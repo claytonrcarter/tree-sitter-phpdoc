@@ -1326,7 +1326,12 @@
           "value": "array"
         },
         {
-          "type": "STRING",
+          "type": "ALIAS",
+          "content": {
+            "type": "PATTERN",
+            "value": "[cC][aA][lL][lL][aA][bB][lL][eE]"
+          },
+          "named": false,
           "value": "callable"
         },
         {
@@ -1649,6 +1654,7 @@
       "namespace_name_as_prefix"
     ]
   ],
+  "precedences": [],
   "externals": [],
   "inline": [],
   "supertypes": []
