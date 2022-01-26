@@ -1,0 +1,169 @@
+=====================
+@link w/ URI
+=====================
+/**
+ * @link http://example.com
+ * @link https://example.com
+ * @link http://www.example.com
+ * @link https://www.example.com
+ */
+---
+(document
+  (tag (tag_name) (uri))
+  (tag (tag_name) (uri))
+  (tag (tag_name) (uri))
+  (tag (tag_name) (uri)))
+
+=====================
+@link w/ URI & description
+=====================
+/**
+ * @link http://example.com some description
+ * @link https://example.com some description
+ * @link http://www.example.com some description
+ * @link https://www.example.com some description
+ */
+---
+(document
+  (tag (tag_name) (uri) (description (text)))
+  (tag (tag_name) (uri) (description (text)))
+  (tag (tag_name) (uri) (description (text)))
+  (tag (tag_name) (uri) (description (text))))
+
+=====================
+@link w/ URI & description on next line
+=====================
+/**
+ * @link http://example.com
+ * some description
+ * @link https://example.com
+ * some description
+ * @link http://www.example.com
+ * some description
+ * @link https://www.example.com
+ * some description
+ */
+---
+(document
+  (tag (tag_name) (uri) (description (text)))
+  (tag (tag_name) (uri) (description (text)))
+  (tag (tag_name) (uri) (description (text)))
+  (tag (tag_name) (uri) (description (text))))
+
+=====================
+@link w/ URI & description w/ linebreak
+=====================
+/**
+ * @link http://example.com some description
+ * more description
+ * @link https://example.com some description
+ * more description
+ * @link http://www.example.com some description
+ * more description
+ * @link https://www.example.com some description
+ * more description
+ */
+---
+(document
+  (tag (tag_name) (uri) (description (text) (text)))
+  (tag (tag_name) (uri) (description (text) (text)))
+  (tag (tag_name) (uri) (description (text) (text)))
+  (tag (tag_name) (uri) (description (text) (text))))
+
+
+
+
+=====================
+@see w/ URI
+=====================
+/**
+ * @see http://example.com
+ * @see https://example.com
+ * @see http://www.example.com
+ * @see https://www.example.com
+ */
+---
+(document
+  (tag (tag_name) (uri))
+  (tag (tag_name) (uri))
+  (tag (tag_name) (uri))
+  (tag (tag_name) (uri)))
+
+=====================
+@see w/ URI & description
+=====================
+/**
+ * @see http://example.com some description
+ * @see https://example.com some description
+ * @see http://www.example.com some description
+ * @see https://www.example.com some description
+ */
+---
+(document
+  (tag (tag_name) (uri) (description (text)))
+  (tag (tag_name) (uri) (description (text)))
+  (tag (tag_name) (uri) (description (text)))
+  (tag (tag_name) (uri) (description (text))))
+
+=====================
+@see w/ URI & description on next line
+=====================
+/**
+ * @see http://example.com
+ * some description
+ * @see https://example.com
+ * some description
+ * @see http://www.example.com
+ * some description
+ * @see https://www.example.com
+ * some description
+ */
+---
+(document
+  (tag (tag_name) (uri) (description (text)))
+  (tag (tag_name) (uri) (description (text)))
+  (tag (tag_name) (uri) (description (text)))
+  (tag (tag_name) (uri) (description (text))))
+
+=====================
+@see w/ URI & description w/ linebreak
+=====================
+/**
+ * @see http://example.com some description
+ * more description
+ * @see https://example.com some description
+ * more description
+ * @see http://www.example.com some description
+ * more description
+ * @see https://www.example.com some description
+ * more description
+ */
+---
+(document
+  (tag (tag_name) (uri) (description (text) (text)))
+  (tag (tag_name) (uri) (description (text) (text)))
+  (tag (tag_name) (uri) (description (text) (text)))
+  (tag (tag_name) (uri) (description (text) (text))))
+
+
+=====================
+@see sw/ FQSEN
+=====================
+/**
+ * @see \MyClass
+ * @see \Other\Class
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (fqsen
+      (namespace_name_as_prefix)
+      (name)))
+  (tag
+    (tag_name)
+    (fqsen
+      (namespace_name_as_prefix
+        (namespace_name (name)))
+      (name))))
+

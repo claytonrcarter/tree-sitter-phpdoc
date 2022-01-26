@@ -1,0 +1,61 @@
+=====================
+Empty docblock
+=====================
+/**
+ *
+ */
+---
+(document)
+
+=====================
+Docblock w/ no tags
+=====================
+/**
+ * Just a comment
+ *
+ * more comment here with
+ * $variable and special chars: } { @
+ */
+---
+(document (description (text) (text) (text)))
+
+=====================
+Tags w/o description
+=====================
+/**
+ * @api
+ * @filesource
+ * @inheritDoc
+ */
+---
+(document
+  (tag (tag_name))
+  (tag (tag_name))
+  (tag (tag_name)))
+
+=====================
+Tags w/ optional description
+=====================
+/**
+ * @ignore
+ * @ignore description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag (tag_name) (description (text))))
+
+=====================
+Tags w/ required descriptions
+=====================
+/**
+ * @category description
+ * @copyright description
+ * @todo description
+ */
+---
+(document
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text))))
+

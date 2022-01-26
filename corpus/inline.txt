@@ -1,0 +1,149 @@
+=====================
+Inline tags standalone
+=====================
+/**
+ * {@inheritDoc}
+ * {@internal}
+ * {@link http://www.example.com}
+ * {@see http://www.example.com}
+ */
+---
+(document
+  (description
+    (inline_tag (tag_name))
+    (inline_tag (tag_name))
+    (inline_tag (tag_name) (uri))
+    (inline_tag (tag_name) (uri))))
+
+
+=====================
+Inline tags standalone w/ description
+=====================
+/**
+ * {@internal some description}
+ * {@link http://www.example.com some description}
+ * {@see http://www.example.com some description}
+ */
+---
+(document
+  (description
+    (inline_tag (tag_name) (description (text)))
+    (inline_tag (tag_name) (uri) (description (text)))
+    (inline_tag (tag_name) (uri) (description (text)))))
+
+=====================
+Inline tags standalone w/ description w/ linebreaks
+=====================
+/**
+ * {@internal some description
+ * continued on next line}
+ * {@link http://www.example.com some description
+ * continued on next line}
+ * {@see http://www.example.com some description
+ * continued on next line}
+ */
+---
+(document
+  (description
+    (inline_tag (tag_name) (description (text) (text)))
+    (inline_tag (tag_name) (uri) (description (text) (text)))
+    (inline_tag (tag_name) (uri) (description (text) (text)))))
+
+
+
+
+
+=====================
+Inline tags embedded in description
+=====================
+/**
+ * Some {description {@inheritDoc} more description}
+ * Some {description {@internal} more description}
+ * Some {description {@link http://www.example.com} more description}
+ * Some {description {@see http://www.example.com} more description}
+ */
+---
+(document
+  (description
+    (text)
+    (inline_tag (tag_name))
+    (text)
+    (text)
+    (inline_tag (tag_name))
+    (text)
+    (text)
+    (inline_tag (tag_name) (uri))
+    (text)
+    (text)
+    (inline_tag (tag_name) (uri))
+    (text)))
+
+
+=====================
+Inline tags w/ description embedded in description
+=====================
+/**
+ * Some {description {@internal some description} more description}
+ * Some {description {@link http://www.example.com some description} more description}
+ * Some {description {@see http://www.example.com some description} more description}
+ */
+---
+(document
+  (description
+    (text)
+    (inline_tag (tag_name) (description (text)))
+    (text)
+    (text)
+    (inline_tag (tag_name) (uri) (description (text)))
+    (text)
+    (text)
+    (inline_tag (tag_name) (uri) (description (text)))
+    (text)))
+
+=====================
+Inline tags w/ description w/ linebreaks embedded in description
+=====================
+/**
+ * Some {description {@internal some description
+ * continued on next line} more description}
+ * Some {description {@link http://www.example.com some description
+ * continued on next line} more description}
+ * Some {description {@see http://www.example.com some description
+ * continued on next line} more description}
+ */
+---
+(document
+  (description
+    (text)
+    (inline_tag (tag_name) (description (text) (text)))
+    (text)
+    (text)
+    (inline_tag (tag_name) (uri) (description (text) (text)))
+    (text)
+    (text)
+    (inline_tag (tag_name) (uri) (description (text) (text)))
+    (text)))
+
+
+
+=====================
+Inline @internal w/ nested inline tag
+=====================
+/**
+ * Some {description {@internal some description {@see https://www.example.com
+ * nested see description} continued internal description} outer description
+ */
+---
+(document
+  (description
+    (text)
+    (inline_tag
+      (tag_name)
+      (description
+        (text)
+        (inline_tag
+          (tag_name)
+          (uri)
+          (description (text)))
+        (text)))
+    (text)))

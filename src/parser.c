@@ -14,12 +14,12 @@
 #endif
 
 #define LANGUAGE_VERSION 12
-#define STATE_COUNT 202
-#define LARGE_STATE_COUNT 51
-#define SYMBOL_COUNT 146
+#define STATE_COUNT 231
+#define LARGE_STATE_COUNT 58
+#define SYMBOL_COUNT 163
 #define ALIAS_COUNT 0
-#define TOKEN_COUNT 99
-#define EXTERNAL_TOKEN_COUNT 0
+#define TOKEN_COUNT 106
+#define EXTERNAL_TOKEN_COUNT 4
 #define FIELD_COUNT 3
 #define MAX_ALIAS_SEQUENCE_LENGTH 6
 
@@ -27,27 +27,27 @@ enum {
   sym_name = 1,
   sym__begin = 2,
   anon_sym_LBRACE = 3,
-  anon_sym_ATinheritDoc = 4,
-  anon_sym_RBRACE = 5,
-  anon_sym_ATapi = 6,
-  anon_sym_ATfilesource = 7,
-  anon_sym_ATignore = 8,
-  anon_sym_ATcategory = 9,
-  anon_sym_ATcopyright = 10,
-  anon_sym_ATtodo = 11,
-  anon_sym_ATexample = 12,
-  anon_sym_ATlicense = 13,
-  anon_sym_ATpackage = 14,
-  anon_sym_ATsource = 15,
-  anon_sym_ATsubpackage = 16,
-  anon_sym_ATuses = 17,
-  anon_sym_ATauthor = 18,
-  anon_sym_LT = 19,
-  anon_sym_GT = 20,
-  anon_sym_ATglobal = 21,
-  anon_sym_ATinternal = 22,
-  anon_sym_ATlink = 23,
-  anon_sym_LPAREN_RPAREN = 24,
+  anon_sym_ATinheritdoc = 4,
+  anon_sym_ATinheritDoc = 5,
+  anon_sym_RBRACE = 6,
+  anon_sym_ATapi = 7,
+  anon_sym_ATfilesource = 8,
+  anon_sym_ATignore = 9,
+  anon_sym_ATinternal = 10,
+  anon_sym_ATcategory = 11,
+  anon_sym_ATcopyright = 12,
+  anon_sym_ATtodo = 13,
+  anon_sym_ATexample = 14,
+  anon_sym_ATlicense = 15,
+  anon_sym_ATpackage = 16,
+  anon_sym_ATsource = 17,
+  anon_sym_ATsubpackage = 18,
+  anon_sym_ATuses = 19,
+  anon_sym_ATauthor = 20,
+  anon_sym_LT = 21,
+  anon_sym_GT = 22,
+  anon_sym_ATglobal = 23,
+  anon_sym_ATlink = 24,
   anon_sym_ATmethod = 25,
   anon_sym_ATparam = 26,
   anon_sym_ATproperty = 27,
@@ -55,120 +55,137 @@ enum {
   anon_sym_ATproperty_DASHwrite = 29,
   anon_sym_ATreturn = 30,
   anon_sym_ATsee = 31,
-  anon_sym_ATthrows = 32,
-  anon_sym_ATvar = 33,
-  anon_sym_ATdeprecated = 34,
-  anon_sym_ATsince = 35,
-  anon_sym_ATversion = 36,
-  anon_sym_ATafter = 37,
-  anon_sym_ATafterClass = 38,
-  anon_sym_ATannotation = 39,
-  anon_sym_ATbackupGlobals = 40,
-  anon_sym_ATbackupStaticAttributes = 41,
-  anon_sym_ATbefore = 42,
-  anon_sym_ATbeforeClass = 43,
-  anon_sym_ATcodeCoverageIgnore = 44,
-  anon_sym_ATcodeCoverageIgnore_STAR = 45,
-  anon_sym_ATcodeCoverageIgnoreEnd = 46,
-  anon_sym_ATcodeCoverageIgnoreStart = 47,
-  anon_sym_ATcovers = 48,
-  anon_sym_ATcoversDefaultClass = 49,
-  anon_sym_ATcoversDefaultClasstoshortenannotations = 50,
-  anon_sym_ATcoversNothing = 51,
-  anon_sym_ATdataProvider = 52,
-  anon_sym_ATdepends = 53,
-  anon_sym_ATdependsannotationtoexpressdependencies = 54,
-  anon_sym_ATdoesNotPerformAssertions = 55,
-  anon_sym_ATgroup = 56,
-  anon_sym_ATlarge = 57,
-  anon_sym_ATmedium = 58,
-  anon_sym_ATpreserveGlobalState = 59,
-  anon_sym_ATrequires = 60,
-  anon_sym_ATrequiresusages = 61,
-  anon_sym_ATrunInSeparateProcess = 62,
-  anon_sym_ATrunTestsInSeparateProcesses = 63,
-  anon_sym_ATsmall = 64,
-  anon_sym_ATtest = 65,
-  anon_sym_ATtestWith = 66,
-  anon_sym_ATtestdox = 67,
-  anon_sym_ATticket = 68,
-  anon_sym_LBRACK_RBRACK = 69,
-  anon_sym_COMMA = 70,
-  anon_sym_list = 71,
-  anon_sym_BSLASH = 72,
-  aux_sym_namespace_name_as_prefix_token1 = 73,
-  anon_sym_QMARK = 74,
-  anon_sym_array = 75,
-  anon_sym_callable = 76,
-  anon_sym_iterable = 77,
-  anon_sym_bool = 78,
-  anon_sym_float = 79,
-  anon_sym_int = 80,
-  anon_sym_string = 81,
-  anon_sym_void = 82,
-  anon_sym_mixed = 83,
-  anon_sym_static = 84,
-  anon_sym_false = 85,
-  anon_sym_null = 86,
-  anon_sym_PIPE = 87,
-  anon_sym_DOLLAR = 88,
-  sym_author_name = 89,
-  sym_email_address = 90,
-  sym_text = 91,
-  sym_version = 92,
-  sym_uri = 93,
-  anon_sym_LPAREN = 94,
-  anon_sym_RPAREN = 95,
-  anon_sym_EQ = 96,
-  sym_default_value = 97,
-  sym__end = 98,
-  sym_document = 99,
-  sym_tag = 100,
-  sym_inline_tag = 101,
-  sym__simple_tag_without_description = 102,
-  sym__simple_tag_with_optional_description = 103,
-  sym__simple_tag_with_required_description = 104,
-  sym__currently_incomplete_tags = 105,
-  sym__author_tag = 106,
-  sym__global_tag = 107,
-  sym__internal_tag = 108,
-  sym__internal_inline_tag = 109,
-  sym__link_tag = 110,
-  sym__link_inline_tag = 111,
-  sym__method_tag = 112,
-  sym__param_tag = 113,
-  sym__property_tag = 114,
-  sym__return_tag = 115,
-  sym__see_tag = 116,
-  sym__see_inline_tag = 117,
-  sym__throws_tag = 118,
-  sym__var_tag = 119,
-  sym__version_tag = 120,
-  sym__phpunit_tag = 121,
-  sym__type = 122,
-  sym__types = 123,
-  sym__regular_types = 124,
-  sym__phpdoc_array_types = 125,
-  sym__psalm_generic_array_types = 126,
-  sym__psalm_list_array_types = 127,
-  sym_named_type = 128,
-  sym_namespace_name = 129,
-  sym_namespace_name_as_prefix = 130,
-  sym_optional_type = 131,
-  sym_primitive_type = 132,
-  sym_qualified_name = 133,
-  sym_union_type = 134,
-  sym_variable_name = 135,
-  sym_description = 136,
-  sym_parameters = 137,
-  sym_parameter = 138,
-  sym_static = 139,
-  aux_sym_document_repeat1 = 140,
-  aux_sym__phpdoc_array_types_repeat1 = 141,
-  aux_sym_namespace_name_repeat1 = 142,
-  aux_sym_union_type_repeat1 = 143,
-  aux_sym_description_repeat1 = 144,
-  aux_sym_parameters_repeat1 = 145,
+  anon_sym_LPAREN_RPAREN = 32,
+  anon_sym_ATthrows = 33,
+  anon_sym_ATvar = 34,
+  anon_sym_ATdeprecated = 35,
+  anon_sym_ATsince = 36,
+  anon_sym_ATversion = 37,
+  anon_sym_ATafter = 38,
+  anon_sym_ATafterClass = 39,
+  anon_sym_ATannotation = 40,
+  anon_sym_ATbackupGlobals = 41,
+  anon_sym_ATbackupStaticAttributes = 42,
+  anon_sym_ATbefore = 43,
+  anon_sym_ATbeforeClass = 44,
+  anon_sym_ATcodeCoverageIgnore = 45,
+  anon_sym_ATcodeCoverageIgnore_STAR = 46,
+  anon_sym_ATcodeCoverageIgnoreEnd = 47,
+  anon_sym_ATcodeCoverageIgnoreStart = 48,
+  anon_sym_ATcovers = 49,
+  anon_sym_ATcoversDefaultClass = 50,
+  anon_sym_ATcoversDefaultClasstoshortenannotations = 51,
+  anon_sym_ATcoversNothing = 52,
+  anon_sym_ATdataProvider = 53,
+  anon_sym_ATdepends = 54,
+  anon_sym_ATdependsannotationtoexpressdependencies = 55,
+  anon_sym_ATdoesNotPerformAssertions = 56,
+  anon_sym_ATgroup = 57,
+  anon_sym_ATlarge = 58,
+  anon_sym_ATmedium = 59,
+  anon_sym_ATpreserveGlobalState = 60,
+  anon_sym_ATrequires = 61,
+  anon_sym_ATrequiresusages = 62,
+  anon_sym_ATrunInSeparateProcess = 63,
+  anon_sym_ATrunTestsInSeparateProcesses = 64,
+  anon_sym_ATsmall = 65,
+  anon_sym_ATtest = 66,
+  anon_sym_ATtestWith = 67,
+  anon_sym_ATtestdox = 68,
+  anon_sym_ATticket = 69,
+  anon_sym_LBRACK_RBRACK = 70,
+  anon_sym_COMMA = 71,
+  anon_sym_list = 72,
+  anon_sym_BSLASH = 73,
+  aux_sym_namespace_name_as_prefix_token1 = 74,
+  anon_sym_QMARK = 75,
+  anon_sym_array = 76,
+  anon_sym_callable = 77,
+  anon_sym_iterable = 78,
+  anon_sym_bool = 79,
+  anon_sym_float = 80,
+  anon_sym_int = 81,
+  anon_sym_string = 82,
+  anon_sym_void = 83,
+  anon_sym_mixed = 84,
+  anon_sym_static = 85,
+  anon_sym_false = 86,
+  anon_sym_null = 87,
+  anon_sym_PIPE = 88,
+  anon_sym_DOLLAR = 89,
+  sym_author_name = 90,
+  sym_email_address = 91,
+  aux_sym_version_token1 = 92,
+  aux_sym_version_token2 = 93,
+  anon_sym_ATpackage_version_AT = 94,
+  sym__version_vector = 95,
+  sym_uri = 96,
+  anon_sym_LPAREN = 97,
+  anon_sym_RPAREN = 98,
+  anon_sym_EQ = 99,
+  sym_default_value = 100,
+  sym__end = 101,
+  sym_text = 102,
+  sym__text_after_type = 103,
+  sym__text_in_inline_tag = 104,
+  sym__text_not_version = 105,
+  sym_document = 106,
+  sym_description = 107,
+  sym__description_after_type = 108,
+  sym__description_not_version = 109,
+  sym__description_in_inline_tag = 110,
+  sym__description_in_inline_tag_with_nesting = 111,
+  sym_tag = 112,
+  sym_inline_tag = 113,
+  sym__tag_without_description = 114,
+  sym__tag_with_optional_description = 115,
+  sym__tag_with_required_description = 116,
+  sym__tag_with_incomplete_implementation = 117,
+  sym__author_tag = 118,
+  sym__global_tag = 119,
+  sym__inline_internal_tag = 120,
+  sym__link_tag = 121,
+  sym__inline_link_tag = 122,
+  sym__method_tag = 123,
+  sym__param_tag = 124,
+  sym__property_tag = 125,
+  sym__return_tag = 126,
+  sym__see_tag = 127,
+  sym__inline_see_tag = 128,
+  sym__throws_tag = 129,
+  sym__var_tag = 130,
+  sym__deprecated_tag = 131,
+  sym__since_tag = 132,
+  sym__version_tag = 133,
+  sym__phpunit_tag = 134,
+  sym__type = 135,
+  sym__types = 136,
+  sym__regular_types = 137,
+  sym__phpdoc_array_types = 138,
+  sym__psalm_generic_array_types = 139,
+  sym__psalm_list_array_types = 140,
+  sym_named_type = 141,
+  sym_namespace_name = 142,
+  sym_namespace_name_as_prefix = 143,
+  sym_optional_type = 144,
+  sym_primitive_type = 145,
+  sym_qualified_name = 146,
+  sym_union_type = 147,
+  sym_variable_name = 148,
+  sym_version = 149,
+  sym_parameters = 150,
+  sym_parameter = 151,
+  sym_static = 152,
+  aux_sym_document_repeat1 = 153,
+  aux_sym_description_repeat1 = 154,
+  aux_sym__description_after_type_repeat1 = 155,
+  aux_sym__description_not_version_repeat1 = 156,
+  aux_sym__description_in_inline_tag_repeat1 = 157,
+  aux_sym__description_in_inline_tag_with_nesting_repeat1 = 158,
+  aux_sym__phpdoc_array_types_repeat1 = 159,
+  aux_sym_namespace_name_repeat1 = 160,
+  aux_sym_union_type_repeat1 = 161,
+  aux_sym_parameters_repeat1 = 162,
 };
 
 static const char *ts_symbol_names[] = {
@@ -176,27 +193,27 @@ static const char *ts_symbol_names[] = {
   [sym_name] = "name",
   [sym__begin] = "_begin",
   [anon_sym_LBRACE] = "{",
+  [anon_sym_ATinheritdoc] = "tag_name",
   [anon_sym_ATinheritDoc] = "tag_name",
   [anon_sym_RBRACE] = "}",
   [anon_sym_ATapi] = "tag_name",
   [anon_sym_ATfilesource] = "tag_name",
   [anon_sym_ATignore] = "tag_name",
+  [anon_sym_ATinternal] = "tag_name",
   [anon_sym_ATcategory] = "tag_name",
   [anon_sym_ATcopyright] = "tag_name",
   [anon_sym_ATtodo] = "tag_name",
-  [anon_sym_ATexample] = "@example",
-  [anon_sym_ATlicense] = "@license",
-  [anon_sym_ATpackage] = "@package",
-  [anon_sym_ATsource] = "@source",
-  [anon_sym_ATsubpackage] = "@subpackage",
-  [anon_sym_ATuses] = "@uses",
+  [anon_sym_ATexample] = "tag_name",
+  [anon_sym_ATlicense] = "tag_name",
+  [anon_sym_ATpackage] = "tag_name",
+  [anon_sym_ATsource] = "tag_name",
+  [anon_sym_ATsubpackage] = "tag_name",
+  [anon_sym_ATuses] = "tag_name",
   [anon_sym_ATauthor] = "tag_name",
   [anon_sym_LT] = "<",
   [anon_sym_GT] = ">",
   [anon_sym_ATglobal] = "tag_name",
-  [anon_sym_ATinternal] = "tag_name",
   [anon_sym_ATlink] = "tag_name",
-  [anon_sym_LPAREN_RPAREN] = "()",
   [anon_sym_ATmethod] = "tag_name",
   [anon_sym_ATparam] = "tag_name",
   [anon_sym_ATproperty] = "tag_name",
@@ -204,6 +221,7 @@ static const char *ts_symbol_names[] = {
   [anon_sym_ATproperty_DASHwrite] = "tag_name",
   [anon_sym_ATreturn] = "tag_name",
   [anon_sym_ATsee] = "tag_name",
+  [anon_sym_LPAREN_RPAREN] = "fqsen",
   [anon_sym_ATthrows] = "tag_name",
   [anon_sym_ATvar] = "tag_name",
   [anon_sym_ATdeprecated] = "tag_name",
@@ -263,35 +281,47 @@ static const char *ts_symbol_names[] = {
   [anon_sym_DOLLAR] = "$",
   [sym_author_name] = "author_name",
   [sym_email_address] = "email_address",
-  [sym_text] = "text",
-  [sym_version] = "version",
+  [aux_sym_version_token1] = "version_token1",
+  [aux_sym_version_token2] = "version_token2",
+  [anon_sym_ATpackage_version_AT] = "@package_version@",
+  [sym__version_vector] = "_version_vector",
   [sym_uri] = "uri",
   [anon_sym_LPAREN] = "(",
   [anon_sym_RPAREN] = ")",
   [anon_sym_EQ] = "=",
   [sym_default_value] = "default_value",
   [sym__end] = "_end",
+  [sym_text] = "text",
+  [sym__text_after_type] = "text",
+  [sym__text_in_inline_tag] = "text",
+  [sym__text_not_version] = "text",
   [sym_document] = "document",
+  [sym_description] = "description",
+  [sym__description_after_type] = "_description_after_type",
+  [sym__description_not_version] = "_description_not_version",
+  [sym__description_in_inline_tag] = "_description_in_inline_tag",
+  [sym__description_in_inline_tag_with_nesting] = "_description_in_inline_tag_with_nesting",
   [sym_tag] = "tag",
   [sym_inline_tag] = "inline_tag",
-  [sym__simple_tag_without_description] = "_simple_tag_without_description",
-  [sym__simple_tag_with_optional_description] = "_simple_tag_with_optional_description",
-  [sym__simple_tag_with_required_description] = "_simple_tag_with_required_description",
-  [sym__currently_incomplete_tags] = "tag_name",
+  [sym__tag_without_description] = "_tag_without_description",
+  [sym__tag_with_optional_description] = "_tag_with_optional_description",
+  [sym__tag_with_required_description] = "_tag_with_required_description",
+  [sym__tag_with_incomplete_implementation] = "_tag_with_incomplete_implementation",
   [sym__author_tag] = "_author_tag",
   [sym__global_tag] = "_global_tag",
-  [sym__internal_tag] = "_internal_tag",
-  [sym__internal_inline_tag] = "_internal_inline_tag",
+  [sym__inline_internal_tag] = "_inline_internal_tag",
   [sym__link_tag] = "_link_tag",
-  [sym__link_inline_tag] = "_link_inline_tag",
+  [sym__inline_link_tag] = "_inline_link_tag",
   [sym__method_tag] = "_method_tag",
   [sym__param_tag] = "_param_tag",
   [sym__property_tag] = "_property_tag",
   [sym__return_tag] = "_return_tag",
   [sym__see_tag] = "_see_tag",
-  [sym__see_inline_tag] = "_see_inline_tag",
+  [sym__inline_see_tag] = "_inline_see_tag",
   [sym__throws_tag] = "_throws_tag",
   [sym__var_tag] = "_var_tag",
+  [sym__deprecated_tag] = "_deprecated_tag",
+  [sym__since_tag] = "_since_tag",
   [sym__version_tag] = "_version_tag",
   [sym__phpunit_tag] = "_phpunit_tag",
   [sym__type] = "_type",
@@ -308,15 +338,19 @@ static const char *ts_symbol_names[] = {
   [sym_qualified_name] = "qualified_name",
   [sym_union_type] = "type_list",
   [sym_variable_name] = "variable_name",
-  [sym_description] = "description",
+  [sym_version] = "version",
   [sym_parameters] = "parameters",
   [sym_parameter] = "parameter",
   [sym_static] = "static",
   [aux_sym_document_repeat1] = "document_repeat1",
+  [aux_sym_description_repeat1] = "description_repeat1",
+  [aux_sym__description_after_type_repeat1] = "_description_after_type_repeat1",
+  [aux_sym__description_not_version_repeat1] = "_description_not_version_repeat1",
+  [aux_sym__description_in_inline_tag_repeat1] = "_description_in_inline_tag_repeat1",
+  [aux_sym__description_in_inline_tag_with_nesting_repeat1] = "_description_in_inline_tag_with_nesting_repeat1",
   [aux_sym__phpdoc_array_types_repeat1] = "_phpdoc_array_types_repeat1",
   [aux_sym_namespace_name_repeat1] = "namespace_name_repeat1",
   [aux_sym_union_type_repeat1] = "union_type_repeat1",
-  [aux_sym_description_repeat1] = "description_repeat1",
   [aux_sym_parameters_repeat1] = "parameters_repeat1",
 };
 
@@ -325,71 +359,72 @@ static TSSymbol ts_symbol_map[] = {
   [sym_name] = sym_name,
   [sym__begin] = sym__begin,
   [anon_sym_LBRACE] = anon_sym_LBRACE,
-  [anon_sym_ATinheritDoc] = anon_sym_ATinheritDoc,
+  [anon_sym_ATinheritdoc] = anon_sym_ATinheritdoc,
+  [anon_sym_ATinheritDoc] = anon_sym_ATinheritdoc,
   [anon_sym_RBRACE] = anon_sym_RBRACE,
-  [anon_sym_ATapi] = anon_sym_ATinheritDoc,
-  [anon_sym_ATfilesource] = anon_sym_ATinheritDoc,
-  [anon_sym_ATignore] = anon_sym_ATinheritDoc,
-  [anon_sym_ATcategory] = anon_sym_ATinheritDoc,
-  [anon_sym_ATcopyright] = anon_sym_ATinheritDoc,
-  [anon_sym_ATtodo] = anon_sym_ATinheritDoc,
-  [anon_sym_ATexample] = anon_sym_ATexample,
-  [anon_sym_ATlicense] = anon_sym_ATlicense,
-  [anon_sym_ATpackage] = anon_sym_ATpackage,
-  [anon_sym_ATsource] = anon_sym_ATsource,
-  [anon_sym_ATsubpackage] = anon_sym_ATsubpackage,
-  [anon_sym_ATuses] = anon_sym_ATuses,
-  [anon_sym_ATauthor] = anon_sym_ATinheritDoc,
+  [anon_sym_ATapi] = anon_sym_ATinheritdoc,
+  [anon_sym_ATfilesource] = anon_sym_ATinheritdoc,
+  [anon_sym_ATignore] = anon_sym_ATinheritdoc,
+  [anon_sym_ATinternal] = anon_sym_ATinheritdoc,
+  [anon_sym_ATcategory] = anon_sym_ATinheritdoc,
+  [anon_sym_ATcopyright] = anon_sym_ATinheritdoc,
+  [anon_sym_ATtodo] = anon_sym_ATinheritdoc,
+  [anon_sym_ATexample] = anon_sym_ATinheritdoc,
+  [anon_sym_ATlicense] = anon_sym_ATinheritdoc,
+  [anon_sym_ATpackage] = anon_sym_ATinheritdoc,
+  [anon_sym_ATsource] = anon_sym_ATinheritdoc,
+  [anon_sym_ATsubpackage] = anon_sym_ATinheritdoc,
+  [anon_sym_ATuses] = anon_sym_ATinheritdoc,
+  [anon_sym_ATauthor] = anon_sym_ATinheritdoc,
   [anon_sym_LT] = anon_sym_LT,
   [anon_sym_GT] = anon_sym_GT,
-  [anon_sym_ATglobal] = anon_sym_ATinheritDoc,
-  [anon_sym_ATinternal] = anon_sym_ATinheritDoc,
-  [anon_sym_ATlink] = anon_sym_ATinheritDoc,
+  [anon_sym_ATglobal] = anon_sym_ATinheritdoc,
+  [anon_sym_ATlink] = anon_sym_ATinheritdoc,
+  [anon_sym_ATmethod] = anon_sym_ATinheritdoc,
+  [anon_sym_ATparam] = anon_sym_ATinheritdoc,
+  [anon_sym_ATproperty] = anon_sym_ATinheritdoc,
+  [anon_sym_ATproperty_DASHread] = anon_sym_ATinheritdoc,
+  [anon_sym_ATproperty_DASHwrite] = anon_sym_ATinheritdoc,
+  [anon_sym_ATreturn] = anon_sym_ATinheritdoc,
+  [anon_sym_ATsee] = anon_sym_ATinheritdoc,
   [anon_sym_LPAREN_RPAREN] = anon_sym_LPAREN_RPAREN,
-  [anon_sym_ATmethod] = anon_sym_ATinheritDoc,
-  [anon_sym_ATparam] = anon_sym_ATinheritDoc,
-  [anon_sym_ATproperty] = anon_sym_ATinheritDoc,
-  [anon_sym_ATproperty_DASHread] = anon_sym_ATinheritDoc,
-  [anon_sym_ATproperty_DASHwrite] = anon_sym_ATinheritDoc,
-  [anon_sym_ATreturn] = anon_sym_ATinheritDoc,
-  [anon_sym_ATsee] = anon_sym_ATinheritDoc,
-  [anon_sym_ATthrows] = anon_sym_ATinheritDoc,
-  [anon_sym_ATvar] = anon_sym_ATinheritDoc,
-  [anon_sym_ATdeprecated] = anon_sym_ATinheritDoc,
-  [anon_sym_ATsince] = anon_sym_ATinheritDoc,
-  [anon_sym_ATversion] = anon_sym_ATinheritDoc,
-  [anon_sym_ATafter] = anon_sym_ATinheritDoc,
-  [anon_sym_ATafterClass] = anon_sym_ATinheritDoc,
-  [anon_sym_ATannotation] = anon_sym_ATinheritDoc,
-  [anon_sym_ATbackupGlobals] = anon_sym_ATinheritDoc,
-  [anon_sym_ATbackupStaticAttributes] = anon_sym_ATinheritDoc,
-  [anon_sym_ATbefore] = anon_sym_ATinheritDoc,
-  [anon_sym_ATbeforeClass] = anon_sym_ATinheritDoc,
-  [anon_sym_ATcodeCoverageIgnore] = anon_sym_ATinheritDoc,
-  [anon_sym_ATcodeCoverageIgnore_STAR] = anon_sym_ATinheritDoc,
-  [anon_sym_ATcodeCoverageIgnoreEnd] = anon_sym_ATinheritDoc,
-  [anon_sym_ATcodeCoverageIgnoreStart] = anon_sym_ATinheritDoc,
-  [anon_sym_ATcovers] = anon_sym_ATinheritDoc,
-  [anon_sym_ATcoversDefaultClass] = anon_sym_ATinheritDoc,
-  [anon_sym_ATcoversDefaultClasstoshortenannotations] = anon_sym_ATinheritDoc,
-  [anon_sym_ATcoversNothing] = anon_sym_ATinheritDoc,
-  [anon_sym_ATdataProvider] = anon_sym_ATinheritDoc,
-  [anon_sym_ATdepends] = anon_sym_ATinheritDoc,
-  [anon_sym_ATdependsannotationtoexpressdependencies] = anon_sym_ATinheritDoc,
-  [anon_sym_ATdoesNotPerformAssertions] = anon_sym_ATinheritDoc,
-  [anon_sym_ATgroup] = anon_sym_ATinheritDoc,
-  [anon_sym_ATlarge] = anon_sym_ATinheritDoc,
-  [anon_sym_ATmedium] = anon_sym_ATinheritDoc,
-  [anon_sym_ATpreserveGlobalState] = anon_sym_ATinheritDoc,
-  [anon_sym_ATrequires] = anon_sym_ATinheritDoc,
-  [anon_sym_ATrequiresusages] = anon_sym_ATinheritDoc,
-  [anon_sym_ATrunInSeparateProcess] = anon_sym_ATinheritDoc,
-  [anon_sym_ATrunTestsInSeparateProcesses] = anon_sym_ATinheritDoc,
-  [anon_sym_ATsmall] = anon_sym_ATinheritDoc,
-  [anon_sym_ATtest] = anon_sym_ATinheritDoc,
-  [anon_sym_ATtestWith] = anon_sym_ATinheritDoc,
-  [anon_sym_ATtestdox] = anon_sym_ATinheritDoc,
-  [anon_sym_ATticket] = anon_sym_ATinheritDoc,
+  [anon_sym_ATthrows] = anon_sym_ATinheritdoc,
+  [anon_sym_ATvar] = anon_sym_ATinheritdoc,
+  [anon_sym_ATdeprecated] = anon_sym_ATinheritdoc,
+  [anon_sym_ATsince] = anon_sym_ATinheritdoc,
+  [anon_sym_ATversion] = anon_sym_ATinheritdoc,
+  [anon_sym_ATafter] = anon_sym_ATinheritdoc,
+  [anon_sym_ATafterClass] = anon_sym_ATinheritdoc,
+  [anon_sym_ATannotation] = anon_sym_ATinheritdoc,
+  [anon_sym_ATbackupGlobals] = anon_sym_ATinheritdoc,
+  [anon_sym_ATbackupStaticAttributes] = anon_sym_ATinheritdoc,
+  [anon_sym_ATbefore] = anon_sym_ATinheritdoc,
+  [anon_sym_ATbeforeClass] = anon_sym_ATinheritdoc,
+  [anon_sym_ATcodeCoverageIgnore] = anon_sym_ATinheritdoc,
+  [anon_sym_ATcodeCoverageIgnore_STAR] = anon_sym_ATinheritdoc,
+  [anon_sym_ATcodeCoverageIgnoreEnd] = anon_sym_ATinheritdoc,
+  [anon_sym_ATcodeCoverageIgnoreStart] = anon_sym_ATinheritdoc,
+  [anon_sym_ATcovers] = anon_sym_ATinheritdoc,
+  [anon_sym_ATcoversDefaultClass] = anon_sym_ATinheritdoc,
+  [anon_sym_ATcoversDefaultClasstoshortenannotations] = anon_sym_ATinheritdoc,
+  [anon_sym_ATcoversNothing] = anon_sym_ATinheritdoc,
+  [anon_sym_ATdataProvider] = anon_sym_ATinheritdoc,
+  [anon_sym_ATdepends] = anon_sym_ATinheritdoc,
+  [anon_sym_ATdependsannotationtoexpressdependencies] = anon_sym_ATinheritdoc,
+  [anon_sym_ATdoesNotPerformAssertions] = anon_sym_ATinheritdoc,
+  [anon_sym_ATgroup] = anon_sym_ATinheritdoc,
+  [anon_sym_ATlarge] = anon_sym_ATinheritdoc,
+  [anon_sym_ATmedium] = anon_sym_ATinheritdoc,
+  [anon_sym_ATpreserveGlobalState] = anon_sym_ATinheritdoc,
+  [anon_sym_ATrequires] = anon_sym_ATinheritdoc,
+  [anon_sym_ATrequiresusages] = anon_sym_ATinheritdoc,
+  [anon_sym_ATrunInSeparateProcess] = anon_sym_ATinheritdoc,
+  [anon_sym_ATrunTestsInSeparateProcesses] = anon_sym_ATinheritdoc,
+  [anon_sym_ATsmall] = anon_sym_ATinheritdoc,
+  [anon_sym_ATtest] = anon_sym_ATinheritdoc,
+  [anon_sym_ATtestWith] = anon_sym_ATinheritdoc,
+  [anon_sym_ATtestdox] = anon_sym_ATinheritdoc,
+  [anon_sym_ATticket] = anon_sym_ATinheritdoc,
   [anon_sym_LBRACK_RBRACK] = anon_sym_LBRACK_RBRACK,
   [anon_sym_COMMA] = anon_sym_COMMA,
   [anon_sym_list] = sym_primitive_type,
@@ -412,35 +447,47 @@ static TSSymbol ts_symbol_map[] = {
   [anon_sym_DOLLAR] = anon_sym_DOLLAR,
   [sym_author_name] = sym_author_name,
   [sym_email_address] = sym_email_address,
-  [sym_text] = sym_text,
-  [sym_version] = sym_version,
+  [aux_sym_version_token1] = aux_sym_version_token1,
+  [aux_sym_version_token2] = aux_sym_version_token2,
+  [anon_sym_ATpackage_version_AT] = anon_sym_ATpackage_version_AT,
+  [sym__version_vector] = sym__version_vector,
   [sym_uri] = sym_uri,
   [anon_sym_LPAREN] = anon_sym_LPAREN,
   [anon_sym_RPAREN] = anon_sym_RPAREN,
   [anon_sym_EQ] = anon_sym_EQ,
   [sym_default_value] = sym_default_value,
   [sym__end] = sym__end,
+  [sym_text] = sym_text,
+  [sym__text_after_type] = sym_text,
+  [sym__text_in_inline_tag] = sym_text,
+  [sym__text_not_version] = sym_text,
   [sym_document] = sym_document,
+  [sym_description] = sym_description,
+  [sym__description_after_type] = sym__description_after_type,
+  [sym__description_not_version] = sym__description_not_version,
+  [sym__description_in_inline_tag] = sym__description_in_inline_tag,
+  [sym__description_in_inline_tag_with_nesting] = sym__description_in_inline_tag_with_nesting,
   [sym_tag] = sym_tag,
   [sym_inline_tag] = sym_inline_tag,
-  [sym__simple_tag_without_description] = sym__simple_tag_without_description,
-  [sym__simple_tag_with_optional_description] = sym__simple_tag_with_optional_description,
-  [sym__simple_tag_with_required_description] = sym__simple_tag_with_required_description,
-  [sym__currently_incomplete_tags] = anon_sym_ATinheritDoc,
+  [sym__tag_without_description] = sym__tag_without_description,
+  [sym__tag_with_optional_description] = sym__tag_with_optional_description,
+  [sym__tag_with_required_description] = sym__tag_with_required_description,
+  [sym__tag_with_incomplete_implementation] = sym__tag_with_incomplete_implementation,
   [sym__author_tag] = sym__author_tag,
   [sym__global_tag] = sym__global_tag,
-  [sym__internal_tag] = sym__internal_tag,
-  [sym__internal_inline_tag] = sym__internal_inline_tag,
+  [sym__inline_internal_tag] = sym__inline_internal_tag,
   [sym__link_tag] = sym__link_tag,
-  [sym__link_inline_tag] = sym__link_inline_tag,
+  [sym__inline_link_tag] = sym__inline_link_tag,
   [sym__method_tag] = sym__method_tag,
   [sym__param_tag] = sym__param_tag,
   [sym__property_tag] = sym__property_tag,
   [sym__return_tag] = sym__return_tag,
   [sym__see_tag] = sym__see_tag,
-  [sym__see_inline_tag] = sym__see_inline_tag,
+  [sym__inline_see_tag] = sym__inline_see_tag,
   [sym__throws_tag] = sym__throws_tag,
   [sym__var_tag] = sym__var_tag,
+  [sym__deprecated_tag] = sym__deprecated_tag,
+  [sym__since_tag] = sym__since_tag,
   [sym__version_tag] = sym__version_tag,
   [sym__phpunit_tag] = sym__phpunit_tag,
   [sym__type] = sym__type,
@@ -457,15 +504,19 @@ static TSSymbol ts_symbol_map[] = {
   [sym_qualified_name] = sym_qualified_name,
   [sym_union_type] = sym_union_type,
   [sym_variable_name] = sym_variable_name,
-  [sym_description] = sym_description,
+  [sym_version] = sym_version,
   [sym_parameters] = sym_parameters,
   [sym_parameter] = sym_parameter,
   [sym_static] = sym_static,
   [aux_sym_document_repeat1] = aux_sym_document_repeat1,
+  [aux_sym_description_repeat1] = aux_sym_description_repeat1,
+  [aux_sym__description_after_type_repeat1] = aux_sym__description_after_type_repeat1,
+  [aux_sym__description_not_version_repeat1] = aux_sym__description_not_version_repeat1,
+  [aux_sym__description_in_inline_tag_repeat1] = aux_sym__description_in_inline_tag_repeat1,
+  [aux_sym__description_in_inline_tag_with_nesting_repeat1] = aux_sym__description_in_inline_tag_with_nesting_repeat1,
   [aux_sym__phpdoc_array_types_repeat1] = aux_sym__phpdoc_array_types_repeat1,
   [aux_sym_namespace_name_repeat1] = aux_sym_namespace_name_repeat1,
   [aux_sym_union_type_repeat1] = aux_sym_union_type_repeat1,
-  [aux_sym_description_repeat1] = aux_sym_description_repeat1,
   [aux_sym_parameters_repeat1] = aux_sym_parameters_repeat1,
 };
 
@@ -485,6 +536,10 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
   [anon_sym_LBRACE] = {
     .visible = true,
     .named = false,
+  },
+  [anon_sym_ATinheritdoc] = {
+    .visible = true,
+    .named = true,
   },
   [anon_sym_ATinheritDoc] = {
     .visible = true,
@@ -506,6 +561,10 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
+  [anon_sym_ATinternal] = {
+    .visible = true,
+    .named = true,
+  },
   [anon_sym_ATcategory] = {
     .visible = true,
     .named = true,
@@ -520,27 +579,27 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
   },
   [anon_sym_ATexample] = {
     .visible = true,
-    .named = false,
+    .named = true,
   },
   [anon_sym_ATlicense] = {
     .visible = true,
-    .named = false,
+    .named = true,
   },
   [anon_sym_ATpackage] = {
     .visible = true,
-    .named = false,
+    .named = true,
   },
   [anon_sym_ATsource] = {
     .visible = true,
-    .named = false,
+    .named = true,
   },
   [anon_sym_ATsubpackage] = {
     .visible = true,
-    .named = false,
+    .named = true,
   },
   [anon_sym_ATuses] = {
     .visible = true,
-    .named = false,
+    .named = true,
   },
   [anon_sym_ATauthor] = {
     .visible = true,
@@ -558,17 +617,9 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
-  [anon_sym_ATinternal] = {
-    .visible = true,
-    .named = true,
-  },
   [anon_sym_ATlink] = {
     .visible = true,
     .named = true,
-  },
-  [anon_sym_LPAREN_RPAREN] = {
-    .visible = true,
-    .named = false,
   },
   [anon_sym_ATmethod] = {
     .visible = true,
@@ -595,6 +646,10 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .named = true,
   },
   [anon_sym_ATsee] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_LPAREN_RPAREN] = {
     .visible = true,
     .named = true,
   },
@@ -834,12 +889,20 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
-  [sym_text] = {
-    .visible = true,
-    .named = true,
+  [aux_sym_version_token1] = {
+    .visible = false,
+    .named = false,
   },
-  [sym_version] = {
+  [aux_sym_version_token2] = {
+    .visible = false,
+    .named = false,
+  },
+  [anon_sym_ATpackage_version_AT] = {
     .visible = true,
+    .named = false,
+  },
+  [sym__version_vector] = {
+    .visible = false,
     .named = true,
   },
   [sym_uri] = {
@@ -866,8 +929,44 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = true,
   },
+  [sym_text] = {
+    .visible = true,
+    .named = true,
+  },
+  [sym__text_after_type] = {
+    .visible = true,
+    .named = true,
+  },
+  [sym__text_in_inline_tag] = {
+    .visible = true,
+    .named = true,
+  },
+  [sym__text_not_version] = {
+    .visible = true,
+    .named = true,
+  },
   [sym_document] = {
     .visible = true,
+    .named = true,
+  },
+  [sym_description] = {
+    .visible = true,
+    .named = true,
+  },
+  [sym__description_after_type] = {
+    .visible = false,
+    .named = true,
+  },
+  [sym__description_not_version] = {
+    .visible = false,
+    .named = true,
+  },
+  [sym__description_in_inline_tag] = {
+    .visible = false,
+    .named = true,
+  },
+  [sym__description_in_inline_tag_with_nesting] = {
+    .visible = false,
     .named = true,
   },
   [sym_tag] = {
@@ -878,20 +977,20 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
-  [sym__simple_tag_without_description] = {
+  [sym__tag_without_description] = {
     .visible = false,
     .named = true,
   },
-  [sym__simple_tag_with_optional_description] = {
+  [sym__tag_with_optional_description] = {
     .visible = false,
     .named = true,
   },
-  [sym__simple_tag_with_required_description] = {
+  [sym__tag_with_required_description] = {
     .visible = false,
     .named = true,
   },
-  [sym__currently_incomplete_tags] = {
-    .visible = true,
+  [sym__tag_with_incomplete_implementation] = {
+    .visible = false,
     .named = true,
   },
   [sym__author_tag] = {
@@ -902,11 +1001,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = true,
   },
-  [sym__internal_tag] = {
-    .visible = false,
-    .named = true,
-  },
-  [sym__internal_inline_tag] = {
+  [sym__inline_internal_tag] = {
     .visible = false,
     .named = true,
   },
@@ -914,7 +1009,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = true,
   },
-  [sym__link_inline_tag] = {
+  [sym__inline_link_tag] = {
     .visible = false,
     .named = true,
   },
@@ -938,7 +1033,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = true,
   },
-  [sym__see_inline_tag] = {
+  [sym__inline_see_tag] = {
     .visible = false,
     .named = true,
   },
@@ -947,6 +1042,14 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .named = true,
   },
   [sym__var_tag] = {
+    .visible = false,
+    .named = true,
+  },
+  [sym__deprecated_tag] = {
+    .visible = false,
+    .named = true,
+  },
+  [sym__since_tag] = {
     .visible = false,
     .named = true,
   },
@@ -1014,7 +1117,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
-  [sym_description] = {
+  [sym_version] = {
     .visible = true,
     .named = true,
   },
@@ -1034,6 +1137,26 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = false,
   },
+  [aux_sym_description_repeat1] = {
+    .visible = false,
+    .named = false,
+  },
+  [aux_sym__description_after_type_repeat1] = {
+    .visible = false,
+    .named = false,
+  },
+  [aux_sym__description_not_version_repeat1] = {
+    .visible = false,
+    .named = false,
+  },
+  [aux_sym__description_in_inline_tag_repeat1] = {
+    .visible = false,
+    .named = false,
+  },
+  [aux_sym__description_in_inline_tag_with_nesting_repeat1] = {
+    .visible = false,
+    .named = false,
+  },
   [aux_sym__phpdoc_array_types_repeat1] = {
     .visible = false,
     .named = false,
@@ -1043,10 +1166,6 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .named = false,
   },
   [aux_sym_union_type_repeat1] = {
-    .visible = false,
-    .named = false,
-  },
-  [aux_sym_description_repeat1] = {
     .visible = false,
     .named = false,
   },
@@ -1069,9 +1188,9 @@ static const char *ts_field_names[] = {
   [field_value] = "value",
 };
 
-static const TSFieldMapSlice ts_field_map_slices[6] = {
-  [4] = {.index = 0, .length = 2},
-  [5] = {.index = 2, .length = 3},
+static const TSFieldMapSlice ts_field_map_slices[5] = {
+  [3] = {.index = 0, .length = 2},
+  [4] = {.index = 2, .length = 3},
 };
 
 static const TSFieldMapEntry ts_field_map_entries[] = {
@@ -1084,20 +1203,32 @@ static const TSFieldMapEntry ts_field_map_entries[] = {
     {field_value, 4},
 };
 
-static TSSymbol ts_alias_sequences[6][MAX_ALIAS_SEQUENCE_LENGTH] = {
+static TSSymbol ts_alias_sequences[5][MAX_ALIAS_SEQUENCE_LENGTH] = {
   [0] = {0},
   [1] = {
-    [1] = sym_description,
+    [1] = anon_sym_LPAREN_RPAREN,
   },
   [2] = {
-    [2] = sym_description,
-  },
-  [3] = {
-    [3] = sym_description,
+    [0] = sym_description,
   },
 };
 
 static uint16_t ts_non_terminal_alias_map[] = {
+  sym_qualified_name, 2,
+    sym_qualified_name,
+    anon_sym_LPAREN_RPAREN,
+  aux_sym__description_after_type_repeat1, 2,
+    aux_sym__description_after_type_repeat1,
+    sym_description,
+  aux_sym__description_not_version_repeat1, 2,
+    aux_sym__description_not_version_repeat1,
+    sym_description,
+  aux_sym__description_in_inline_tag_repeat1, 2,
+    aux_sym__description_in_inline_tag_repeat1,
+    sym_description,
+  aux_sym__description_in_inline_tag_with_nesting_repeat1, 2,
+    aux_sym__description_in_inline_tag_with_nesting_repeat1,
+    sym_description,
   0,
 };
 
@@ -1106,2527 +1237,2351 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
   eof = lexer->eof(lexer);
   switch (state) {
     case 0:
-      if (eof) ADVANCE(464);
-      if (lookahead == '\t') SKIP(0)
-      if (lookahead == '\n') SKIP(463)
-      if (lookahead == '\r') SKIP(463)
-      if (lookahead == ' ') SKIP(0)
-      if (lookahead == '$') ADVANCE(555);
-      if (lookahead == '(') ADVANCE(579);
-      if (lookahead == ')') ADVANCE(580);
-      if (lookahead == '*') ADVANCE(1);
-      if (lookahead == ',') ADVANCE(533);
-      if (lookahead == '<') ADVANCE(482);
-      if (lookahead == '=') ADVANCE(581);
-      if (lookahead == '>') ADVANCE(483);
-      if (lookahead == '?') ADVANCE(553);
-      if (lookahead == '@') ADVANCE(66);
-      if (lookahead == '[') ADVANCE(565);
-      if (lookahead == '\\') ADVANCE(552);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead == '|') ADVANCE(554);
-      if (lookahead == '}') ADVANCE(468);
+      if (eof) ADVANCE(468);
+      if (lookahead == '\n') SKIP(467)
+      if (lookahead == '$') ADVANCE(560);
+      if (lookahead == '(') ADVANCE(573);
+      if (lookahead == ')') ADVANCE(574);
+      if (lookahead == '*') ADVANCE(30);
+      if (lookahead == ',') ADVANCE(538);
+      if (lookahead == '/') ADVANCE(26);
+      if (lookahead == '<') ADVANCE(488);
+      if (lookahead == '=') ADVANCE(575);
+      if (lookahead == '>') ADVANCE(489);
+      if (lookahead == '?') ADVANCE(558);
+      if (lookahead == '@') ADVANCE(57);
+      if (lookahead == '[') ADVANCE(55);
+      if (lookahead == '\\') ADVANCE(557);
+      if (lookahead == '{') ADVANCE(470);
+      if (lookahead == '|') ADVANCE(559);
+      if (lookahead == '}') ADVANCE(473);
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(543);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(569);
+          lookahead == 'n') ADVANCE(548);
+      if (lookahead == '\t' ||
+          lookahead == '\r' ||
+          lookahead == ' ') SKIP(0)
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(27);
       if (('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z') ||
-          (161 <= lookahead && lookahead <= 255)) ADVANCE(551);
-      if (lookahead != 0) ADVANCE(567);
+          (161 <= lookahead && lookahead <= 255)) ADVANCE(556);
       END_STATE();
     case 1:
-      if (lookahead == '\t') SKIP(2)
-      if (lookahead == '\n') SKIP(2)
+      if (lookahead == '\n') SKIP(1)
       if (lookahead == '\r') SKIP(2)
-      if (lookahead == ' ') SKIP(2)
-      if (lookahead == '$') ADVANCE(555);
-      if (lookahead == '(') ADVANCE(579);
-      if (lookahead == ')') ADVANCE(580);
-      if (lookahead == '*') ADVANCE(1);
-      if (lookahead == ',') ADVANCE(533);
-      if (lookahead == '/') ADVANCE(584);
-      if (lookahead == '<') ADVANCE(482);
-      if (lookahead == '=') ADVANCE(581);
-      if (lookahead == '>') ADVANCE(483);
-      if (lookahead == '?') ADVANCE(553);
-      if (lookahead == '@') ADVANCE(66);
-      if (lookahead == '[') ADVANCE(565);
-      if (lookahead == '\\') ADVANCE(552);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead == '|') ADVANCE(554);
-      if (lookahead == '}') ADVANCE(468);
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(543);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(569);
-      if (('A' <= lookahead && lookahead <= 'Z') ||
+      if (lookahead == '$') ADVANCE(464);
+      if (lookahead == '(') ADVANCE(24);
+      if (lookahead == '*') SKIP(1)
+      if (lookahead == '/') ADVANCE(26);
+      if (lookahead == '@') ADVANCE(328);
+      if (lookahead == '{') ADVANCE(470);
+      if (lookahead == '}') ADVANCE(473);
+      if (lookahead == '\t' ||
+          lookahead == ' ') SKIP(1)
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(27);
+      if (lookahead == '-' ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z') ||
-          (161 <= lookahead && lookahead <= 255)) ADVANCE(551);
-      if (lookahead != 0) ADVANCE(567);
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(32);
       END_STATE();
     case 2:
-      if (lookahead == '\t') SKIP(2)
-      if (lookahead == '\n') SKIP(2)
-      if (lookahead == '\r') SKIP(2)
-      if (lookahead == ' ') SKIP(2)
-      if (lookahead == '$') ADVANCE(555);
-      if (lookahead == '(') ADVANCE(579);
-      if (lookahead == ')') ADVANCE(580);
-      if (lookahead == '*') ADVANCE(1);
-      if (lookahead == ',') ADVANCE(533);
-      if (lookahead == '<') ADVANCE(482);
-      if (lookahead == '=') ADVANCE(581);
-      if (lookahead == '>') ADVANCE(483);
-      if (lookahead == '?') ADVANCE(553);
-      if (lookahead == '@') ADVANCE(66);
-      if (lookahead == '[') ADVANCE(565);
-      if (lookahead == '\\') ADVANCE(552);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead == '|') ADVANCE(554);
-      if (lookahead == '}') ADVANCE(468);
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(543);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(569);
-      if (('A' <= lookahead && lookahead <= 'Z') ||
+      if (lookahead == '\n') SKIP(1)
+      if (lookahead == '$') ADVANCE(464);
+      if (lookahead == '(') ADVANCE(24);
+      if (lookahead == '/') ADVANCE(26);
+      if (lookahead == '@') ADVANCE(328);
+      if (lookahead == '{') ADVANCE(470);
+      if (lookahead == '}') ADVANCE(473);
+      if (lookahead == '\t' ||
+          lookahead == '\r' ||
+          lookahead == ' ') SKIP(2)
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(27);
+      if (lookahead == '-' ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z') ||
-          (161 <= lookahead && lookahead <= 255)) ADVANCE(551);
-      if (lookahead != 0) ADVANCE(567);
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(32);
       END_STATE();
     case 3:
-      if (lookahead == '\t') SKIP(3)
-      if (lookahead == '\n') SKIP(3)
-      if (lookahead == '\r') SKIP(3)
-      if (lookahead == ' ') SKIP(3)
-      if (lookahead == '$') ADVANCE(555);
-      if (lookahead == '(') ADVANCE(579);
-      if (lookahead == ')') ADVANCE(580);
-      if (lookahead == '*') SKIP(3)
-      if (lookahead == ',') ADVANCE(533);
-      if (lookahead == '/') ADVANCE(40);
-      if (lookahead == '<') ADVANCE(482);
-      if (lookahead == '=') ADVANCE(581);
-      if (lookahead == '>') ADVANCE(483);
-      if (lookahead == '?') ADVANCE(553);
-      if (lookahead == '[') ADVANCE(65);
-      if (lookahead == '\\') ADVANCE(552);
-      if (lookahead == '|') ADVANCE(554);
+      if (lookahead == '\n') SKIP(4)
+      if (lookahead == '\r') SKIP(5)
+      if (lookahead == '$') ADVANCE(464);
+      if (lookahead == '(') ADVANCE(24);
+      if (lookahead == ')') ADVANCE(574);
+      if (lookahead == '*') ADVANCE(3);
+      if (lookahead == ',') ADVANCE(538);
+      if (lookahead == '/') ADVANCE(579);
+      if (lookahead == '<') ADVANCE(488);
+      if (lookahead == '=') ADVANCE(575);
+      if (lookahead == '@') ADVANCE(57);
+      if (lookahead == '[') ADVANCE(55);
+      if (lookahead == '\\') ADVANCE(557);
+      if (lookahead == '{') ADVANCE(470);
+      if (lookahead == '|') ADVANCE(559);
+      if (lookahead == '\t' ||
+          lookahead == ' ') SKIP(4)
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(27);
+      if (lookahead == '-' ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(32);
+      END_STATE();
+    case 4:
+      if (lookahead == '\n') SKIP(4)
+      if (lookahead == '\r') SKIP(5)
+      if (lookahead == '$') ADVANCE(464);
+      if (lookahead == '(') ADVANCE(24);
+      if (lookahead == ')') ADVANCE(574);
+      if (lookahead == '*') ADVANCE(3);
+      if (lookahead == ',') ADVANCE(538);
+      if (lookahead == '<') ADVANCE(488);
+      if (lookahead == '=') ADVANCE(575);
+      if (lookahead == '@') ADVANCE(57);
+      if (lookahead == '[') ADVANCE(55);
+      if (lookahead == '\\') ADVANCE(557);
+      if (lookahead == '{') ADVANCE(470);
+      if (lookahead == '|') ADVANCE(559);
+      if (lookahead == '\t' ||
+          lookahead == ' ') SKIP(4)
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(27);
+      if (lookahead == '-' ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(32);
+      END_STATE();
+    case 5:
+      if (lookahead == '\n') SKIP(4)
+      if (lookahead == '$') ADVANCE(464);
+      if (lookahead == '(') ADVANCE(24);
+      if (lookahead == ')') ADVANCE(574);
+      if (lookahead == '*') ADVANCE(30);
+      if (lookahead == ',') ADVANCE(538);
+      if (lookahead == '<') ADVANCE(488);
+      if (lookahead == '=') ADVANCE(575);
+      if (lookahead == '@') ADVANCE(57);
+      if (lookahead == '[') ADVANCE(55);
+      if (lookahead == '\\') ADVANCE(557);
+      if (lookahead == '{') ADVANCE(470);
+      if (lookahead == '|') ADVANCE(559);
+      if (lookahead == '\t' ||
+          lookahead == '\r' ||
+          lookahead == ' ') SKIP(5)
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(27);
+      if (lookahead == '-' ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(32);
+      END_STATE();
+    case 6:
+      if (lookahead == '\n') SKIP(6)
+      if (lookahead == '\r') SKIP(7)
+      if (lookahead == '*') SKIP(6)
+      if (lookahead == '\\') ADVANCE(557);
+      if (lookahead == '\t' ||
+          lookahead == ' ') SKIP(6)
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(543);
+          lookahead == 'n') ADVANCE(539);
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(33);
+      if (('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(547);
+      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(556);
+      END_STATE();
+    case 7:
+      if (lookahead == '\n') SKIP(6)
+      if (lookahead == '\\') ADVANCE(557);
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(539);
+      if (lookahead == '\t' ||
+          lookahead == '\r' ||
+          lookahead == ' ') SKIP(7)
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(33);
+      if (('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(547);
+      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(556);
+      END_STATE();
+    case 8:
+      if (lookahead == '\n') SKIP(8)
+      if (lookahead == '\r') SKIP(10)
+      if (lookahead == '*') ADVANCE(564);
+      if (lookahead == '\t' ||
+          lookahead == ' ') SKIP(8)
+      if (lookahead != 0) ADVANCE(562);
+      END_STATE();
+    case 9:
+      if (lookahead == '\n') SKIP(8)
+      if (lookahead == '\r') SKIP(10)
+      if (lookahead == '*') ADVANCE(565);
+      if (lookahead == '<') ADVANCE(562);
+      if (lookahead == '\t' ||
+          lookahead == ' ') SKIP(8)
+      if (lookahead != 0) ADVANCE(561);
+      END_STATE();
+    case 10:
+      if (lookahead == '\n') SKIP(8)
+      if (lookahead == '\t' ||
+          lookahead == '\r' ||
+          lookahead == ' ') SKIP(10)
+      if (lookahead != 0) ADVANCE(562);
+      END_STATE();
+    case 11:
+      if (lookahead == '\n') ADVANCE(576);
+      if (lookahead == ' ') SKIP(11)
+      if (lookahead == '\t' ||
+          lookahead == '\r') ADVANCE(577);
+      if (lookahead != 0 &&
+          lookahead != ',') ADVANCE(578);
+      END_STATE();
+    case 12:
+      if (lookahead == '\n') SKIP(12)
+      if (lookahead == '\r') SKIP(14)
+      if (lookahead == '$') ADVANCE(560);
+      if (lookahead == '(') ADVANCE(573);
+      if (lookahead == ')') ADVANCE(574);
+      if (lookahead == '*') ADVANCE(13);
+      if (lookahead == ',') ADVANCE(538);
+      if (lookahead == '/') ADVANCE(26);
+      if (lookahead == '<') ADVANCE(488);
+      if (lookahead == '=') ADVANCE(575);
+      if (lookahead == '>') ADVANCE(489);
+      if (lookahead == '?') ADVANCE(558);
+      if (lookahead == '@') ADVANCE(57);
+      if (lookahead == '[') ADVANCE(55);
+      if (lookahead == '\\') ADVANCE(557);
+      if (lookahead == '{') ADVANCE(470);
+      if (lookahead == '|') ADVANCE(559);
+      if (lookahead == '}') ADVANCE(473);
+      if (lookahead == '\t' ||
+          lookahead == ' ') SKIP(12)
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(548);
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(27);
       if (('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z') ||
-          (161 <= lookahead && lookahead <= 255)) ADVANCE(551);
-      END_STATE();
-    case 4:
-      if (lookahead == '\t') SKIP(5)
-      if (lookahead == '\n') SKIP(5)
-      if (lookahead == '\r') SKIP(5)
-      if (lookahead == ' ') SKIP(5)
-      if (lookahead == '*') ADVANCE(4);
-      if (lookahead == '/') ADVANCE(584);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead != 0 &&
-          lookahead != '\\') ADVANCE(567);
-      END_STATE();
-    case 5:
-      if (lookahead == '\t') SKIP(5)
-      if (lookahead == '\n') SKIP(5)
-      if (lookahead == '\r') SKIP(5)
-      if (lookahead == ' ') SKIP(5)
-      if (lookahead == '*') ADVANCE(4);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead != 0 &&
-          lookahead != '\\') ADVANCE(567);
-      END_STATE();
-    case 6:
-      if (lookahead == '\t') SKIP(7)
-      if (lookahead == '\n') SKIP(7)
-      if (lookahead == '\r') SKIP(7)
-      if (lookahead == ' ') SKIP(7)
-      if (lookahead == '$') ADVANCE(555);
-      if (lookahead == '*') ADVANCE(6);
-      if (lookahead == '/') ADVANCE(584);
-      if (lookahead == '<') ADVANCE(482);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '[') ADVANCE(565);
-      if (lookahead == '\\') ADVANCE(552);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead == '|') ADVANCE(554);
-      if (lookahead != 0) ADVANCE(567);
-      END_STATE();
-    case 7:
-      if (lookahead == '\t') SKIP(7)
-      if (lookahead == '\n') SKIP(7)
-      if (lookahead == '\r') SKIP(7)
-      if (lookahead == ' ') SKIP(7)
-      if (lookahead == '$') ADVANCE(555);
-      if (lookahead == '*') ADVANCE(6);
-      if (lookahead == '<') ADVANCE(482);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '[') ADVANCE(565);
-      if (lookahead == '\\') ADVANCE(552);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead == '|') ADVANCE(554);
-      if (lookahead != 0) ADVANCE(567);
-      END_STATE();
-    case 8:
-      if (lookahead == '\t') SKIP(9)
-      if (lookahead == '\n') SKIP(9)
-      if (lookahead == '\r') SKIP(9)
-      if (lookahead == ' ') SKIP(9)
-      if (lookahead == '$') ADVANCE(555);
-      if (lookahead == '*') ADVANCE(8);
-      if (lookahead == '/') ADVANCE(584);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead != 0 &&
-          lookahead != '\\') ADVANCE(567);
-      END_STATE();
-    case 9:
-      if (lookahead == '\t') SKIP(9)
-      if (lookahead == '\n') SKIP(9)
-      if (lookahead == '\r') SKIP(9)
-      if (lookahead == ' ') SKIP(9)
-      if (lookahead == '$') ADVANCE(555);
-      if (lookahead == '*') ADVANCE(8);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead != 0 &&
-          lookahead != '\\') ADVANCE(567);
-      END_STATE();
-    case 10:
-      if (lookahead == '\t') SKIP(11)
-      if (lookahead == '\n') SKIP(11)
-      if (lookahead == '\r') SKIP(11)
-      if (lookahead == ' ') SKIP(11)
-      if (lookahead == '*') ADVANCE(10);
-      if (lookahead == '/') ADVANCE(584);
-      if (lookahead == '<') ADVANCE(482);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '[') ADVANCE(565);
-      if (lookahead == '\\') ADVANCE(552);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead == '|') ADVANCE(554);
-      if (lookahead != 0) ADVANCE(567);
-      END_STATE();
-    case 11:
-      if (lookahead == '\t') SKIP(11)
-      if (lookahead == '\n') SKIP(11)
-      if (lookahead == '\r') SKIP(11)
-      if (lookahead == ' ') SKIP(11)
-      if (lookahead == '*') ADVANCE(10);
-      if (lookahead == '<') ADVANCE(482);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '[') ADVANCE(565);
-      if (lookahead == '\\') ADVANCE(552);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead == '|') ADVANCE(554);
-      if (lookahead != 0) ADVANCE(567);
-      END_STATE();
-    case 12:
-      if (lookahead == '\t') SKIP(13)
-      if (lookahead == '\n') SKIP(13)
-      if (lookahead == '\r') SKIP(13)
-      if (lookahead == ' ') SKIP(13)
-      if (lookahead == '(') ADVANCE(562);
-      if (lookahead == '*') ADVANCE(12);
-      if (lookahead == '/') ADVANCE(584);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead != 0 &&
-          lookahead != '\\') ADVANCE(567);
+          (161 <= lookahead && lookahead <= 255)) ADVANCE(556);
       END_STATE();
     case 13:
-      if (lookahead == '\t') SKIP(13)
-      if (lookahead == '\n') SKIP(13)
-      if (lookahead == '\r') SKIP(13)
-      if (lookahead == ' ') SKIP(13)
-      if (lookahead == '(') ADVANCE(562);
-      if (lookahead == '*') ADVANCE(12);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead != 0 &&
-          lookahead != '\\') ADVANCE(567);
-      END_STATE();
-    case 14:
-      if (lookahead == '\t') SKIP(15)
-      if (lookahead == '\n') SKIP(15)
-      if (lookahead == '\r') SKIP(15)
-      if (lookahead == ' ') SKIP(15)
-      if (lookahead == '$') ADVANCE(555);
-      if (lookahead == '*') ADVANCE(14);
-      if (lookahead == '/') ADVANCE(584);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '[') ADVANCE(565);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead == '|') ADVANCE(554);
-      if (lookahead != 0 &&
-          lookahead != '\\') ADVANCE(567);
-      END_STATE();
-    case 15:
-      if (lookahead == '\t') SKIP(15)
-      if (lookahead == '\n') SKIP(15)
-      if (lookahead == '\r') SKIP(15)
-      if (lookahead == ' ') SKIP(15)
-      if (lookahead == '$') ADVANCE(555);
-      if (lookahead == '*') ADVANCE(14);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '[') ADVANCE(565);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead == '|') ADVANCE(554);
-      if (lookahead != 0 &&
-          lookahead != '\\') ADVANCE(567);
-      END_STATE();
-    case 16:
-      if (lookahead == '\t') SKIP(17)
-      if (lookahead == '\n') SKIP(17)
-      if (lookahead == '\r') SKIP(17)
-      if (lookahead == ' ') SKIP(17)
-      if (lookahead == '*') ADVANCE(16);
-      if (lookahead == '/') ADVANCE(584);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '{') ADVANCE(466);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(569);
-      if (lookahead != 0 &&
-          lookahead != '\\') ADVANCE(567);
-      END_STATE();
-    case 17:
-      if (lookahead == '\t') SKIP(17)
-      if (lookahead == '\n') SKIP(17)
-      if (lookahead == '\r') SKIP(17)
-      if (lookahead == ' ') SKIP(17)
-      if (lookahead == '*') ADVANCE(16);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '{') ADVANCE(466);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(569);
-      if (lookahead != 0 &&
-          lookahead != '\\') ADVANCE(567);
-      END_STATE();
-    case 18:
-      if (lookahead == '\t') SKIP(19)
-      if (lookahead == '\n') SKIP(19)
-      if (lookahead == '\r') SKIP(19)
-      if (lookahead == ' ') SKIP(19)
-      if (lookahead == '$') ADVANCE(555);
-      if (lookahead == '*') ADVANCE(18);
-      if (lookahead == '/') ADVANCE(584);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead == '|') ADVANCE(554);
-      if (lookahead != 0 &&
-          lookahead != '\\') ADVANCE(567);
-      END_STATE();
-    case 19:
-      if (lookahead == '\t') SKIP(19)
-      if (lookahead == '\n') SKIP(19)
-      if (lookahead == '\r') SKIP(19)
-      if (lookahead == ' ') SKIP(19)
-      if (lookahead == '$') ADVANCE(555);
-      if (lookahead == '*') ADVANCE(18);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead == '|') ADVANCE(554);
-      if (lookahead != 0 &&
-          lookahead != '\\') ADVANCE(567);
-      END_STATE();
-    case 20:
-      if (lookahead == '\t') SKIP(21)
-      if (lookahead == '\n') SKIP(21)
-      if (lookahead == '\r') SKIP(21)
-      if (lookahead == ' ') SKIP(21)
-      if (lookahead == '*') ADVANCE(20);
-      if (lookahead == '/') ADVANCE(584);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '[') ADVANCE(565);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead == '|') ADVANCE(554);
-      if (lookahead != 0 &&
-          lookahead != '\\') ADVANCE(567);
-      END_STATE();
-    case 21:
-      if (lookahead == '\t') SKIP(21)
-      if (lookahead == '\n') SKIP(21)
-      if (lookahead == '\r') SKIP(21)
-      if (lookahead == ' ') SKIP(21)
-      if (lookahead == '*') ADVANCE(20);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '[') ADVANCE(565);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead == '|') ADVANCE(554);
-      if (lookahead != 0 &&
-          lookahead != '\\') ADVANCE(567);
-      END_STATE();
-    case 22:
-      if (lookahead == '\t') SKIP(23)
-      if (lookahead == '\n') SKIP(23)
-      if (lookahead == '\r') SKIP(23)
-      if (lookahead == ' ') SKIP(23)
-      if (lookahead == '*') ADVANCE(22);
-      if (lookahead == '/') ADVANCE(584);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead == '|') ADVANCE(554);
-      if (lookahead != 0 &&
-          lookahead != '\\') ADVANCE(567);
-      END_STATE();
-    case 23:
-      if (lookahead == '\t') SKIP(23)
-      if (lookahead == '\n') SKIP(23)
-      if (lookahead == '\r') SKIP(23)
-      if (lookahead == ' ') SKIP(23)
-      if (lookahead == '*') ADVANCE(22);
-      if (lookahead == '@') ADVANCE(67);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead == '|') ADVANCE(554);
-      if (lookahead != 0 &&
-          lookahead != '\\') ADVANCE(567);
-      END_STATE();
-    case 24:
-      if (lookahead == '\t') SKIP(24)
-      if (lookahead == '\n') SKIP(24)
-      if (lookahead == '\r') SKIP(24)
-      if (lookahead == ' ') SKIP(24)
-      if (lookahead == '*') SKIP(24)
-      if (lookahead == '\\') ADVANCE(552);
+      if (lookahead == '\n') SKIP(12)
+      if (lookahead == '\r') SKIP(14)
+      if (lookahead == '$') ADVANCE(560);
+      if (lookahead == '(') ADVANCE(573);
+      if (lookahead == ')') ADVANCE(574);
+      if (lookahead == '*') ADVANCE(13);
+      if (lookahead == ',') ADVANCE(538);
+      if (lookahead == '/') ADVANCE(580);
+      if (lookahead == '<') ADVANCE(488);
+      if (lookahead == '=') ADVANCE(575);
+      if (lookahead == '>') ADVANCE(489);
+      if (lookahead == '?') ADVANCE(558);
+      if (lookahead == '@') ADVANCE(57);
+      if (lookahead == '[') ADVANCE(55);
+      if (lookahead == '\\') ADVANCE(557);
+      if (lookahead == '{') ADVANCE(470);
+      if (lookahead == '|') ADVANCE(559);
+      if (lookahead == '}') ADVANCE(473);
+      if (lookahead == '\t' ||
+          lookahead == ' ') SKIP(12)
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(534);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(44);
+          lookahead == 'n') ADVANCE(548);
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(27);
       if (('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(542);
-      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(551);
+          ('a' <= lookahead && lookahead <= 'z') ||
+          (161 <= lookahead && lookahead <= 255)) ADVANCE(556);
+      END_STATE();
+    case 14:
+      if (lookahead == '\n') SKIP(12)
+      if (lookahead == '$') ADVANCE(560);
+      if (lookahead == '(') ADVANCE(573);
+      if (lookahead == ')') ADVANCE(574);
+      if (lookahead == '*') ADVANCE(30);
+      if (lookahead == ',') ADVANCE(538);
+      if (lookahead == '/') ADVANCE(26);
+      if (lookahead == '<') ADVANCE(488);
+      if (lookahead == '=') ADVANCE(575);
+      if (lookahead == '>') ADVANCE(489);
+      if (lookahead == '?') ADVANCE(558);
+      if (lookahead == '@') ADVANCE(57);
+      if (lookahead == '[') ADVANCE(55);
+      if (lookahead == '\\') ADVANCE(557);
+      if (lookahead == '{') ADVANCE(470);
+      if (lookahead == '|') ADVANCE(559);
+      if (lookahead == '}') ADVANCE(473);
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(548);
+      if (lookahead == '\t' ||
+          lookahead == '\r' ||
+          lookahead == ' ') SKIP(14)
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(27);
+      if (('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z') ||
+          (161 <= lookahead && lookahead <= 255)) ADVANCE(556);
+      END_STATE();
+    case 15:
+      if (lookahead == '\n') SKIP(16)
+      if (lookahead == '\r') SKIP(17)
+      if (lookahead == '*') ADVANCE(15);
+      if (lookahead == '@') ADVANCE(35);
+      if (lookahead == '\t' ||
+          lookahead == ' ') SKIP(16)
+      if (lookahead != 0) ADVANCE(36);
+      END_STATE();
+    case 16:
+      if (lookahead == '\n') SKIP(16)
+      if (lookahead == '\r') SKIP(17)
+      if (lookahead == '*') ADVANCE(15);
+      if (lookahead == '\t' ||
+          lookahead == ' ') SKIP(16)
+      if (lookahead != 0) ADVANCE(36);
+      END_STATE();
+    case 17:
+      if (lookahead == '\n') SKIP(16)
+      if (lookahead == '\t' ||
+          lookahead == '\r' ||
+          lookahead == ' ') SKIP(17)
+      if (lookahead != 0) ADVANCE(36);
+      END_STATE();
+    case 18:
+      if (lookahead == ' ') ADVANCE(126);
+      END_STATE();
+    case 19:
+      if (lookahead == ' ') ADVANCE(403);
+      END_STATE();
+    case 20:
+      if (lookahead == ' ') ADVANCE(152);
+      END_STATE();
+    case 21:
+      if (lookahead == ' ') ADVANCE(427);
+      END_STATE();
+    case 22:
+      if (lookahead == ' ') ADVANCE(96);
+      END_STATE();
+    case 23:
+      if (lookahead == '$') ADVANCE(570);
+      if (lookahead == '-' ||
+          ('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(23);
+      END_STATE();
+    case 24:
+      if (lookahead == ')') ADVANCE(499);
       END_STATE();
     case 25:
-      if (lookahead == '\t') SKIP(25)
-      if (lookahead == '\n') SKIP(25)
-      if (lookahead == '\r') SKIP(25)
-      if (lookahead == ' ') SKIP(25)
-      if (lookahead == '*') SKIP(25)
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead != 0 &&
-          lookahead != '@' &&
-          lookahead != '\\') ADVANCE(567);
+      if (lookahead == '*') ADVANCE(469);
       END_STATE();
     case 26:
-      if (lookahead == '\t') SKIP(26)
-      if (lookahead == '\n') SKIP(26)
-      if (lookahead == '\r') SKIP(26)
-      if (lookahead == ' ') SKIP(26)
-      if (lookahead == '(') ADVANCE(562);
-      if (lookahead == '*') SKIP(26)
-      if (lookahead == '}') ADVANCE(468);
-      if (lookahead != 0 &&
-          lookahead != '@' &&
-          lookahead != '\\') ADVANCE(567);
+      if (lookahead == '*') ADVANCE(25);
       END_STATE();
     case 27:
-      if (lookahead == '\t') SKIP(27)
-      if (lookahead == '\n') SKIP(27)
-      if (lookahead == '\r') SKIP(27)
-      if (lookahead == ' ') SKIP(27)
-      if (lookahead == '*') SKIP(27)
-      if (lookahead == '}') ADVANCE(468);
-      if (lookahead != 0 &&
-          lookahead != '@' &&
-          lookahead != '\\') ADVANCE(567);
+      if (lookahead == '.') ADVANCE(465);
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(27);
       END_STATE();
     case 28:
-      if (lookahead == '\t') SKIP(28)
-      if (lookahead == '\n') SKIP(28)
-      if (lookahead == '\r') SKIP(28)
-      if (lookahead == ' ') SKIP(28)
-      if (lookahead == '*') SKIP(28)
+      if (lookahead == '.') ADVANCE(29);
+      if (lookahead == '@') ADVANCE(28);
       if (lookahead != 0 &&
-          lookahead != '@' &&
-          lookahead != '\\') ADVANCE(567);
+          lookahead != '\t' &&
+          lookahead != '\n' &&
+          lookahead != '\r' &&
+          lookahead != ' ') ADVANCE(28);
       END_STATE();
     case 29:
-      if (lookahead == '\t') ADVANCE(582);
-      if (lookahead == '\n') ADVANCE(582);
-      if (lookahead == '\r') ADVANCE(582);
-      if (lookahead == ' ') SKIP(29)
-      if (lookahead == '*') ADVANCE(582);
+      if (lookahead == '.') ADVANCE(566);
+      if (lookahead == '>') ADVANCE(28);
+      if (lookahead == '@') ADVANCE(566);
       if (lookahead != 0 &&
-          lookahead != ',') ADVANCE(583);
+          lookahead != '\t' &&
+          lookahead != '\n' &&
+          lookahead != '\r' &&
+          lookahead != ' ') ADVANCE(566);
       END_STATE();
     case 30:
-      if (lookahead == '\t') SKIP(31)
-      if (lookahead == '\n') SKIP(31)
-      if (lookahead == '\r') SKIP(31)
-      if (lookahead == ' ') SKIP(31)
-      if (lookahead == '*') ADVANCE(30);
-      if (lookahead == '@') ADVANCE(45);
-      if (lookahead != 0) ADVANCE(46);
+      if (lookahead == '/') ADVANCE(579);
       END_STATE();
     case 31:
-      if (lookahead == '\t') SKIP(31)
-      if (lookahead == '\n') SKIP(31)
-      if (lookahead == '\r') SKIP(31)
-      if (lookahead == ' ') SKIP(31)
-      if (lookahead == '*') ADVANCE(30);
-      if (lookahead != 0) ADVANCE(46);
-      END_STATE();
-    case 32:
-      if (lookahead == '\t') SKIP(32)
-      if (lookahead == '\n') SKIP(32)
-      if (lookahead == '\r') SKIP(32)
-      if (lookahead == ' ') SKIP(32)
-      if (lookahead == '*') ADVANCE(556);
-      if (lookahead != 0) ADVANCE(559);
-      END_STATE();
-    case 33:
-      if (lookahead == '\t') SKIP(32)
-      if (lookahead == '\n') SKIP(32)
-      if (lookahead == '\r') SKIP(32)
-      if (lookahead == ' ') SKIP(32)
-      if (lookahead == '*') ADVANCE(557);
-      if (lookahead == '<') ADVANCE(559);
-      if (lookahead != 0) ADVANCE(558);
-      END_STATE();
-    case 34:
-      if (lookahead == ' ') ADVANCE(132);
-      END_STATE();
-    case 35:
-      if (lookahead == ' ') ADVANCE(399);
-      END_STATE();
-    case 36:
-      if (lookahead == ' ') ADVANCE(157);
-      END_STATE();
-    case 37:
-      if (lookahead == ' ') ADVANCE(422);
-      END_STATE();
-    case 38:
-      if (lookahead == ' ') ADVANCE(104);
-      END_STATE();
-    case 39:
-      if (lookahead == '*') ADVANCE(465);
-      END_STATE();
-    case 40:
-      if (lookahead == '*') ADVANCE(39);
-      END_STATE();
-    case 41:
-      if (lookahead == '.') ADVANCE(42);
-      if (lookahead == '@') ADVANCE(41);
-      if (lookahead != 0 &&
-          lookahead != '\t' &&
-          lookahead != '\n' &&
-          lookahead != '\r' &&
-          lookahead != ' ') ADVANCE(41);
-      END_STATE();
-    case 42:
-      if (lookahead == '.') ADVANCE(561);
-      if (lookahead == '>') ADVANCE(41);
-      if (lookahead == '@') ADVANCE(561);
-      if (lookahead != 0 &&
-          lookahead != '\t' &&
-          lookahead != '\n' &&
-          lookahead != '\r' &&
-          lookahead != ' ') ADVANCE(561);
-      END_STATE();
-    case 43:
-      if (lookahead == '/') ADVANCE(577);
+      if (lookahead == '/') ADVANCE(571);
       if (lookahead != 0 &&
           lookahead != '\t' &&
           lookahead != '\n' &&
           lookahead != '\r' &&
           lookahead != ' ' &&
-          lookahead != '}') ADVANCE(578);
+          lookahead != '}') ADVANCE(572);
       END_STATE();
-    case 44:
-      if (lookahead == ':') ADVANCE(43);
+    case 32:
+      if (lookahead == ':') ADVANCE(568);
+      if (lookahead == '-' ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(32);
+      END_STATE();
+    case 33:
+      if (lookahead == ':') ADVANCE(31);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(44);
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(33);
+      END_STATE();
+    case 34:
+      if (lookahead == '@') ADVANCE(569);
+      END_STATE();
+    case 35:
+      if (lookahead == '@') ADVANCE(28);
+      if (lookahead != 0 &&
+          lookahead != '\t' &&
+          lookahead != '\n' &&
+          lookahead != '\r' &&
+          lookahead != ' ') ADVANCE(28);
+      END_STATE();
+    case 36:
+      if (lookahead == '@') ADVANCE(35);
+      if (lookahead != 0 &&
+          lookahead != '\t' &&
+          lookahead != '\n' &&
+          lookahead != '\r' &&
+          lookahead != ' ') ADVANCE(36);
+      END_STATE();
+    case 37:
+      if (lookahead == 'A') ADVANCE(424);
+      END_STATE();
+    case 38:
+      if (lookahead == 'A') ADVANCE(404);
+      END_STATE();
+    case 39:
+      if (lookahead == 'C') ADVANCE(286);
+      END_STATE();
+    case 40:
+      if (lookahead == 'C') ADVANCE(251);
+      END_STATE();
+    case 41:
+      if (lookahead == 'D') ADVANCE(294);
+      if (lookahead == 'd') ADVANCE(295);
+      END_STATE();
+    case 42:
+      if (lookahead == 'G') ADVANCE(252);
+      if (lookahead == 'S') ADVANCE(422);
+      END_STATE();
+    case 43:
+      if (lookahead == 'G') ADVANCE(253);
+      END_STATE();
+    case 44:
+      if (lookahead == 'I') ADVANCE(206);
       END_STATE();
     case 45:
-      if (lookahead == '@') ADVANCE(41);
-      if (lookahead != 0 &&
-          lookahead != '\t' &&
-          lookahead != '\n' &&
-          lookahead != '\r' &&
-          lookahead != ' ') ADVANCE(41);
+      if (lookahead == 'I') ADVANCE(259);
+      if (lookahead == 'T') ADVANCE(181);
       END_STATE();
     case 46:
-      if (lookahead == '@') ADVANCE(45);
-      if (lookahead != 0 &&
-          lookahead != '\t' &&
-          lookahead != '\n' &&
-          lookahead != '\r' &&
-          lookahead != ' ') ADVANCE(46);
+      if (lookahead == 'I') ADVANCE(283);
       END_STATE();
     case 47:
-      if (lookahead == 'A') ADVANCE(420);
+      if (lookahead == 'N') ADVANCE(296);
       END_STATE();
     case 48:
-      if (lookahead == 'A') ADVANCE(400);
+      if (lookahead == 'P') ADVANCE(350);
       END_STATE();
     case 49:
-      if (lookahead == 'C') ADVANCE(287);
+      if (lookahead == 'P') ADVANCE(352);
       END_STATE();
     case 50:
-      if (lookahead == 'C') ADVANCE(253);
+      if (lookahead == 'P') ADVANCE(173);
       END_STATE();
     case 51:
-      if (lookahead == 'D') ADVANCE(295);
+      if (lookahead == 'P') ADVANCE(364);
       END_STATE();
     case 52:
-      if (lookahead == 'G') ADVANCE(254);
-      if (lookahead == 'S') ADVANCE(418);
+      if (lookahead == 'S') ADVANCE(183);
       END_STATE();
     case 53:
-      if (lookahead == 'G') ADVANCE(255);
+      if (lookahead == 'S') ADVANCE(441);
       END_STATE();
     case 54:
-      if (lookahead == 'I') ADVANCE(210);
+      if (lookahead == 'S') ADVANCE(191);
       END_STATE();
     case 55:
-      if (lookahead == 'I') ADVANCE(261);
-      if (lookahead == 'T') ADVANCE(186);
+      if (lookahead == ']') ADVANCE(537);
       END_STATE();
     case 56:
-      if (lookahead == 'I') ADVANCE(284);
+      if (lookahead == '_') ADVANCE(456);
       END_STATE();
     case 57:
-      if (lookahead == 'N') ADVANCE(297);
+      if (lookahead == 'a') ADVANCE(192);
+      if (lookahead == 'b') ADVANCE(58);
+      if (lookahead == 'c') ADVANCE(79);
+      if (lookahead == 'd') ADVANCE(65);
+      if (lookahead == 'e') ADVANCE(458);
+      if (lookahead == 'f') ADVANCE(214);
+      if (lookahead == 'g') ADVANCE(239);
+      if (lookahead == 'i') ADVANCE(203);
+      if (lookahead == 'l') ADVANCE(59);
+      if (lookahead == 'm') ADVANCE(129);
+      if (lookahead == 'p') ADVANCE(60);
+      if (lookahead == 'r') ADVANCE(130);
+      if (lookahead == 's') ADVANCE(153);
+      if (lookahead == 't') ADVANCE(148);
+      if (lookahead == 'u') ADVANCE(397);
+      if (lookahead == 'v') ADVANCE(66);
       END_STATE();
     case 58:
-      if (lookahead == 'P') ADVANCE(348);
+      if (lookahead == 'a') ADVANCE(102);
+      if (lookahead == 'e') ADVANCE(193);
       END_STATE();
     case 59:
-      if (lookahead == 'P') ADVANCE(349);
+      if (lookahead == 'a') ADVANCE(331);
+      if (lookahead == 'i') ADVANCE(108);
       END_STATE();
     case 60:
-      if (lookahead == 'P') ADVANCE(179);
+      if (lookahead == 'a') ADVANCE(106);
+      if (lookahead == 'r') ADVANCE(180);
       END_STATE();
     case 61:
-      if (lookahead == 'P') ADVANCE(361);
+      if (lookahead == 'a') ADVANCE(257);
       END_STATE();
     case 62:
-      if (lookahead == 'S') ADVANCE(188);
+      if (lookahead == 'a') ADVANCE(48);
       END_STATE();
     case 63:
-      if (lookahead == 'S') ADVANCE(438);
-      END_STATE();
-    case 64:
-      if (lookahead == 'S') ADVANCE(195);
-      END_STATE();
-    case 65:
-      if (lookahead == ']') ADVANCE(532);
-      END_STATE();
-    case 66:
-      if (lookahead == 'a') ADVANCE(196);
-      if (lookahead == 'b') ADVANCE(68);
-      if (lookahead == 'c') ADVANCE(89);
-      if (lookahead == 'd') ADVANCE(75);
-      if (lookahead == 'e') ADVANCE(454);
-      if (lookahead == 'f') ADVANCE(218);
-      if (lookahead == 'g') ADVANCE(241);
-      if (lookahead == 'i') ADVANCE(206);
-      if (lookahead == 'l') ADVANCE(69);
-      if (lookahead == 'm') ADVANCE(135);
-      if (lookahead == 'p') ADVANCE(70);
-      if (lookahead == 'r') ADVANCE(136);
-      if (lookahead == 's') ADVANCE(158);
-      if (lookahead == 't') ADVANCE(153);
-      if (lookahead == 'u') ADVANCE(394);
-      if (lookahead == 'v') ADVANCE(76);
-      END_STATE();
-    case 67:
-      if (lookahead == 'a') ADVANCE(196);
-      if (lookahead == 'b') ADVANCE(68);
-      if (lookahead == 'c') ADVANCE(89);
-      if (lookahead == 'd') ADVANCE(75);
-      if (lookahead == 'e') ADVANCE(454);
-      if (lookahead == 'f') ADVANCE(218);
-      if (lookahead == 'g') ADVANCE(241);
-      if (lookahead == 'i') ADVANCE(207);
-      if (lookahead == 'l') ADVANCE(69);
-      if (lookahead == 'm') ADVANCE(135);
-      if (lookahead == 'p') ADVANCE(70);
-      if (lookahead == 'r') ADVANCE(136);
-      if (lookahead == 's') ADVANCE(158);
-      if (lookahead == 't') ADVANCE(153);
-      if (lookahead == 'u') ADVANCE(394);
-      if (lookahead == 'v') ADVANCE(76);
-      END_STATE();
-    case 68:
-      if (lookahead == 'a') ADVANCE(110);
-      if (lookahead == 'e') ADVANCE(197);
-      END_STATE();
-    case 69:
-      if (lookahead == 'a') ADVANCE(329);
-      if (lookahead == 'i') ADVANCE(115);
-      END_STATE();
-    case 70:
-      if (lookahead == 'a') ADVANCE(113);
-      if (lookahead == 'r') ADVANCE(185);
-      END_STATE();
-    case 71:
-      if (lookahead == 'a') ADVANCE(259);
-      END_STATE();
-    case 72:
-      if (lookahead == 'a') ADVANCE(58);
-      END_STATE();
-    case 73:
-      if (lookahead == 'a') ADVANCE(246);
-      END_STATE();
-    case 74:
-      if (lookahead == 'a') ADVANCE(256);
-      END_STATE();
-    case 75:
-      if (lookahead == 'a') ADVANCE(410);
-      if (lookahead == 'e') ADVANCE(318);
-      if (lookahead == 'o') ADVANCE(159);
-      END_STATE();
-    case 76:
-      if (lookahead == 'a') ADVANCE(330);
-      if (lookahead == 'e') ADVANCE(336);
-      END_STATE();
-    case 77:
-      if (lookahead == 'a') ADVANCE(243);
-      END_STATE();
-    case 78:
-      if (lookahead == 'a') ADVANCE(429);
-      END_STATE();
-    case 79:
-      if (lookahead == 'a') ADVANCE(445);
-      END_STATE();
-    case 80:
-      if (lookahead == 'a') ADVANCE(126);
-      END_STATE();
-    case 81:
       if (lookahead == 'a') ADVANCE(244);
       END_STATE();
-    case 82:
-      if (lookahead == 'a') ADVANCE(250);
+    case 64:
+      if (lookahead == 'a') ADVANCE(254);
       END_STATE();
-    case 83:
-      if (lookahead == 'a') ADVANCE(245);
+    case 65:
+      if (lookahead == 'a') ADVANCE(414);
+      if (lookahead == 'e') ADVANCE(319);
+      if (lookahead == 'o') ADVANCE(154);
       END_STATE();
-    case 84:
-      if (lookahead == 'a') ADVANCE(282);
+    case 66:
+      if (lookahead == 'a') ADVANCE(332);
+      if (lookahead == 'e') ADVANCE(338);
       END_STATE();
-    case 85:
-      if (lookahead == 'a') ADVANCE(388);
+    case 67:
+      if (lookahead == 'a') ADVANCE(241);
       END_STATE();
-    case 86:
-      if (lookahead == 'a') ADVANCE(417);
+    case 68:
+      if (lookahead == 'a') ADVANCE(433);
       END_STATE();
-    case 87:
-      if (lookahead == 'a') ADVANCE(360);
+    case 69:
+      if (lookahead == 'a') ADVANCE(448);
       END_STATE();
-    case 88:
-      if (lookahead == 'a') ADVANCE(350);
+    case 70:
+      if (lookahead == 'a') ADVANCE(120);
       END_STATE();
-    case 89:
-      if (lookahead == 'a') ADVANCE(415);
-      if (lookahead == 'o') ADVANCE(129);
+    case 71:
+      if (lookahead == 'a') ADVANCE(242);
       END_STATE();
-    case 90:
-      if (lookahead == 'a') ADVANCE(203);
+    case 72:
+      if (lookahead == 'a') ADVANCE(248);
       END_STATE();
-    case 91:
-      if (lookahead == 'a') ADVANCE(389);
+    case 73:
+      if (lookahead == 'a') ADVANCE(243);
       END_STATE();
-    case 92:
-      if (lookahead == 'a') ADVANCE(423);
+    case 74:
+      if (lookahead == 'a') ADVANCE(281);
       END_STATE();
-    case 93:
-      if (lookahead == 'a') ADVANCE(123);
-      END_STATE();
-    case 94:
-      if (lookahead == 'a') ADVANCE(204);
-      END_STATE();
-    case 95:
+    case 75:
       if (lookahead == 'a') ADVANCE(391);
       END_STATE();
-    case 96:
+    case 76:
+      if (lookahead == 'a') ADVANCE(421);
+      END_STATE();
+    case 77:
+      if (lookahead == 'a') ADVANCE(363);
+      END_STATE();
+    case 78:
+      if (lookahead == 'a') ADVANCE(351);
+      END_STATE();
+    case 79:
+      if (lookahead == 'a') ADVANCE(419);
+      if (lookahead == 'o') ADVANCE(123);
+      END_STATE();
+    case 80:
+      if (lookahead == 'a') ADVANCE(199);
+      END_STATE();
+    case 81:
+      if (lookahead == 'a') ADVANCE(392);
+      END_STATE();
+    case 82:
       if (lookahead == 'a') ADVANCE(425);
       END_STATE();
-    case 97:
+    case 83:
+      if (lookahead == 'a') ADVANCE(116);
+      END_STATE();
+    case 84:
+      if (lookahead == 'a') ADVANCE(200);
+      END_STATE();
+    case 85:
+      if (lookahead == 'a') ADVANCE(394);
+      END_STATE();
+    case 86:
+      if (lookahead == 'a') ADVANCE(429);
+      END_STATE();
+    case 87:
+      if (lookahead == 'a') ADVANCE(201);
+      END_STATE();
+    case 88:
       if (lookahead == 'a') ADVANCE(205);
       END_STATE();
-    case 98:
-      if (lookahead == 'a') ADVANCE(209);
-      END_STATE();
-    case 99:
-      if (lookahead == 'a') ADVANCE(427);
-      END_STATE();
-    case 100:
+    case 89:
       if (lookahead == 'a') ADVANCE(431);
       END_STATE();
+    case 90:
+      if (lookahead == 'a') ADVANCE(202);
+      END_STATE();
+    case 91:
+      if (lookahead == 'a') ADVANCE(435);
+      END_STATE();
+    case 92:
+      if (lookahead == 'a') ADVANCE(437);
+      END_STATE();
+    case 93:
+      if (lookahead == 'a') ADVANCE(442);
+      END_STATE();
+    case 94:
+      if (lookahead == 'a') ADVANCE(367);
+      END_STATE();
+    case 95:
+      if (lookahead == 'a') ADVANCE(117);
+      END_STATE();
+    case 96:
+      if (lookahead == 'a') ADVANCE(282);
+      END_STATE();
+    case 97:
+      if (lookahead == 'b') ADVANCE(322);
+      END_STATE();
+    case 98:
+      if (lookahead == 'b') ADVANCE(451);
+      END_STATE();
+    case 99:
+      if (lookahead == 'b') ADVANCE(67);
+      END_STATE();
+    case 100:
+      if (lookahead == 'b') ADVANCE(72);
+      END_STATE();
     case 101:
-      if (lookahead == 'a') ADVANCE(434);
+      if (lookahead == 'b') ADVANCE(73);
       END_STATE();
     case 102:
-      if (lookahead == 'a') ADVANCE(439);
+      if (lookahead == 'c') ADVANCE(236);
       END_STATE();
     case 103:
-      if (lookahead == 'a') ADVANCE(364);
+      if (lookahead == 'c') ADVANCE(472);
       END_STATE();
     case 104:
-      if (lookahead == 'a') ADVANCE(283);
+      if (lookahead == 'c') ADVANCE(471);
       END_STATE();
     case 105:
-      if (lookahead == 'b') ADVANCE(321);
+      if (lookahead == 'c') ADVANCE(37);
       END_STATE();
     case 106:
-      if (lookahead == 'b') ADVANCE(448);
+      if (lookahead == 'c') ADVANCE(234);
+      if (lookahead == 'r') ADVANCE(64);
       END_STATE();
     case 107:
-      if (lookahead == 'b') ADVANCE(77);
-      END_STATE();
-    case 108:
-      if (lookahead == 'b') ADVANCE(82);
-      END_STATE();
-    case 109:
-      if (lookahead == 'b') ADVANCE(83);
-      END_STATE();
-    case 110:
-      if (lookahead == 'c') ADVANCE(239);
-      END_STATE();
-    case 111:
-      if (lookahead == 'c') ADVANCE(467);
-      END_STATE();
-    case 112:
-      if (lookahead == 'c') ADVANCE(47);
-      END_STATE();
-    case 113:
-      if (lookahead == 'c') ADVANCE(237);
-      if (lookahead == 'r') ADVANCE(74);
-      END_STATE();
-    case 114:
-      if (lookahead == 'c') ADVANCE(238);
-      END_STATE();
-    case 115:
-      if (lookahead == 'c') ADVANCE(164);
-      if (lookahead == 'n') ADVANCE(236);
-      END_STATE();
-    case 116:
-      if (lookahead == 'c') ADVANCE(92);
-      END_STATE();
-    case 117:
-      if (lookahead == 'c') ADVANCE(140);
-      END_STATE();
-    case 118:
       if (lookahead == 'c') ADVANCE(235);
       END_STATE();
+    case 108:
+      if (lookahead == 'c') ADVANCE(159);
+      if (lookahead == 'n') ADVANCE(233);
+      END_STATE();
+    case 109:
+      if (lookahead == 'c') ADVANCE(82);
+      END_STATE();
+    case 110:
+      if (lookahead == 'c') ADVANCE(134);
+      END_STATE();
+    case 111:
+      if (lookahead == 'c') ADVANCE(232);
+      END_STATE();
+    case 112:
+      if (lookahead == 'c') ADVANCE(137);
+      END_STATE();
+    case 113:
+      if (lookahead == 'c') ADVANCE(142);
+      END_STATE();
+    case 114:
+      if (lookahead == 'c') ADVANCE(186);
+      END_STATE();
+    case 115:
+      if (lookahead == 'c') ADVANCE(185);
+      END_STATE();
+    case 116:
+      if (lookahead == 'c') ADVANCE(237);
+      END_STATE();
+    case 117:
+      if (lookahead == 'c') ADVANCE(238);
+      END_STATE();
+    case 118:
+      if (lookahead == 'd') ADVANCE(492);
+      END_STATE();
     case 119:
-      if (lookahead == 'c') ADVANCE(143);
+      if (lookahead == 'd') ADVANCE(502);
       END_STATE();
     case 120:
-      if (lookahead == 'c') ADVANCE(148);
+      if (lookahead == 'd') ADVANCE(495);
       END_STATE();
     case 121:
-      if (lookahead == 'c') ADVANCE(191);
+      if (lookahead == 'd') ADVANCE(514);
       END_STATE();
     case 122:
-      if (lookahead == 'c') ADVANCE(190);
+      if (lookahead == 'd') ADVANCE(218);
+      if (lookahead == 't') ADVANCE(208);
       END_STATE();
     case 123:
-      if (lookahead == 'c') ADVANCE(240);
+      if (lookahead == 'd') ADVANCE(132);
+      if (lookahead == 'p') ADVANCE(463);
+      if (lookahead == 'v') ADVANCE(184);
       END_STATE();
     case 124:
-      if (lookahead == 'd') ADVANCE(488);
+      if (lookahead == 'd') ADVANCE(285);
       END_STATE();
     case 125:
-      if (lookahead == 'd') ADVANCE(497);
+      if (lookahead == 'd') ADVANCE(372);
       END_STATE();
     case 126:
-      if (lookahead == 'd') ADVANCE(491);
+      if (lookahead == 'd') ADVANCE(182);
       END_STATE();
     case 127:
-      if (lookahead == 'd') ADVANCE(509);
+      if (lookahead == 'd') ADVANCE(174);
       END_STATE();
     case 128:
-      if (lookahead == 'd') ADVANCE(222);
-      if (lookahead == 't') ADVANCE(212);
+      if (lookahead == 'd') ADVANCE(176);
       END_STATE();
     case 129:
-      if (lookahead == 'd') ADVANCE(138);
-      if (lookahead == 'p') ADVANCE(459);
-      if (lookahead == 'v') ADVANCE(189);
+      if (lookahead == 'e') ADVANCE(122);
       END_STATE();
     case 130:
-      if (lookahead == 'd') ADVANCE(286);
+      if (lookahead == 'e') ADVANCE(330);
+      if (lookahead == 'u') ADVANCE(258);
       END_STATE();
     case 131:
-      if (lookahead == 'd') ADVANCE(369);
-      END_STATE();
-    case 132:
-      if (lookahead == 'd') ADVANCE(187);
-      END_STATE();
-    case 133:
-      if (lookahead == 'd') ADVANCE(178);
-      END_STATE();
-    case 134:
-      if (lookahead == 'd') ADVANCE(181);
-      END_STATE();
-    case 135:
-      if (lookahead == 'e') ADVANCE(128);
-      END_STATE();
-    case 136:
-      if (lookahead == 'e') ADVANCE(328);
-      if (lookahead == 'u') ADVANCE(260);
-      END_STATE();
-    case 137:
-      if (lookahead == 'e') ADVANCE(494);
-      END_STATE();
-    case 138:
-      if (lookahead == 'e') ADVANCE(49);
-      END_STATE();
-    case 139:
-      if (lookahead == 'e') ADVANCE(520);
-      END_STATE();
-    case 140:
       if (lookahead == 'e') ADVANCE(498);
       END_STATE();
-    case 141:
-      if (lookahead == 'e') ADVANCE(505);
+    case 132:
+      if (lookahead == 'e') ADVANCE(39);
       END_STATE();
-    case 142:
-      if (lookahead == 'e') ADVANCE(471);
+    case 133:
+      if (lookahead == 'e') ADVANCE(525);
       END_STATE();
-    case 143:
-      if (lookahead == 'e') ADVANCE(478);
+    case 134:
+      if (lookahead == 'e') ADVANCE(503);
       END_STATE();
-    case 144:
-      if (lookahead == 'e') ADVANCE(475);
+    case 135:
+      if (lookahead == 'e') ADVANCE(510);
       END_STATE();
-    case 145:
+    case 136:
       if (lookahead == 'e') ADVANCE(476);
       END_STATE();
+    case 137:
+      if (lookahead == 'e') ADVANCE(484);
+      END_STATE();
+    case 138:
+      if (lookahead == 'e') ADVANCE(481);
+      END_STATE();
+    case 139:
+      if (lookahead == 'e') ADVANCE(482);
+      END_STATE();
+    case 140:
+      if (lookahead == 'e') ADVANCE(483);
+      END_STATE();
+    case 141:
+      if (lookahead == 'e') ADVANCE(43);
+      END_STATE();
+    case 142:
+      if (lookahead == 'e') ADVANCE(475);
+      END_STATE();
+    case 143:
+      if (lookahead == 'e') ADVANCE(485);
+      END_STATE();
+    case 144:
+      if (lookahead == 'e') ADVANCE(496);
+      END_STATE();
+    case 145:
+      if (lookahead == 'e') ADVANCE(512);
+      END_STATE();
     case 146:
-      if (lookahead == 'e') ADVANCE(477);
+      if (lookahead == 'e') ADVANCE(527);
       END_STATE();
     case 147:
-      if (lookahead == 'e') ADVANCE(53);
+      if (lookahead == 'e') ADVANCE(56);
       END_STATE();
     case 148:
-      if (lookahead == 'e') ADVANCE(470);
+      if (lookahead == 'e') ADVANCE(386);
+      if (lookahead == 'h') ADVANCE(339);
+      if (lookahead == 'i') ADVANCE(107);
+      if (lookahead == 'o') ADVANCE(124);
       END_STATE();
     case 149:
-      if (lookahead == 'e') ADVANCE(479);
+      if (lookahead == 'e') ADVANCE(194);
       END_STATE();
     case 150:
-      if (lookahead == 'e') ADVANCE(492);
+      if (lookahead == 'e') ADVANCE(204);
       END_STATE();
     case 151:
-      if (lookahead == 'e') ADVANCE(507);
+      if (lookahead == 'e') ADVANCE(44);
       END_STATE();
     case 152:
-      if (lookahead == 'e') ADVANCE(522);
+      if (lookahead == 'e') ADVANCE(460);
       END_STATE();
     case 153:
-      if (lookahead == 'e') ADVANCE(383);
-      if (lookahead == 'h') ADVANCE(337);
-      if (lookahead == 'i') ADVANCE(114);
-      if (lookahead == 'o') ADVANCE(130);
+      if (lookahead == 'e') ADVANCE(131);
+      if (lookahead == 'i') ADVANCE(265);
+      if (lookahead == 'm') ADVANCE(63);
+      if (lookahead == 'o') ADVANCE(446);
+      if (lookahead == 'u') ADVANCE(97);
       END_STATE();
     case 154:
-      if (lookahead == 'e') ADVANCE(198);
+      if (lookahead == 'e') ADVANCE(368);
       END_STATE();
     case 155:
-      if (lookahead == 'e') ADVANCE(208);
+      if (lookahead == 'e') ADVANCE(109);
       END_STATE();
     case 156:
-      if (lookahead == 'e') ADVANCE(54);
+      if (lookahead == 'e') ADVANCE(369);
       END_STATE();
     case 157:
-      if (lookahead == 'e') ADVANCE(456);
+      if (lookahead == 'e') ADVANCE(266);
+      if (lookahead == 'r') ADVANCE(155);
       END_STATE();
     case 158:
-      if (lookahead == 'e') ADVANCE(137);
-      if (lookahead == 'i') ADVANCE(266);
-      if (lookahead == 'm') ADVANCE(73);
-      if (lookahead == 'o') ADVANCE(443);
-      if (lookahead == 'u') ADVANCE(105);
+      if (lookahead == 'e') ADVANCE(408);
       END_STATE();
     case 159:
-      if (lookahead == 'e') ADVANCE(365);
-      END_STATE();
-    case 160:
-      if (lookahead == 'e') ADVANCE(116);
-      END_STATE();
-    case 161:
-      if (lookahead == 'e') ADVANCE(366);
-      END_STATE();
-    case 162:
-      if (lookahead == 'e') ADVANCE(267);
-      if (lookahead == 'r') ADVANCE(160);
-      END_STATE();
-    case 163:
-      if (lookahead == 'e') ADVANCE(404);
-      END_STATE();
-    case 164:
-      if (lookahead == 'e') ADVANCE(276);
-      END_STATE();
-    case 165:
-      if (lookahead == 'e') ADVANCE(125);
-      END_STATE();
-    case 166:
-      if (lookahead == 'e') ADVANCE(387);
-      END_STATE();
-    case 167:
-      if (lookahead == 'e') ADVANCE(331);
-      END_STATE();
-    case 168:
-      if (lookahead == 'e') ADVANCE(339);
-      END_STATE();
-    case 169:
-      if (lookahead == 'e') ADVANCE(370);
-      END_STATE();
-    case 170:
-      if (lookahead == 'e') ADVANCE(341);
-      END_STATE();
-    case 171:
-      if (lookahead == 'e') ADVANCE(80);
-      END_STATE();
-    case 172:
-      if (lookahead == 'e') ADVANCE(353);
-      END_STATE();
-    case 173:
-      if (lookahead == 'e') ADVANCE(343);
-      END_STATE();
-    case 174:
-      if (lookahead == 'e') ADVANCE(270);
-      END_STATE();
-    case 175:
-      if (lookahead == 'e') ADVANCE(375);
-      END_STATE();
-    case 176:
       if (lookahead == 'e') ADVANCE(275);
       END_STATE();
-    case 177:
-      if (lookahead == 'e') ADVANCE(362);
+    case 160:
+      if (lookahead == 'e') ADVANCE(119);
       END_STATE();
-    case 178:
-      if (lookahead == 'e') ADVANCE(271);
+    case 161:
+      if (lookahead == 'e') ADVANCE(390);
       END_STATE();
-    case 179:
-      if (lookahead == 'e') ADVANCE(359);
-      END_STATE();
-    case 180:
-      if (lookahead == 'e') ADVANCE(378);
-      END_STATE();
-    case 181:
+    case 162:
       if (lookahead == 'e') ADVANCE(333);
       END_STATE();
+    case 163:
+      if (lookahead == 'e') ADVANCE(341);
+      END_STATE();
+    case 164:
+      if (lookahead == 'e') ADVANCE(373);
+      END_STATE();
+    case 165:
+      if (lookahead == 'e') ADVANCE(343);
+      END_STATE();
+    case 166:
+      if (lookahead == 'e') ADVANCE(70);
+      END_STATE();
+    case 167:
+      if (lookahead == 'e') ADVANCE(355);
+      END_STATE();
+    case 168:
+      if (lookahead == 'e') ADVANCE(345);
+      END_STATE();
+    case 169:
+      if (lookahead == 'e') ADVANCE(378);
+      END_STATE();
+    case 170:
+      if (lookahead == 'e') ADVANCE(269);
+      END_STATE();
+    case 171:
+      if (lookahead == 'e') ADVANCE(365);
+      END_STATE();
+    case 172:
+      if (lookahead == 'e') ADVANCE(274);
+      END_STATE();
+    case 173:
+      if (lookahead == 'e') ADVANCE(362);
+      END_STATE();
+    case 174:
+      if (lookahead == 'e') ADVANCE(271);
+      END_STATE();
+    case 175:
+      if (lookahead == 'e') ADVANCE(381);
+      END_STATE();
+    case 176:
+      if (lookahead == 'e') ADVANCE(335);
+      END_STATE();
+    case 177:
+      if (lookahead == 'e') ADVANCE(383);
+      END_STATE();
+    case 178:
+      if (lookahead == 'e') ADVANCE(366);
+      END_STATE();
+    case 179:
+      if (lookahead == 'e') ADVANCE(385);
+      END_STATE();
+    case 180:
+      if (lookahead == 'e') ADVANCE(399);
+      if (lookahead == 'o') ADVANCE(326);
+      END_STATE();
+    case 181:
+      if (lookahead == 'e') ADVANCE(389);
+      END_STATE();
     case 182:
-      if (lookahead == 'e') ADVANCE(380);
+      if (lookahead == 'e') ADVANCE(324);
       END_STATE();
     case 183:
-      if (lookahead == 'e') ADVANCE(363);
-      END_STATE();
-    case 184:
-      if (lookahead == 'e') ADVANCE(382);
-      END_STATE();
-    case 185:
-      if (lookahead == 'e') ADVANCE(395);
-      if (lookahead == 'o') ADVANCE(325);
-      END_STATE();
-    case 186:
-      if (lookahead == 'e') ADVANCE(386);
-      END_STATE();
-    case 187:
       if (lookahead == 'e') ADVANCE(323);
       END_STATE();
+    case 184:
+      if (lookahead == 'e') ADVANCE(342);
+      END_STATE();
+    case 185:
+      if (lookahead == 'e') ADVANCE(402);
+      END_STATE();
+    case 186:
+      if (lookahead == 'e') ADVANCE(395);
+      END_STATE();
+    case 187:
+      if (lookahead == 'e') ADVANCE(396);
+      END_STATE();
     case 188:
-      if (lookahead == 'e') ADVANCE(322);
+      if (lookahead == 'e') ADVANCE(49);
       END_STATE();
     case 189:
-      if (lookahead == 'e') ADVANCE(340);
+      if (lookahead == 'e') ADVANCE(357);
       END_STATE();
     case 190:
-      if (lookahead == 'e') ADVANCE(398);
+      if (lookahead == 'e') ADVANCE(51);
       END_STATE();
     case 191:
-      if (lookahead == 'e') ADVANCE(392);
+      if (lookahead == 'e') ADVANCE(329);
       END_STATE();
     case 192:
-      if (lookahead == 'e') ADVANCE(393);
+      if (lookahead == 'f') ADVANCE(417);
+      if (lookahead == 'n') ADVANCE(267);
+      if (lookahead == 'p') ADVANCE(215);
+      if (lookahead == 'u') ADVANCE(406);
       END_STATE();
     case 193:
-      if (lookahead == 'e') ADVANCE(59);
-      END_STATE();
-    case 194:
-      if (lookahead == 'e') ADVANCE(61);
-      END_STATE();
-    case 195:
-      if (lookahead == 'e') ADVANCE(327);
-      END_STATE();
-    case 196:
-      if (lookahead == 'f') ADVANCE(413);
-      if (lookahead == 'n') ADVANCE(268);
-      if (lookahead == 'p') ADVANCE(219);
-      if (lookahead == 'u') ADVANCE(402);
-      END_STATE();
-    case 197:
       if (lookahead == 'f') ADVANCE(298);
       END_STATE();
+    case 194:
+      if (lookahead == 'f') ADVANCE(69);
+      END_STATE();
+    case 195:
+      if (lookahead == 'f') ADVANCE(307);
+      END_STATE();
+    case 196:
+      if (lookahead == 'g') ADVANCE(519);
+      END_STATE();
+    case 197:
+      if (lookahead == 'g') ADVANCE(210);
+      END_STATE();
     case 198:
-      if (lookahead == 'f') ADVANCE(79);
+      if (lookahead == 'g') ADVANCE(133);
       END_STATE();
     case 199:
-      if (lookahead == 'f') ADVANCE(306);
+      if (lookahead == 'g') ADVANCE(140);
       END_STATE();
     case 200:
-      if (lookahead == 'g') ADVANCE(514);
+      if (lookahead == 'g') ADVANCE(143);
       END_STATE();
     case 201:
-      if (lookahead == 'g') ADVANCE(214);
+      if (lookahead == 'g') ADVANCE(151);
       END_STATE();
     case 202:
-      if (lookahead == 'g') ADVANCE(139);
+      if (lookahead == 'g') ADVANCE(147);
       END_STATE();
     case 203:
-      if (lookahead == 'g') ADVANCE(146);
+      if (lookahead == 'g') ADVANCE(277);
+      if (lookahead == 'n') ADVANCE(212);
       END_STATE();
     case 204:
-      if (lookahead == 'g') ADVANCE(149);
+      if (lookahead == 'g') ADVANCE(306);
       END_STATE();
     case 205:
-      if (lookahead == 'g') ADVANCE(156);
+      if (lookahead == 'g') ADVANCE(169);
       END_STATE();
     case 206:
       if (lookahead == 'g') ADVANCE(278);
-      if (lookahead == 'n') ADVANCE(216);
       END_STATE();
     case 207:
-      if (lookahead == 'g') ADVANCE(278);
-      if (lookahead == 'n') ADVANCE(432);
+      if (lookahead == 'h') ADVANCE(534);
       END_STATE();
     case 208:
-      if (lookahead == 'g') ADVANCE(305);
+      if (lookahead == 'h') ADVANCE(292);
       END_STATE();
     case 209:
-      if (lookahead == 'g') ADVANCE(175);
+      if (lookahead == 'h') ADVANCE(223);
       END_STATE();
     case 210:
-      if (lookahead == 'g') ADVANCE(279);
+      if (lookahead == 'h') ADVANCE(410);
       END_STATE();
     case 211:
-      if (lookahead == 'h') ADVANCE(529);
-      END_STATE();
-    case 212:
-      if (lookahead == 'h') ADVANCE(293);
-      END_STATE();
-    case 213:
-      if (lookahead == 'h') ADVANCE(227);
-      END_STATE();
-    case 214:
-      if (lookahead == 'h') ADVANCE(406);
-      END_STATE();
-    case 215:
       if (lookahead == 'h') ADVANCE(301);
       END_STATE();
+    case 212:
+      if (lookahead == 'h') ADVANCE(163);
+      if (lookahead == 't') ADVANCE(165);
+      END_STATE();
+    case 213:
+      if (lookahead == 'h') ADVANCE(308);
+      END_STATE();
+    case 214:
+      if (lookahead == 'i') ADVANCE(249);
+      END_STATE();
+    case 215:
+      if (lookahead == 'i') ADVANCE(474);
+      END_STATE();
     case 216:
-      if (lookahead == 'h') ADVANCE(168);
-      if (lookahead == 't') ADVANCE(170);
+      if (lookahead == 'i') ADVANCE(98);
       END_STATE();
     case 217:
-      if (lookahead == 'h') ADVANCE(307);
+      if (lookahead == 'i') ADVANCE(197);
       END_STATE();
     case 218:
-      if (lookahead == 'i') ADVANCE(251);
+      if (lookahead == 'i') ADVANCE(443);
       END_STATE();
     case 219:
-      if (lookahead == 'i') ADVANCE(469);
+      if (lookahead == 'i') ADVANCE(128);
       END_STATE();
     case 220:
-      if (lookahead == 'i') ADVANCE(106);
+      if (lookahead == 'i') ADVANCE(105);
       END_STATE();
     case 221:
-      if (lookahead == 'i') ADVANCE(201);
+      if (lookahead == 'i') ADVANCE(409);
       END_STATE();
     case 222:
-      if (lookahead == 'i') ADVANCE(440);
+      if (lookahead == 'i') ADVANCE(415);
       END_STATE();
     case 223:
-      if (lookahead == 'i') ADVANCE(134);
+      if (lookahead == 'i') ADVANCE(268);
       END_STATE();
     case 224:
-      if (lookahead == 'i') ADVANCE(112);
-      END_STATE();
-    case 225:
-      if (lookahead == 'i') ADVANCE(405);
-      END_STATE();
-    case 226:
-      if (lookahead == 'i') ADVANCE(411);
-      END_STATE();
-    case 227:
-      if (lookahead == 'i') ADVANCE(269);
-      END_STATE();
-    case 228:
       if (lookahead == 'i') ADVANCE(299);
       END_STATE();
-    case 229:
+    case 225:
       if (lookahead == 'i') ADVANCE(300);
       END_STATE();
-    case 230:
-      if (lookahead == 'i') ADVANCE(356);
+    case 226:
+      if (lookahead == 'i') ADVANCE(359);
       END_STATE();
-    case 231:
+    case 227:
       if (lookahead == 'i') ADVANCE(303);
       END_STATE();
-    case 232:
+    case 228:
       if (lookahead == 'i') ADVANCE(304);
       END_STATE();
+    case 229:
+      if (lookahead == 'i') ADVANCE(305);
+      END_STATE();
+    case 230:
+      if (lookahead == 'i') ADVANCE(311);
+      END_STATE();
+    case 231:
+      if (lookahead == 'i') ADVANCE(430);
+      END_STATE();
+    case 232:
+      if (lookahead == 'i') ADVANCE(179);
+      END_STATE();
     case 233:
-      if (lookahead == 'i') ADVANCE(310);
+      if (lookahead == 'k') ADVANCE(491);
       END_STATE();
     case 234:
-      if (lookahead == 'i') ADVANCE(426);
+      if (lookahead == 'k') ADVANCE(80);
       END_STATE();
     case 235:
-      if (lookahead == 'i') ADVANCE(184);
+      if (lookahead == 'k') ADVANCE(158);
       END_STATE();
     case 236:
-      if (lookahead == 'k') ADVANCE(486);
+      if (lookahead == 'k') ADVANCE(447);
       END_STATE();
     case 237:
-      if (lookahead == 'k') ADVANCE(90);
+      if (lookahead == 'k') ADVANCE(84);
       END_STATE();
     case 238:
-      if (lookahead == 'k') ADVANCE(163);
+      if (lookahead == 'k') ADVANCE(90);
       END_STATE();
     case 239:
-      if (lookahead == 'k') ADVANCE(444);
+      if (lookahead == 'l') ADVANCE(289);
+      if (lookahead == 'r') ADVANCE(288);
       END_STATE();
     case 240:
-      if (lookahead == 'k') ADVANCE(94);
+      if (lookahead == 'l') ADVANCE(532);
       END_STATE();
     case 241:
-      if (lookahead == 'l') ADVANCE(290);
-      if (lookahead == 'r') ADVANCE(289);
+      if (lookahead == 'l') ADVANCE(490);
       END_STATE();
     case 242:
-      if (lookahead == 'l') ADVANCE(527);
+      if (lookahead == 'l') ADVANCE(477);
       END_STATE();
     case 243:
-      if (lookahead == 'l') ADVANCE(484);
+      if (lookahead == 'l') ADVANCE(53);
       END_STATE();
     case 244:
-      if (lookahead == 'l') ADVANCE(485);
+      if (lookahead == 'l') ADVANCE(240);
       END_STATE();
     case 245:
-      if (lookahead == 'l') ADVANCE(63);
+      if (lookahead == 'l') ADVANCE(75);
       END_STATE();
     case 246:
-      if (lookahead == 'l') ADVANCE(242);
+      if (lookahead == 'l') ADVANCE(138);
       END_STATE();
     case 247:
-      if (lookahead == 'l') ADVANCE(85);
+      if (lookahead == 'l') ADVANCE(412);
       END_STATE();
     case 248:
-      if (lookahead == 'l') ADVANCE(144);
+      if (lookahead == 'l') ADVANCE(377);
       END_STATE();
     case 249:
-      if (lookahead == 'l') ADVANCE(408);
+      if (lookahead == 'l') ADVANCE(161);
       END_STATE();
     case 250:
-      if (lookahead == 'l') ADVANCE(374);
+      if (lookahead == 'l') ADVANCE(81);
       END_STATE();
     case 251:
-      if (lookahead == 'l') ADVANCE(166);
+      if (lookahead == 'l') ADVANCE(85);
       END_STATE();
     case 252:
-      if (lookahead == 'l') ADVANCE(91);
+      if (lookahead == 'l') ADVANCE(313);
       END_STATE();
     case 253:
-      if (lookahead == 'l') ADVANCE(95);
+      if (lookahead == 'l') ADVANCE(316);
       END_STATE();
     case 254:
-      if (lookahead == 'l') ADVANCE(312);
+      if (lookahead == 'm') ADVANCE(493);
       END_STATE();
     case 255:
-      if (lookahead == 'l') ADVANCE(315);
+      if (lookahead == 'm') ADVANCE(526);
       END_STATE();
     case 256:
-      if (lookahead == 'm') ADVANCE(489);
+      if (lookahead == 'm') ADVANCE(38);
       END_STATE();
     case 257:
-      if (lookahead == 'm') ADVANCE(521);
+      if (lookahead == 'm') ADVANCE(325);
       END_STATE();
     case 258:
-      if (lookahead == 'm') ADVANCE(48);
+      if (lookahead == 'n') ADVANCE(45);
       END_STATE();
     case 259:
-      if (lookahead == 'm') ADVANCE(324);
+      if (lookahead == 'n') ADVANCE(52);
       END_STATE();
     case 260:
-      if (lookahead == 'n') ADVANCE(55);
+      if (lookahead == 'n') ADVANCE(497);
       END_STATE();
     case 261:
-      if (lookahead == 'n') ADVANCE(62);
+      if (lookahead == 'n') ADVANCE(504);
       END_STATE();
     case 262:
-      if (lookahead == 'n') ADVANCE(493);
+      if (lookahead == 'n') ADVANCE(507);
       END_STATE();
     case 263:
-      if (lookahead == 'n') ADVANCE(499);
+      if (lookahead == 'n') ADVANCE(34);
       END_STATE();
     case 264:
-      if (lookahead == 'n') ADVANCE(502);
+      if (lookahead == 'n') ADVANCE(21);
       END_STATE();
     case 265:
-      if (lookahead == 'n') ADVANCE(37);
+      if (lookahead == 'n') ADVANCE(110);
       END_STATE();
     case 266:
-      if (lookahead == 'n') ADVANCE(117);
+      if (lookahead == 'n') ADVANCE(125);
       END_STATE();
     case 267:
-      if (lookahead == 'n') ADVANCE(131);
-      END_STATE();
-    case 268:
-      if (lookahead == 'n') ADVANCE(308);
-      END_STATE();
-    case 269:
-      if (lookahead == 'n') ADVANCE(200);
-      END_STATE();
-    case 270:
-      if (lookahead == 'n') ADVANCE(38);
-      END_STATE();
-    case 271:
-      if (lookahead == 'n') ADVANCE(118);
-      END_STATE();
-    case 272:
-      if (lookahead == 'n') ADVANCE(127);
-      END_STATE();
-    case 273:
-      if (lookahead == 'n') ADVANCE(379);
-      END_STATE();
-    case 274:
-      if (lookahead == 'n') ADVANCE(381);
-      END_STATE();
-    case 275:
-      if (lookahead == 'n') ADVANCE(133);
-      END_STATE();
-    case 276:
-      if (lookahead == 'n') ADVANCE(390);
-      END_STATE();
-    case 277:
-      if (lookahead == 'n') ADVANCE(81);
-      END_STATE();
-    case 278:
       if (lookahead == 'n') ADVANCE(309);
       END_STATE();
+    case 268:
+      if (lookahead == 'n') ADVANCE(196);
+      END_STATE();
+    case 269:
+      if (lookahead == 'n') ADVANCE(22);
+      END_STATE();
+    case 270:
+      if (lookahead == 'n') ADVANCE(121);
+      END_STATE();
+    case 271:
+      if (lookahead == 'n') ADVANCE(111);
+      END_STATE();
+    case 272:
+      if (lookahead == 'n') ADVANCE(382);
+      END_STATE();
+    case 273:
+      if (lookahead == 'n') ADVANCE(384);
+      END_STATE();
+    case 274:
+      if (lookahead == 'n') ADVANCE(127);
+      END_STATE();
+    case 275:
+      if (lookahead == 'n') ADVANCE(393);
+      END_STATE();
+    case 276:
+      if (lookahead == 'n') ADVANCE(71);
+      END_STATE();
+    case 277:
+      if (lookahead == 'n') ADVANCE(310);
+      END_STATE();
+    case 278:
+      if (lookahead == 'n') ADVANCE(312);
+      END_STATE();
     case 279:
-      if (lookahead == 'n') ADVANCE(311);
+      if (lookahead == 'n') ADVANCE(315);
       END_STATE();
     case 280:
-      if (lookahead == 'n') ADVANCE(314);
+      if (lookahead == 'n') ADVANCE(317);
       END_STATE();
     case 281:
-      if (lookahead == 'n') ADVANCE(316);
+      if (lookahead == 'n') ADVANCE(279);
       END_STATE();
     case 282:
       if (lookahead == 'n') ADVANCE(280);
       END_STATE();
     case 283:
-      if (lookahead == 'n') ADVANCE(281);
+      if (lookahead == 'n') ADVANCE(54);
       END_STATE();
     case 284:
-      if (lookahead == 'n') ADVANCE(64);
+      if (lookahead == 'o') ADVANCE(457);
       END_STATE();
     case 285:
-      if (lookahead == 'o') ADVANCE(453);
+      if (lookahead == 'o') ADVANCE(480);
       END_STATE();
     case 286:
-      if (lookahead == 'o') ADVANCE(474);
-      END_STATE();
-    case 287:
-      if (lookahead == 'o') ADVANCE(452);
-      END_STATE();
-    case 288:
       if (lookahead == 'o') ADVANCE(455);
       END_STATE();
+    case 287:
+      if (lookahead == 'o') ADVANCE(459);
+      END_STATE();
+    case 288:
+      if (lookahead == 'o') ADVANCE(445);
+      END_STATE();
     case 289:
-      if (lookahead == 'o') ADVANCE(442);
+      if (lookahead == 'o') ADVANCE(99);
       END_STATE();
     case 290:
-      if (lookahead == 'o') ADVANCE(107);
+      if (lookahead == 'o') ADVANCE(453);
       END_STATE();
     case 291:
-      if (lookahead == 'o') ADVANCE(450);
+      if (lookahead == 'o') ADVANCE(19);
       END_STATE();
     case 292:
-      if (lookahead == 'o') ADVANCE(35);
+      if (lookahead == 'o') ADVANCE(118);
       END_STATE();
     case 293:
-      if (lookahead == 'o') ADVANCE(124);
+      if (lookahead == 'o') ADVANCE(20);
       END_STATE();
     case 294:
-      if (lookahead == 'o') ADVANCE(36);
+      if (lookahead == 'o') ADVANCE(103);
       END_STATE();
     case 295:
-      if (lookahead == 'o') ADVANCE(111);
+      if (lookahead == 'o') ADVANCE(104);
       END_STATE();
     case 296:
-      if (lookahead == 'o') ADVANCE(121);
+      if (lookahead == 'o') ADVANCE(413);
       END_STATE();
     case 297:
-      if (lookahead == 'o') ADVANCE(409);
+      if (lookahead == 'o') ADVANCE(114);
       END_STATE();
     case 298:
-      if (lookahead == 'o') ADVANCE(346);
+      if (lookahead == 'o') ADVANCE(348);
       END_STATE();
     case 299:
-      if (lookahead == 'o') ADVANCE(263);
+      if (lookahead == 'o') ADVANCE(261);
       END_STATE();
     case 300:
-      if (lookahead == 'o') ADVANCE(264);
+      if (lookahead == 'o') ADVANCE(262);
       END_STATE();
     case 301:
-      if (lookahead == 'o') ADVANCE(332);
-      END_STATE();
-    case 302:
-      if (lookahead == 'o') ADVANCE(414);
-      END_STATE();
-    case 303:
-      if (lookahead == 'o') ADVANCE(265);
-      END_STATE();
-    case 304:
-      if (lookahead == 'o') ADVANCE(273);
-      END_STATE();
-    case 305:
       if (lookahead == 'o') ADVANCE(334);
       END_STATE();
+    case 302:
+      if (lookahead == 'o') ADVANCE(418);
+      END_STATE();
+    case 303:
+      if (lookahead == 'o') ADVANCE(263);
+      END_STATE();
+    case 304:
+      if (lookahead == 'o') ADVANCE(264);
+      END_STATE();
+    case 305:
+      if (lookahead == 'o') ADVANCE(272);
+      END_STATE();
     case 306:
-      if (lookahead == 'o') ADVANCE(335);
+      if (lookahead == 'o') ADVANCE(336);
       END_STATE();
     case 307:
-      if (lookahead == 'o') ADVANCE(357);
+      if (lookahead == 'o') ADVANCE(337);
       END_STATE();
     case 308:
-      if (lookahead == 'o') ADVANCE(416);
+      if (lookahead == 'o') ADVANCE(360);
       END_STATE();
     case 309:
-      if (lookahead == 'o') ADVANCE(347);
+      if (lookahead == 'o') ADVANCE(420);
       END_STATE();
     case 310:
-      if (lookahead == 'o') ADVANCE(274);
+      if (lookahead == 'o') ADVANCE(349);
       END_STATE();
     case 311:
-      if (lookahead == 'o') ADVANCE(352);
+      if (lookahead == 'o') ADVANCE(273);
       END_STATE();
     case 312:
-      if (lookahead == 'o') ADVANCE(108);
+      if (lookahead == 'o') ADVANCE(354);
       END_STATE();
     case 313:
-      if (lookahead == 'o') ADVANCE(122);
+      if (lookahead == 'o') ADVANCE(100);
       END_STATE();
     case 314:
-      if (lookahead == 'o') ADVANCE(436);
+      if (lookahead == 'o') ADVANCE(115);
       END_STATE();
     case 315:
-      if (lookahead == 'o') ADVANCE(109);
+      if (lookahead == 'o') ADVANCE(439);
       END_STATE();
     case 316:
-      if (lookahead == 'o') ADVANCE(437);
+      if (lookahead == 'o') ADVANCE(101);
       END_STATE();
     case 317:
-      if (lookahead == 'o') ADVANCE(449);
+      if (lookahead == 'o') ADVANCE(440);
       END_STATE();
     case 318:
-      if (lookahead == 'p') ADVANCE(162);
+      if (lookahead == 'o') ADVANCE(452);
       END_STATE();
     case 319:
-      if (lookahead == 'p') ADVANCE(519);
+      if (lookahead == 'p') ADVANCE(157);
       END_STATE();
     case 320:
-      if (lookahead == 'p') ADVANCE(52);
+      if (lookahead == 'p') ADVANCE(524);
       END_STATE();
     case 321:
-      if (lookahead == 'p') ADVANCE(93);
+      if (lookahead == 'p') ADVANCE(42);
       END_STATE();
     case 322:
-      if (lookahead == 'p') ADVANCE(87);
+      if (lookahead == 'p') ADVANCE(83);
       END_STATE();
     case 323:
-      if (lookahead == 'p') ADVANCE(176);
+      if (lookahead == 'p') ADVANCE(77);
       END_STATE();
     case 324:
-      if (lookahead == 'p') ADVANCE(248);
+      if (lookahead == 'p') ADVANCE(172);
       END_STATE();
     case 325:
-      if (lookahead == 'p') ADVANCE(173);
+      if (lookahead == 'p') ADVANCE(246);
       END_STATE();
     case 326:
-      if (lookahead == 'p') ADVANCE(358);
+      if (lookahead == 'p') ADVANCE(168);
       END_STATE();
     case 327:
-      if (lookahead == 'p') ADVANCE(103);
+      if (lookahead == 'p') ADVANCE(361);
       END_STATE();
     case 328:
-      if (lookahead == 'q') ADVANCE(441);
-      if (lookahead == 't') ADVANCE(446);
+      if (lookahead == 'p') ADVANCE(95);
       END_STATE();
     case 329:
-      if (lookahead == 'r') ADVANCE(202);
+      if (lookahead == 'p') ADVANCE(94);
       END_STATE();
     case 330:
-      if (lookahead == 'r') ADVANCE(496);
+      if (lookahead == 'q') ADVANCE(444);
+      if (lookahead == 't') ADVANCE(449);
       END_STATE();
     case 331:
-      if (lookahead == 'r') ADVANCE(500);
+      if (lookahead == 'r') ADVANCE(198);
       END_STATE();
     case 332:
-      if (lookahead == 'r') ADVANCE(481);
+      if (lookahead == 'r') ADVANCE(501);
       END_STATE();
     case 333:
-      if (lookahead == 'r') ADVANCE(515);
+      if (lookahead == 'r') ADVANCE(505);
       END_STATE();
     case 334:
-      if (lookahead == 'r') ADVANCE(457);
+      if (lookahead == 'r') ADVANCE(487);
       END_STATE();
     case 335:
-      if (lookahead == 'r') ADVANCE(258);
+      if (lookahead == 'r') ADVANCE(520);
       END_STATE();
     case 336:
-      if (lookahead == 'r') ADVANCE(384);
+      if (lookahead == 'r') ADVANCE(461);
       END_STATE();
     case 337:
-      if (lookahead == 'r') ADVANCE(285);
+      if (lookahead == 'r') ADVANCE(256);
       END_STATE();
     case 338:
-      if (lookahead == 'r') ADVANCE(221);
+      if (lookahead == 'r') ADVANCE(387);
       END_STATE();
     case 339:
-      if (lookahead == 'r') ADVANCE(225);
+      if (lookahead == 'r') ADVANCE(284);
       END_STATE();
     case 340:
-      if (lookahead == 'r') ADVANCE(367);
+      if (lookahead == 'r') ADVANCE(217);
       END_STATE();
     case 341:
-      if (lookahead == 'r') ADVANCE(277);
+      if (lookahead == 'r') ADVANCE(221);
       END_STATE();
     case 342:
-      if (lookahead == 'r') ADVANCE(262);
+      if (lookahead == 'r') ADVANCE(370);
       END_STATE();
     case 343:
-      if (lookahead == 'r') ADVANCE(412);
+      if (lookahead == 'r') ADVANCE(276);
       END_STATE();
     case 344:
-      if (lookahead == 'r') ADVANCE(234);
+      if (lookahead == 'r') ADVANCE(260);
       END_STATE();
     case 345:
-      if (lookahead == 'r') ADVANCE(220);
+      if (lookahead == 'r') ADVANCE(416);
       END_STATE();
     case 346:
-      if (lookahead == 'r') ADVANCE(141);
+      if (lookahead == 'r') ADVANCE(231);
       END_STATE();
     case 347:
-      if (lookahead == 'r') ADVANCE(142);
+      if (lookahead == 'r') ADVANCE(216);
       END_STATE();
     case 348:
-      if (lookahead == 'r') ADVANCE(291);
+      if (lookahead == 'r') ADVANCE(135);
       END_STATE();
     case 349:
-      if (lookahead == 'r') ADVANCE(296);
+      if (lookahead == 'r') ADVANCE(136);
       END_STATE();
     case 350:
-      if (lookahead == 'r') ADVANCE(407);
+      if (lookahead == 'r') ADVANCE(290);
       END_STATE();
     case 351:
-      if (lookahead == 'r') ADVANCE(171);
-      if (lookahead == 'w') ADVANCE(344);
+      if (lookahead == 'r') ADVANCE(411);
       END_STATE();
     case 352:
-      if (lookahead == 'r') ADVANCE(151);
+      if (lookahead == 'r') ADVANCE(297);
       END_STATE();
     case 353:
-      if (lookahead == 'r') ADVANCE(451);
+      if (lookahead == 'r') ADVANCE(166);
+      if (lookahead == 'w') ADVANCE(346);
       END_STATE();
     case 354:
-      if (lookahead == 'r') ADVANCE(119);
+      if (lookahead == 'r') ADVANCE(145);
       END_STATE();
     case 355:
-      if (lookahead == 'r') ADVANCE(120);
+      if (lookahead == 'r') ADVANCE(454);
       END_STATE();
     case 356:
-      if (lookahead == 'r') ADVANCE(169);
+      if (lookahead == 'r') ADVANCE(112);
       END_STATE();
     case 357:
-      if (lookahead == 'r') ADVANCE(428);
+      if (lookahead == 'r') ADVANCE(398);
       END_STATE();
     case 358:
-      if (lookahead == 'r') ADVANCE(192);
+      if (lookahead == 'r') ADVANCE(113);
       END_STATE();
     case 359:
-      if (lookahead == 'r') ADVANCE(199);
+      if (lookahead == 'r') ADVANCE(164);
       END_STATE();
     case 360:
-      if (lookahead == 'r') ADVANCE(96);
+      if (lookahead == 'r') ADVANCE(432);
       END_STATE();
     case 361:
-      if (lookahead == 'r') ADVANCE(313);
+      if (lookahead == 'r') ADVANCE(187);
       END_STATE();
     case 362:
-      if (lookahead == 'r') ADVANCE(97);
+      if (lookahead == 'r') ADVANCE(195);
       END_STATE();
     case 363:
-      if (lookahead == 'r') ADVANCE(433);
+      if (lookahead == 'r') ADVANCE(86);
       END_STATE();
     case 364:
-      if (lookahead == 'r') ADVANCE(102);
+      if (lookahead == 'r') ADVANCE(314);
       END_STATE();
     case 365:
-      if (lookahead == 's') ADVANCE(57);
+      if (lookahead == 'r') ADVANCE(87);
       END_STATE();
     case 366:
-      if (lookahead == 's') ADVANCE(480);
+      if (lookahead == 'r') ADVANCE(436);
       END_STATE();
     case 367:
-      if (lookahead == 's') ADVANCE(511);
+      if (lookahead == 'r') ADVANCE(93);
       END_STATE();
     case 368:
-      if (lookahead == 's') ADVANCE(495);
+      if (lookahead == 's') ADVANCE(47);
       END_STATE();
     case 369:
-      if (lookahead == 's') ADVANCE(516);
+      if (lookahead == 's') ADVANCE(486);
       END_STATE();
     case 370:
-      if (lookahead == 's') ADVANCE(523);
+      if (lookahead == 's') ADVANCE(516);
       END_STATE();
     case 371:
-      if (lookahead == 's') ADVANCE(56);
+      if (lookahead == 's') ADVANCE(500);
       END_STATE();
     case 372:
-      if (lookahead == 's') ADVANCE(501);
+      if (lookahead == 's') ADVANCE(521);
       END_STATE();
     case 373:
-      if (lookahead == 's') ADVANCE(506);
+      if (lookahead == 's') ADVANCE(528);
       END_STATE();
     case 374:
-      if (lookahead == 's') ADVANCE(503);
+      if (lookahead == 's') ADVANCE(46);
       END_STATE();
     case 375:
-      if (lookahead == 's') ADVANCE(524);
+      if (lookahead == 's') ADVANCE(506);
       END_STATE();
     case 376:
-      if (lookahead == 's') ADVANCE(512);
+      if (lookahead == 's') ADVANCE(511);
       END_STATE();
     case 377:
-      if (lookahead == 's') ADVANCE(525);
+      if (lookahead == 's') ADVANCE(508);
       END_STATE();
     case 378:
-      if (lookahead == 's') ADVANCE(504);
+      if (lookahead == 's') ADVANCE(529);
       END_STATE();
     case 379:
-      if (lookahead == 's') ADVANCE(518);
-      END_STATE();
-    case 380:
-      if (lookahead == 's') ADVANCE(526);
-      END_STATE();
-    case 381:
-      if (lookahead == 's') ADVANCE(513);
-      END_STATE();
-    case 382:
       if (lookahead == 's') ADVANCE(517);
       END_STATE();
+    case 380:
+      if (lookahead == 's') ADVANCE(530);
+      END_STATE();
+    case 381:
+      if (lookahead == 's') ADVANCE(509);
+      END_STATE();
+    case 382:
+      if (lookahead == 's') ADVANCE(523);
+      END_STATE();
     case 383:
-      if (lookahead == 's') ADVANCE(403);
+      if (lookahead == 's') ADVANCE(531);
       END_STATE();
     case 384:
-      if (lookahead == 's') ADVANCE(228);
+      if (lookahead == 's') ADVANCE(518);
       END_STATE();
     case 385:
-      if (lookahead == 's') ADVANCE(34);
+      if (lookahead == 's') ADVANCE(522);
       END_STATE();
     case 386:
-      if (lookahead == 's') ADVANCE(419);
+      if (lookahead == 's') ADVANCE(407);
       END_STATE();
     case 387:
-      if (lookahead == 's') ADVANCE(317);
+      if (lookahead == 's') ADVANCE(224);
       END_STATE();
     case 388:
-      if (lookahead == 's') ADVANCE(372);
+      if (lookahead == 's') ADVANCE(18);
       END_STATE();
     case 389:
-      if (lookahead == 's') ADVANCE(373);
+      if (lookahead == 's') ADVANCE(423);
       END_STATE();
     case 390:
-      if (lookahead == 's') ADVANCE(145);
+      if (lookahead == 's') ADVANCE(318);
       END_STATE();
     case 391:
-      if (lookahead == 's') ADVANCE(376);
+      if (lookahead == 's') ADVANCE(375);
       END_STATE();
     case 392:
-      if (lookahead == 's') ADVANCE(377);
+      if (lookahead == 's') ADVANCE(376);
       END_STATE();
     case 393:
-      if (lookahead == 's') ADVANCE(385);
+      if (lookahead == 's') ADVANCE(139);
       END_STATE();
     case 394:
-      if (lookahead == 's') ADVANCE(161);
+      if (lookahead == 's') ADVANCE(379);
       END_STATE();
     case 395:
-      if (lookahead == 's') ADVANCE(172);
+      if (lookahead == 's') ADVANCE(380);
       END_STATE();
     case 396:
-      if (lookahead == 's') ADVANCE(182);
+      if (lookahead == 's') ADVANCE(388);
       END_STATE();
     case 397:
-      if (lookahead == 's') ADVANCE(183);
+      if (lookahead == 's') ADVANCE(156);
       END_STATE();
     case 398:
-      if (lookahead == 's') ADVANCE(396);
+      if (lookahead == 's') ADVANCE(227);
       END_STATE();
     case 399:
-      if (lookahead == 's') ADVANCE(217);
+      if (lookahead == 's') ADVANCE(167);
       END_STATE();
     case 400:
-      if (lookahead == 's') ADVANCE(397);
+      if (lookahead == 's') ADVANCE(177);
       END_STATE();
     case 401:
-      if (lookahead == 's') ADVANCE(98);
+      if (lookahead == 's') ADVANCE(178);
       END_STATE();
     case 402:
-      if (lookahead == 't') ADVANCE(215);
+      if (lookahead == 's') ADVANCE(400);
       END_STATE();
     case 403:
-      if (lookahead == 't') ADVANCE(528);
+      if (lookahead == 's') ADVANCE(213);
       END_STATE();
     case 404:
-      if (lookahead == 't') ADVANCE(531);
+      if (lookahead == 's') ADVANCE(401);
       END_STATE();
     case 405:
-      if (lookahead == 't') ADVANCE(51);
+      if (lookahead == 's') ADVANCE(88);
       END_STATE();
     case 406:
-      if (lookahead == 't') ADVANCE(473);
-      END_STATE();
-    case 407:
-      if (lookahead == 't') ADVANCE(510);
-      END_STATE();
-    case 408:
-      if (lookahead == 't') ADVANCE(50);
-      END_STATE();
-    case 409:
-      if (lookahead == 't') ADVANCE(60);
-      END_STATE();
-    case 410:
-      if (lookahead == 't') ADVANCE(72);
-      END_STATE();
-    case 411:
       if (lookahead == 't') ADVANCE(211);
       END_STATE();
+    case 407:
+      if (lookahead == 't') ADVANCE(533);
+      END_STATE();
+    case 408:
+      if (lookahead == 't') ADVANCE(536);
+      END_STATE();
+    case 409:
+      if (lookahead == 't') ADVANCE(41);
+      END_STATE();
+    case 410:
+      if (lookahead == 't') ADVANCE(479);
+      END_STATE();
+    case 411:
+      if (lookahead == 't') ADVANCE(515);
+      END_STATE();
     case 412:
-      if (lookahead == 't') ADVANCE(458);
+      if (lookahead == 't') ADVANCE(40);
       END_STATE();
     case 413:
-      if (lookahead == 't') ADVANCE(167);
+      if (lookahead == 't') ADVANCE(50);
       END_STATE();
     case 414:
-      if (lookahead == 't') ADVANCE(213);
+      if (lookahead == 't') ADVANCE(62);
       END_STATE();
     case 415:
-      if (lookahead == 't') ADVANCE(155);
+      if (lookahead == 't') ADVANCE(207);
       END_STATE();
     case 416:
-      if (lookahead == 't') ADVANCE(78);
+      if (lookahead == 't') ADVANCE(462);
       END_STATE();
     case 417:
-      if (lookahead == 't') ADVANCE(224);
+      if (lookahead == 't') ADVANCE(162);
       END_STATE();
     case 418:
-      if (lookahead == 't') ADVANCE(86);
+      if (lookahead == 't') ADVANCE(209);
       END_STATE();
     case 419:
-      if (lookahead == 't') ADVANCE(371);
-      END_STATE();
-    case 420:
-      if (lookahead == 't') ADVANCE(424);
-      END_STATE();
-    case 421:
-      if (lookahead == 't') ADVANCE(292);
-      END_STATE();
-    case 422:
-      if (lookahead == 't') ADVANCE(294);
-      END_STATE();
-    case 423:
-      if (lookahead == 't') ADVANCE(165);
-      END_STATE();
-    case 424:
-      if (lookahead == 't') ADVANCE(345);
-      END_STATE();
-    case 425:
-      if (lookahead == 't') ADVANCE(193);
-      END_STATE();
-    case 426:
       if (lookahead == 't') ADVANCE(150);
       END_STATE();
+    case 420:
+      if (lookahead == 't') ADVANCE(68);
+      END_STATE();
+    case 421:
+      if (lookahead == 't') ADVANCE(220);
+      END_STATE();
+    case 422:
+      if (lookahead == 't') ADVANCE(76);
+      END_STATE();
+    case 423:
+      if (lookahead == 't') ADVANCE(374);
+      END_STATE();
+    case 424:
+      if (lookahead == 't') ADVANCE(428);
+      END_STATE();
+    case 425:
+      if (lookahead == 't') ADVANCE(160);
+      END_STATE();
+    case 426:
+      if (lookahead == 't') ADVANCE(291);
+      END_STATE();
     case 427:
-      if (lookahead == 't') ADVANCE(152);
+      if (lookahead == 't') ADVANCE(293);
       END_STATE();
     case 428:
-      if (lookahead == 't') ADVANCE(174);
+      if (lookahead == 't') ADVANCE(347);
       END_STATE();
     case 429:
-      if (lookahead == 't') ADVANCE(229);
+      if (lookahead == 't') ADVANCE(188);
       END_STATE();
     case 430:
-      if (lookahead == 't') ADVANCE(88);
+      if (lookahead == 't') ADVANCE(144);
       END_STATE();
     case 431:
-      if (lookahead == 't') ADVANCE(231);
+      if (lookahead == 't') ADVANCE(146);
       END_STATE();
     case 432:
       if (lookahead == 't') ADVANCE(170);
       END_STATE();
     case 433:
-      if (lookahead == 't') ADVANCE(232);
+      if (lookahead == 't') ADVANCE(225);
       END_STATE();
     case 434:
-      if (lookahead == 't') ADVANCE(233);
+      if (lookahead == 't') ADVANCE(78);
       END_STATE();
     case 435:
-      if (lookahead == 't') ADVANCE(180);
+      if (lookahead == 't') ADVANCE(228);
       END_STATE();
     case 436:
-      if (lookahead == 't') ADVANCE(100);
+      if (lookahead == 't') ADVANCE(229);
       END_STATE();
     case 437:
-      if (lookahead == 't') ADVANCE(101);
+      if (lookahead == 't') ADVANCE(230);
       END_STATE();
     case 438:
-      if (lookahead == 't') ADVANCE(99);
+      if (lookahead == 't') ADVANCE(175);
       END_STATE();
     case 439:
-      if (lookahead == 't') ADVANCE(194);
+      if (lookahead == 't') ADVANCE(91);
       END_STATE();
     case 440:
-      if (lookahead == 'u') ADVANCE(257);
+      if (lookahead == 't') ADVANCE(92);
       END_STATE();
     case 441:
-      if (lookahead == 'u') ADVANCE(230);
+      if (lookahead == 't') ADVANCE(89);
       END_STATE();
     case 442:
-      if (lookahead == 'u') ADVANCE(319);
+      if (lookahead == 't') ADVANCE(190);
       END_STATE();
     case 443:
-      if (lookahead == 'u') ADVANCE(354);
+      if (lookahead == 'u') ADVANCE(255);
       END_STATE();
     case 444:
-      if (lookahead == 'u') ADVANCE(320);
+      if (lookahead == 'u') ADVANCE(226);
       END_STATE();
     case 445:
-      if (lookahead == 'u') ADVANCE(249);
+      if (lookahead == 'u') ADVANCE(320);
       END_STATE();
     case 446:
-      if (lookahead == 'u') ADVANCE(342);
+      if (lookahead == 'u') ADVANCE(356);
       END_STATE();
     case 447:
-      if (lookahead == 'u') ADVANCE(401);
+      if (lookahead == 'u') ADVANCE(321);
       END_STATE();
     case 448:
-      if (lookahead == 'u') ADVANCE(435);
+      if (lookahead == 'u') ADVANCE(247);
       END_STATE();
     case 449:
-      if (lookahead == 'u') ADVANCE(355);
+      if (lookahead == 'u') ADVANCE(344);
       END_STATE();
     case 450:
-      if (lookahead == 'v') ADVANCE(223);
+      if (lookahead == 'u') ADVANCE(405);
       END_STATE();
     case 451:
-      if (lookahead == 'v') ADVANCE(147);
+      if (lookahead == 'u') ADVANCE(438);
       END_STATE();
     case 452:
-      if (lookahead == 'v') ADVANCE(177);
+      if (lookahead == 'u') ADVANCE(358);
       END_STATE();
     case 453:
-      if (lookahead == 'w') ADVANCE(368);
+      if (lookahead == 'v') ADVANCE(219);
       END_STATE();
     case 454:
-      if (lookahead == 'x') ADVANCE(71);
+      if (lookahead == 'v') ADVANCE(141);
       END_STATE();
     case 455:
-      if (lookahead == 'x') ADVANCE(530);
+      if (lookahead == 'v') ADVANCE(171);
       END_STATE();
     case 456:
-      if (lookahead == 'x') ADVANCE(326);
+      if (lookahead == 'v') ADVANCE(189);
       END_STATE();
     case 457:
-      if (lookahead == 'y') ADVANCE(472);
+      if (lookahead == 'w') ADVANCE(371);
       END_STATE();
     case 458:
-      if (lookahead == 'y') ADVANCE(490);
+      if (lookahead == 'x') ADVANCE(61);
       END_STATE();
     case 459:
-      if (lookahead == 'y') ADVANCE(338);
+      if (lookahead == 'x') ADVANCE(535);
       END_STATE();
     case 460:
-      if (lookahead == '*' ||
-          lookahead == 'x') ADVANCE(573);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(575);
+      if (lookahead == 'x') ADVANCE(327);
       END_STATE();
     case 461:
-      if (('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
-          lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(576);
+      if (lookahead == 'y') ADVANCE(478);
       END_STATE();
     case 462:
+      if (lookahead == 'y') ADVANCE(494);
+      END_STATE();
+    case 463:
+      if (lookahead == 'y') ADVANCE(340);
+      END_STATE();
+    case 464:
+      if (('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(23);
+      END_STATE();
+    case 465:
+      if (lookahead != 0 &&
+          lookahead != '\t' &&
+          lookahead != '\n' &&
+          lookahead != '\r' &&
+          lookahead != ' ') ADVANCE(567);
+      END_STATE();
+    case 466:
       if (lookahead != 0 &&
           lookahead != '\t' &&
           lookahead != '\n' &&
           lookahead != '\r' &&
           lookahead != ' ' &&
-          lookahead != '<') ADVANCE(560);
+          lookahead != '<') ADVANCE(563);
       END_STATE();
-    case 463:
-      if (eof) ADVANCE(464);
-      if (lookahead == '\t') SKIP(463)
-      if (lookahead == '\n') SKIP(463)
-      if (lookahead == '\r') SKIP(463)
-      if (lookahead == ' ') SKIP(463)
-      if (lookahead == '$') ADVANCE(555);
-      if (lookahead == '(') ADVANCE(579);
-      if (lookahead == ')') ADVANCE(580);
-      if (lookahead == '*') ADVANCE(1);
-      if (lookahead == ',') ADVANCE(533);
-      if (lookahead == '<') ADVANCE(482);
-      if (lookahead == '=') ADVANCE(581);
-      if (lookahead == '>') ADVANCE(483);
-      if (lookahead == '?') ADVANCE(553);
-      if (lookahead == '@') ADVANCE(66);
-      if (lookahead == '[') ADVANCE(565);
-      if (lookahead == '\\') ADVANCE(552);
-      if (lookahead == '{') ADVANCE(466);
-      if (lookahead == '|') ADVANCE(554);
-      if (lookahead == '}') ADVANCE(468);
+    case 467:
+      if (eof) ADVANCE(468);
+      if (lookahead == '\n') SKIP(467)
+      if (lookahead == '\r') SKIP(0)
+      if (lookahead == '$') ADVANCE(560);
+      if (lookahead == '(') ADVANCE(573);
+      if (lookahead == ')') ADVANCE(574);
+      if (lookahead == '*') ADVANCE(13);
+      if (lookahead == ',') ADVANCE(538);
+      if (lookahead == '/') ADVANCE(26);
+      if (lookahead == '<') ADVANCE(488);
+      if (lookahead == '=') ADVANCE(575);
+      if (lookahead == '>') ADVANCE(489);
+      if (lookahead == '?') ADVANCE(558);
+      if (lookahead == '@') ADVANCE(57);
+      if (lookahead == '[') ADVANCE(55);
+      if (lookahead == '\\') ADVANCE(557);
+      if (lookahead == '{') ADVANCE(470);
+      if (lookahead == '|') ADVANCE(559);
+      if (lookahead == '}') ADVANCE(473);
+      if (lookahead == '\t' ||
+          lookahead == ' ') SKIP(467)
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(543);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(569);
+          lookahead == 'n') ADVANCE(548);
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(27);
       if (('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z') ||
-          (161 <= lookahead && lookahead <= 255)) ADVANCE(551);
-      if (lookahead != 0) ADVANCE(567);
-      END_STATE();
-    case 464:
-      ACCEPT_TOKEN(ts_builtin_sym_end);
-      END_STATE();
-    case 465:
-      ACCEPT_TOKEN(sym__begin);
-      if (lookahead == '*') ADVANCE(465);
-      END_STATE();
-    case 466:
-      ACCEPT_TOKEN(anon_sym_LBRACE);
-      END_STATE();
-    case 467:
-      ACCEPT_TOKEN(anon_sym_ATinheritDoc);
+          (161 <= lookahead && lookahead <= 255)) ADVANCE(556);
       END_STATE();
     case 468:
-      ACCEPT_TOKEN(anon_sym_RBRACE);
+      ACCEPT_TOKEN(ts_builtin_sym_end);
       END_STATE();
     case 469:
-      ACCEPT_TOKEN(anon_sym_ATapi);
+      ACCEPT_TOKEN(sym__begin);
+      if (lookahead == '*') ADVANCE(469);
       END_STATE();
     case 470:
-      ACCEPT_TOKEN(anon_sym_ATfilesource);
+      ACCEPT_TOKEN(anon_sym_LBRACE);
       END_STATE();
     case 471:
-      ACCEPT_TOKEN(anon_sym_ATignore);
+      ACCEPT_TOKEN(anon_sym_ATinheritdoc);
       END_STATE();
     case 472:
-      ACCEPT_TOKEN(anon_sym_ATcategory);
+      ACCEPT_TOKEN(anon_sym_ATinheritDoc);
       END_STATE();
     case 473:
-      ACCEPT_TOKEN(anon_sym_ATcopyright);
+      ACCEPT_TOKEN(anon_sym_RBRACE);
       END_STATE();
     case 474:
-      ACCEPT_TOKEN(anon_sym_ATtodo);
+      ACCEPT_TOKEN(anon_sym_ATapi);
       END_STATE();
     case 475:
-      ACCEPT_TOKEN(anon_sym_ATexample);
+      ACCEPT_TOKEN(anon_sym_ATfilesource);
       END_STATE();
     case 476:
-      ACCEPT_TOKEN(anon_sym_ATlicense);
+      ACCEPT_TOKEN(anon_sym_ATignore);
       END_STATE();
     case 477:
-      ACCEPT_TOKEN(anon_sym_ATpackage);
-      END_STATE();
-    case 478:
-      ACCEPT_TOKEN(anon_sym_ATsource);
-      END_STATE();
-    case 479:
-      ACCEPT_TOKEN(anon_sym_ATsubpackage);
-      END_STATE();
-    case 480:
-      ACCEPT_TOKEN(anon_sym_ATuses);
-      END_STATE();
-    case 481:
-      ACCEPT_TOKEN(anon_sym_ATauthor);
-      END_STATE();
-    case 482:
-      ACCEPT_TOKEN(anon_sym_LT);
-      END_STATE();
-    case 483:
-      ACCEPT_TOKEN(anon_sym_GT);
-      END_STATE();
-    case 484:
-      ACCEPT_TOKEN(anon_sym_ATglobal);
-      END_STATE();
-    case 485:
       ACCEPT_TOKEN(anon_sym_ATinternal);
       END_STATE();
+    case 478:
+      ACCEPT_TOKEN(anon_sym_ATcategory);
+      END_STATE();
+    case 479:
+      ACCEPT_TOKEN(anon_sym_ATcopyright);
+      END_STATE();
+    case 480:
+      ACCEPT_TOKEN(anon_sym_ATtodo);
+      END_STATE();
+    case 481:
+      ACCEPT_TOKEN(anon_sym_ATexample);
+      END_STATE();
+    case 482:
+      ACCEPT_TOKEN(anon_sym_ATlicense);
+      END_STATE();
+    case 483:
+      ACCEPT_TOKEN(anon_sym_ATpackage);
+      if (lookahead == '_') ADVANCE(456);
+      END_STATE();
+    case 484:
+      ACCEPT_TOKEN(anon_sym_ATsource);
+      END_STATE();
+    case 485:
+      ACCEPT_TOKEN(anon_sym_ATsubpackage);
+      END_STATE();
     case 486:
-      ACCEPT_TOKEN(anon_sym_ATlink);
+      ACCEPT_TOKEN(anon_sym_ATuses);
       END_STATE();
     case 487:
-      ACCEPT_TOKEN(anon_sym_LPAREN_RPAREN);
+      ACCEPT_TOKEN(anon_sym_ATauthor);
       END_STATE();
     case 488:
-      ACCEPT_TOKEN(anon_sym_ATmethod);
+      ACCEPT_TOKEN(anon_sym_LT);
       END_STATE();
     case 489:
-      ACCEPT_TOKEN(anon_sym_ATparam);
+      ACCEPT_TOKEN(anon_sym_GT);
       END_STATE();
     case 490:
-      ACCEPT_TOKEN(anon_sym_ATproperty);
-      if (lookahead == '-') ADVANCE(351);
+      ACCEPT_TOKEN(anon_sym_ATglobal);
       END_STATE();
     case 491:
-      ACCEPT_TOKEN(anon_sym_ATproperty_DASHread);
+      ACCEPT_TOKEN(anon_sym_ATlink);
       END_STATE();
     case 492:
-      ACCEPT_TOKEN(anon_sym_ATproperty_DASHwrite);
+      ACCEPT_TOKEN(anon_sym_ATmethod);
       END_STATE();
     case 493:
-      ACCEPT_TOKEN(anon_sym_ATreturn);
+      ACCEPT_TOKEN(anon_sym_ATparam);
       END_STATE();
     case 494:
-      ACCEPT_TOKEN(anon_sym_ATsee);
+      ACCEPT_TOKEN(anon_sym_ATproperty);
+      if (lookahead == '-') ADVANCE(353);
       END_STATE();
     case 495:
-      ACCEPT_TOKEN(anon_sym_ATthrows);
+      ACCEPT_TOKEN(anon_sym_ATproperty_DASHread);
       END_STATE();
     case 496:
-      ACCEPT_TOKEN(anon_sym_ATvar);
+      ACCEPT_TOKEN(anon_sym_ATproperty_DASHwrite);
       END_STATE();
     case 497:
-      ACCEPT_TOKEN(anon_sym_ATdeprecated);
+      ACCEPT_TOKEN(anon_sym_ATreturn);
       END_STATE();
     case 498:
-      ACCEPT_TOKEN(anon_sym_ATsince);
+      ACCEPT_TOKEN(anon_sym_ATsee);
       END_STATE();
     case 499:
-      ACCEPT_TOKEN(anon_sym_ATversion);
+      ACCEPT_TOKEN(anon_sym_LPAREN_RPAREN);
       END_STATE();
     case 500:
-      ACCEPT_TOKEN(anon_sym_ATafter);
-      if (lookahead == 'C') ADVANCE(247);
+      ACCEPT_TOKEN(anon_sym_ATthrows);
       END_STATE();
     case 501:
-      ACCEPT_TOKEN(anon_sym_ATafterClass);
+      ACCEPT_TOKEN(anon_sym_ATvar);
       END_STATE();
     case 502:
-      ACCEPT_TOKEN(anon_sym_ATannotation);
+      ACCEPT_TOKEN(anon_sym_ATdeprecated);
       END_STATE();
     case 503:
-      ACCEPT_TOKEN(anon_sym_ATbackupGlobals);
+      ACCEPT_TOKEN(anon_sym_ATsince);
       END_STATE();
     case 504:
-      ACCEPT_TOKEN(anon_sym_ATbackupStaticAttributes);
+      ACCEPT_TOKEN(anon_sym_ATversion);
       END_STATE();
     case 505:
-      ACCEPT_TOKEN(anon_sym_ATbefore);
-      if (lookahead == 'C') ADVANCE(252);
+      ACCEPT_TOKEN(anon_sym_ATafter);
+      if (lookahead == 'C') ADVANCE(245);
       END_STATE();
     case 506:
-      ACCEPT_TOKEN(anon_sym_ATbeforeClass);
+      ACCEPT_TOKEN(anon_sym_ATafterClass);
       END_STATE();
     case 507:
-      ACCEPT_TOKEN(anon_sym_ATcodeCoverageIgnore);
-      if (lookahead == '*') ADVANCE(508);
-      if (lookahead == 'E') ADVANCE(272);
-      if (lookahead == 'S') ADVANCE(430);
+      ACCEPT_TOKEN(anon_sym_ATannotation);
       END_STATE();
     case 508:
-      ACCEPT_TOKEN(anon_sym_ATcodeCoverageIgnore_STAR);
+      ACCEPT_TOKEN(anon_sym_ATbackupGlobals);
       END_STATE();
     case 509:
-      ACCEPT_TOKEN(anon_sym_ATcodeCoverageIgnoreEnd);
+      ACCEPT_TOKEN(anon_sym_ATbackupStaticAttributes);
       END_STATE();
     case 510:
-      ACCEPT_TOKEN(anon_sym_ATcodeCoverageIgnoreStart);
+      ACCEPT_TOKEN(anon_sym_ATbefore);
+      if (lookahead == 'C') ADVANCE(250);
       END_STATE();
     case 511:
-      ACCEPT_TOKEN(anon_sym_ATcovers);
-      if (lookahead == 'D') ADVANCE(154);
-      if (lookahead == 'N') ADVANCE(302);
+      ACCEPT_TOKEN(anon_sym_ATbeforeClass);
       END_STATE();
     case 512:
-      ACCEPT_TOKEN(anon_sym_ATcoversDefaultClass);
-      if (lookahead == ' ') ADVANCE(421);
+      ACCEPT_TOKEN(anon_sym_ATcodeCoverageIgnore);
+      if (lookahead == '*') ADVANCE(513);
+      if (lookahead == 'E') ADVANCE(270);
+      if (lookahead == 'S') ADVANCE(434);
       END_STATE();
     case 513:
-      ACCEPT_TOKEN(anon_sym_ATcoversDefaultClasstoshortenannotations);
+      ACCEPT_TOKEN(anon_sym_ATcodeCoverageIgnore_STAR);
       END_STATE();
     case 514:
-      ACCEPT_TOKEN(anon_sym_ATcoversNothing);
+      ACCEPT_TOKEN(anon_sym_ATcodeCoverageIgnoreEnd);
       END_STATE();
     case 515:
-      ACCEPT_TOKEN(anon_sym_ATdataProvider);
+      ACCEPT_TOKEN(anon_sym_ATcodeCoverageIgnoreStart);
       END_STATE();
     case 516:
-      ACCEPT_TOKEN(anon_sym_ATdepends);
-      if (lookahead == ' ') ADVANCE(84);
+      ACCEPT_TOKEN(anon_sym_ATcovers);
+      if (lookahead == 'D') ADVANCE(149);
+      if (lookahead == 'N') ADVANCE(302);
       END_STATE();
     case 517:
-      ACCEPT_TOKEN(anon_sym_ATdependsannotationtoexpressdependencies);
+      ACCEPT_TOKEN(anon_sym_ATcoversDefaultClass);
+      if (lookahead == ' ') ADVANCE(426);
       END_STATE();
     case 518:
-      ACCEPT_TOKEN(anon_sym_ATdoesNotPerformAssertions);
+      ACCEPT_TOKEN(anon_sym_ATcoversDefaultClasstoshortenannotations);
       END_STATE();
     case 519:
-      ACCEPT_TOKEN(anon_sym_ATgroup);
+      ACCEPT_TOKEN(anon_sym_ATcoversNothing);
       END_STATE();
     case 520:
-      ACCEPT_TOKEN(anon_sym_ATlarge);
+      ACCEPT_TOKEN(anon_sym_ATdataProvider);
       END_STATE();
     case 521:
-      ACCEPT_TOKEN(anon_sym_ATmedium);
+      ACCEPT_TOKEN(anon_sym_ATdepends);
+      if (lookahead == ' ') ADVANCE(74);
       END_STATE();
     case 522:
-      ACCEPT_TOKEN(anon_sym_ATpreserveGlobalState);
+      ACCEPT_TOKEN(anon_sym_ATdependsannotationtoexpressdependencies);
       END_STATE();
     case 523:
-      ACCEPT_TOKEN(anon_sym_ATrequires);
-      if (lookahead == ' ') ADVANCE(447);
+      ACCEPT_TOKEN(anon_sym_ATdoesNotPerformAssertions);
       END_STATE();
     case 524:
-      ACCEPT_TOKEN(anon_sym_ATrequiresusages);
+      ACCEPT_TOKEN(anon_sym_ATgroup);
       END_STATE();
     case 525:
-      ACCEPT_TOKEN(anon_sym_ATrunInSeparateProcess);
+      ACCEPT_TOKEN(anon_sym_ATlarge);
       END_STATE();
     case 526:
-      ACCEPT_TOKEN(anon_sym_ATrunTestsInSeparateProcesses);
+      ACCEPT_TOKEN(anon_sym_ATmedium);
       END_STATE();
     case 527:
-      ACCEPT_TOKEN(anon_sym_ATsmall);
+      ACCEPT_TOKEN(anon_sym_ATpreserveGlobalState);
       END_STATE();
     case 528:
-      ACCEPT_TOKEN(anon_sym_ATtest);
-      if (lookahead == 'W') ADVANCE(226);
-      if (lookahead == 'd') ADVANCE(288);
+      ACCEPT_TOKEN(anon_sym_ATrequires);
+      if (lookahead == ' ') ADVANCE(450);
       END_STATE();
     case 529:
-      ACCEPT_TOKEN(anon_sym_ATtestWith);
+      ACCEPT_TOKEN(anon_sym_ATrequiresusages);
       END_STATE();
     case 530:
-      ACCEPT_TOKEN(anon_sym_ATtestdox);
+      ACCEPT_TOKEN(anon_sym_ATrunInSeparateProcess);
       END_STATE();
     case 531:
-      ACCEPT_TOKEN(anon_sym_ATticket);
+      ACCEPT_TOKEN(anon_sym_ATrunTestsInSeparateProcesses);
       END_STATE();
     case 532:
-      ACCEPT_TOKEN(anon_sym_LBRACK_RBRACK);
+      ACCEPT_TOKEN(anon_sym_ATsmall);
       END_STATE();
     case 533:
-      ACCEPT_TOKEN(anon_sym_COMMA);
+      ACCEPT_TOKEN(anon_sym_ATtest);
+      if (lookahead == 'W') ADVANCE(222);
+      if (lookahead == 'd') ADVANCE(287);
       END_STATE();
     case 534:
-      ACCEPT_TOKEN(sym_name);
-      if (lookahead == ':') ADVANCE(43);
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(539);
-      if (('0' <= lookahead && lookahead <= '9') ||
-          ('B' <= lookahead && lookahead <= 'Z') ||
-          lookahead == '_' ||
-          ('b' <= lookahead && lookahead <= 'z')) ADVANCE(542);
-      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(551);
+      ACCEPT_TOKEN(anon_sym_ATtestWith);
       END_STATE();
     case 535:
-      ACCEPT_TOKEN(sym_name);
-      if (lookahead == ':') ADVANCE(43);
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(536);
-      if (('0' <= lookahead && lookahead <= '9') ||
-          ('B' <= lookahead && lookahead <= 'Z') ||
-          lookahead == '_' ||
-          ('b' <= lookahead && lookahead <= 'z')) ADVANCE(542);
-      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(551);
+      ACCEPT_TOKEN(anon_sym_ATtestdox);
       END_STATE();
     case 536:
-      ACCEPT_TOKEN(sym_name);
-      if (lookahead == ':') ADVANCE(43);
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(537);
-      if (('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
-          lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(542);
-      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(551);
+      ACCEPT_TOKEN(anon_sym_ATticket);
       END_STATE();
     case 537:
-      ACCEPT_TOKEN(sym_name);
-      if (lookahead == ':') ADVANCE(43);
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(542);
-      if (('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
-          lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(542);
-      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(551);
+      ACCEPT_TOKEN(anon_sym_LBRACK_RBRACK);
       END_STATE();
     case 538:
-      ACCEPT_TOKEN(sym_name);
-      if (lookahead == ':') ADVANCE(43);
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(541);
-      if (('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
-          lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(542);
-      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(551);
+      ACCEPT_TOKEN(anon_sym_COMMA);
       END_STATE();
     case 539:
       ACCEPT_TOKEN(sym_name);
-      if (lookahead == ':') ADVANCE(43);
-      if (lookahead == 'M' ||
-          lookahead == 'm') ADVANCE(538);
+      if (lookahead == ':') ADVANCE(31);
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(544);
       if (('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
+          ('B' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(542);
-      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(551);
+          ('b' <= lookahead && lookahead <= 'z')) ADVANCE(547);
+      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(556);
       END_STATE();
     case 540:
       ACCEPT_TOKEN(sym_name);
-      if (lookahead == ':') ADVANCE(43);
-      if (lookahead == 'P' ||
-          lookahead == 'p') ADVANCE(535);
+      if (lookahead == ':') ADVANCE(31);
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(541);
       if (('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
+          ('B' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(542);
-      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(551);
+          ('b' <= lookahead && lookahead <= 'z')) ADVANCE(547);
+      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(556);
       END_STATE();
     case 541:
       ACCEPT_TOKEN(sym_name);
-      if (lookahead == ':') ADVANCE(43);
-      if (lookahead == 'S' ||
-          lookahead == 's') ADVANCE(540);
+      if (lookahead == ':') ADVANCE(31);
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(542);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(542);
-      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(551);
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(547);
+      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(556);
       END_STATE();
     case 542:
       ACCEPT_TOKEN(sym_name);
-      if (lookahead == ':') ADVANCE(43);
+      if (lookahead == ':') ADVANCE(31);
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(547);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(542);
-      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(551);
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(547);
+      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(556);
       END_STATE();
     case 543:
       ACCEPT_TOKEN(sym_name);
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(548);
+      if (lookahead == ':') ADVANCE(31);
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(546);
       if (('0' <= lookahead && lookahead <= '9') ||
-          ('B' <= lookahead && lookahead <= 'Z') ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
-          ('b' <= lookahead && lookahead <= 'z') ||
-          (161 <= lookahead && lookahead <= 255)) ADVANCE(551);
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(547);
+      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(556);
       END_STATE();
     case 544:
       ACCEPT_TOKEN(sym_name);
+      if (lookahead == ':') ADVANCE(31);
+      if (lookahead == 'M' ||
+          lookahead == 'm') ADVANCE(543);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(547);
+      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(556);
+      END_STATE();
+    case 545:
+      ACCEPT_TOKEN(sym_name);
+      if (lookahead == ':') ADVANCE(31);
+      if (lookahead == 'P' ||
+          lookahead == 'p') ADVANCE(540);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(547);
+      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(556);
+      END_STATE();
+    case 546:
+      ACCEPT_TOKEN(sym_name);
+      if (lookahead == ':') ADVANCE(31);
+      if (lookahead == 'S' ||
+          lookahead == 's') ADVANCE(545);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(547);
+      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(556);
+      END_STATE();
+    case 547:
+      ACCEPT_TOKEN(sym_name);
+      if (lookahead == ':') ADVANCE(31);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(547);
+      if ((161 <= lookahead && lookahead <= 255)) ADVANCE(556);
+      END_STATE();
+    case 548:
+      ACCEPT_TOKEN(sym_name);
       if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(545);
+          lookahead == 'a') ADVANCE(553);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('B' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('b' <= lookahead && lookahead <= 'z') ||
-          (161 <= lookahead && lookahead <= 255)) ADVANCE(551);
-      END_STATE();
-    case 545:
-      ACCEPT_TOKEN(sym_name);
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(546);
-      if (('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
-          lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z') ||
-          (161 <= lookahead && lookahead <= 255)) ADVANCE(551);
-      END_STATE();
-    case 546:
-      ACCEPT_TOKEN(sym_name);
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(551);
-      if (('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
-          lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z') ||
-          (161 <= lookahead && lookahead <= 255)) ADVANCE(551);
-      END_STATE();
-    case 547:
-      ACCEPT_TOKEN(sym_name);
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(550);
-      if (('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
-          lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z') ||
-          (161 <= lookahead && lookahead <= 255)) ADVANCE(551);
-      END_STATE();
-    case 548:
-      ACCEPT_TOKEN(sym_name);
-      if (lookahead == 'M' ||
-          lookahead == 'm') ADVANCE(547);
-      if (('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
-          lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z') ||
-          (161 <= lookahead && lookahead <= 255)) ADVANCE(551);
+          (161 <= lookahead && lookahead <= 255)) ADVANCE(556);
       END_STATE();
     case 549:
       ACCEPT_TOKEN(sym_name);
-      if (lookahead == 'P' ||
-          lookahead == 'p') ADVANCE(544);
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(550);
       if (('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
+          ('B' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z') ||
-          (161 <= lookahead && lookahead <= 255)) ADVANCE(551);
+          ('b' <= lookahead && lookahead <= 'z') ||
+          (161 <= lookahead && lookahead <= 255)) ADVANCE(556);
       END_STATE();
     case 550:
       ACCEPT_TOKEN(sym_name);
-      if (lookahead == 'S' ||
-          lookahead == 's') ADVANCE(549);
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(551);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z') ||
-          (161 <= lookahead && lookahead <= 255)) ADVANCE(551);
+          (161 <= lookahead && lookahead <= 255)) ADVANCE(556);
       END_STATE();
     case 551:
+      ACCEPT_TOKEN(sym_name);
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(556);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z') ||
+          (161 <= lookahead && lookahead <= 255)) ADVANCE(556);
+      END_STATE();
+    case 552:
+      ACCEPT_TOKEN(sym_name);
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(555);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z') ||
+          (161 <= lookahead && lookahead <= 255)) ADVANCE(556);
+      END_STATE();
+    case 553:
+      ACCEPT_TOKEN(sym_name);
+      if (lookahead == 'M' ||
+          lookahead == 'm') ADVANCE(552);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z') ||
+          (161 <= lookahead && lookahead <= 255)) ADVANCE(556);
+      END_STATE();
+    case 554:
+      ACCEPT_TOKEN(sym_name);
+      if (lookahead == 'P' ||
+          lookahead == 'p') ADVANCE(549);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z') ||
+          (161 <= lookahead && lookahead <= 255)) ADVANCE(556);
+      END_STATE();
+    case 555:
+      ACCEPT_TOKEN(sym_name);
+      if (lookahead == 'S' ||
+          lookahead == 's') ADVANCE(554);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z') ||
+          (161 <= lookahead && lookahead <= 255)) ADVANCE(556);
+      END_STATE();
+    case 556:
       ACCEPT_TOKEN(sym_name);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z') ||
-          (161 <= lookahead && lookahead <= 255)) ADVANCE(551);
-      END_STATE();
-    case 552:
-      ACCEPT_TOKEN(anon_sym_BSLASH);
-      END_STATE();
-    case 553:
-      ACCEPT_TOKEN(anon_sym_QMARK);
-      END_STATE();
-    case 554:
-      ACCEPT_TOKEN(anon_sym_PIPE);
-      END_STATE();
-    case 555:
-      ACCEPT_TOKEN(anon_sym_DOLLAR);
-      END_STATE();
-    case 556:
-      ACCEPT_TOKEN(sym_author_name);
-      if (lookahead == ' ') ADVANCE(33);
-      if (lookahead == '*') ADVANCE(556);
-      if (lookahead != 0 &&
-          lookahead != '\t' &&
-          lookahead != '\n' &&
-          lookahead != '\r') ADVANCE(559);
+          (161 <= lookahead && lookahead <= 255)) ADVANCE(556);
       END_STATE();
     case 557:
-      ACCEPT_TOKEN(sym_author_name);
-      if (lookahead == ' ') ADVANCE(33);
-      if (lookahead == '*') ADVANCE(557);
-      if (lookahead == '<') ADVANCE(559);
-      if (lookahead != 0 &&
-          lookahead != '\t' &&
-          lookahead != '\n' &&
-          lookahead != '\r') ADVANCE(558);
+      ACCEPT_TOKEN(anon_sym_BSLASH);
       END_STATE();
     case 558:
-      ACCEPT_TOKEN(sym_author_name);
-      if (lookahead == ' ') ADVANCE(462);
-      if (lookahead == '<') ADVANCE(559);
-      if (lookahead != 0 &&
-          lookahead != '\t' &&
-          lookahead != '\n' &&
-          lookahead != '\r') ADVANCE(558);
+      ACCEPT_TOKEN(anon_sym_QMARK);
       END_STATE();
     case 559:
-      ACCEPT_TOKEN(sym_author_name);
-      if (lookahead == ' ') ADVANCE(462);
-      if (lookahead != 0 &&
-          lookahead != '\t' &&
-          lookahead != '\n' &&
-          lookahead != '\r') ADVANCE(559);
+      ACCEPT_TOKEN(anon_sym_PIPE);
       END_STATE();
     case 560:
-      ACCEPT_TOKEN(sym_author_name);
-      if (lookahead == ' ') ADVANCE(462);
-      if (lookahead != 0 &&
-          lookahead != '\t' &&
-          lookahead != '\n' &&
-          lookahead != '\r' &&
-          lookahead != '<') ADVANCE(560);
+      ACCEPT_TOKEN(anon_sym_DOLLAR);
       END_STATE();
     case 561:
-      ACCEPT_TOKEN(sym_email_address);
-      if (lookahead == '.') ADVANCE(561);
-      if (lookahead == '>') ADVANCE(41);
-      if (lookahead == '@') ADVANCE(561);
+      ACCEPT_TOKEN(sym_author_name);
+      if (lookahead == ' ') ADVANCE(466);
+      if (lookahead == '<') ADVANCE(562);
       if (lookahead != 0 &&
           lookahead != '\t' &&
           lookahead != '\n' &&
-          lookahead != '\r' &&
-          lookahead != ' ') ADVANCE(561);
+          lookahead != '\r') ADVANCE(561);
       END_STATE();
     case 562:
-      ACCEPT_TOKEN(sym_text);
-      if (lookahead == ')') ADVANCE(487);
+      ACCEPT_TOKEN(sym_author_name);
+      if (lookahead == ' ') ADVANCE(466);
       if (lookahead != 0 &&
+          lookahead != '\t' &&
           lookahead != '\n' &&
-          lookahead != '*') ADVANCE(567);
+          lookahead != '\r') ADVANCE(562);
       END_STATE();
     case 563:
-      ACCEPT_TOKEN(sym_text);
-      if (lookahead == '*') ADVANCE(574);
-      if (lookahead == 'x') ADVANCE(570);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(571);
+      ACCEPT_TOKEN(sym_author_name);
+      if (lookahead == ' ') ADVANCE(466);
       if (lookahead != 0 &&
-          lookahead != '\n') ADVANCE(567);
+          lookahead != '\t' &&
+          lookahead != '\n' &&
+          lookahead != '\r' &&
+          lookahead != '<') ADVANCE(563);
       END_STATE();
     case 564:
-      ACCEPT_TOKEN(sym_text);
-      if (lookahead == '*') ADVANCE(573);
-      if (lookahead == 'x') ADVANCE(568);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(572);
+      ACCEPT_TOKEN(sym_author_name);
+      if (lookahead == ' ') ADVANCE(9);
+      if (lookahead == '*') ADVANCE(564);
       if (lookahead != 0 &&
-          lookahead != '\n') ADVANCE(567);
+          lookahead != '\t' &&
+          lookahead != '\n' &&
+          lookahead != '\r') ADVANCE(562);
       END_STATE();
     case 565:
-      ACCEPT_TOKEN(sym_text);
-      if (lookahead == ']') ADVANCE(532);
+      ACCEPT_TOKEN(sym_author_name);
+      if (lookahead == ' ') ADVANCE(9);
+      if (lookahead == '*') ADVANCE(565);
+      if (lookahead == '<') ADVANCE(562);
       if (lookahead != 0 &&
+          lookahead != '\t' &&
           lookahead != '\n' &&
-          lookahead != '*') ADVANCE(567);
+          lookahead != '\r') ADVANCE(561);
       END_STATE();
     case 566:
-      ACCEPT_TOKEN(sym_text);
-      if (('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
-          lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(576);
+      ACCEPT_TOKEN(sym_email_address);
+      if (lookahead == '.') ADVANCE(566);
+      if (lookahead == '>') ADVANCE(28);
+      if (lookahead == '@') ADVANCE(566);
       if (lookahead != 0 &&
+          lookahead != '\t' &&
           lookahead != '\n' &&
-          lookahead != '*') ADVANCE(567);
+          lookahead != '\r' &&
+          lookahead != ' ') ADVANCE(566);
       END_STATE();
     case 567:
-      ACCEPT_TOKEN(sym_text);
+      ACCEPT_TOKEN(aux_sym_version_token1);
       if (lookahead != 0 &&
+          lookahead != '\t' &&
           lookahead != '\n' &&
-          lookahead != '*') ADVANCE(567);
+          lookahead != '\r' &&
+          lookahead != ' ') ADVANCE(567);
       END_STATE();
     case 568:
-      ACCEPT_TOKEN(sym_version);
-      if (lookahead == '-') ADVANCE(566);
+      ACCEPT_TOKEN(aux_sym_version_token2);
+      if (lookahead == ' ') ADVANCE(568);
       END_STATE();
     case 569:
-      ACCEPT_TOKEN(sym_version);
-      if (lookahead == '-') ADVANCE(566);
-      if (lookahead == '.') ADVANCE(563);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(569);
+      ACCEPT_TOKEN(anon_sym_ATpackage_version_AT);
       END_STATE();
     case 570:
-      ACCEPT_TOKEN(sym_version);
-      if (lookahead == '-') ADVANCE(566);
-      if (lookahead == '.') ADVANCE(564);
+      ACCEPT_TOKEN(sym__version_vector);
       END_STATE();
     case 571:
-      ACCEPT_TOKEN(sym_version);
-      if (lookahead == '-') ADVANCE(566);
-      if (lookahead == '.') ADVANCE(564);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(571);
+      ACCEPT_TOKEN(sym_uri);
+      if (lookahead == '/') ADVANCE(572);
+      if (lookahead != 0 &&
+          lookahead != '\t' &&
+          lookahead != '\n' &&
+          lookahead != '\r' &&
+          lookahead != ' ' &&
+          lookahead != '}') ADVANCE(572);
       END_STATE();
     case 572:
-      ACCEPT_TOKEN(sym_version);
-      if (lookahead == '-') ADVANCE(566);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(572);
+      ACCEPT_TOKEN(sym_uri);
+      if (lookahead != 0 &&
+          lookahead != '\t' &&
+          lookahead != '\n' &&
+          lookahead != '\r' &&
+          lookahead != ' ' &&
+          lookahead != '}') ADVANCE(572);
       END_STATE();
     case 573:
-      ACCEPT_TOKEN(sym_version);
-      if (lookahead == '-') ADVANCE(461);
-      END_STATE();
-    case 574:
-      ACCEPT_TOKEN(sym_version);
-      if (lookahead == '-') ADVANCE(461);
-      if (lookahead == '.') ADVANCE(460);
-      END_STATE();
-    case 575:
-      ACCEPT_TOKEN(sym_version);
-      if (lookahead == '-') ADVANCE(461);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(575);
-      END_STATE();
-    case 576:
-      ACCEPT_TOKEN(sym_version);
-      if (('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
-          lookahead == '_' ||
-          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(576);
-      END_STATE();
-    case 577:
-      ACCEPT_TOKEN(sym_uri);
-      if (lookahead == '/') ADVANCE(578);
-      if (lookahead != 0 &&
-          lookahead != '\t' &&
-          lookahead != '\n' &&
-          lookahead != '\r' &&
-          lookahead != ' ' &&
-          lookahead != '}') ADVANCE(578);
-      END_STATE();
-    case 578:
-      ACCEPT_TOKEN(sym_uri);
-      if (lookahead != 0 &&
-          lookahead != '\t' &&
-          lookahead != '\n' &&
-          lookahead != '\r' &&
-          lookahead != ' ' &&
-          lookahead != '}') ADVANCE(578);
-      END_STATE();
-    case 579:
       ACCEPT_TOKEN(anon_sym_LPAREN);
       END_STATE();
-    case 580:
+    case 574:
       ACCEPT_TOKEN(anon_sym_RPAREN);
       END_STATE();
-    case 581:
+    case 575:
       ACCEPT_TOKEN(anon_sym_EQ);
       END_STATE();
-    case 582:
+    case 576:
       ACCEPT_TOKEN(sym_default_value);
-      if (lookahead == '\t') ADVANCE(582);
-      if (lookahead == '\n') ADVANCE(582);
-      if (lookahead == '\r') ADVANCE(582);
-      if (lookahead == ' ') ADVANCE(582);
-      if (lookahead == ')') ADVANCE(583);
-      if (lookahead == '*') ADVANCE(582);
+      if (lookahead == '\t') ADVANCE(576);
+      if (lookahead == '\n') ADVANCE(576);
+      if (lookahead == '\r') ADVANCE(577);
+      if (lookahead == ' ') ADVANCE(576);
+      if (lookahead == ')') ADVANCE(578);
+      if (lookahead == '*') ADVANCE(576);
       if (lookahead != 0 &&
-          lookahead != ',') ADVANCE(583);
+          lookahead != ',') ADVANCE(578);
       END_STATE();
-    case 583:
+    case 577:
+      ACCEPT_TOKEN(sym_default_value);
+      if (lookahead == '\n') ADVANCE(576);
+      if (lookahead == ' ') ADVANCE(577);
+      if (lookahead == ')') ADVANCE(578);
+      if (lookahead == '\t' ||
+          lookahead == '\r') ADVANCE(577);
+      if (lookahead != 0 &&
+          lookahead != ',') ADVANCE(578);
+      END_STATE();
+    case 578:
       ACCEPT_TOKEN(sym_default_value);
       if (lookahead != 0 &&
           lookahead != ')' &&
-          lookahead != ',') ADVANCE(583);
+          lookahead != ',') ADVANCE(578);
       END_STATE();
-    case 584:
+    case 579:
       ACCEPT_TOKEN(sym__end);
+      END_STATE();
+    case 580:
+      ACCEPT_TOKEN(sym__end);
+      if (lookahead == '*') ADVANCE(25);
       END_STATE();
     default:
       return false;
@@ -3638,280 +3593,245 @@ static bool ts_lex_keywords(TSLexer *lexer, TSStateId state) {
   eof = lexer->eof(lexer);
   switch (state) {
     case 0:
-      if (lookahead == '\t') SKIP(0)
       if (lookahead == '\n') SKIP(1)
-      if (lookahead == '\r') SKIP(2)
-      if (lookahead == ' ') SKIP(0)
-      if (lookahead == '*') SKIP(0)
-      if (lookahead == 'a') ADVANCE(3);
-      if (lookahead == 'b') ADVANCE(4);
-      if (lookahead == 'c') ADVANCE(5);
-      if (lookahead == 'f') ADVANCE(6);
-      if (lookahead == 'i') ADVANCE(7);
-      if (lookahead == 'l') ADVANCE(8);
-      if (lookahead == 'm') ADVANCE(9);
-      if (lookahead == 'n') ADVANCE(10);
-      if (lookahead == 's') ADVANCE(11);
-      if (lookahead == 'v') ADVANCE(12);
+      if (lookahead == 'a') ADVANCE(2);
+      if (lookahead == 'b') ADVANCE(3);
+      if (lookahead == 'c') ADVANCE(4);
+      if (lookahead == 'f') ADVANCE(5);
+      if (lookahead == 'i') ADVANCE(6);
+      if (lookahead == 'l') ADVANCE(7);
+      if (lookahead == 'm') ADVANCE(8);
+      if (lookahead == 'n') ADVANCE(9);
+      if (lookahead == 's') ADVANCE(10);
+      if (lookahead == 'v') ADVANCE(11);
+      if (lookahead == '\t' ||
+          lookahead == '\r' ||
+          lookahead == ' ') SKIP(0)
       END_STATE();
     case 1:
-      if (lookahead == '\t') SKIP(1)
       if (lookahead == '\n') SKIP(1)
-      if (lookahead == '\r') SKIP(2)
-      if (lookahead == ' ') SKIP(1)
-      if (lookahead == '*') SKIP(13)
-      if (lookahead == 'a') ADVANCE(3);
-      if (lookahead == 'b') ADVANCE(4);
-      if (lookahead == 'c') ADVANCE(5);
-      if (lookahead == 'f') ADVANCE(6);
-      if (lookahead == 'i') ADVANCE(7);
-      if (lookahead == 'l') ADVANCE(8);
-      if (lookahead == 'm') ADVANCE(9);
-      if (lookahead == 'n') ADVANCE(10);
-      if (lookahead == 's') ADVANCE(11);
-      if (lookahead == 'v') ADVANCE(12);
+      if (lookahead == '\r') SKIP(0)
+      if (lookahead == '*') SKIP(12)
+      if (lookahead == 'a') ADVANCE(2);
+      if (lookahead == 'b') ADVANCE(3);
+      if (lookahead == 'c') ADVANCE(4);
+      if (lookahead == 'f') ADVANCE(5);
+      if (lookahead == 'i') ADVANCE(6);
+      if (lookahead == 'l') ADVANCE(7);
+      if (lookahead == 'm') ADVANCE(8);
+      if (lookahead == 'n') ADVANCE(9);
+      if (lookahead == 's') ADVANCE(10);
+      if (lookahead == 'v') ADVANCE(11);
+      if (lookahead == '\t' ||
+          lookahead == ' ') SKIP(1)
       END_STATE();
     case 2:
-      if (lookahead == '\t') SKIP(1)
-      if (lookahead == '\n') SKIP(1)
-      if (lookahead == '\r') SKIP(2)
-      if (lookahead == ' ') SKIP(1)
-      if (lookahead == '*') SKIP(13)
-      if (lookahead == 'a') ADVANCE(3);
-      if (lookahead == 'b') ADVANCE(4);
-      if (lookahead == 'c') ADVANCE(5);
-      if (lookahead == 'f') ADVANCE(6);
-      if (lookahead == 'i') ADVANCE(7);
-      if (lookahead == 'l') ADVANCE(8);
-      if (lookahead == 'm') ADVANCE(9);
-      if (lookahead == 'n') ADVANCE(10);
-      if (lookahead == 's') ADVANCE(11);
-      if (lookahead == 'v') ADVANCE(12);
+      if (lookahead == 'r') ADVANCE(13);
       END_STATE();
     case 3:
-      if (lookahead == 'r') ADVANCE(14);
+      if (lookahead == 'o') ADVANCE(14);
       END_STATE();
     case 4:
-      if (lookahead == 'o') ADVANCE(15);
+      if (lookahead == 'a') ADVANCE(15);
       END_STATE();
     case 5:
       if (lookahead == 'a') ADVANCE(16);
+      if (lookahead == 'l') ADVANCE(17);
       END_STATE();
     case 6:
-      if (lookahead == 'a') ADVANCE(17);
-      if (lookahead == 'l') ADVANCE(18);
+      if (lookahead == 'n') ADVANCE(18);
+      if (lookahead == 't') ADVANCE(19);
       END_STATE();
     case 7:
-      if (lookahead == 'n') ADVANCE(19);
-      if (lookahead == 't') ADVANCE(20);
+      if (lookahead == 'i') ADVANCE(20);
       END_STATE();
     case 8:
       if (lookahead == 'i') ADVANCE(21);
       END_STATE();
     case 9:
-      if (lookahead == 'i') ADVANCE(22);
+      if (lookahead == 'u') ADVANCE(22);
       END_STATE();
     case 10:
-      if (lookahead == 'u') ADVANCE(23);
+      if (lookahead == 't') ADVANCE(23);
       END_STATE();
     case 11:
-      if (lookahead == 't') ADVANCE(24);
+      if (lookahead == 'o') ADVANCE(24);
       END_STATE();
     case 12:
-      if (lookahead == 'o') ADVANCE(25);
+      if (lookahead == '\n') SKIP(1)
+      if (lookahead == '\r') SKIP(0)
+      if (lookahead == '*') SKIP(12)
+      if (lookahead == 'a') ADVANCE(2);
+      if (lookahead == 'b') ADVANCE(3);
+      if (lookahead == 'c') ADVANCE(4);
+      if (lookahead == 'f') ADVANCE(5);
+      if (lookahead == 'i') ADVANCE(6);
+      if (lookahead == 'l') ADVANCE(7);
+      if (lookahead == 'm') ADVANCE(8);
+      if (lookahead == 'n') ADVANCE(9);
+      if (lookahead == 's') ADVANCE(10);
+      if (lookahead == 'v') ADVANCE(11);
+      if (lookahead == '\t' ||
+          lookahead == ' ') SKIP(12)
       END_STATE();
     case 13:
-      if (lookahead == '\t') SKIP(26)
-      if (lookahead == '\n') SKIP(1)
-      if (lookahead == '\r') SKIP(2)
-      if (lookahead == ' ') SKIP(26)
-      if (lookahead == '*') SKIP(13)
-      if (lookahead == 'a') ADVANCE(3);
-      if (lookahead == 'b') ADVANCE(4);
-      if (lookahead == 'c') ADVANCE(5);
-      if (lookahead == 'f') ADVANCE(6);
-      if (lookahead == 'i') ADVANCE(7);
-      if (lookahead == 'l') ADVANCE(8);
-      if (lookahead == 'm') ADVANCE(9);
-      if (lookahead == 'n') ADVANCE(10);
-      if (lookahead == 's') ADVANCE(11);
-      if (lookahead == 'v') ADVANCE(12);
+      if (lookahead == 'r') ADVANCE(25);
       END_STATE();
     case 14:
-      if (lookahead == 'r') ADVANCE(27);
+      if (lookahead == 'o') ADVANCE(26);
       END_STATE();
     case 15:
-      if (lookahead == 'o') ADVANCE(28);
+      if (lookahead == 'l') ADVANCE(27);
       END_STATE();
     case 16:
-      if (lookahead == 'l') ADVANCE(29);
+      if (lookahead == 'l') ADVANCE(28);
       END_STATE();
     case 17:
-      if (lookahead == 'l') ADVANCE(30);
+      if (lookahead == 'o') ADVANCE(29);
       END_STATE();
     case 18:
-      if (lookahead == 'o') ADVANCE(31);
+      if (lookahead == 't') ADVANCE(30);
       END_STATE();
     case 19:
-      if (lookahead == 't') ADVANCE(32);
+      if (lookahead == 'e') ADVANCE(31);
       END_STATE();
     case 20:
-      if (lookahead == 'e') ADVANCE(33);
+      if (lookahead == 's') ADVANCE(32);
       END_STATE();
     case 21:
-      if (lookahead == 's') ADVANCE(34);
+      if (lookahead == 'x') ADVANCE(33);
       END_STATE();
     case 22:
-      if (lookahead == 'x') ADVANCE(35);
+      if (lookahead == 'l') ADVANCE(34);
       END_STATE();
     case 23:
-      if (lookahead == 'l') ADVANCE(36);
+      if (lookahead == 'a') ADVANCE(35);
+      if (lookahead == 'r') ADVANCE(36);
       END_STATE();
     case 24:
-      if (lookahead == 'a') ADVANCE(37);
-      if (lookahead == 'r') ADVANCE(38);
+      if (lookahead == 'i') ADVANCE(37);
       END_STATE();
     case 25:
-      if (lookahead == 'i') ADVANCE(39);
+      if (lookahead == 'a') ADVANCE(38);
       END_STATE();
     case 26:
-      if (lookahead == '\t') SKIP(26)
-      if (lookahead == '\n') SKIP(1)
-      if (lookahead == '\r') SKIP(2)
-      if (lookahead == ' ') SKIP(26)
-      if (lookahead == '*') SKIP(0)
-      if (lookahead == 'a') ADVANCE(3);
-      if (lookahead == 'b') ADVANCE(4);
-      if (lookahead == 'c') ADVANCE(5);
-      if (lookahead == 'f') ADVANCE(6);
-      if (lookahead == 'i') ADVANCE(7);
-      if (lookahead == 'l') ADVANCE(8);
-      if (lookahead == 'm') ADVANCE(9);
-      if (lookahead == 'n') ADVANCE(10);
-      if (lookahead == 's') ADVANCE(11);
-      if (lookahead == 'v') ADVANCE(12);
+      if (lookahead == 'l') ADVANCE(39);
       END_STATE();
     case 27:
-      if (lookahead == 'a') ADVANCE(40);
+      if (lookahead == 'l') ADVANCE(40);
       END_STATE();
     case 28:
-      if (lookahead == 'l') ADVANCE(41);
+      if (lookahead == 's') ADVANCE(41);
       END_STATE();
     case 29:
-      if (lookahead == 'l') ADVANCE(42);
+      if (lookahead == 'a') ADVANCE(42);
       END_STATE();
     case 30:
-      if (lookahead == 's') ADVANCE(43);
-      END_STATE();
-    case 31:
-      if (lookahead == 'a') ADVANCE(44);
-      END_STATE();
-    case 32:
       ACCEPT_TOKEN(anon_sym_int);
       END_STATE();
+    case 31:
+      if (lookahead == 'r') ADVANCE(43);
+      END_STATE();
+    case 32:
+      if (lookahead == 't') ADVANCE(44);
+      END_STATE();
     case 33:
-      if (lookahead == 'r') ADVANCE(45);
+      if (lookahead == 'e') ADVANCE(45);
       END_STATE();
     case 34:
-      if (lookahead == 't') ADVANCE(46);
+      if (lookahead == 'l') ADVANCE(46);
       END_STATE();
     case 35:
-      if (lookahead == 'e') ADVANCE(47);
+      if (lookahead == 't') ADVANCE(47);
       END_STATE();
     case 36:
-      if (lookahead == 'l') ADVANCE(48);
+      if (lookahead == 'i') ADVANCE(48);
       END_STATE();
     case 37:
-      if (lookahead == 't') ADVANCE(49);
+      if (lookahead == 'd') ADVANCE(49);
       END_STATE();
     case 38:
-      if (lookahead == 'i') ADVANCE(50);
+      if (lookahead == 'y') ADVANCE(50);
       END_STATE();
     case 39:
-      if (lookahead == 'd') ADVANCE(51);
-      END_STATE();
-    case 40:
-      if (lookahead == 'y') ADVANCE(52);
-      END_STATE();
-    case 41:
       ACCEPT_TOKEN(anon_sym_bool);
       END_STATE();
+    case 40:
+      if (lookahead == 'a') ADVANCE(51);
+      END_STATE();
+    case 41:
+      if (lookahead == 'e') ADVANCE(52);
+      END_STATE();
     case 42:
-      if (lookahead == 'a') ADVANCE(53);
+      if (lookahead == 't') ADVANCE(53);
       END_STATE();
     case 43:
-      if (lookahead == 'e') ADVANCE(54);
+      if (lookahead == 'a') ADVANCE(54);
       END_STATE();
     case 44:
-      if (lookahead == 't') ADVANCE(55);
-      END_STATE();
-    case 45:
-      if (lookahead == 'a') ADVANCE(56);
-      END_STATE();
-    case 46:
       ACCEPT_TOKEN(anon_sym_list);
       END_STATE();
-    case 47:
-      if (lookahead == 'd') ADVANCE(57);
+    case 45:
+      if (lookahead == 'd') ADVANCE(55);
       END_STATE();
-    case 48:
+    case 46:
       ACCEPT_TOKEN(anon_sym_null);
       END_STATE();
+    case 47:
+      if (lookahead == 'i') ADVANCE(56);
+      END_STATE();
+    case 48:
+      if (lookahead == 'n') ADVANCE(57);
+      END_STATE();
     case 49:
-      if (lookahead == 'i') ADVANCE(58);
-      END_STATE();
-    case 50:
-      if (lookahead == 'n') ADVANCE(59);
-      END_STATE();
-    case 51:
       ACCEPT_TOKEN(anon_sym_void);
       END_STATE();
-    case 52:
+    case 50:
       ACCEPT_TOKEN(anon_sym_array);
       END_STATE();
-    case 53:
-      if (lookahead == 'b') ADVANCE(60);
+    case 51:
+      if (lookahead == 'b') ADVANCE(58);
       END_STATE();
-    case 54:
+    case 52:
       ACCEPT_TOKEN(anon_sym_false);
       END_STATE();
-    case 55:
+    case 53:
       ACCEPT_TOKEN(anon_sym_float);
       END_STATE();
-    case 56:
-      if (lookahead == 'b') ADVANCE(61);
+    case 54:
+      if (lookahead == 'b') ADVANCE(59);
       END_STATE();
-    case 57:
+    case 55:
       ACCEPT_TOKEN(anon_sym_mixed);
       END_STATE();
+    case 56:
+      if (lookahead == 'c') ADVANCE(60);
+      END_STATE();
+    case 57:
+      if (lookahead == 'g') ADVANCE(61);
+      END_STATE();
     case 58:
-      if (lookahead == 'c') ADVANCE(62);
+      if (lookahead == 'l') ADVANCE(62);
       END_STATE();
     case 59:
-      if (lookahead == 'g') ADVANCE(63);
+      if (lookahead == 'l') ADVANCE(63);
       END_STATE();
     case 60:
-      if (lookahead == 'l') ADVANCE(64);
-      END_STATE();
-    case 61:
-      if (lookahead == 'l') ADVANCE(65);
-      END_STATE();
-    case 62:
       ACCEPT_TOKEN(anon_sym_static);
       END_STATE();
-    case 63:
+    case 61:
       ACCEPT_TOKEN(anon_sym_string);
       END_STATE();
+    case 62:
+      if (lookahead == 'e') ADVANCE(64);
+      END_STATE();
+    case 63:
+      if (lookahead == 'e') ADVANCE(65);
+      END_STATE();
     case 64:
-      if (lookahead == 'e') ADVANCE(66);
-      END_STATE();
-    case 65:
-      if (lookahead == 'e') ADVANCE(67);
-      END_STATE();
-    case 66:
       ACCEPT_TOKEN(anon_sym_callable);
       END_STATE();
-    case 67:
+    case 65:
       ACCEPT_TOKEN(anon_sym_iterable);
       END_STATE();
     default:
@@ -3920,220 +3840,287 @@ static bool ts_lex_keywords(TSLexer *lexer, TSStateId state) {
 }
 
 static TSLexMode ts_lex_modes[STATE_COUNT] = {
-  [0] = {.lex_state = 0},
-  [1] = {.lex_state = 3},
-  [2] = {.lex_state = 5},
-  [3] = {.lex_state = 0},
-  [4] = {.lex_state = 0},
-  [5] = {.lex_state = 0},
-  [6] = {.lex_state = 0},
-  [7] = {.lex_state = 7},
-  [8] = {.lex_state = 9},
-  [9] = {.lex_state = 11},
-  [10] = {.lex_state = 7},
-  [11] = {.lex_state = 7},
-  [12] = {.lex_state = 13},
-  [13] = {.lex_state = 15},
-  [14] = {.lex_state = 11},
-  [15] = {.lex_state = 15},
-  [16] = {.lex_state = 7},
-  [17] = {.lex_state = 7},
-  [18] = {.lex_state = 7},
-  [19] = {.lex_state = 17},
-  [20] = {.lex_state = 5},
-  [21] = {.lex_state = 11},
-  [22] = {.lex_state = 19},
-  [23] = {.lex_state = 5},
-  [24] = {.lex_state = 5},
-  [25] = {.lex_state = 5},
-  [26] = {.lex_state = 5},
-  [27] = {.lex_state = 5},
-  [28] = {.lex_state = 21},
-  [29] = {.lex_state = 5},
-  [30] = {.lex_state = 5},
-  [31] = {.lex_state = 19},
-  [32] = {.lex_state = 21},
-  [33] = {.lex_state = 19},
-  [34] = {.lex_state = 5},
-  [35] = {.lex_state = 5},
-  [36] = {.lex_state = 11},
-  [37] = {.lex_state = 5},
-  [38] = {.lex_state = 5},
-  [39] = {.lex_state = 11},
-  [40] = {.lex_state = 11},
-  [41] = {.lex_state = 5},
-  [42] = {.lex_state = 5},
-  [43] = {.lex_state = 23},
+  [0] = {.lex_state = 0, .external_lex_state = 1},
+  [1] = {.lex_state = 2},
+  [2] = {.lex_state = 5, .external_lex_state = 2},
+  [3] = {.lex_state = 5},
+  [4] = {.lex_state = 5},
+  [5] = {.lex_state = 5},
+  [6] = {.lex_state = 5},
+  [7] = {.lex_state = 5, .external_lex_state = 3},
+  [8] = {.lex_state = 5, .external_lex_state = 2},
+  [9] = {.lex_state = 5, .external_lex_state = 2},
+  [10] = {.lex_state = 5, .external_lex_state = 2},
+  [11] = {.lex_state = 5, .external_lex_state = 2},
+  [12] = {.lex_state = 5, .external_lex_state = 2},
+  [13] = {.lex_state = 5, .external_lex_state = 2},
+  [14] = {.lex_state = 5, .external_lex_state = 2},
+  [15] = {.lex_state = 5, .external_lex_state = 2},
+  [16] = {.lex_state = 5, .external_lex_state = 2},
+  [17] = {.lex_state = 5, .external_lex_state = 2},
+  [18] = {.lex_state = 5, .external_lex_state = 2},
+  [19] = {.lex_state = 5, .external_lex_state = 2},
+  [20] = {.lex_state = 5, .external_lex_state = 2},
+  [21] = {.lex_state = 5, .external_lex_state = 2},
+  [22] = {.lex_state = 5, .external_lex_state = 2},
+  [23] = {.lex_state = 5, .external_lex_state = 2},
+  [24] = {.lex_state = 5, .external_lex_state = 2},
+  [25] = {.lex_state = 5, .external_lex_state = 2},
+  [26] = {.lex_state = 5, .external_lex_state = 2},
+  [27] = {.lex_state = 5, .external_lex_state = 2},
+  [28] = {.lex_state = 5, .external_lex_state = 2},
+  [29] = {.lex_state = 5, .external_lex_state = 2},
+  [30] = {.lex_state = 5, .external_lex_state = 2},
+  [31] = {.lex_state = 5, .external_lex_state = 2},
+  [32] = {.lex_state = 5, .external_lex_state = 2},
+  [33] = {.lex_state = 5, .external_lex_state = 2},
+  [34] = {.lex_state = 5, .external_lex_state = 3},
+  [35] = {.lex_state = 5, .external_lex_state = 2},
+  [36] = {.lex_state = 5, .external_lex_state = 4},
+  [37] = {.lex_state = 5, .external_lex_state = 2},
+  [38] = {.lex_state = 5, .external_lex_state = 2},
+  [39] = {.lex_state = 5, .external_lex_state = 2},
+  [40] = {.lex_state = 5, .external_lex_state = 4},
+  [41] = {.lex_state = 5, .external_lex_state = 2},
+  [42] = {.lex_state = 5, .external_lex_state = 3},
+  [43] = {.lex_state = 5, .external_lex_state = 2},
   [44] = {.lex_state = 5},
-  [45] = {.lex_state = 19},
-  [46] = {.lex_state = 19},
-  [47] = {.lex_state = 23},
-  [48] = {.lex_state = 19},
-  [49] = {.lex_state = 23},
-  [50] = {.lex_state = 5},
-  [51] = {.lex_state = 13},
-  [52] = {.lex_state = 23},
-  [53] = {.lex_state = 23},
-  [54] = {.lex_state = 23},
-  [55] = {.lex_state = 5},
-  [56] = {.lex_state = 5},
-  [57] = {.lex_state = 5},
+  [45] = {.lex_state = 5, .external_lex_state = 2},
+  [46] = {.lex_state = 5, .external_lex_state = 2},
+  [47] = {.lex_state = 5, .external_lex_state = 4},
+  [48] = {.lex_state = 5, .external_lex_state = 2},
+  [49] = {.lex_state = 5, .external_lex_state = 2},
+  [50] = {.lex_state = 5, .external_lex_state = 3},
+  [51] = {.lex_state = 5, .external_lex_state = 2},
+  [52] = {.lex_state = 5, .external_lex_state = 2},
+  [53] = {.lex_state = 5, .external_lex_state = 2},
+  [54] = {.lex_state = 5, .external_lex_state = 3},
+  [55] = {.lex_state = 5, .external_lex_state = 2},
+  [56] = {.lex_state = 5, .external_lex_state = 4},
+  [57] = {.lex_state = 5, .external_lex_state = 2},
   [58] = {.lex_state = 5},
   [59] = {.lex_state = 5},
   [60] = {.lex_state = 5},
-  [61] = {.lex_state = 0},
-  [62] = {.lex_state = 0},
-  [63] = {.lex_state = 0},
-  [64] = {.lex_state = 0},
-  [65] = {.lex_state = 0},
-  [66] = {.lex_state = 0},
-  [67] = {.lex_state = 0},
-  [68] = {.lex_state = 0},
-  [69] = {.lex_state = 0},
-  [70] = {.lex_state = 0},
-  [71] = {.lex_state = 0},
-  [72] = {.lex_state = 0},
-  [73] = {.lex_state = 0},
-  [74] = {.lex_state = 0},
-  [75] = {.lex_state = 0},
-  [76] = {.lex_state = 0},
-  [77] = {.lex_state = 0},
-  [78] = {.lex_state = 0},
-  [79] = {.lex_state = 0},
-  [80] = {.lex_state = 0},
-  [81] = {.lex_state = 0},
-  [82] = {.lex_state = 0},
-  [83] = {.lex_state = 0},
-  [84] = {.lex_state = 3},
-  [85] = {.lex_state = 3},
-  [86] = {.lex_state = 3},
-  [87] = {.lex_state = 3},
-  [88] = {.lex_state = 3},
-  [89] = {.lex_state = 3},
-  [90] = {.lex_state = 3},
-  [91] = {.lex_state = 3},
-  [92] = {.lex_state = 3},
-  [93] = {.lex_state = 3},
-  [94] = {.lex_state = 3},
-  [95] = {.lex_state = 3},
-  [96] = {.lex_state = 3},
-  [97] = {.lex_state = 3},
-  [98] = {.lex_state = 3},
-  [99] = {.lex_state = 3},
-  [100] = {.lex_state = 3},
-  [101] = {.lex_state = 3},
-  [102] = {.lex_state = 3},
-  [103] = {.lex_state = 3},
-  [104] = {.lex_state = 3},
-  [105] = {.lex_state = 3},
-  [106] = {.lex_state = 3},
-  [107] = {.lex_state = 3},
-  [108] = {.lex_state = 3},
-  [109] = {.lex_state = 3},
-  [110] = {.lex_state = 3},
-  [111] = {.lex_state = 0},
-  [112] = {.lex_state = 24},
-  [113] = {.lex_state = 3},
-  [114] = {.lex_state = 24},
-  [115] = {.lex_state = 3},
-  [116] = {.lex_state = 3},
-  [117] = {.lex_state = 3},
-  [118] = {.lex_state = 3},
-  [119] = {.lex_state = 25},
-  [120] = {.lex_state = 25},
-  [121] = {.lex_state = 25},
-  [122] = {.lex_state = 3},
-  [123] = {.lex_state = 3},
-  [124] = {.lex_state = 3},
-  [125] = {.lex_state = 3},
-  [126] = {.lex_state = 3},
-  [127] = {.lex_state = 3},
-  [128] = {.lex_state = 26},
-  [129] = {.lex_state = 3},
-  [130] = {.lex_state = 3},
-  [131] = {.lex_state = 3},
-  [132] = {.lex_state = 3},
-  [133] = {.lex_state = 3},
-  [134] = {.lex_state = 3},
-  [135] = {.lex_state = 3},
-  [136] = {.lex_state = 3},
-  [137] = {.lex_state = 3},
-  [138] = {.lex_state = 26},
-  [139] = {.lex_state = 3},
-  [140] = {.lex_state = 3},
-  [141] = {.lex_state = 27},
-  [142] = {.lex_state = 27},
-  [143] = {.lex_state = 27},
-  [144] = {.lex_state = 0},
-  [145] = {.lex_state = 0},
+  [61] = {.lex_state = 5},
+  [62] = {.lex_state = 5},
+  [63] = {.lex_state = 5},
+  [64] = {.lex_state = 5},
+  [65] = {.lex_state = 5},
+  [66] = {.lex_state = 5},
+  [67] = {.lex_state = 5},
+  [68] = {.lex_state = 5},
+  [69] = {.lex_state = 5},
+  [70] = {.lex_state = 5},
+  [71] = {.lex_state = 5},
+  [72] = {.lex_state = 5},
+  [73] = {.lex_state = 5},
+  [74] = {.lex_state = 5},
+  [75] = {.lex_state = 5},
+  [76] = {.lex_state = 5},
+  [77] = {.lex_state = 5},
+  [78] = {.lex_state = 5},
+  [79] = {.lex_state = 5},
+  [80] = {.lex_state = 5},
+  [81] = {.lex_state = 5},
+  [82] = {.lex_state = 5},
+  [83] = {.lex_state = 5},
+  [84] = {.lex_state = 5},
+  [85] = {.lex_state = 0},
+  [86] = {.lex_state = 0},
+  [87] = {.lex_state = 0},
+  [88] = {.lex_state = 0},
+  [89] = {.lex_state = 0},
+  [90] = {.lex_state = 0},
+  [91] = {.lex_state = 0},
+  [92] = {.lex_state = 0},
+  [93] = {.lex_state = 0},
+  [94] = {.lex_state = 0},
+  [95] = {.lex_state = 0},
+  [96] = {.lex_state = 0},
+  [97] = {.lex_state = 0},
+  [98] = {.lex_state = 0},
+  [99] = {.lex_state = 0},
+  [100] = {.lex_state = 0},
+  [101] = {.lex_state = 0},
+  [102] = {.lex_state = 0},
+  [103] = {.lex_state = 0},
+  [104] = {.lex_state = 0},
+  [105] = {.lex_state = 0},
+  [106] = {.lex_state = 0},
+  [107] = {.lex_state = 0},
+  [108] = {.lex_state = 0},
+  [109] = {.lex_state = 0},
+  [110] = {.lex_state = 0},
+  [111] = {.lex_state = 2, .external_lex_state = 3},
+  [112] = {.lex_state = 2, .external_lex_state = 3},
+  [113] = {.lex_state = 0},
+  [114] = {.lex_state = 0},
+  [115] = {.lex_state = 0},
+  [116] = {.lex_state = 0},
+  [117] = {.lex_state = 0, .external_lex_state = 4},
+  [118] = {.lex_state = 0},
+  [119] = {.lex_state = 7},
+  [120] = {.lex_state = 0},
+  [121] = {.lex_state = 0},
+  [122] = {.lex_state = 0},
+  [123] = {.lex_state = 0},
+  [124] = {.lex_state = 7},
+  [125] = {.lex_state = 0, .external_lex_state = 4},
+  [126] = {.lex_state = 0, .external_lex_state = 4},
+  [127] = {.lex_state = 0},
+  [128] = {.lex_state = 0, .external_lex_state = 4},
+  [129] = {.lex_state = 0, .external_lex_state = 4},
+  [130] = {.lex_state = 0, .external_lex_state = 4},
+  [131] = {.lex_state = 0, .external_lex_state = 4},
+  [132] = {.lex_state = 0, .external_lex_state = 5},
+  [133] = {.lex_state = 0, .external_lex_state = 4},
+  [134] = {.lex_state = 0, .external_lex_state = 4},
+  [135] = {.lex_state = 0, .external_lex_state = 5},
+  [136] = {.lex_state = 0, .external_lex_state = 4},
+  [137] = {.lex_state = 0},
+  [138] = {.lex_state = 0, .external_lex_state = 4},
+  [139] = {.lex_state = 0, .external_lex_state = 5},
+  [140] = {.lex_state = 0},
+  [141] = {.lex_state = 0, .external_lex_state = 4},
+  [142] = {.lex_state = 2, .external_lex_state = 5},
+  [143] = {.lex_state = 0, .external_lex_state = 2},
+  [144] = {.lex_state = 0, .external_lex_state = 4},
+  [145] = {.lex_state = 0, .external_lex_state = 4},
   [146] = {.lex_state = 0},
-  [147] = {.lex_state = 3},
-  [148] = {.lex_state = 3},
-  [149] = {.lex_state = 3},
-  [150] = {.lex_state = 0},
-  [151] = {.lex_state = 3},
+  [147] = {.lex_state = 0, .external_lex_state = 5},
+  [148] = {.lex_state = 0},
+  [149] = {.lex_state = 0, .external_lex_state = 5},
+  [150] = {.lex_state = 0, .external_lex_state = 5},
+  [151] = {.lex_state = 0, .external_lex_state = 4},
   [152] = {.lex_state = 0},
-  [153] = {.lex_state = 3},
-  [154] = {.lex_state = 3},
-  [155] = {.lex_state = 3},
+  [153] = {.lex_state = 0},
+  [154] = {.lex_state = 0},
+  [155] = {.lex_state = 0},
   [156] = {.lex_state = 0},
-  [157] = {.lex_state = 0},
-  [158] = {.lex_state = 3},
-  [159] = {.lex_state = 28},
-  [160] = {.lex_state = 0},
-  [161] = {.lex_state = 3},
-  [162] = {.lex_state = 24},
-  [163] = {.lex_state = 3},
-  [164] = {.lex_state = 0},
+  [157] = {.lex_state = 0, .external_lex_state = 5},
+  [158] = {.lex_state = 0},
+  [159] = {.lex_state = 0},
+  [160] = {.lex_state = 0, .external_lex_state = 5},
+  [161] = {.lex_state = 0},
+  [162] = {.lex_state = 0},
+  [163] = {.lex_state = 0, .external_lex_state = 5},
+  [164] = {.lex_state = 0, .external_lex_state = 5},
   [165] = {.lex_state = 0},
-  [166] = {.lex_state = 0},
+  [166] = {.lex_state = 2, .external_lex_state = 5},
   [167] = {.lex_state = 0},
-  [168] = {.lex_state = 3},
+  [168] = {.lex_state = 0},
   [169] = {.lex_state = 0},
-  [170] = {.lex_state = 24},
+  [170] = {.lex_state = 0},
   [171] = {.lex_state = 0},
-  [172] = {.lex_state = 29},
-  [173] = {.lex_state = 3},
-  [174] = {.lex_state = 31},
-  [175] = {.lex_state = 3},
-  [176] = {.lex_state = 3},
+  [172] = {.lex_state = 0},
+  [173] = {.lex_state = 0},
+  [174] = {.lex_state = 0},
+  [175] = {.lex_state = 0},
+  [176] = {.lex_state = 0},
   [177] = {.lex_state = 0},
   [178] = {.lex_state = 0},
-  [179] = {.lex_state = 32},
+  [179] = {.lex_state = 0},
   [180] = {.lex_state = 0},
-  [181] = {.lex_state = 29},
+  [181] = {.lex_state = 0},
   [182] = {.lex_state = 0},
-  [183] = {.lex_state = 3},
-  [184] = {.lex_state = 3},
-  [185] = {.lex_state = 3},
-  [186] = {.lex_state = 3},
-  [187] = {.lex_state = 3},
-  [188] = {.lex_state = 3},
-  [189] = {.lex_state = 3},
-  [190] = {.lex_state = 3},
-  [191] = {.lex_state = 3},
-  [192] = {.lex_state = 3},
-  [193] = {.lex_state = 3},
-  [194] = {.lex_state = 3},
+  [183] = {.lex_state = 0, .external_lex_state = 5},
+  [184] = {.lex_state = 0},
+  [185] = {.lex_state = 0},
+  [186] = {.lex_state = 0},
+  [187] = {.lex_state = 7},
+  [188] = {.lex_state = 0},
+  [189] = {.lex_state = 2},
+  [190] = {.lex_state = 0},
+  [191] = {.lex_state = 0},
+  [192] = {.lex_state = 0},
+  [193] = {.lex_state = 0},
+  [194] = {.lex_state = 0},
   [195] = {.lex_state = 0},
   [196] = {.lex_state = 0},
   [197] = {.lex_state = 0},
-  [198] = {.lex_state = 3},
-  [199] = {.lex_state = 3},
+  [198] = {.lex_state = 0},
+  [199] = {.lex_state = 0},
   [200] = {.lex_state = 0},
   [201] = {.lex_state = 0},
+  [202] = {.lex_state = 0},
+  [203] = {.lex_state = 0},
+  [204] = {.lex_state = 10},
+  [205] = {.lex_state = 0},
+  [206] = {.lex_state = 0},
+  [207] = {.lex_state = 0},
+  [208] = {.lex_state = 7},
+  [209] = {.lex_state = 0},
+  [210] = {.lex_state = 0},
+  [211] = {.lex_state = 0},
+  [212] = {.lex_state = 0},
+  [213] = {.lex_state = 0},
+  [214] = {.lex_state = 0},
+  [215] = {.lex_state = 0},
+  [216] = {.lex_state = 0},
+  [217] = {.lex_state = 0},
+  [218] = {.lex_state = 0},
+  [219] = {.lex_state = 0},
+  [220] = {.lex_state = 0},
+  [221] = {.lex_state = 11},
+  [222] = {.lex_state = 0},
+  [223] = {.lex_state = 0},
+  [224] = {.lex_state = 0},
+  [225] = {.lex_state = 0},
+  [226] = {.lex_state = 11},
+  [227] = {.lex_state = 0},
+  [228] = {.lex_state = 17},
+  [229] = {.lex_state = 0},
+  [230] = {.lex_state = 0},
+};
+
+enum {
+  ts_external_token_text = 0,
+  ts_external_token__text_after_type = 1,
+  ts_external_token__text_in_inline_tag = 2,
+  ts_external_token__text_not_version = 3,
+};
+
+static TSSymbol ts_external_scanner_symbol_map[EXTERNAL_TOKEN_COUNT] = {
+  [ts_external_token_text] = sym_text,
+  [ts_external_token__text_after_type] = sym__text_after_type,
+  [ts_external_token__text_in_inline_tag] = sym__text_in_inline_tag,
+  [ts_external_token__text_not_version] = sym__text_not_version,
+};
+
+static bool ts_external_scanner_states[6][EXTERNAL_TOKEN_COUNT] = {
+  [1] = {
+    [ts_external_token_text] = true,
+    [ts_external_token__text_after_type] = true,
+    [ts_external_token__text_in_inline_tag] = true,
+    [ts_external_token__text_not_version] = true,
+  },
+  [2] = {
+    [ts_external_token_text] = true,
+  },
+  [3] = {
+    [ts_external_token__text_not_version] = true,
+  },
+  [4] = {
+    [ts_external_token__text_after_type] = true,
+  },
+  [5] = {
+    [ts_external_token__text_in_inline_tag] = true,
+  },
 };
 
 static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   [0] = {
     [ts_builtin_sym_end] = ACTIONS(1),
     [sym_name] = ACTIONS(1),
+    [sym__begin] = ACTIONS(1),
     [anon_sym_LBRACE] = ACTIONS(1),
+    [anon_sym_ATinheritdoc] = ACTIONS(1),
     [anon_sym_ATinheritDoc] = ACTIONS(1),
     [anon_sym_RBRACE] = ACTIONS(1),
     [anon_sym_ATapi] = ACTIONS(1),
     [anon_sym_ATfilesource] = ACTIONS(1),
     [anon_sym_ATignore] = ACTIONS(1),
+    [anon_sym_ATinternal] = ACTIONS(1),
     [anon_sym_ATcategory] = ACTIONS(1),
     [anon_sym_ATcopyright] = ACTIONS(1),
     [anon_sym_ATtodo] = ACTIONS(1),
@@ -4147,7 +4134,6 @@ static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_LT] = ACTIONS(1),
     [anon_sym_GT] = ACTIONS(1),
     [anon_sym_ATglobal] = ACTIONS(1),
-    [anon_sym_ATinternal] = ACTIONS(1),
     [anon_sym_ATlink] = ACTIONS(1),
     [anon_sym_ATmethod] = ACTIONS(1),
     [anon_sym_ATparam] = ACTIONS(1),
@@ -4213,44 +4199,52 @@ static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_null] = ACTIONS(1),
     [anon_sym_PIPE] = ACTIONS(1),
     [anon_sym_DOLLAR] = ACTIONS(1),
-    [sym_text] = ACTIONS(1),
-    [sym_version] = ACTIONS(1),
+    [aux_sym_version_token1] = ACTIONS(1),
+    [anon_sym_ATpackage_version_AT] = ACTIONS(1),
     [anon_sym_LPAREN] = ACTIONS(1),
     [anon_sym_RPAREN] = ACTIONS(1),
     [anon_sym_EQ] = ACTIONS(1),
     [sym__end] = ACTIONS(1),
+    [sym_text] = ACTIONS(1),
+    [sym__text_after_type] = ACTIONS(1),
+    [sym__text_in_inline_tag] = ACTIONS(1),
+    [sym__text_not_version] = ACTIONS(1),
   },
   [1] = {
-    [sym_document] = STATE(160),
+    [sym_document] = STATE(211),
     [sym__begin] = ACTIONS(3),
   },
   [2] = {
-    [sym_tag] = STATE(3),
-    [sym_inline_tag] = STATE(50),
-    [sym__simple_tag_without_description] = STATE(82),
-    [sym__simple_tag_with_optional_description] = STATE(82),
-    [sym__simple_tag_with_required_description] = STATE(82),
-    [sym__currently_incomplete_tags] = STATE(25),
-    [sym__author_tag] = STATE(82),
-    [sym__global_tag] = STATE(82),
-    [sym__internal_tag] = STATE(82),
-    [sym__link_tag] = STATE(82),
-    [sym__method_tag] = STATE(82),
-    [sym__param_tag] = STATE(82),
-    [sym__property_tag] = STATE(82),
-    [sym__return_tag] = STATE(82),
-    [sym__see_tag] = STATE(82),
-    [sym__throws_tag] = STATE(82),
-    [sym__var_tag] = STATE(82),
-    [sym__version_tag] = STATE(82),
-    [sym__phpunit_tag] = STATE(82),
     [sym_description] = STATE(6),
+    [sym_tag] = STATE(3),
+    [sym_inline_tag] = STATE(38),
+    [sym__tag_without_description] = STATE(74),
+    [sym__tag_with_optional_description] = STATE(74),
+    [sym__tag_with_required_description] = STATE(74),
+    [sym__tag_with_incomplete_implementation] = STATE(74),
+    [sym__author_tag] = STATE(74),
+    [sym__global_tag] = STATE(74),
+    [sym__link_tag] = STATE(74),
+    [sym__method_tag] = STATE(74),
+    [sym__param_tag] = STATE(74),
+    [sym__property_tag] = STATE(74),
+    [sym__return_tag] = STATE(74),
+    [sym__see_tag] = STATE(74),
+    [sym__throws_tag] = STATE(74),
+    [sym__var_tag] = STATE(74),
+    [sym__deprecated_tag] = STATE(74),
+    [sym__since_tag] = STATE(74),
+    [sym__version_tag] = STATE(74),
+    [sym__phpunit_tag] = STATE(74),
     [aux_sym_document_repeat1] = STATE(3),
-    [aux_sym_description_repeat1] = STATE(50),
+    [aux_sym_description_repeat1] = STATE(38),
     [anon_sym_LBRACE] = ACTIONS(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(7),
+    [anon_sym_ATinheritDoc] = ACTIONS(7),
     [anon_sym_ATapi] = ACTIONS(7),
     [anon_sym_ATfilesource] = ACTIONS(7),
     [anon_sym_ATignore] = ACTIONS(9),
+    [anon_sym_ATinternal] = ACTIONS(9),
     [anon_sym_ATcategory] = ACTIONS(11),
     [anon_sym_ATcopyright] = ACTIONS(11),
     [anon_sym_ATtodo] = ACTIONS(11),
@@ -4262,78 +4256,81 @@ static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_ATuses] = ACTIONS(13),
     [anon_sym_ATauthor] = ACTIONS(15),
     [anon_sym_ATglobal] = ACTIONS(17),
-    [anon_sym_ATinternal] = ACTIONS(19),
-    [anon_sym_ATlink] = ACTIONS(21),
-    [anon_sym_ATmethod] = ACTIONS(23),
-    [anon_sym_ATparam] = ACTIONS(25),
-    [anon_sym_ATproperty] = ACTIONS(27),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(29),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(29),
-    [anon_sym_ATreturn] = ACTIONS(31),
-    [anon_sym_ATsee] = ACTIONS(33),
-    [anon_sym_ATthrows] = ACTIONS(35),
-    [anon_sym_ATvar] = ACTIONS(37),
-    [anon_sym_ATdeprecated] = ACTIONS(39),
+    [anon_sym_ATlink] = ACTIONS(19),
+    [anon_sym_ATmethod] = ACTIONS(21),
+    [anon_sym_ATparam] = ACTIONS(23),
+    [anon_sym_ATproperty] = ACTIONS(25),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(27),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(27),
+    [anon_sym_ATreturn] = ACTIONS(29),
+    [anon_sym_ATsee] = ACTIONS(31),
+    [anon_sym_ATthrows] = ACTIONS(33),
+    [anon_sym_ATvar] = ACTIONS(35),
+    [anon_sym_ATdeprecated] = ACTIONS(37),
     [anon_sym_ATsince] = ACTIONS(39),
-    [anon_sym_ATversion] = ACTIONS(39),
-    [anon_sym_ATafter] = ACTIONS(41),
-    [anon_sym_ATafterClass] = ACTIONS(43),
-    [anon_sym_ATannotation] = ACTIONS(43),
-    [anon_sym_ATbackupGlobals] = ACTIONS(43),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(43),
-    [anon_sym_ATbefore] = ACTIONS(41),
-    [anon_sym_ATbeforeClass] = ACTIONS(43),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(41),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(43),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(43),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(43),
-    [anon_sym_ATcovers] = ACTIONS(41),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(41),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(43),
-    [anon_sym_ATcoversNothing] = ACTIONS(43),
-    [anon_sym_ATdataProvider] = ACTIONS(43),
-    [anon_sym_ATdepends] = ACTIONS(41),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(43),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(43),
-    [anon_sym_ATgroup] = ACTIONS(43),
-    [anon_sym_ATlarge] = ACTIONS(43),
-    [anon_sym_ATmedium] = ACTIONS(43),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(43),
-    [anon_sym_ATrequires] = ACTIONS(41),
-    [anon_sym_ATrequiresusages] = ACTIONS(43),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(43),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(43),
-    [anon_sym_ATsmall] = ACTIONS(43),
-    [anon_sym_ATtest] = ACTIONS(41),
-    [anon_sym_ATtestWith] = ACTIONS(43),
-    [anon_sym_ATtestdox] = ACTIONS(43),
-    [anon_sym_ATticket] = ACTIONS(43),
-    [sym_text] = ACTIONS(45),
+    [anon_sym_ATversion] = ACTIONS(41),
+    [anon_sym_ATafter] = ACTIONS(43),
+    [anon_sym_ATafterClass] = ACTIONS(45),
+    [anon_sym_ATannotation] = ACTIONS(45),
+    [anon_sym_ATbackupGlobals] = ACTIONS(45),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(45),
+    [anon_sym_ATbefore] = ACTIONS(43),
+    [anon_sym_ATbeforeClass] = ACTIONS(45),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(43),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(45),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(45),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(45),
+    [anon_sym_ATcovers] = ACTIONS(43),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(43),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(45),
+    [anon_sym_ATcoversNothing] = ACTIONS(45),
+    [anon_sym_ATdataProvider] = ACTIONS(45),
+    [anon_sym_ATdepends] = ACTIONS(43),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(45),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(45),
+    [anon_sym_ATgroup] = ACTIONS(45),
+    [anon_sym_ATlarge] = ACTIONS(45),
+    [anon_sym_ATmedium] = ACTIONS(45),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(45),
+    [anon_sym_ATrequires] = ACTIONS(43),
+    [anon_sym_ATrequiresusages] = ACTIONS(45),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(45),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(45),
+    [anon_sym_ATsmall] = ACTIONS(45),
+    [anon_sym_ATtest] = ACTIONS(43),
+    [anon_sym_ATtestWith] = ACTIONS(45),
+    [anon_sym_ATtestdox] = ACTIONS(45),
+    [anon_sym_ATticket] = ACTIONS(45),
     [sym__end] = ACTIONS(47),
+    [sym_text] = ACTIONS(49),
   },
   [3] = {
-    [sym_tag] = STATE(4),
-    [sym__simple_tag_without_description] = STATE(82),
-    [sym__simple_tag_with_optional_description] = STATE(82),
-    [sym__simple_tag_with_required_description] = STATE(82),
-    [sym__currently_incomplete_tags] = STATE(25),
-    [sym__author_tag] = STATE(82),
-    [sym__global_tag] = STATE(82),
-    [sym__internal_tag] = STATE(82),
-    [sym__link_tag] = STATE(82),
-    [sym__method_tag] = STATE(82),
-    [sym__param_tag] = STATE(82),
-    [sym__property_tag] = STATE(82),
-    [sym__return_tag] = STATE(82),
-    [sym__see_tag] = STATE(82),
-    [sym__throws_tag] = STATE(82),
-    [sym__var_tag] = STATE(82),
-    [sym__version_tag] = STATE(82),
-    [sym__phpunit_tag] = STATE(82),
-    [aux_sym_document_repeat1] = STATE(4),
+    [sym_tag] = STATE(5),
+    [sym__tag_without_description] = STATE(74),
+    [sym__tag_with_optional_description] = STATE(74),
+    [sym__tag_with_required_description] = STATE(74),
+    [sym__tag_with_incomplete_implementation] = STATE(74),
+    [sym__author_tag] = STATE(74),
+    [sym__global_tag] = STATE(74),
+    [sym__link_tag] = STATE(74),
+    [sym__method_tag] = STATE(74),
+    [sym__param_tag] = STATE(74),
+    [sym__property_tag] = STATE(74),
+    [sym__return_tag] = STATE(74),
+    [sym__see_tag] = STATE(74),
+    [sym__throws_tag] = STATE(74),
+    [sym__var_tag] = STATE(74),
+    [sym__deprecated_tag] = STATE(74),
+    [sym__since_tag] = STATE(74),
+    [sym__version_tag] = STATE(74),
+    [sym__phpunit_tag] = STATE(74),
+    [aux_sym_document_repeat1] = STATE(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(7),
+    [anon_sym_ATinheritDoc] = ACTIONS(7),
     [anon_sym_ATapi] = ACTIONS(7),
     [anon_sym_ATfilesource] = ACTIONS(7),
     [anon_sym_ATignore] = ACTIONS(9),
+    [anon_sym_ATinternal] = ACTIONS(9),
     [anon_sym_ATcategory] = ACTIONS(11),
     [anon_sym_ATcopyright] = ACTIONS(11),
     [anon_sym_ATtodo] = ACTIONS(11),
@@ -4345,392 +4342,331 @@ static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_ATuses] = ACTIONS(13),
     [anon_sym_ATauthor] = ACTIONS(15),
     [anon_sym_ATglobal] = ACTIONS(17),
-    [anon_sym_ATinternal] = ACTIONS(19),
-    [anon_sym_ATlink] = ACTIONS(21),
-    [anon_sym_ATmethod] = ACTIONS(23),
-    [anon_sym_ATparam] = ACTIONS(25),
-    [anon_sym_ATproperty] = ACTIONS(27),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(29),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(29),
-    [anon_sym_ATreturn] = ACTIONS(31),
-    [anon_sym_ATsee] = ACTIONS(33),
-    [anon_sym_ATthrows] = ACTIONS(35),
-    [anon_sym_ATvar] = ACTIONS(37),
-    [anon_sym_ATdeprecated] = ACTIONS(39),
+    [anon_sym_ATlink] = ACTIONS(19),
+    [anon_sym_ATmethod] = ACTIONS(21),
+    [anon_sym_ATparam] = ACTIONS(23),
+    [anon_sym_ATproperty] = ACTIONS(25),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(27),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(27),
+    [anon_sym_ATreturn] = ACTIONS(29),
+    [anon_sym_ATsee] = ACTIONS(31),
+    [anon_sym_ATthrows] = ACTIONS(33),
+    [anon_sym_ATvar] = ACTIONS(35),
+    [anon_sym_ATdeprecated] = ACTIONS(37),
     [anon_sym_ATsince] = ACTIONS(39),
-    [anon_sym_ATversion] = ACTIONS(39),
-    [anon_sym_ATafter] = ACTIONS(41),
-    [anon_sym_ATafterClass] = ACTIONS(43),
-    [anon_sym_ATannotation] = ACTIONS(43),
-    [anon_sym_ATbackupGlobals] = ACTIONS(43),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(43),
-    [anon_sym_ATbefore] = ACTIONS(41),
-    [anon_sym_ATbeforeClass] = ACTIONS(43),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(41),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(43),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(43),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(43),
-    [anon_sym_ATcovers] = ACTIONS(41),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(41),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(43),
-    [anon_sym_ATcoversNothing] = ACTIONS(43),
-    [anon_sym_ATdataProvider] = ACTIONS(43),
-    [anon_sym_ATdepends] = ACTIONS(41),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(43),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(43),
-    [anon_sym_ATgroup] = ACTIONS(43),
-    [anon_sym_ATlarge] = ACTIONS(43),
-    [anon_sym_ATmedium] = ACTIONS(43),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(43),
-    [anon_sym_ATrequires] = ACTIONS(41),
-    [anon_sym_ATrequiresusages] = ACTIONS(43),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(43),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(43),
-    [anon_sym_ATsmall] = ACTIONS(43),
-    [anon_sym_ATtest] = ACTIONS(41),
-    [anon_sym_ATtestWith] = ACTIONS(43),
-    [anon_sym_ATtestdox] = ACTIONS(43),
-    [anon_sym_ATticket] = ACTIONS(43),
-    [sym__end] = ACTIONS(49),
+    [anon_sym_ATversion] = ACTIONS(41),
+    [anon_sym_ATafter] = ACTIONS(43),
+    [anon_sym_ATafterClass] = ACTIONS(45),
+    [anon_sym_ATannotation] = ACTIONS(45),
+    [anon_sym_ATbackupGlobals] = ACTIONS(45),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(45),
+    [anon_sym_ATbefore] = ACTIONS(43),
+    [anon_sym_ATbeforeClass] = ACTIONS(45),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(43),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(45),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(45),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(45),
+    [anon_sym_ATcovers] = ACTIONS(43),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(43),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(45),
+    [anon_sym_ATcoversNothing] = ACTIONS(45),
+    [anon_sym_ATdataProvider] = ACTIONS(45),
+    [anon_sym_ATdepends] = ACTIONS(43),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(45),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(45),
+    [anon_sym_ATgroup] = ACTIONS(45),
+    [anon_sym_ATlarge] = ACTIONS(45),
+    [anon_sym_ATmedium] = ACTIONS(45),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(45),
+    [anon_sym_ATrequires] = ACTIONS(43),
+    [anon_sym_ATrequiresusages] = ACTIONS(45),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(45),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(45),
+    [anon_sym_ATsmall] = ACTIONS(45),
+    [anon_sym_ATtest] = ACTIONS(43),
+    [anon_sym_ATtestWith] = ACTIONS(45),
+    [anon_sym_ATtestdox] = ACTIONS(45),
+    [anon_sym_ATticket] = ACTIONS(45),
+    [sym__end] = ACTIONS(51),
   },
   [4] = {
-    [sym_tag] = STATE(4),
-    [sym__simple_tag_without_description] = STATE(82),
-    [sym__simple_tag_with_optional_description] = STATE(82),
-    [sym__simple_tag_with_required_description] = STATE(82),
-    [sym__currently_incomplete_tags] = STATE(25),
-    [sym__author_tag] = STATE(82),
-    [sym__global_tag] = STATE(82),
-    [sym__internal_tag] = STATE(82),
-    [sym__link_tag] = STATE(82),
-    [sym__method_tag] = STATE(82),
-    [sym__param_tag] = STATE(82),
-    [sym__property_tag] = STATE(82),
-    [sym__return_tag] = STATE(82),
-    [sym__see_tag] = STATE(82),
-    [sym__throws_tag] = STATE(82),
-    [sym__var_tag] = STATE(82),
-    [sym__version_tag] = STATE(82),
-    [sym__phpunit_tag] = STATE(82),
-    [aux_sym_document_repeat1] = STATE(4),
-    [anon_sym_ATapi] = ACTIONS(51),
-    [anon_sym_ATfilesource] = ACTIONS(51),
-    [anon_sym_ATignore] = ACTIONS(54),
-    [anon_sym_ATcategory] = ACTIONS(57),
-    [anon_sym_ATcopyright] = ACTIONS(57),
-    [anon_sym_ATtodo] = ACTIONS(57),
-    [anon_sym_ATexample] = ACTIONS(60),
-    [anon_sym_ATlicense] = ACTIONS(60),
-    [anon_sym_ATpackage] = ACTIONS(60),
-    [anon_sym_ATsource] = ACTIONS(60),
-    [anon_sym_ATsubpackage] = ACTIONS(60),
-    [anon_sym_ATuses] = ACTIONS(60),
-    [anon_sym_ATauthor] = ACTIONS(63),
-    [anon_sym_ATglobal] = ACTIONS(66),
-    [anon_sym_ATinternal] = ACTIONS(69),
-    [anon_sym_ATlink] = ACTIONS(72),
-    [anon_sym_ATmethod] = ACTIONS(75),
-    [anon_sym_ATparam] = ACTIONS(78),
-    [anon_sym_ATproperty] = ACTIONS(81),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(84),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(84),
-    [anon_sym_ATreturn] = ACTIONS(87),
-    [anon_sym_ATsee] = ACTIONS(90),
-    [anon_sym_ATthrows] = ACTIONS(93),
-    [anon_sym_ATvar] = ACTIONS(96),
-    [anon_sym_ATdeprecated] = ACTIONS(99),
-    [anon_sym_ATsince] = ACTIONS(99),
-    [anon_sym_ATversion] = ACTIONS(99),
-    [anon_sym_ATafter] = ACTIONS(102),
-    [anon_sym_ATafterClass] = ACTIONS(105),
-    [anon_sym_ATannotation] = ACTIONS(105),
-    [anon_sym_ATbackupGlobals] = ACTIONS(105),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(105),
-    [anon_sym_ATbefore] = ACTIONS(102),
-    [anon_sym_ATbeforeClass] = ACTIONS(105),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(102),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(105),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(105),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(105),
-    [anon_sym_ATcovers] = ACTIONS(102),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(102),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(105),
-    [anon_sym_ATcoversNothing] = ACTIONS(105),
-    [anon_sym_ATdataProvider] = ACTIONS(105),
-    [anon_sym_ATdepends] = ACTIONS(102),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(105),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(105),
-    [anon_sym_ATgroup] = ACTIONS(105),
-    [anon_sym_ATlarge] = ACTIONS(105),
-    [anon_sym_ATmedium] = ACTIONS(105),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(105),
-    [anon_sym_ATrequires] = ACTIONS(102),
-    [anon_sym_ATrequiresusages] = ACTIONS(105),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(105),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(105),
-    [anon_sym_ATsmall] = ACTIONS(105),
-    [anon_sym_ATtest] = ACTIONS(102),
-    [anon_sym_ATtestWith] = ACTIONS(105),
-    [anon_sym_ATtestdox] = ACTIONS(105),
-    [anon_sym_ATticket] = ACTIONS(105),
-    [sym__end] = ACTIONS(108),
+    [sym_tag] = STATE(5),
+    [sym__tag_without_description] = STATE(74),
+    [sym__tag_with_optional_description] = STATE(74),
+    [sym__tag_with_required_description] = STATE(74),
+    [sym__tag_with_incomplete_implementation] = STATE(74),
+    [sym__author_tag] = STATE(74),
+    [sym__global_tag] = STATE(74),
+    [sym__link_tag] = STATE(74),
+    [sym__method_tag] = STATE(74),
+    [sym__param_tag] = STATE(74),
+    [sym__property_tag] = STATE(74),
+    [sym__return_tag] = STATE(74),
+    [sym__see_tag] = STATE(74),
+    [sym__throws_tag] = STATE(74),
+    [sym__var_tag] = STATE(74),
+    [sym__deprecated_tag] = STATE(74),
+    [sym__since_tag] = STATE(74),
+    [sym__version_tag] = STATE(74),
+    [sym__phpunit_tag] = STATE(74),
+    [aux_sym_document_repeat1] = STATE(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(7),
+    [anon_sym_ATinheritDoc] = ACTIONS(7),
+    [anon_sym_ATapi] = ACTIONS(7),
+    [anon_sym_ATfilesource] = ACTIONS(7),
+    [anon_sym_ATignore] = ACTIONS(9),
+    [anon_sym_ATinternal] = ACTIONS(9),
+    [anon_sym_ATcategory] = ACTIONS(11),
+    [anon_sym_ATcopyright] = ACTIONS(11),
+    [anon_sym_ATtodo] = ACTIONS(11),
+    [anon_sym_ATexample] = ACTIONS(13),
+    [anon_sym_ATlicense] = ACTIONS(13),
+    [anon_sym_ATpackage] = ACTIONS(13),
+    [anon_sym_ATsource] = ACTIONS(13),
+    [anon_sym_ATsubpackage] = ACTIONS(13),
+    [anon_sym_ATuses] = ACTIONS(13),
+    [anon_sym_ATauthor] = ACTIONS(15),
+    [anon_sym_ATglobal] = ACTIONS(17),
+    [anon_sym_ATlink] = ACTIONS(19),
+    [anon_sym_ATmethod] = ACTIONS(21),
+    [anon_sym_ATparam] = ACTIONS(23),
+    [anon_sym_ATproperty] = ACTIONS(25),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(27),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(27),
+    [anon_sym_ATreturn] = ACTIONS(29),
+    [anon_sym_ATsee] = ACTIONS(31),
+    [anon_sym_ATthrows] = ACTIONS(33),
+    [anon_sym_ATvar] = ACTIONS(35),
+    [anon_sym_ATdeprecated] = ACTIONS(37),
+    [anon_sym_ATsince] = ACTIONS(39),
+    [anon_sym_ATversion] = ACTIONS(41),
+    [anon_sym_ATafter] = ACTIONS(43),
+    [anon_sym_ATafterClass] = ACTIONS(45),
+    [anon_sym_ATannotation] = ACTIONS(45),
+    [anon_sym_ATbackupGlobals] = ACTIONS(45),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(45),
+    [anon_sym_ATbefore] = ACTIONS(43),
+    [anon_sym_ATbeforeClass] = ACTIONS(45),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(43),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(45),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(45),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(45),
+    [anon_sym_ATcovers] = ACTIONS(43),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(43),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(45),
+    [anon_sym_ATcoversNothing] = ACTIONS(45),
+    [anon_sym_ATdataProvider] = ACTIONS(45),
+    [anon_sym_ATdepends] = ACTIONS(43),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(45),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(45),
+    [anon_sym_ATgroup] = ACTIONS(45),
+    [anon_sym_ATlarge] = ACTIONS(45),
+    [anon_sym_ATmedium] = ACTIONS(45),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(45),
+    [anon_sym_ATrequires] = ACTIONS(43),
+    [anon_sym_ATrequiresusages] = ACTIONS(45),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(45),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(45),
+    [anon_sym_ATsmall] = ACTIONS(45),
+    [anon_sym_ATtest] = ACTIONS(43),
+    [anon_sym_ATtestWith] = ACTIONS(45),
+    [anon_sym_ATtestdox] = ACTIONS(45),
+    [anon_sym_ATticket] = ACTIONS(45),
+    [sym__end] = ACTIONS(53),
   },
   [5] = {
-    [sym_tag] = STATE(4),
-    [sym__simple_tag_without_description] = STATE(82),
-    [sym__simple_tag_with_optional_description] = STATE(82),
-    [sym__simple_tag_with_required_description] = STATE(82),
-    [sym__currently_incomplete_tags] = STATE(25),
-    [sym__author_tag] = STATE(82),
-    [sym__global_tag] = STATE(82),
-    [sym__internal_tag] = STATE(82),
-    [sym__link_tag] = STATE(82),
-    [sym__method_tag] = STATE(82),
-    [sym__param_tag] = STATE(82),
-    [sym__property_tag] = STATE(82),
-    [sym__return_tag] = STATE(82),
-    [sym__see_tag] = STATE(82),
-    [sym__throws_tag] = STATE(82),
-    [sym__var_tag] = STATE(82),
-    [sym__version_tag] = STATE(82),
-    [sym__phpunit_tag] = STATE(82),
-    [aux_sym_document_repeat1] = STATE(4),
-    [anon_sym_ATapi] = ACTIONS(7),
-    [anon_sym_ATfilesource] = ACTIONS(7),
-    [anon_sym_ATignore] = ACTIONS(9),
-    [anon_sym_ATcategory] = ACTIONS(11),
-    [anon_sym_ATcopyright] = ACTIONS(11),
-    [anon_sym_ATtodo] = ACTIONS(11),
-    [anon_sym_ATexample] = ACTIONS(13),
-    [anon_sym_ATlicense] = ACTIONS(13),
-    [anon_sym_ATpackage] = ACTIONS(13),
-    [anon_sym_ATsource] = ACTIONS(13),
-    [anon_sym_ATsubpackage] = ACTIONS(13),
-    [anon_sym_ATuses] = ACTIONS(13),
-    [anon_sym_ATauthor] = ACTIONS(15),
-    [anon_sym_ATglobal] = ACTIONS(17),
-    [anon_sym_ATinternal] = ACTIONS(19),
-    [anon_sym_ATlink] = ACTIONS(21),
-    [anon_sym_ATmethod] = ACTIONS(23),
-    [anon_sym_ATparam] = ACTIONS(25),
-    [anon_sym_ATproperty] = ACTIONS(27),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(29),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(29),
-    [anon_sym_ATreturn] = ACTIONS(31),
-    [anon_sym_ATsee] = ACTIONS(33),
-    [anon_sym_ATthrows] = ACTIONS(35),
-    [anon_sym_ATvar] = ACTIONS(37),
-    [anon_sym_ATdeprecated] = ACTIONS(39),
-    [anon_sym_ATsince] = ACTIONS(39),
-    [anon_sym_ATversion] = ACTIONS(39),
-    [anon_sym_ATafter] = ACTIONS(41),
-    [anon_sym_ATafterClass] = ACTIONS(43),
-    [anon_sym_ATannotation] = ACTIONS(43),
-    [anon_sym_ATbackupGlobals] = ACTIONS(43),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(43),
-    [anon_sym_ATbefore] = ACTIONS(41),
-    [anon_sym_ATbeforeClass] = ACTIONS(43),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(41),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(43),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(43),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(43),
-    [anon_sym_ATcovers] = ACTIONS(41),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(41),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(43),
-    [anon_sym_ATcoversNothing] = ACTIONS(43),
-    [anon_sym_ATdataProvider] = ACTIONS(43),
-    [anon_sym_ATdepends] = ACTIONS(41),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(43),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(43),
-    [anon_sym_ATgroup] = ACTIONS(43),
-    [anon_sym_ATlarge] = ACTIONS(43),
-    [anon_sym_ATmedium] = ACTIONS(43),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(43),
-    [anon_sym_ATrequires] = ACTIONS(41),
-    [anon_sym_ATrequiresusages] = ACTIONS(43),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(43),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(43),
-    [anon_sym_ATsmall] = ACTIONS(43),
-    [anon_sym_ATtest] = ACTIONS(41),
-    [anon_sym_ATtestWith] = ACTIONS(43),
-    [anon_sym_ATtestdox] = ACTIONS(43),
-    [anon_sym_ATticket] = ACTIONS(43),
-    [sym__end] = ACTIONS(110),
-  },
-  [6] = {
     [sym_tag] = STATE(5),
-    [sym__simple_tag_without_description] = STATE(82),
-    [sym__simple_tag_with_optional_description] = STATE(82),
-    [sym__simple_tag_with_required_description] = STATE(82),
-    [sym__currently_incomplete_tags] = STATE(25),
-    [sym__author_tag] = STATE(82),
-    [sym__global_tag] = STATE(82),
-    [sym__internal_tag] = STATE(82),
-    [sym__link_tag] = STATE(82),
-    [sym__method_tag] = STATE(82),
-    [sym__param_tag] = STATE(82),
-    [sym__property_tag] = STATE(82),
-    [sym__return_tag] = STATE(82),
-    [sym__see_tag] = STATE(82),
-    [sym__throws_tag] = STATE(82),
-    [sym__var_tag] = STATE(82),
-    [sym__version_tag] = STATE(82),
-    [sym__phpunit_tag] = STATE(82),
+    [sym__tag_without_description] = STATE(74),
+    [sym__tag_with_optional_description] = STATE(74),
+    [sym__tag_with_required_description] = STATE(74),
+    [sym__tag_with_incomplete_implementation] = STATE(74),
+    [sym__author_tag] = STATE(74),
+    [sym__global_tag] = STATE(74),
+    [sym__link_tag] = STATE(74),
+    [sym__method_tag] = STATE(74),
+    [sym__param_tag] = STATE(74),
+    [sym__property_tag] = STATE(74),
+    [sym__return_tag] = STATE(74),
+    [sym__see_tag] = STATE(74),
+    [sym__throws_tag] = STATE(74),
+    [sym__var_tag] = STATE(74),
+    [sym__deprecated_tag] = STATE(74),
+    [sym__since_tag] = STATE(74),
+    [sym__version_tag] = STATE(74),
+    [sym__phpunit_tag] = STATE(74),
     [aux_sym_document_repeat1] = STATE(5),
-    [anon_sym_ATapi] = ACTIONS(7),
-    [anon_sym_ATfilesource] = ACTIONS(7),
-    [anon_sym_ATignore] = ACTIONS(9),
-    [anon_sym_ATcategory] = ACTIONS(11),
-    [anon_sym_ATcopyright] = ACTIONS(11),
-    [anon_sym_ATtodo] = ACTIONS(11),
-    [anon_sym_ATexample] = ACTIONS(13),
-    [anon_sym_ATlicense] = ACTIONS(13),
-    [anon_sym_ATpackage] = ACTIONS(13),
-    [anon_sym_ATsource] = ACTIONS(13),
-    [anon_sym_ATsubpackage] = ACTIONS(13),
-    [anon_sym_ATuses] = ACTIONS(13),
-    [anon_sym_ATauthor] = ACTIONS(15),
-    [anon_sym_ATglobal] = ACTIONS(17),
-    [anon_sym_ATinternal] = ACTIONS(19),
-    [anon_sym_ATlink] = ACTIONS(21),
-    [anon_sym_ATmethod] = ACTIONS(23),
-    [anon_sym_ATparam] = ACTIONS(25),
-    [anon_sym_ATproperty] = ACTIONS(27),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(29),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(29),
-    [anon_sym_ATreturn] = ACTIONS(31),
-    [anon_sym_ATsee] = ACTIONS(33),
-    [anon_sym_ATthrows] = ACTIONS(35),
-    [anon_sym_ATvar] = ACTIONS(37),
-    [anon_sym_ATdeprecated] = ACTIONS(39),
-    [anon_sym_ATsince] = ACTIONS(39),
-    [anon_sym_ATversion] = ACTIONS(39),
-    [anon_sym_ATafter] = ACTIONS(41),
-    [anon_sym_ATafterClass] = ACTIONS(43),
-    [anon_sym_ATannotation] = ACTIONS(43),
-    [anon_sym_ATbackupGlobals] = ACTIONS(43),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(43),
-    [anon_sym_ATbefore] = ACTIONS(41),
-    [anon_sym_ATbeforeClass] = ACTIONS(43),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(41),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(43),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(43),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(43),
-    [anon_sym_ATcovers] = ACTIONS(41),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(41),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(43),
-    [anon_sym_ATcoversNothing] = ACTIONS(43),
-    [anon_sym_ATdataProvider] = ACTIONS(43),
-    [anon_sym_ATdepends] = ACTIONS(41),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(43),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(43),
-    [anon_sym_ATgroup] = ACTIONS(43),
-    [anon_sym_ATlarge] = ACTIONS(43),
-    [anon_sym_ATmedium] = ACTIONS(43),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(43),
-    [anon_sym_ATrequires] = ACTIONS(41),
-    [anon_sym_ATrequiresusages] = ACTIONS(43),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(43),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(43),
-    [anon_sym_ATsmall] = ACTIONS(43),
-    [anon_sym_ATtest] = ACTIONS(41),
-    [anon_sym_ATtestWith] = ACTIONS(43),
-    [anon_sym_ATtestdox] = ACTIONS(43),
-    [anon_sym_ATticket] = ACTIONS(43),
-    [sym__end] = ACTIONS(49),
-  },
-  [7] = {
-    [aux_sym_namespace_name_repeat1] = STATE(145),
-    [anon_sym_LBRACE] = ACTIONS(112),
-    [anon_sym_ATapi] = ACTIONS(112),
-    [anon_sym_ATfilesource] = ACTIONS(112),
-    [anon_sym_ATignore] = ACTIONS(112),
-    [anon_sym_ATcategory] = ACTIONS(112),
-    [anon_sym_ATcopyright] = ACTIONS(112),
-    [anon_sym_ATtodo] = ACTIONS(112),
-    [anon_sym_ATexample] = ACTIONS(112),
-    [anon_sym_ATlicense] = ACTIONS(112),
-    [anon_sym_ATpackage] = ACTIONS(112),
-    [anon_sym_ATsource] = ACTIONS(112),
-    [anon_sym_ATsubpackage] = ACTIONS(112),
-    [anon_sym_ATuses] = ACTIONS(112),
-    [anon_sym_ATauthor] = ACTIONS(112),
-    [anon_sym_LT] = ACTIONS(112),
-    [anon_sym_ATglobal] = ACTIONS(112),
-    [anon_sym_ATinternal] = ACTIONS(112),
-    [anon_sym_ATlink] = ACTIONS(112),
-    [anon_sym_ATmethod] = ACTIONS(112),
-    [anon_sym_ATparam] = ACTIONS(112),
-    [anon_sym_ATproperty] = ACTIONS(114),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(112),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(112),
-    [anon_sym_ATreturn] = ACTIONS(112),
-    [anon_sym_ATsee] = ACTIONS(112),
-    [anon_sym_ATthrows] = ACTIONS(112),
-    [anon_sym_ATvar] = ACTIONS(112),
-    [anon_sym_ATdeprecated] = ACTIONS(112),
-    [anon_sym_ATsince] = ACTIONS(112),
-    [anon_sym_ATversion] = ACTIONS(112),
-    [anon_sym_ATafter] = ACTIONS(114),
+    [anon_sym_ATinheritdoc] = ACTIONS(55),
+    [anon_sym_ATinheritDoc] = ACTIONS(55),
+    [anon_sym_ATapi] = ACTIONS(55),
+    [anon_sym_ATfilesource] = ACTIONS(55),
+    [anon_sym_ATignore] = ACTIONS(58),
+    [anon_sym_ATinternal] = ACTIONS(58),
+    [anon_sym_ATcategory] = ACTIONS(61),
+    [anon_sym_ATcopyright] = ACTIONS(61),
+    [anon_sym_ATtodo] = ACTIONS(61),
+    [anon_sym_ATexample] = ACTIONS(64),
+    [anon_sym_ATlicense] = ACTIONS(64),
+    [anon_sym_ATpackage] = ACTIONS(64),
+    [anon_sym_ATsource] = ACTIONS(64),
+    [anon_sym_ATsubpackage] = ACTIONS(64),
+    [anon_sym_ATuses] = ACTIONS(64),
+    [anon_sym_ATauthor] = ACTIONS(67),
+    [anon_sym_ATglobal] = ACTIONS(70),
+    [anon_sym_ATlink] = ACTIONS(73),
+    [anon_sym_ATmethod] = ACTIONS(76),
+    [anon_sym_ATparam] = ACTIONS(79),
+    [anon_sym_ATproperty] = ACTIONS(82),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(85),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(85),
+    [anon_sym_ATreturn] = ACTIONS(88),
+    [anon_sym_ATsee] = ACTIONS(91),
+    [anon_sym_ATthrows] = ACTIONS(94),
+    [anon_sym_ATvar] = ACTIONS(97),
+    [anon_sym_ATdeprecated] = ACTIONS(100),
+    [anon_sym_ATsince] = ACTIONS(103),
+    [anon_sym_ATversion] = ACTIONS(106),
+    [anon_sym_ATafter] = ACTIONS(109),
     [anon_sym_ATafterClass] = ACTIONS(112),
     [anon_sym_ATannotation] = ACTIONS(112),
     [anon_sym_ATbackupGlobals] = ACTIONS(112),
     [anon_sym_ATbackupStaticAttributes] = ACTIONS(112),
-    [anon_sym_ATbefore] = ACTIONS(114),
+    [anon_sym_ATbefore] = ACTIONS(109),
     [anon_sym_ATbeforeClass] = ACTIONS(112),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(114),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(109),
     [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(112),
     [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(112),
     [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(112),
-    [anon_sym_ATcovers] = ACTIONS(114),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(114),
+    [anon_sym_ATcovers] = ACTIONS(109),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(109),
     [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(112),
     [anon_sym_ATcoversNothing] = ACTIONS(112),
     [anon_sym_ATdataProvider] = ACTIONS(112),
-    [anon_sym_ATdepends] = ACTIONS(114),
+    [anon_sym_ATdepends] = ACTIONS(109),
     [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(112),
     [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(112),
     [anon_sym_ATgroup] = ACTIONS(112),
     [anon_sym_ATlarge] = ACTIONS(112),
     [anon_sym_ATmedium] = ACTIONS(112),
     [anon_sym_ATpreserveGlobalState] = ACTIONS(112),
-    [anon_sym_ATrequires] = ACTIONS(114),
+    [anon_sym_ATrequires] = ACTIONS(109),
     [anon_sym_ATrequiresusages] = ACTIONS(112),
     [anon_sym_ATrunInSeparateProcess] = ACTIONS(112),
     [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(112),
     [anon_sym_ATsmall] = ACTIONS(112),
-    [anon_sym_ATtest] = ACTIONS(114),
+    [anon_sym_ATtest] = ACTIONS(109),
     [anon_sym_ATtestWith] = ACTIONS(112),
     [anon_sym_ATtestdox] = ACTIONS(112),
     [anon_sym_ATticket] = ACTIONS(112),
-    [anon_sym_LBRACK_RBRACK] = ACTIONS(112),
-    [anon_sym_BSLASH] = ACTIONS(116),
-    [anon_sym_PIPE] = ACTIONS(112),
-    [anon_sym_DOLLAR] = ACTIONS(112),
-    [sym_text] = ACTIONS(114),
-    [sym__end] = ACTIONS(112),
+    [sym__end] = ACTIONS(115),
   },
-  [8] = {
-    [sym_inline_tag] = STATE(50),
-    [sym_variable_name] = STATE(37),
-    [sym_description] = STATE(62),
-    [aux_sym_description_repeat1] = STATE(50),
-    [anon_sym_LBRACE] = ACTIONS(5),
+  [6] = {
+    [sym_tag] = STATE(4),
+    [sym__tag_without_description] = STATE(74),
+    [sym__tag_with_optional_description] = STATE(74),
+    [sym__tag_with_required_description] = STATE(74),
+    [sym__tag_with_incomplete_implementation] = STATE(74),
+    [sym__author_tag] = STATE(74),
+    [sym__global_tag] = STATE(74),
+    [sym__link_tag] = STATE(74),
+    [sym__method_tag] = STATE(74),
+    [sym__param_tag] = STATE(74),
+    [sym__property_tag] = STATE(74),
+    [sym__return_tag] = STATE(74),
+    [sym__see_tag] = STATE(74),
+    [sym__throws_tag] = STATE(74),
+    [sym__var_tag] = STATE(74),
+    [sym__deprecated_tag] = STATE(74),
+    [sym__since_tag] = STATE(74),
+    [sym__version_tag] = STATE(74),
+    [sym__phpunit_tag] = STATE(74),
+    [aux_sym_document_repeat1] = STATE(4),
+    [anon_sym_ATinheritdoc] = ACTIONS(7),
+    [anon_sym_ATinheritDoc] = ACTIONS(7),
+    [anon_sym_ATapi] = ACTIONS(7),
+    [anon_sym_ATfilesource] = ACTIONS(7),
+    [anon_sym_ATignore] = ACTIONS(9),
+    [anon_sym_ATinternal] = ACTIONS(9),
+    [anon_sym_ATcategory] = ACTIONS(11),
+    [anon_sym_ATcopyright] = ACTIONS(11),
+    [anon_sym_ATtodo] = ACTIONS(11),
+    [anon_sym_ATexample] = ACTIONS(13),
+    [anon_sym_ATlicense] = ACTIONS(13),
+    [anon_sym_ATpackage] = ACTIONS(13),
+    [anon_sym_ATsource] = ACTIONS(13),
+    [anon_sym_ATsubpackage] = ACTIONS(13),
+    [anon_sym_ATuses] = ACTIONS(13),
+    [anon_sym_ATauthor] = ACTIONS(15),
+    [anon_sym_ATglobal] = ACTIONS(17),
+    [anon_sym_ATlink] = ACTIONS(19),
+    [anon_sym_ATmethod] = ACTIONS(21),
+    [anon_sym_ATparam] = ACTIONS(23),
+    [anon_sym_ATproperty] = ACTIONS(25),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(27),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(27),
+    [anon_sym_ATreturn] = ACTIONS(29),
+    [anon_sym_ATsee] = ACTIONS(31),
+    [anon_sym_ATthrows] = ACTIONS(33),
+    [anon_sym_ATvar] = ACTIONS(35),
+    [anon_sym_ATdeprecated] = ACTIONS(37),
+    [anon_sym_ATsince] = ACTIONS(39),
+    [anon_sym_ATversion] = ACTIONS(41),
+    [anon_sym_ATafter] = ACTIONS(43),
+    [anon_sym_ATafterClass] = ACTIONS(45),
+    [anon_sym_ATannotation] = ACTIONS(45),
+    [anon_sym_ATbackupGlobals] = ACTIONS(45),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(45),
+    [anon_sym_ATbefore] = ACTIONS(43),
+    [anon_sym_ATbeforeClass] = ACTIONS(45),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(43),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(45),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(45),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(45),
+    [anon_sym_ATcovers] = ACTIONS(43),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(43),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(45),
+    [anon_sym_ATcoversNothing] = ACTIONS(45),
+    [anon_sym_ATdataProvider] = ACTIONS(45),
+    [anon_sym_ATdepends] = ACTIONS(43),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(45),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(45),
+    [anon_sym_ATgroup] = ACTIONS(45),
+    [anon_sym_ATlarge] = ACTIONS(45),
+    [anon_sym_ATmedium] = ACTIONS(45),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(45),
+    [anon_sym_ATrequires] = ACTIONS(43),
+    [anon_sym_ATrequiresusages] = ACTIONS(45),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(45),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(45),
+    [anon_sym_ATsmall] = ACTIONS(45),
+    [anon_sym_ATtest] = ACTIONS(43),
+    [anon_sym_ATtestWith] = ACTIONS(45),
+    [anon_sym_ATtestdox] = ACTIONS(45),
+    [anon_sym_ATticket] = ACTIONS(45),
+    [sym__end] = ACTIONS(51),
+  },
+  [7] = {
+    [sym__description_not_version] = STATE(70),
+    [sym_inline_tag] = STATE(54),
+    [sym_version] = STATE(28),
+    [aux_sym__description_not_version_repeat1] = STATE(34),
+    [anon_sym_LBRACE] = ACTIONS(117),
+    [anon_sym_ATinheritdoc] = ACTIONS(119),
+    [anon_sym_ATinheritDoc] = ACTIONS(119),
     [anon_sym_ATapi] = ACTIONS(119),
     [anon_sym_ATfilesource] = ACTIONS(119),
     [anon_sym_ATignore] = ACTIONS(119),
+    [anon_sym_ATinternal] = ACTIONS(119),
     [anon_sym_ATcategory] = ACTIONS(119),
     [anon_sym_ATcopyright] = ACTIONS(119),
     [anon_sym_ATtodo] = ACTIONS(119),
     [anon_sym_ATexample] = ACTIONS(119),
     [anon_sym_ATlicense] = ACTIONS(119),
-    [anon_sym_ATpackage] = ACTIONS(119),
+    [anon_sym_ATpackage] = ACTIONS(121),
     [anon_sym_ATsource] = ACTIONS(119),
     [anon_sym_ATsubpackage] = ACTIONS(119),
     [anon_sym_ATuses] = ACTIONS(119),
     [anon_sym_ATauthor] = ACTIONS(119),
     [anon_sym_ATglobal] = ACTIONS(119),
-    [anon_sym_ATinternal] = ACTIONS(119),
     [anon_sym_ATlink] = ACTIONS(119),
     [anon_sym_ATmethod] = ACTIONS(119),
     [anon_sym_ATparam] = ACTIONS(119),
@@ -4776,432 +4712,306 @@ static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_ATtestWith] = ACTIONS(119),
     [anon_sym_ATtestdox] = ACTIONS(119),
     [anon_sym_ATticket] = ACTIONS(119),
-    [anon_sym_DOLLAR] = ACTIONS(123),
-    [sym_text] = ACTIONS(45),
+    [aux_sym_version_token1] = ACTIONS(123),
+    [aux_sym_version_token2] = ACTIONS(125),
+    [anon_sym_ATpackage_version_AT] = ACTIONS(123),
+    [sym__version_vector] = ACTIONS(123),
     [sym__end] = ACTIONS(119),
+    [sym__text_not_version] = ACTIONS(127),
+  },
+  [8] = {
+    [aux_sym_namespace_name_repeat1] = STATE(181),
+    [anon_sym_LBRACE] = ACTIONS(129),
+    [anon_sym_ATinheritdoc] = ACTIONS(129),
+    [anon_sym_ATinheritDoc] = ACTIONS(129),
+    [anon_sym_ATapi] = ACTIONS(129),
+    [anon_sym_ATfilesource] = ACTIONS(129),
+    [anon_sym_ATignore] = ACTIONS(129),
+    [anon_sym_ATinternal] = ACTIONS(129),
+    [anon_sym_ATcategory] = ACTIONS(129),
+    [anon_sym_ATcopyright] = ACTIONS(129),
+    [anon_sym_ATtodo] = ACTIONS(129),
+    [anon_sym_ATexample] = ACTIONS(129),
+    [anon_sym_ATlicense] = ACTIONS(129),
+    [anon_sym_ATpackage] = ACTIONS(129),
+    [anon_sym_ATsource] = ACTIONS(129),
+    [anon_sym_ATsubpackage] = ACTIONS(129),
+    [anon_sym_ATuses] = ACTIONS(129),
+    [anon_sym_ATauthor] = ACTIONS(129),
+    [anon_sym_LT] = ACTIONS(129),
+    [anon_sym_ATglobal] = ACTIONS(129),
+    [anon_sym_ATlink] = ACTIONS(129),
+    [anon_sym_ATmethod] = ACTIONS(129),
+    [anon_sym_ATparam] = ACTIONS(129),
+    [anon_sym_ATproperty] = ACTIONS(131),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(129),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(129),
+    [anon_sym_ATreturn] = ACTIONS(129),
+    [anon_sym_ATsee] = ACTIONS(129),
+    [anon_sym_ATthrows] = ACTIONS(129),
+    [anon_sym_ATvar] = ACTIONS(129),
+    [anon_sym_ATdeprecated] = ACTIONS(129),
+    [anon_sym_ATsince] = ACTIONS(129),
+    [anon_sym_ATversion] = ACTIONS(129),
+    [anon_sym_ATafter] = ACTIONS(131),
+    [anon_sym_ATafterClass] = ACTIONS(129),
+    [anon_sym_ATannotation] = ACTIONS(129),
+    [anon_sym_ATbackupGlobals] = ACTIONS(129),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(129),
+    [anon_sym_ATbefore] = ACTIONS(131),
+    [anon_sym_ATbeforeClass] = ACTIONS(129),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(131),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(129),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(129),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(129),
+    [anon_sym_ATcovers] = ACTIONS(131),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(131),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(129),
+    [anon_sym_ATcoversNothing] = ACTIONS(129),
+    [anon_sym_ATdataProvider] = ACTIONS(129),
+    [anon_sym_ATdepends] = ACTIONS(131),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(129),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(129),
+    [anon_sym_ATgroup] = ACTIONS(129),
+    [anon_sym_ATlarge] = ACTIONS(129),
+    [anon_sym_ATmedium] = ACTIONS(129),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(129),
+    [anon_sym_ATrequires] = ACTIONS(131),
+    [anon_sym_ATrequiresusages] = ACTIONS(129),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(129),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(129),
+    [anon_sym_ATsmall] = ACTIONS(129),
+    [anon_sym_ATtest] = ACTIONS(131),
+    [anon_sym_ATtestWith] = ACTIONS(129),
+    [anon_sym_ATtestdox] = ACTIONS(129),
+    [anon_sym_ATticket] = ACTIONS(129),
+    [anon_sym_LBRACK_RBRACK] = ACTIONS(129),
+    [anon_sym_BSLASH] = ACTIONS(133),
+    [anon_sym_PIPE] = ACTIONS(129),
+    [sym__end] = ACTIONS(129),
+    [sym_text] = ACTIONS(129),
   },
   [9] = {
-    [aux_sym_namespace_name_repeat1] = STATE(145),
-    [anon_sym_LBRACE] = ACTIONS(112),
-    [anon_sym_ATapi] = ACTIONS(112),
-    [anon_sym_ATfilesource] = ACTIONS(112),
-    [anon_sym_ATignore] = ACTIONS(112),
-    [anon_sym_ATcategory] = ACTIONS(112),
-    [anon_sym_ATcopyright] = ACTIONS(112),
-    [anon_sym_ATtodo] = ACTIONS(112),
-    [anon_sym_ATexample] = ACTIONS(112),
-    [anon_sym_ATlicense] = ACTIONS(112),
-    [anon_sym_ATpackage] = ACTIONS(112),
-    [anon_sym_ATsource] = ACTIONS(112),
-    [anon_sym_ATsubpackage] = ACTIONS(112),
-    [anon_sym_ATuses] = ACTIONS(112),
-    [anon_sym_ATauthor] = ACTIONS(112),
-    [anon_sym_LT] = ACTIONS(112),
-    [anon_sym_ATglobal] = ACTIONS(112),
-    [anon_sym_ATinternal] = ACTIONS(112),
-    [anon_sym_ATlink] = ACTIONS(112),
-    [anon_sym_ATmethod] = ACTIONS(112),
-    [anon_sym_ATparam] = ACTIONS(112),
-    [anon_sym_ATproperty] = ACTIONS(114),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(112),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(112),
-    [anon_sym_ATreturn] = ACTIONS(112),
-    [anon_sym_ATsee] = ACTIONS(112),
-    [anon_sym_ATthrows] = ACTIONS(112),
-    [anon_sym_ATvar] = ACTIONS(112),
-    [anon_sym_ATdeprecated] = ACTIONS(112),
-    [anon_sym_ATsince] = ACTIONS(112),
-    [anon_sym_ATversion] = ACTIONS(112),
-    [anon_sym_ATafter] = ACTIONS(114),
-    [anon_sym_ATafterClass] = ACTIONS(112),
-    [anon_sym_ATannotation] = ACTIONS(112),
-    [anon_sym_ATbackupGlobals] = ACTIONS(112),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(112),
-    [anon_sym_ATbefore] = ACTIONS(114),
-    [anon_sym_ATbeforeClass] = ACTIONS(112),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(114),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(112),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(112),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(112),
-    [anon_sym_ATcovers] = ACTIONS(114),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(114),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(112),
-    [anon_sym_ATcoversNothing] = ACTIONS(112),
-    [anon_sym_ATdataProvider] = ACTIONS(112),
-    [anon_sym_ATdepends] = ACTIONS(114),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(112),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(112),
-    [anon_sym_ATgroup] = ACTIONS(112),
-    [anon_sym_ATlarge] = ACTIONS(112),
-    [anon_sym_ATmedium] = ACTIONS(112),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(112),
-    [anon_sym_ATrequires] = ACTIONS(114),
-    [anon_sym_ATrequiresusages] = ACTIONS(112),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(112),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(112),
-    [anon_sym_ATsmall] = ACTIONS(112),
-    [anon_sym_ATtest] = ACTIONS(114),
-    [anon_sym_ATtestWith] = ACTIONS(112),
-    [anon_sym_ATtestdox] = ACTIONS(112),
-    [anon_sym_ATticket] = ACTIONS(112),
-    [anon_sym_LBRACK_RBRACK] = ACTIONS(112),
-    [anon_sym_BSLASH] = ACTIONS(116),
-    [anon_sym_PIPE] = ACTIONS(112),
-    [sym_text] = ACTIONS(114),
-    [sym__end] = ACTIONS(112),
+    [anon_sym_LBRACE] = ACTIONS(136),
+    [anon_sym_ATinheritdoc] = ACTIONS(136),
+    [anon_sym_ATinheritDoc] = ACTIONS(136),
+    [anon_sym_ATapi] = ACTIONS(136),
+    [anon_sym_ATfilesource] = ACTIONS(136),
+    [anon_sym_ATignore] = ACTIONS(136),
+    [anon_sym_ATinternal] = ACTIONS(136),
+    [anon_sym_ATcategory] = ACTIONS(136),
+    [anon_sym_ATcopyright] = ACTIONS(136),
+    [anon_sym_ATtodo] = ACTIONS(136),
+    [anon_sym_ATexample] = ACTIONS(136),
+    [anon_sym_ATlicense] = ACTIONS(136),
+    [anon_sym_ATpackage] = ACTIONS(136),
+    [anon_sym_ATsource] = ACTIONS(136),
+    [anon_sym_ATsubpackage] = ACTIONS(136),
+    [anon_sym_ATuses] = ACTIONS(136),
+    [anon_sym_ATauthor] = ACTIONS(136),
+    [anon_sym_LT] = ACTIONS(136),
+    [anon_sym_ATglobal] = ACTIONS(136),
+    [anon_sym_ATlink] = ACTIONS(136),
+    [anon_sym_ATmethod] = ACTIONS(136),
+    [anon_sym_ATparam] = ACTIONS(136),
+    [anon_sym_ATproperty] = ACTIONS(138),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(136),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(136),
+    [anon_sym_ATreturn] = ACTIONS(136),
+    [anon_sym_ATsee] = ACTIONS(136),
+    [anon_sym_LPAREN_RPAREN] = ACTIONS(136),
+    [anon_sym_ATthrows] = ACTIONS(136),
+    [anon_sym_ATvar] = ACTIONS(136),
+    [anon_sym_ATdeprecated] = ACTIONS(136),
+    [anon_sym_ATsince] = ACTIONS(136),
+    [anon_sym_ATversion] = ACTIONS(136),
+    [anon_sym_ATafter] = ACTIONS(138),
+    [anon_sym_ATafterClass] = ACTIONS(136),
+    [anon_sym_ATannotation] = ACTIONS(136),
+    [anon_sym_ATbackupGlobals] = ACTIONS(136),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(136),
+    [anon_sym_ATbefore] = ACTIONS(138),
+    [anon_sym_ATbeforeClass] = ACTIONS(136),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(138),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(136),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(136),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(136),
+    [anon_sym_ATcovers] = ACTIONS(138),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(138),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(136),
+    [anon_sym_ATcoversNothing] = ACTIONS(136),
+    [anon_sym_ATdataProvider] = ACTIONS(136),
+    [anon_sym_ATdepends] = ACTIONS(138),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(136),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(136),
+    [anon_sym_ATgroup] = ACTIONS(136),
+    [anon_sym_ATlarge] = ACTIONS(136),
+    [anon_sym_ATmedium] = ACTIONS(136),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(136),
+    [anon_sym_ATrequires] = ACTIONS(138),
+    [anon_sym_ATrequiresusages] = ACTIONS(136),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(136),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(136),
+    [anon_sym_ATsmall] = ACTIONS(136),
+    [anon_sym_ATtest] = ACTIONS(138),
+    [anon_sym_ATtestWith] = ACTIONS(136),
+    [anon_sym_ATtestdox] = ACTIONS(136),
+    [anon_sym_ATticket] = ACTIONS(136),
+    [anon_sym_LBRACK_RBRACK] = ACTIONS(136),
+    [anon_sym_PIPE] = ACTIONS(136),
+    [sym__end] = ACTIONS(136),
+    [sym_text] = ACTIONS(136),
   },
   [10] = {
     [aux_sym__phpdoc_array_types_repeat1] = STATE(15),
-    [anon_sym_LBRACE] = ACTIONS(125),
-    [anon_sym_ATapi] = ACTIONS(125),
-    [anon_sym_ATfilesource] = ACTIONS(125),
-    [anon_sym_ATignore] = ACTIONS(125),
-    [anon_sym_ATcategory] = ACTIONS(125),
-    [anon_sym_ATcopyright] = ACTIONS(125),
-    [anon_sym_ATtodo] = ACTIONS(125),
-    [anon_sym_ATexample] = ACTIONS(125),
-    [anon_sym_ATlicense] = ACTIONS(125),
-    [anon_sym_ATpackage] = ACTIONS(125),
-    [anon_sym_ATsource] = ACTIONS(125),
-    [anon_sym_ATsubpackage] = ACTIONS(125),
-    [anon_sym_ATuses] = ACTIONS(125),
-    [anon_sym_ATauthor] = ACTIONS(125),
-    [anon_sym_LT] = ACTIONS(127),
-    [anon_sym_ATglobal] = ACTIONS(125),
-    [anon_sym_ATinternal] = ACTIONS(125),
-    [anon_sym_ATlink] = ACTIONS(125),
-    [anon_sym_ATmethod] = ACTIONS(125),
-    [anon_sym_ATparam] = ACTIONS(125),
-    [anon_sym_ATproperty] = ACTIONS(129),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(125),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(125),
-    [anon_sym_ATreturn] = ACTIONS(125),
-    [anon_sym_ATsee] = ACTIONS(125),
-    [anon_sym_ATthrows] = ACTIONS(125),
-    [anon_sym_ATvar] = ACTIONS(125),
-    [anon_sym_ATdeprecated] = ACTIONS(125),
-    [anon_sym_ATsince] = ACTIONS(125),
-    [anon_sym_ATversion] = ACTIONS(125),
-    [anon_sym_ATafter] = ACTIONS(129),
-    [anon_sym_ATafterClass] = ACTIONS(125),
-    [anon_sym_ATannotation] = ACTIONS(125),
-    [anon_sym_ATbackupGlobals] = ACTIONS(125),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(125),
-    [anon_sym_ATbefore] = ACTIONS(129),
-    [anon_sym_ATbeforeClass] = ACTIONS(125),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(129),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(125),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(125),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(125),
-    [anon_sym_ATcovers] = ACTIONS(129),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(129),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(125),
-    [anon_sym_ATcoversNothing] = ACTIONS(125),
-    [anon_sym_ATdataProvider] = ACTIONS(125),
-    [anon_sym_ATdepends] = ACTIONS(129),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(125),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(125),
-    [anon_sym_ATgroup] = ACTIONS(125),
-    [anon_sym_ATlarge] = ACTIONS(125),
-    [anon_sym_ATmedium] = ACTIONS(125),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(125),
-    [anon_sym_ATrequires] = ACTIONS(129),
-    [anon_sym_ATrequiresusages] = ACTIONS(125),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(125),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(125),
-    [anon_sym_ATsmall] = ACTIONS(125),
-    [anon_sym_ATtest] = ACTIONS(129),
-    [anon_sym_ATtestWith] = ACTIONS(125),
-    [anon_sym_ATtestdox] = ACTIONS(125),
-    [anon_sym_ATticket] = ACTIONS(125),
-    [anon_sym_LBRACK_RBRACK] = ACTIONS(131),
-    [anon_sym_PIPE] = ACTIONS(125),
-    [anon_sym_DOLLAR] = ACTIONS(125),
-    [sym_text] = ACTIONS(129),
-    [sym__end] = ACTIONS(125),
+    [anon_sym_LBRACE] = ACTIONS(140),
+    [anon_sym_ATinheritdoc] = ACTIONS(140),
+    [anon_sym_ATinheritDoc] = ACTIONS(140),
+    [anon_sym_ATapi] = ACTIONS(140),
+    [anon_sym_ATfilesource] = ACTIONS(140),
+    [anon_sym_ATignore] = ACTIONS(140),
+    [anon_sym_ATinternal] = ACTIONS(140),
+    [anon_sym_ATcategory] = ACTIONS(140),
+    [anon_sym_ATcopyright] = ACTIONS(140),
+    [anon_sym_ATtodo] = ACTIONS(140),
+    [anon_sym_ATexample] = ACTIONS(140),
+    [anon_sym_ATlicense] = ACTIONS(140),
+    [anon_sym_ATpackage] = ACTIONS(140),
+    [anon_sym_ATsource] = ACTIONS(140),
+    [anon_sym_ATsubpackage] = ACTIONS(140),
+    [anon_sym_ATuses] = ACTIONS(140),
+    [anon_sym_ATauthor] = ACTIONS(140),
+    [anon_sym_LT] = ACTIONS(142),
+    [anon_sym_ATglobal] = ACTIONS(140),
+    [anon_sym_ATlink] = ACTIONS(140),
+    [anon_sym_ATmethod] = ACTIONS(140),
+    [anon_sym_ATparam] = ACTIONS(140),
+    [anon_sym_ATproperty] = ACTIONS(144),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(140),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(140),
+    [anon_sym_ATreturn] = ACTIONS(140),
+    [anon_sym_ATsee] = ACTIONS(140),
+    [anon_sym_ATthrows] = ACTIONS(140),
+    [anon_sym_ATvar] = ACTIONS(140),
+    [anon_sym_ATdeprecated] = ACTIONS(140),
+    [anon_sym_ATsince] = ACTIONS(140),
+    [anon_sym_ATversion] = ACTIONS(140),
+    [anon_sym_ATafter] = ACTIONS(144),
+    [anon_sym_ATafterClass] = ACTIONS(140),
+    [anon_sym_ATannotation] = ACTIONS(140),
+    [anon_sym_ATbackupGlobals] = ACTIONS(140),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(140),
+    [anon_sym_ATbefore] = ACTIONS(144),
+    [anon_sym_ATbeforeClass] = ACTIONS(140),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(144),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(140),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(140),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(140),
+    [anon_sym_ATcovers] = ACTIONS(144),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(144),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(140),
+    [anon_sym_ATcoversNothing] = ACTIONS(140),
+    [anon_sym_ATdataProvider] = ACTIONS(140),
+    [anon_sym_ATdepends] = ACTIONS(144),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(140),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(140),
+    [anon_sym_ATgroup] = ACTIONS(140),
+    [anon_sym_ATlarge] = ACTIONS(140),
+    [anon_sym_ATmedium] = ACTIONS(140),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(140),
+    [anon_sym_ATrequires] = ACTIONS(144),
+    [anon_sym_ATrequiresusages] = ACTIONS(140),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(140),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(140),
+    [anon_sym_ATsmall] = ACTIONS(140),
+    [anon_sym_ATtest] = ACTIONS(144),
+    [anon_sym_ATtestWith] = ACTIONS(140),
+    [anon_sym_ATtestdox] = ACTIONS(140),
+    [anon_sym_ATticket] = ACTIONS(140),
+    [anon_sym_LBRACK_RBRACK] = ACTIONS(146),
+    [anon_sym_PIPE] = ACTIONS(140),
+    [sym__end] = ACTIONS(140),
+    [sym_text] = ACTIONS(140),
   },
   [11] = {
-    [anon_sym_LBRACE] = ACTIONS(133),
-    [anon_sym_ATapi] = ACTIONS(133),
-    [anon_sym_ATfilesource] = ACTIONS(133),
-    [anon_sym_ATignore] = ACTIONS(133),
-    [anon_sym_ATcategory] = ACTIONS(133),
-    [anon_sym_ATcopyright] = ACTIONS(133),
-    [anon_sym_ATtodo] = ACTIONS(133),
-    [anon_sym_ATexample] = ACTIONS(133),
-    [anon_sym_ATlicense] = ACTIONS(133),
-    [anon_sym_ATpackage] = ACTIONS(133),
-    [anon_sym_ATsource] = ACTIONS(133),
-    [anon_sym_ATsubpackage] = ACTIONS(133),
-    [anon_sym_ATuses] = ACTIONS(133),
-    [anon_sym_ATauthor] = ACTIONS(133),
-    [anon_sym_LT] = ACTIONS(133),
-    [anon_sym_ATglobal] = ACTIONS(133),
-    [anon_sym_ATinternal] = ACTIONS(133),
-    [anon_sym_ATlink] = ACTIONS(133),
-    [anon_sym_ATmethod] = ACTIONS(133),
-    [anon_sym_ATparam] = ACTIONS(133),
-    [anon_sym_ATproperty] = ACTIONS(135),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(133),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(133),
-    [anon_sym_ATreturn] = ACTIONS(133),
-    [anon_sym_ATsee] = ACTIONS(133),
-    [anon_sym_ATthrows] = ACTIONS(133),
-    [anon_sym_ATvar] = ACTIONS(133),
-    [anon_sym_ATdeprecated] = ACTIONS(133),
-    [anon_sym_ATsince] = ACTIONS(133),
-    [anon_sym_ATversion] = ACTIONS(133),
-    [anon_sym_ATafter] = ACTIONS(135),
-    [anon_sym_ATafterClass] = ACTIONS(133),
-    [anon_sym_ATannotation] = ACTIONS(133),
-    [anon_sym_ATbackupGlobals] = ACTIONS(133),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(133),
-    [anon_sym_ATbefore] = ACTIONS(135),
-    [anon_sym_ATbeforeClass] = ACTIONS(133),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(135),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(133),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(133),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(133),
-    [anon_sym_ATcovers] = ACTIONS(135),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(135),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(133),
-    [anon_sym_ATcoversNothing] = ACTIONS(133),
-    [anon_sym_ATdataProvider] = ACTIONS(133),
-    [anon_sym_ATdepends] = ACTIONS(135),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(133),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(133),
-    [anon_sym_ATgroup] = ACTIONS(133),
-    [anon_sym_ATlarge] = ACTIONS(133),
-    [anon_sym_ATmedium] = ACTIONS(133),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(133),
-    [anon_sym_ATrequires] = ACTIONS(135),
-    [anon_sym_ATrequiresusages] = ACTIONS(133),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(133),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(133),
-    [anon_sym_ATsmall] = ACTIONS(133),
-    [anon_sym_ATtest] = ACTIONS(135),
-    [anon_sym_ATtestWith] = ACTIONS(133),
-    [anon_sym_ATtestdox] = ACTIONS(133),
-    [anon_sym_ATticket] = ACTIONS(133),
-    [anon_sym_LBRACK_RBRACK] = ACTIONS(133),
-    [anon_sym_PIPE] = ACTIONS(133),
-    [anon_sym_DOLLAR] = ACTIONS(133),
-    [sym_text] = ACTIONS(135),
-    [sym__end] = ACTIONS(133),
+    [sym_description] = STATE(76),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
+    [anon_sym_LBRACE] = ACTIONS(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(148),
+    [anon_sym_ATinheritDoc] = ACTIONS(148),
+    [anon_sym_ATapi] = ACTIONS(148),
+    [anon_sym_ATfilesource] = ACTIONS(148),
+    [anon_sym_ATignore] = ACTIONS(148),
+    [anon_sym_ATinternal] = ACTIONS(148),
+    [anon_sym_ATcategory] = ACTIONS(148),
+    [anon_sym_ATcopyright] = ACTIONS(148),
+    [anon_sym_ATtodo] = ACTIONS(148),
+    [anon_sym_ATexample] = ACTIONS(148),
+    [anon_sym_ATlicense] = ACTIONS(148),
+    [anon_sym_ATpackage] = ACTIONS(148),
+    [anon_sym_ATsource] = ACTIONS(148),
+    [anon_sym_ATsubpackage] = ACTIONS(148),
+    [anon_sym_ATuses] = ACTIONS(148),
+    [anon_sym_ATauthor] = ACTIONS(148),
+    [anon_sym_ATglobal] = ACTIONS(148),
+    [anon_sym_ATlink] = ACTIONS(148),
+    [anon_sym_ATmethod] = ACTIONS(148),
+    [anon_sym_ATparam] = ACTIONS(148),
+    [anon_sym_ATproperty] = ACTIONS(150),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(148),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(148),
+    [anon_sym_ATreturn] = ACTIONS(148),
+    [anon_sym_ATsee] = ACTIONS(148),
+    [anon_sym_LPAREN_RPAREN] = ACTIONS(152),
+    [anon_sym_ATthrows] = ACTIONS(148),
+    [anon_sym_ATvar] = ACTIONS(148),
+    [anon_sym_ATdeprecated] = ACTIONS(148),
+    [anon_sym_ATsince] = ACTIONS(148),
+    [anon_sym_ATversion] = ACTIONS(148),
+    [anon_sym_ATafter] = ACTIONS(150),
+    [anon_sym_ATafterClass] = ACTIONS(148),
+    [anon_sym_ATannotation] = ACTIONS(148),
+    [anon_sym_ATbackupGlobals] = ACTIONS(148),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(148),
+    [anon_sym_ATbefore] = ACTIONS(150),
+    [anon_sym_ATbeforeClass] = ACTIONS(148),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(150),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(148),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(148),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(148),
+    [anon_sym_ATcovers] = ACTIONS(150),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(150),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(148),
+    [anon_sym_ATcoversNothing] = ACTIONS(148),
+    [anon_sym_ATdataProvider] = ACTIONS(148),
+    [anon_sym_ATdepends] = ACTIONS(150),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(148),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(148),
+    [anon_sym_ATgroup] = ACTIONS(148),
+    [anon_sym_ATlarge] = ACTIONS(148),
+    [anon_sym_ATmedium] = ACTIONS(148),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(148),
+    [anon_sym_ATrequires] = ACTIONS(150),
+    [anon_sym_ATrequiresusages] = ACTIONS(148),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(148),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(148),
+    [anon_sym_ATsmall] = ACTIONS(148),
+    [anon_sym_ATtest] = ACTIONS(150),
+    [anon_sym_ATtestWith] = ACTIONS(148),
+    [anon_sym_ATtestdox] = ACTIONS(148),
+    [anon_sym_ATticket] = ACTIONS(148),
+    [sym__end] = ACTIONS(148),
+    [sym_text] = ACTIONS(49),
   },
   [12] = {
-    [sym_inline_tag] = STATE(50),
-    [sym_description] = STATE(79),
-    [aux_sym_description_repeat1] = STATE(50),
-    [anon_sym_LBRACE] = ACTIONS(5),
-    [anon_sym_ATapi] = ACTIONS(137),
-    [anon_sym_ATfilesource] = ACTIONS(137),
-    [anon_sym_ATignore] = ACTIONS(137),
-    [anon_sym_ATcategory] = ACTIONS(137),
-    [anon_sym_ATcopyright] = ACTIONS(137),
-    [anon_sym_ATtodo] = ACTIONS(137),
-    [anon_sym_ATexample] = ACTIONS(137),
-    [anon_sym_ATlicense] = ACTIONS(137),
-    [anon_sym_ATpackage] = ACTIONS(137),
-    [anon_sym_ATsource] = ACTIONS(137),
-    [anon_sym_ATsubpackage] = ACTIONS(137),
-    [anon_sym_ATuses] = ACTIONS(137),
-    [anon_sym_ATauthor] = ACTIONS(137),
-    [anon_sym_ATglobal] = ACTIONS(137),
-    [anon_sym_ATinternal] = ACTIONS(137),
-    [anon_sym_ATlink] = ACTIONS(137),
-    [anon_sym_LPAREN_RPAREN] = ACTIONS(139),
-    [anon_sym_ATmethod] = ACTIONS(137),
-    [anon_sym_ATparam] = ACTIONS(137),
-    [anon_sym_ATproperty] = ACTIONS(141),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(137),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(137),
-    [anon_sym_ATreturn] = ACTIONS(137),
-    [anon_sym_ATsee] = ACTIONS(137),
-    [anon_sym_ATthrows] = ACTIONS(137),
-    [anon_sym_ATvar] = ACTIONS(137),
-    [anon_sym_ATdeprecated] = ACTIONS(137),
-    [anon_sym_ATsince] = ACTIONS(137),
-    [anon_sym_ATversion] = ACTIONS(137),
-    [anon_sym_ATafter] = ACTIONS(141),
-    [anon_sym_ATafterClass] = ACTIONS(137),
-    [anon_sym_ATannotation] = ACTIONS(137),
-    [anon_sym_ATbackupGlobals] = ACTIONS(137),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(137),
-    [anon_sym_ATbefore] = ACTIONS(141),
-    [anon_sym_ATbeforeClass] = ACTIONS(137),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(141),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(137),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(137),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(137),
-    [anon_sym_ATcovers] = ACTIONS(141),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(141),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(137),
-    [anon_sym_ATcoversNothing] = ACTIONS(137),
-    [anon_sym_ATdataProvider] = ACTIONS(137),
-    [anon_sym_ATdepends] = ACTIONS(141),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(137),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(137),
-    [anon_sym_ATgroup] = ACTIONS(137),
-    [anon_sym_ATlarge] = ACTIONS(137),
-    [anon_sym_ATmedium] = ACTIONS(137),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(137),
-    [anon_sym_ATrequires] = ACTIONS(141),
-    [anon_sym_ATrequiresusages] = ACTIONS(137),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(137),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(137),
-    [anon_sym_ATsmall] = ACTIONS(137),
-    [anon_sym_ATtest] = ACTIONS(141),
-    [anon_sym_ATtestWith] = ACTIONS(137),
-    [anon_sym_ATtestdox] = ACTIONS(137),
-    [anon_sym_ATticket] = ACTIONS(137),
-    [sym_text] = ACTIONS(45),
-    [sym__end] = ACTIONS(137),
-  },
-  [13] = {
-    [aux_sym__phpdoc_array_types_repeat1] = STATE(13),
-    [anon_sym_LBRACE] = ACTIONS(143),
-    [anon_sym_ATapi] = ACTIONS(143),
-    [anon_sym_ATfilesource] = ACTIONS(143),
-    [anon_sym_ATignore] = ACTIONS(143),
-    [anon_sym_ATcategory] = ACTIONS(143),
-    [anon_sym_ATcopyright] = ACTIONS(143),
-    [anon_sym_ATtodo] = ACTIONS(143),
-    [anon_sym_ATexample] = ACTIONS(143),
-    [anon_sym_ATlicense] = ACTIONS(143),
-    [anon_sym_ATpackage] = ACTIONS(143),
-    [anon_sym_ATsource] = ACTIONS(143),
-    [anon_sym_ATsubpackage] = ACTIONS(143),
-    [anon_sym_ATuses] = ACTIONS(143),
-    [anon_sym_ATauthor] = ACTIONS(143),
-    [anon_sym_ATglobal] = ACTIONS(143),
-    [anon_sym_ATinternal] = ACTIONS(143),
-    [anon_sym_ATlink] = ACTIONS(143),
-    [anon_sym_ATmethod] = ACTIONS(143),
-    [anon_sym_ATparam] = ACTIONS(143),
-    [anon_sym_ATproperty] = ACTIONS(145),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(143),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(143),
-    [anon_sym_ATreturn] = ACTIONS(143),
-    [anon_sym_ATsee] = ACTIONS(143),
-    [anon_sym_ATthrows] = ACTIONS(143),
-    [anon_sym_ATvar] = ACTIONS(143),
-    [anon_sym_ATdeprecated] = ACTIONS(143),
-    [anon_sym_ATsince] = ACTIONS(143),
-    [anon_sym_ATversion] = ACTIONS(143),
-    [anon_sym_ATafter] = ACTIONS(145),
-    [anon_sym_ATafterClass] = ACTIONS(143),
-    [anon_sym_ATannotation] = ACTIONS(143),
-    [anon_sym_ATbackupGlobals] = ACTIONS(143),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(143),
-    [anon_sym_ATbefore] = ACTIONS(145),
-    [anon_sym_ATbeforeClass] = ACTIONS(143),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(145),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(143),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(143),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(143),
-    [anon_sym_ATcovers] = ACTIONS(145),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(145),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(143),
-    [anon_sym_ATcoversNothing] = ACTIONS(143),
-    [anon_sym_ATdataProvider] = ACTIONS(143),
-    [anon_sym_ATdepends] = ACTIONS(145),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(143),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(143),
-    [anon_sym_ATgroup] = ACTIONS(143),
-    [anon_sym_ATlarge] = ACTIONS(143),
-    [anon_sym_ATmedium] = ACTIONS(143),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(143),
-    [anon_sym_ATrequires] = ACTIONS(145),
-    [anon_sym_ATrequiresusages] = ACTIONS(143),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(143),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(143),
-    [anon_sym_ATsmall] = ACTIONS(143),
-    [anon_sym_ATtest] = ACTIONS(145),
-    [anon_sym_ATtestWith] = ACTIONS(143),
-    [anon_sym_ATtestdox] = ACTIONS(143),
-    [anon_sym_ATticket] = ACTIONS(143),
-    [anon_sym_LBRACK_RBRACK] = ACTIONS(147),
-    [anon_sym_PIPE] = ACTIONS(143),
-    [anon_sym_DOLLAR] = ACTIONS(143),
-    [sym_text] = ACTIONS(145),
-    [sym__end] = ACTIONS(143),
-  },
-  [14] = {
-    [aux_sym__phpdoc_array_types_repeat1] = STATE(32),
-    [anon_sym_LBRACE] = ACTIONS(125),
-    [anon_sym_ATapi] = ACTIONS(125),
-    [anon_sym_ATfilesource] = ACTIONS(125),
-    [anon_sym_ATignore] = ACTIONS(125),
-    [anon_sym_ATcategory] = ACTIONS(125),
-    [anon_sym_ATcopyright] = ACTIONS(125),
-    [anon_sym_ATtodo] = ACTIONS(125),
-    [anon_sym_ATexample] = ACTIONS(125),
-    [anon_sym_ATlicense] = ACTIONS(125),
-    [anon_sym_ATpackage] = ACTIONS(125),
-    [anon_sym_ATsource] = ACTIONS(125),
-    [anon_sym_ATsubpackage] = ACTIONS(125),
-    [anon_sym_ATuses] = ACTIONS(125),
-    [anon_sym_ATauthor] = ACTIONS(125),
-    [anon_sym_LT] = ACTIONS(150),
-    [anon_sym_ATglobal] = ACTIONS(125),
-    [anon_sym_ATinternal] = ACTIONS(125),
-    [anon_sym_ATlink] = ACTIONS(125),
-    [anon_sym_ATmethod] = ACTIONS(125),
-    [anon_sym_ATparam] = ACTIONS(125),
-    [anon_sym_ATproperty] = ACTIONS(129),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(125),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(125),
-    [anon_sym_ATreturn] = ACTIONS(125),
-    [anon_sym_ATsee] = ACTIONS(125),
-    [anon_sym_ATthrows] = ACTIONS(125),
-    [anon_sym_ATvar] = ACTIONS(125),
-    [anon_sym_ATdeprecated] = ACTIONS(125),
-    [anon_sym_ATsince] = ACTIONS(125),
-    [anon_sym_ATversion] = ACTIONS(125),
-    [anon_sym_ATafter] = ACTIONS(129),
-    [anon_sym_ATafterClass] = ACTIONS(125),
-    [anon_sym_ATannotation] = ACTIONS(125),
-    [anon_sym_ATbackupGlobals] = ACTIONS(125),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(125),
-    [anon_sym_ATbefore] = ACTIONS(129),
-    [anon_sym_ATbeforeClass] = ACTIONS(125),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(129),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(125),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(125),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(125),
-    [anon_sym_ATcovers] = ACTIONS(129),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(129),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(125),
-    [anon_sym_ATcoversNothing] = ACTIONS(125),
-    [anon_sym_ATdataProvider] = ACTIONS(125),
-    [anon_sym_ATdepends] = ACTIONS(129),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(125),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(125),
-    [anon_sym_ATgroup] = ACTIONS(125),
-    [anon_sym_ATlarge] = ACTIONS(125),
-    [anon_sym_ATmedium] = ACTIONS(125),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(125),
-    [anon_sym_ATrequires] = ACTIONS(129),
-    [anon_sym_ATrequiresusages] = ACTIONS(125),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(125),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(125),
-    [anon_sym_ATsmall] = ACTIONS(125),
-    [anon_sym_ATtest] = ACTIONS(129),
-    [anon_sym_ATtestWith] = ACTIONS(125),
-    [anon_sym_ATtestdox] = ACTIONS(125),
-    [anon_sym_ATticket] = ACTIONS(125),
-    [anon_sym_LBRACK_RBRACK] = ACTIONS(152),
-    [anon_sym_PIPE] = ACTIONS(125),
-    [sym_text] = ACTIONS(129),
-    [sym__end] = ACTIONS(125),
-  },
-  [15] = {
-    [aux_sym__phpdoc_array_types_repeat1] = STATE(13),
     [anon_sym_LBRACE] = ACTIONS(154),
+    [anon_sym_ATinheritdoc] = ACTIONS(154),
+    [anon_sym_ATinheritDoc] = ACTIONS(154),
     [anon_sym_ATapi] = ACTIONS(154),
     [anon_sym_ATfilesource] = ACTIONS(154),
     [anon_sym_ATignore] = ACTIONS(154),
+    [anon_sym_ATinternal] = ACTIONS(154),
     [anon_sym_ATcategory] = ACTIONS(154),
     [anon_sym_ATcopyright] = ACTIONS(154),
     [anon_sym_ATtodo] = ACTIONS(154),
@@ -5212,8 +5022,8 @@ static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_ATsubpackage] = ACTIONS(154),
     [anon_sym_ATuses] = ACTIONS(154),
     [anon_sym_ATauthor] = ACTIONS(154),
+    [anon_sym_LT] = ACTIONS(154),
     [anon_sym_ATglobal] = ACTIONS(154),
-    [anon_sym_ATinternal] = ACTIONS(154),
     [anon_sym_ATlink] = ACTIONS(154),
     [anon_sym_ATmethod] = ACTIONS(154),
     [anon_sym_ATparam] = ACTIONS(154),
@@ -5259,908 +5069,862 @@ static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_ATtestWith] = ACTIONS(154),
     [anon_sym_ATtestdox] = ACTIONS(154),
     [anon_sym_ATticket] = ACTIONS(154),
-    [anon_sym_LBRACK_RBRACK] = ACTIONS(158),
+    [anon_sym_LBRACK_RBRACK] = ACTIONS(154),
     [anon_sym_PIPE] = ACTIONS(154),
-    [anon_sym_DOLLAR] = ACTIONS(154),
-    [sym_text] = ACTIONS(156),
     [sym__end] = ACTIONS(154),
+    [sym_text] = ACTIONS(154),
+  },
+  [13] = {
+    [sym_description] = STATE(79),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
+    [anon_sym_LBRACE] = ACTIONS(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(158),
+    [anon_sym_ATinheritDoc] = ACTIONS(158),
+    [anon_sym_ATapi] = ACTIONS(158),
+    [anon_sym_ATfilesource] = ACTIONS(158),
+    [anon_sym_ATignore] = ACTIONS(158),
+    [anon_sym_ATinternal] = ACTIONS(158),
+    [anon_sym_ATcategory] = ACTIONS(158),
+    [anon_sym_ATcopyright] = ACTIONS(158),
+    [anon_sym_ATtodo] = ACTIONS(158),
+    [anon_sym_ATexample] = ACTIONS(158),
+    [anon_sym_ATlicense] = ACTIONS(158),
+    [anon_sym_ATpackage] = ACTIONS(158),
+    [anon_sym_ATsource] = ACTIONS(158),
+    [anon_sym_ATsubpackage] = ACTIONS(158),
+    [anon_sym_ATuses] = ACTIONS(158),
+    [anon_sym_ATauthor] = ACTIONS(158),
+    [anon_sym_ATglobal] = ACTIONS(158),
+    [anon_sym_ATlink] = ACTIONS(158),
+    [anon_sym_ATmethod] = ACTIONS(158),
+    [anon_sym_ATparam] = ACTIONS(158),
+    [anon_sym_ATproperty] = ACTIONS(160),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(158),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(158),
+    [anon_sym_ATreturn] = ACTIONS(158),
+    [anon_sym_ATsee] = ACTIONS(158),
+    [anon_sym_ATthrows] = ACTIONS(158),
+    [anon_sym_ATvar] = ACTIONS(158),
+    [anon_sym_ATdeprecated] = ACTIONS(158),
+    [anon_sym_ATsince] = ACTIONS(158),
+    [anon_sym_ATversion] = ACTIONS(158),
+    [anon_sym_ATafter] = ACTIONS(160),
+    [anon_sym_ATafterClass] = ACTIONS(158),
+    [anon_sym_ATannotation] = ACTIONS(158),
+    [anon_sym_ATbackupGlobals] = ACTIONS(158),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(158),
+    [anon_sym_ATbefore] = ACTIONS(160),
+    [anon_sym_ATbeforeClass] = ACTIONS(158),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(160),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(158),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(158),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(158),
+    [anon_sym_ATcovers] = ACTIONS(160),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(160),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(158),
+    [anon_sym_ATcoversNothing] = ACTIONS(158),
+    [anon_sym_ATdataProvider] = ACTIONS(158),
+    [anon_sym_ATdepends] = ACTIONS(160),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(158),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(158),
+    [anon_sym_ATgroup] = ACTIONS(158),
+    [anon_sym_ATlarge] = ACTIONS(158),
+    [anon_sym_ATmedium] = ACTIONS(158),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(158),
+    [anon_sym_ATrequires] = ACTIONS(160),
+    [anon_sym_ATrequiresusages] = ACTIONS(158),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(158),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(158),
+    [anon_sym_ATsmall] = ACTIONS(158),
+    [anon_sym_ATtest] = ACTIONS(160),
+    [anon_sym_ATtestWith] = ACTIONS(158),
+    [anon_sym_ATtestdox] = ACTIONS(158),
+    [anon_sym_ATticket] = ACTIONS(158),
+    [sym__end] = ACTIONS(158),
+    [sym_text] = ACTIONS(49),
+  },
+  [14] = {
+    [aux_sym__phpdoc_array_types_repeat1] = STATE(14),
+    [anon_sym_LBRACE] = ACTIONS(162),
+    [anon_sym_ATinheritdoc] = ACTIONS(162),
+    [anon_sym_ATinheritDoc] = ACTIONS(162),
+    [anon_sym_ATapi] = ACTIONS(162),
+    [anon_sym_ATfilesource] = ACTIONS(162),
+    [anon_sym_ATignore] = ACTIONS(162),
+    [anon_sym_ATinternal] = ACTIONS(162),
+    [anon_sym_ATcategory] = ACTIONS(162),
+    [anon_sym_ATcopyright] = ACTIONS(162),
+    [anon_sym_ATtodo] = ACTIONS(162),
+    [anon_sym_ATexample] = ACTIONS(162),
+    [anon_sym_ATlicense] = ACTIONS(162),
+    [anon_sym_ATpackage] = ACTIONS(162),
+    [anon_sym_ATsource] = ACTIONS(162),
+    [anon_sym_ATsubpackage] = ACTIONS(162),
+    [anon_sym_ATuses] = ACTIONS(162),
+    [anon_sym_ATauthor] = ACTIONS(162),
+    [anon_sym_ATglobal] = ACTIONS(162),
+    [anon_sym_ATlink] = ACTIONS(162),
+    [anon_sym_ATmethod] = ACTIONS(162),
+    [anon_sym_ATparam] = ACTIONS(162),
+    [anon_sym_ATproperty] = ACTIONS(164),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(162),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(162),
+    [anon_sym_ATreturn] = ACTIONS(162),
+    [anon_sym_ATsee] = ACTIONS(162),
+    [anon_sym_ATthrows] = ACTIONS(162),
+    [anon_sym_ATvar] = ACTIONS(162),
+    [anon_sym_ATdeprecated] = ACTIONS(162),
+    [anon_sym_ATsince] = ACTIONS(162),
+    [anon_sym_ATversion] = ACTIONS(162),
+    [anon_sym_ATafter] = ACTIONS(164),
+    [anon_sym_ATafterClass] = ACTIONS(162),
+    [anon_sym_ATannotation] = ACTIONS(162),
+    [anon_sym_ATbackupGlobals] = ACTIONS(162),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(162),
+    [anon_sym_ATbefore] = ACTIONS(164),
+    [anon_sym_ATbeforeClass] = ACTIONS(162),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(164),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(162),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(162),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(162),
+    [anon_sym_ATcovers] = ACTIONS(164),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(164),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(162),
+    [anon_sym_ATcoversNothing] = ACTIONS(162),
+    [anon_sym_ATdataProvider] = ACTIONS(162),
+    [anon_sym_ATdepends] = ACTIONS(164),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(162),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(162),
+    [anon_sym_ATgroup] = ACTIONS(162),
+    [anon_sym_ATlarge] = ACTIONS(162),
+    [anon_sym_ATmedium] = ACTIONS(162),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(162),
+    [anon_sym_ATrequires] = ACTIONS(164),
+    [anon_sym_ATrequiresusages] = ACTIONS(162),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(162),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(162),
+    [anon_sym_ATsmall] = ACTIONS(162),
+    [anon_sym_ATtest] = ACTIONS(164),
+    [anon_sym_ATtestWith] = ACTIONS(162),
+    [anon_sym_ATtestdox] = ACTIONS(162),
+    [anon_sym_ATticket] = ACTIONS(162),
+    [anon_sym_LBRACK_RBRACK] = ACTIONS(166),
+    [anon_sym_PIPE] = ACTIONS(162),
+    [sym__end] = ACTIONS(162),
+    [sym_text] = ACTIONS(162),
+  },
+  [15] = {
+    [aux_sym__phpdoc_array_types_repeat1] = STATE(14),
+    [anon_sym_LBRACE] = ACTIONS(169),
+    [anon_sym_ATinheritdoc] = ACTIONS(169),
+    [anon_sym_ATinheritDoc] = ACTIONS(169),
+    [anon_sym_ATapi] = ACTIONS(169),
+    [anon_sym_ATfilesource] = ACTIONS(169),
+    [anon_sym_ATignore] = ACTIONS(169),
+    [anon_sym_ATinternal] = ACTIONS(169),
+    [anon_sym_ATcategory] = ACTIONS(169),
+    [anon_sym_ATcopyright] = ACTIONS(169),
+    [anon_sym_ATtodo] = ACTIONS(169),
+    [anon_sym_ATexample] = ACTIONS(169),
+    [anon_sym_ATlicense] = ACTIONS(169),
+    [anon_sym_ATpackage] = ACTIONS(169),
+    [anon_sym_ATsource] = ACTIONS(169),
+    [anon_sym_ATsubpackage] = ACTIONS(169),
+    [anon_sym_ATuses] = ACTIONS(169),
+    [anon_sym_ATauthor] = ACTIONS(169),
+    [anon_sym_ATglobal] = ACTIONS(169),
+    [anon_sym_ATlink] = ACTIONS(169),
+    [anon_sym_ATmethod] = ACTIONS(169),
+    [anon_sym_ATparam] = ACTIONS(169),
+    [anon_sym_ATproperty] = ACTIONS(171),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(169),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(169),
+    [anon_sym_ATreturn] = ACTIONS(169),
+    [anon_sym_ATsee] = ACTIONS(169),
+    [anon_sym_ATthrows] = ACTIONS(169),
+    [anon_sym_ATvar] = ACTIONS(169),
+    [anon_sym_ATdeprecated] = ACTIONS(169),
+    [anon_sym_ATsince] = ACTIONS(169),
+    [anon_sym_ATversion] = ACTIONS(169),
+    [anon_sym_ATafter] = ACTIONS(171),
+    [anon_sym_ATafterClass] = ACTIONS(169),
+    [anon_sym_ATannotation] = ACTIONS(169),
+    [anon_sym_ATbackupGlobals] = ACTIONS(169),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(169),
+    [anon_sym_ATbefore] = ACTIONS(171),
+    [anon_sym_ATbeforeClass] = ACTIONS(169),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(171),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(169),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(169),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(169),
+    [anon_sym_ATcovers] = ACTIONS(171),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(171),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(169),
+    [anon_sym_ATcoversNothing] = ACTIONS(169),
+    [anon_sym_ATdataProvider] = ACTIONS(169),
+    [anon_sym_ATdepends] = ACTIONS(171),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(169),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(169),
+    [anon_sym_ATgroup] = ACTIONS(169),
+    [anon_sym_ATlarge] = ACTIONS(169),
+    [anon_sym_ATmedium] = ACTIONS(169),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(169),
+    [anon_sym_ATrequires] = ACTIONS(171),
+    [anon_sym_ATrequiresusages] = ACTIONS(169),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(169),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(169),
+    [anon_sym_ATsmall] = ACTIONS(169),
+    [anon_sym_ATtest] = ACTIONS(171),
+    [anon_sym_ATtestWith] = ACTIONS(169),
+    [anon_sym_ATtestdox] = ACTIONS(169),
+    [anon_sym_ATticket] = ACTIONS(169),
+    [anon_sym_LBRACK_RBRACK] = ACTIONS(173),
+    [anon_sym_PIPE] = ACTIONS(169),
+    [sym__end] = ACTIONS(169),
+    [sym_text] = ACTIONS(169),
   },
   [16] = {
-    [anon_sym_LBRACE] = ACTIONS(160),
-    [anon_sym_ATapi] = ACTIONS(160),
-    [anon_sym_ATfilesource] = ACTIONS(160),
-    [anon_sym_ATignore] = ACTIONS(160),
-    [anon_sym_ATcategory] = ACTIONS(160),
-    [anon_sym_ATcopyright] = ACTIONS(160),
-    [anon_sym_ATtodo] = ACTIONS(160),
-    [anon_sym_ATexample] = ACTIONS(160),
-    [anon_sym_ATlicense] = ACTIONS(160),
-    [anon_sym_ATpackage] = ACTIONS(160),
-    [anon_sym_ATsource] = ACTIONS(160),
-    [anon_sym_ATsubpackage] = ACTIONS(160),
-    [anon_sym_ATuses] = ACTIONS(160),
-    [anon_sym_ATauthor] = ACTIONS(160),
-    [anon_sym_LT] = ACTIONS(160),
-    [anon_sym_ATglobal] = ACTIONS(160),
-    [anon_sym_ATinternal] = ACTIONS(160),
-    [anon_sym_ATlink] = ACTIONS(160),
-    [anon_sym_ATmethod] = ACTIONS(160),
-    [anon_sym_ATparam] = ACTIONS(160),
-    [anon_sym_ATproperty] = ACTIONS(162),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(160),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(160),
-    [anon_sym_ATreturn] = ACTIONS(160),
-    [anon_sym_ATsee] = ACTIONS(160),
-    [anon_sym_ATthrows] = ACTIONS(160),
-    [anon_sym_ATvar] = ACTIONS(160),
-    [anon_sym_ATdeprecated] = ACTIONS(160),
-    [anon_sym_ATsince] = ACTIONS(160),
-    [anon_sym_ATversion] = ACTIONS(160),
-    [anon_sym_ATafter] = ACTIONS(162),
-    [anon_sym_ATafterClass] = ACTIONS(160),
-    [anon_sym_ATannotation] = ACTIONS(160),
-    [anon_sym_ATbackupGlobals] = ACTIONS(160),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(160),
-    [anon_sym_ATbefore] = ACTIONS(162),
-    [anon_sym_ATbeforeClass] = ACTIONS(160),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(162),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(160),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(160),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(160),
-    [anon_sym_ATcovers] = ACTIONS(162),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(162),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(160),
-    [anon_sym_ATcoversNothing] = ACTIONS(160),
-    [anon_sym_ATdataProvider] = ACTIONS(160),
-    [anon_sym_ATdepends] = ACTIONS(162),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(160),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(160),
-    [anon_sym_ATgroup] = ACTIONS(160),
-    [anon_sym_ATlarge] = ACTIONS(160),
-    [anon_sym_ATmedium] = ACTIONS(160),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(160),
-    [anon_sym_ATrequires] = ACTIONS(162),
-    [anon_sym_ATrequiresusages] = ACTIONS(160),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(160),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(160),
-    [anon_sym_ATsmall] = ACTIONS(160),
-    [anon_sym_ATtest] = ACTIONS(162),
-    [anon_sym_ATtestWith] = ACTIONS(160),
-    [anon_sym_ATtestdox] = ACTIONS(160),
-    [anon_sym_ATticket] = ACTIONS(160),
-    [anon_sym_LBRACK_RBRACK] = ACTIONS(160),
-    [anon_sym_PIPE] = ACTIONS(160),
-    [anon_sym_DOLLAR] = ACTIONS(160),
-    [sym_text] = ACTIONS(162),
-    [sym__end] = ACTIONS(160),
+    [anon_sym_LBRACE] = ACTIONS(175),
+    [anon_sym_ATinheritdoc] = ACTIONS(175),
+    [anon_sym_ATinheritDoc] = ACTIONS(175),
+    [anon_sym_ATapi] = ACTIONS(175),
+    [anon_sym_ATfilesource] = ACTIONS(175),
+    [anon_sym_ATignore] = ACTIONS(175),
+    [anon_sym_ATinternal] = ACTIONS(175),
+    [anon_sym_ATcategory] = ACTIONS(175),
+    [anon_sym_ATcopyright] = ACTIONS(175),
+    [anon_sym_ATtodo] = ACTIONS(175),
+    [anon_sym_ATexample] = ACTIONS(175),
+    [anon_sym_ATlicense] = ACTIONS(175),
+    [anon_sym_ATpackage] = ACTIONS(175),
+    [anon_sym_ATsource] = ACTIONS(175),
+    [anon_sym_ATsubpackage] = ACTIONS(175),
+    [anon_sym_ATuses] = ACTIONS(175),
+    [anon_sym_ATauthor] = ACTIONS(175),
+    [anon_sym_LT] = ACTIONS(175),
+    [anon_sym_ATglobal] = ACTIONS(175),
+    [anon_sym_ATlink] = ACTIONS(175),
+    [anon_sym_ATmethod] = ACTIONS(175),
+    [anon_sym_ATparam] = ACTIONS(175),
+    [anon_sym_ATproperty] = ACTIONS(177),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(175),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(175),
+    [anon_sym_ATreturn] = ACTIONS(175),
+    [anon_sym_ATsee] = ACTIONS(175),
+    [anon_sym_ATthrows] = ACTIONS(175),
+    [anon_sym_ATvar] = ACTIONS(175),
+    [anon_sym_ATdeprecated] = ACTIONS(175),
+    [anon_sym_ATsince] = ACTIONS(175),
+    [anon_sym_ATversion] = ACTIONS(175),
+    [anon_sym_ATafter] = ACTIONS(177),
+    [anon_sym_ATafterClass] = ACTIONS(175),
+    [anon_sym_ATannotation] = ACTIONS(175),
+    [anon_sym_ATbackupGlobals] = ACTIONS(175),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(175),
+    [anon_sym_ATbefore] = ACTIONS(177),
+    [anon_sym_ATbeforeClass] = ACTIONS(175),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(177),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(175),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(175),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(175),
+    [anon_sym_ATcovers] = ACTIONS(177),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(177),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(175),
+    [anon_sym_ATcoversNothing] = ACTIONS(175),
+    [anon_sym_ATdataProvider] = ACTIONS(175),
+    [anon_sym_ATdepends] = ACTIONS(177),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(175),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(175),
+    [anon_sym_ATgroup] = ACTIONS(175),
+    [anon_sym_ATlarge] = ACTIONS(175),
+    [anon_sym_ATmedium] = ACTIONS(175),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(175),
+    [anon_sym_ATrequires] = ACTIONS(177),
+    [anon_sym_ATrequiresusages] = ACTIONS(175),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(175),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(175),
+    [anon_sym_ATsmall] = ACTIONS(175),
+    [anon_sym_ATtest] = ACTIONS(177),
+    [anon_sym_ATtestWith] = ACTIONS(175),
+    [anon_sym_ATtestdox] = ACTIONS(175),
+    [anon_sym_ATticket] = ACTIONS(175),
+    [anon_sym_LBRACK_RBRACK] = ACTIONS(175),
+    [anon_sym_PIPE] = ACTIONS(175),
+    [sym__end] = ACTIONS(175),
+    [sym_text] = ACTIONS(175),
   },
   [17] = {
-    [anon_sym_LBRACE] = ACTIONS(112),
-    [anon_sym_ATapi] = ACTIONS(112),
-    [anon_sym_ATfilesource] = ACTIONS(112),
-    [anon_sym_ATignore] = ACTIONS(112),
-    [anon_sym_ATcategory] = ACTIONS(112),
-    [anon_sym_ATcopyright] = ACTIONS(112),
-    [anon_sym_ATtodo] = ACTIONS(112),
-    [anon_sym_ATexample] = ACTIONS(112),
-    [anon_sym_ATlicense] = ACTIONS(112),
-    [anon_sym_ATpackage] = ACTIONS(112),
-    [anon_sym_ATsource] = ACTIONS(112),
-    [anon_sym_ATsubpackage] = ACTIONS(112),
-    [anon_sym_ATuses] = ACTIONS(112),
-    [anon_sym_ATauthor] = ACTIONS(112),
-    [anon_sym_LT] = ACTIONS(112),
-    [anon_sym_ATglobal] = ACTIONS(112),
-    [anon_sym_ATinternal] = ACTIONS(112),
-    [anon_sym_ATlink] = ACTIONS(112),
-    [anon_sym_ATmethod] = ACTIONS(112),
-    [anon_sym_ATparam] = ACTIONS(112),
-    [anon_sym_ATproperty] = ACTIONS(114),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(112),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(112),
-    [anon_sym_ATreturn] = ACTIONS(112),
-    [anon_sym_ATsee] = ACTIONS(112),
-    [anon_sym_ATthrows] = ACTIONS(112),
-    [anon_sym_ATvar] = ACTIONS(112),
-    [anon_sym_ATdeprecated] = ACTIONS(112),
-    [anon_sym_ATsince] = ACTIONS(112),
-    [anon_sym_ATversion] = ACTIONS(112),
-    [anon_sym_ATafter] = ACTIONS(114),
-    [anon_sym_ATafterClass] = ACTIONS(112),
-    [anon_sym_ATannotation] = ACTIONS(112),
-    [anon_sym_ATbackupGlobals] = ACTIONS(112),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(112),
-    [anon_sym_ATbefore] = ACTIONS(114),
-    [anon_sym_ATbeforeClass] = ACTIONS(112),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(114),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(112),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(112),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(112),
-    [anon_sym_ATcovers] = ACTIONS(114),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(114),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(112),
-    [anon_sym_ATcoversNothing] = ACTIONS(112),
-    [anon_sym_ATdataProvider] = ACTIONS(112),
-    [anon_sym_ATdepends] = ACTIONS(114),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(112),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(112),
-    [anon_sym_ATgroup] = ACTIONS(112),
-    [anon_sym_ATlarge] = ACTIONS(112),
-    [anon_sym_ATmedium] = ACTIONS(112),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(112),
-    [anon_sym_ATrequires] = ACTIONS(114),
-    [anon_sym_ATrequiresusages] = ACTIONS(112),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(112),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(112),
-    [anon_sym_ATsmall] = ACTIONS(112),
-    [anon_sym_ATtest] = ACTIONS(114),
-    [anon_sym_ATtestWith] = ACTIONS(112),
-    [anon_sym_ATtestdox] = ACTIONS(112),
-    [anon_sym_ATticket] = ACTIONS(112),
-    [anon_sym_LBRACK_RBRACK] = ACTIONS(112),
-    [anon_sym_PIPE] = ACTIONS(112),
-    [anon_sym_DOLLAR] = ACTIONS(112),
-    [sym_text] = ACTIONS(114),
-    [sym__end] = ACTIONS(112),
+    [anon_sym_LBRACE] = ACTIONS(129),
+    [anon_sym_ATinheritdoc] = ACTIONS(129),
+    [anon_sym_ATinheritDoc] = ACTIONS(129),
+    [anon_sym_ATapi] = ACTIONS(129),
+    [anon_sym_ATfilesource] = ACTIONS(129),
+    [anon_sym_ATignore] = ACTIONS(129),
+    [anon_sym_ATinternal] = ACTIONS(129),
+    [anon_sym_ATcategory] = ACTIONS(129),
+    [anon_sym_ATcopyright] = ACTIONS(129),
+    [anon_sym_ATtodo] = ACTIONS(129),
+    [anon_sym_ATexample] = ACTIONS(129),
+    [anon_sym_ATlicense] = ACTIONS(129),
+    [anon_sym_ATpackage] = ACTIONS(129),
+    [anon_sym_ATsource] = ACTIONS(129),
+    [anon_sym_ATsubpackage] = ACTIONS(129),
+    [anon_sym_ATuses] = ACTIONS(129),
+    [anon_sym_ATauthor] = ACTIONS(129),
+    [anon_sym_LT] = ACTIONS(129),
+    [anon_sym_ATglobal] = ACTIONS(129),
+    [anon_sym_ATlink] = ACTIONS(129),
+    [anon_sym_ATmethod] = ACTIONS(129),
+    [anon_sym_ATparam] = ACTIONS(129),
+    [anon_sym_ATproperty] = ACTIONS(131),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(129),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(129),
+    [anon_sym_ATreturn] = ACTIONS(129),
+    [anon_sym_ATsee] = ACTIONS(129),
+    [anon_sym_ATthrows] = ACTIONS(129),
+    [anon_sym_ATvar] = ACTIONS(129),
+    [anon_sym_ATdeprecated] = ACTIONS(129),
+    [anon_sym_ATsince] = ACTIONS(129),
+    [anon_sym_ATversion] = ACTIONS(129),
+    [anon_sym_ATafter] = ACTIONS(131),
+    [anon_sym_ATafterClass] = ACTIONS(129),
+    [anon_sym_ATannotation] = ACTIONS(129),
+    [anon_sym_ATbackupGlobals] = ACTIONS(129),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(129),
+    [anon_sym_ATbefore] = ACTIONS(131),
+    [anon_sym_ATbeforeClass] = ACTIONS(129),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(131),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(129),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(129),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(129),
+    [anon_sym_ATcovers] = ACTIONS(131),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(131),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(129),
+    [anon_sym_ATcoversNothing] = ACTIONS(129),
+    [anon_sym_ATdataProvider] = ACTIONS(129),
+    [anon_sym_ATdepends] = ACTIONS(131),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(129),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(129),
+    [anon_sym_ATgroup] = ACTIONS(129),
+    [anon_sym_ATlarge] = ACTIONS(129),
+    [anon_sym_ATmedium] = ACTIONS(129),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(129),
+    [anon_sym_ATrequires] = ACTIONS(131),
+    [anon_sym_ATrequiresusages] = ACTIONS(129),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(129),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(129),
+    [anon_sym_ATsmall] = ACTIONS(129),
+    [anon_sym_ATtest] = ACTIONS(131),
+    [anon_sym_ATtestWith] = ACTIONS(129),
+    [anon_sym_ATtestdox] = ACTIONS(129),
+    [anon_sym_ATticket] = ACTIONS(129),
+    [anon_sym_LBRACK_RBRACK] = ACTIONS(129),
+    [anon_sym_PIPE] = ACTIONS(129),
+    [sym__end] = ACTIONS(129),
+    [sym_text] = ACTIONS(129),
   },
   [18] = {
-    [anon_sym_LBRACE] = ACTIONS(164),
-    [anon_sym_ATapi] = ACTIONS(164),
-    [anon_sym_ATfilesource] = ACTIONS(164),
-    [anon_sym_ATignore] = ACTIONS(164),
-    [anon_sym_ATcategory] = ACTIONS(164),
-    [anon_sym_ATcopyright] = ACTIONS(164),
-    [anon_sym_ATtodo] = ACTIONS(164),
-    [anon_sym_ATexample] = ACTIONS(164),
-    [anon_sym_ATlicense] = ACTIONS(164),
-    [anon_sym_ATpackage] = ACTIONS(164),
-    [anon_sym_ATsource] = ACTIONS(164),
-    [anon_sym_ATsubpackage] = ACTIONS(164),
-    [anon_sym_ATuses] = ACTIONS(164),
-    [anon_sym_ATauthor] = ACTIONS(164),
-    [anon_sym_LT] = ACTIONS(164),
-    [anon_sym_ATglobal] = ACTIONS(164),
-    [anon_sym_ATinternal] = ACTIONS(164),
-    [anon_sym_ATlink] = ACTIONS(164),
-    [anon_sym_ATmethod] = ACTIONS(164),
-    [anon_sym_ATparam] = ACTIONS(164),
-    [anon_sym_ATproperty] = ACTIONS(166),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(164),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(164),
-    [anon_sym_ATreturn] = ACTIONS(164),
-    [anon_sym_ATsee] = ACTIONS(164),
-    [anon_sym_ATthrows] = ACTIONS(164),
-    [anon_sym_ATvar] = ACTIONS(164),
-    [anon_sym_ATdeprecated] = ACTIONS(164),
-    [anon_sym_ATsince] = ACTIONS(164),
-    [anon_sym_ATversion] = ACTIONS(164),
-    [anon_sym_ATafter] = ACTIONS(166),
-    [anon_sym_ATafterClass] = ACTIONS(164),
-    [anon_sym_ATannotation] = ACTIONS(164),
-    [anon_sym_ATbackupGlobals] = ACTIONS(164),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(164),
-    [anon_sym_ATbefore] = ACTIONS(166),
-    [anon_sym_ATbeforeClass] = ACTIONS(164),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(166),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(164),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(164),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(164),
-    [anon_sym_ATcovers] = ACTIONS(166),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(166),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(164),
-    [anon_sym_ATcoversNothing] = ACTIONS(164),
-    [anon_sym_ATdataProvider] = ACTIONS(164),
-    [anon_sym_ATdepends] = ACTIONS(166),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(164),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(164),
-    [anon_sym_ATgroup] = ACTIONS(164),
-    [anon_sym_ATlarge] = ACTIONS(164),
-    [anon_sym_ATmedium] = ACTIONS(164),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(164),
-    [anon_sym_ATrequires] = ACTIONS(166),
-    [anon_sym_ATrequiresusages] = ACTIONS(164),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(164),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(164),
-    [anon_sym_ATsmall] = ACTIONS(164),
-    [anon_sym_ATtest] = ACTIONS(166),
-    [anon_sym_ATtestWith] = ACTIONS(164),
-    [anon_sym_ATtestdox] = ACTIONS(164),
-    [anon_sym_ATticket] = ACTIONS(164),
-    [anon_sym_LBRACK_RBRACK] = ACTIONS(164),
-    [anon_sym_PIPE] = ACTIONS(164),
-    [anon_sym_DOLLAR] = ACTIONS(164),
-    [sym_text] = ACTIONS(166),
-    [sym__end] = ACTIONS(164),
+    [sym_description] = STATE(61),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
+    [anon_sym_LBRACE] = ACTIONS(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(179),
+    [anon_sym_ATinheritDoc] = ACTIONS(179),
+    [anon_sym_ATapi] = ACTIONS(179),
+    [anon_sym_ATfilesource] = ACTIONS(179),
+    [anon_sym_ATignore] = ACTIONS(179),
+    [anon_sym_ATinternal] = ACTIONS(179),
+    [anon_sym_ATcategory] = ACTIONS(179),
+    [anon_sym_ATcopyright] = ACTIONS(179),
+    [anon_sym_ATtodo] = ACTIONS(179),
+    [anon_sym_ATexample] = ACTIONS(179),
+    [anon_sym_ATlicense] = ACTIONS(179),
+    [anon_sym_ATpackage] = ACTIONS(179),
+    [anon_sym_ATsource] = ACTIONS(179),
+    [anon_sym_ATsubpackage] = ACTIONS(179),
+    [anon_sym_ATuses] = ACTIONS(179),
+    [anon_sym_ATauthor] = ACTIONS(179),
+    [anon_sym_ATglobal] = ACTIONS(179),
+    [anon_sym_ATlink] = ACTIONS(179),
+    [anon_sym_ATmethod] = ACTIONS(179),
+    [anon_sym_ATparam] = ACTIONS(179),
+    [anon_sym_ATproperty] = ACTIONS(181),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(179),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(179),
+    [anon_sym_ATreturn] = ACTIONS(179),
+    [anon_sym_ATsee] = ACTIONS(179),
+    [anon_sym_ATthrows] = ACTIONS(179),
+    [anon_sym_ATvar] = ACTIONS(179),
+    [anon_sym_ATdeprecated] = ACTIONS(179),
+    [anon_sym_ATsince] = ACTIONS(179),
+    [anon_sym_ATversion] = ACTIONS(179),
+    [anon_sym_ATafter] = ACTIONS(181),
+    [anon_sym_ATafterClass] = ACTIONS(179),
+    [anon_sym_ATannotation] = ACTIONS(179),
+    [anon_sym_ATbackupGlobals] = ACTIONS(179),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(179),
+    [anon_sym_ATbefore] = ACTIONS(181),
+    [anon_sym_ATbeforeClass] = ACTIONS(179),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(181),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(179),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(179),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(179),
+    [anon_sym_ATcovers] = ACTIONS(181),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(181),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(179),
+    [anon_sym_ATcoversNothing] = ACTIONS(179),
+    [anon_sym_ATdataProvider] = ACTIONS(179),
+    [anon_sym_ATdepends] = ACTIONS(181),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(179),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(179),
+    [anon_sym_ATgroup] = ACTIONS(179),
+    [anon_sym_ATlarge] = ACTIONS(179),
+    [anon_sym_ATmedium] = ACTIONS(179),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(179),
+    [anon_sym_ATrequires] = ACTIONS(181),
+    [anon_sym_ATrequiresusages] = ACTIONS(179),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(179),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(179),
+    [anon_sym_ATsmall] = ACTIONS(179),
+    [anon_sym_ATtest] = ACTIONS(181),
+    [anon_sym_ATtestWith] = ACTIONS(179),
+    [anon_sym_ATtestdox] = ACTIONS(179),
+    [anon_sym_ATticket] = ACTIONS(179),
+    [sym__end] = ACTIONS(179),
+    [sym_text] = ACTIONS(49),
   },
   [19] = {
-    [sym_inline_tag] = STATE(50),
     [sym_description] = STATE(68),
-    [aux_sym_description_repeat1] = STATE(50),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
     [anon_sym_LBRACE] = ACTIONS(5),
-    [anon_sym_ATapi] = ACTIONS(168),
-    [anon_sym_ATfilesource] = ACTIONS(168),
-    [anon_sym_ATignore] = ACTIONS(168),
-    [anon_sym_ATcategory] = ACTIONS(168),
-    [anon_sym_ATcopyright] = ACTIONS(168),
-    [anon_sym_ATtodo] = ACTIONS(168),
-    [anon_sym_ATexample] = ACTIONS(168),
-    [anon_sym_ATlicense] = ACTIONS(168),
-    [anon_sym_ATpackage] = ACTIONS(168),
-    [anon_sym_ATsource] = ACTIONS(168),
-    [anon_sym_ATsubpackage] = ACTIONS(168),
-    [anon_sym_ATuses] = ACTIONS(168),
-    [anon_sym_ATauthor] = ACTIONS(168),
-    [anon_sym_ATglobal] = ACTIONS(168),
-    [anon_sym_ATinternal] = ACTIONS(168),
-    [anon_sym_ATlink] = ACTIONS(168),
-    [anon_sym_ATmethod] = ACTIONS(168),
-    [anon_sym_ATparam] = ACTIONS(168),
-    [anon_sym_ATproperty] = ACTIONS(170),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(168),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(168),
-    [anon_sym_ATreturn] = ACTIONS(168),
-    [anon_sym_ATsee] = ACTIONS(168),
-    [anon_sym_ATthrows] = ACTIONS(168),
-    [anon_sym_ATvar] = ACTIONS(168),
-    [anon_sym_ATdeprecated] = ACTIONS(168),
-    [anon_sym_ATsince] = ACTIONS(168),
-    [anon_sym_ATversion] = ACTIONS(168),
-    [anon_sym_ATafter] = ACTIONS(170),
-    [anon_sym_ATafterClass] = ACTIONS(168),
-    [anon_sym_ATannotation] = ACTIONS(168),
-    [anon_sym_ATbackupGlobals] = ACTIONS(168),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(168),
-    [anon_sym_ATbefore] = ACTIONS(170),
-    [anon_sym_ATbeforeClass] = ACTIONS(168),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(170),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(168),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(168),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(168),
-    [anon_sym_ATcovers] = ACTIONS(170),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(170),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(168),
-    [anon_sym_ATcoversNothing] = ACTIONS(168),
-    [anon_sym_ATdataProvider] = ACTIONS(168),
-    [anon_sym_ATdepends] = ACTIONS(170),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(168),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(168),
-    [anon_sym_ATgroup] = ACTIONS(168),
-    [anon_sym_ATlarge] = ACTIONS(168),
-    [anon_sym_ATmedium] = ACTIONS(168),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(168),
-    [anon_sym_ATrequires] = ACTIONS(170),
-    [anon_sym_ATrequiresusages] = ACTIONS(168),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(168),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(168),
-    [anon_sym_ATsmall] = ACTIONS(168),
-    [anon_sym_ATtest] = ACTIONS(170),
-    [anon_sym_ATtestWith] = ACTIONS(168),
-    [anon_sym_ATtestdox] = ACTIONS(168),
-    [anon_sym_ATticket] = ACTIONS(168),
-    [sym_text] = ACTIONS(45),
-    [sym_version] = ACTIONS(172),
-    [sym__end] = ACTIONS(168),
+    [anon_sym_ATinheritdoc] = ACTIONS(183),
+    [anon_sym_ATinheritDoc] = ACTIONS(183),
+    [anon_sym_ATapi] = ACTIONS(183),
+    [anon_sym_ATfilesource] = ACTIONS(183),
+    [anon_sym_ATignore] = ACTIONS(183),
+    [anon_sym_ATinternal] = ACTIONS(183),
+    [anon_sym_ATcategory] = ACTIONS(183),
+    [anon_sym_ATcopyright] = ACTIONS(183),
+    [anon_sym_ATtodo] = ACTIONS(183),
+    [anon_sym_ATexample] = ACTIONS(183),
+    [anon_sym_ATlicense] = ACTIONS(183),
+    [anon_sym_ATpackage] = ACTIONS(183),
+    [anon_sym_ATsource] = ACTIONS(183),
+    [anon_sym_ATsubpackage] = ACTIONS(183),
+    [anon_sym_ATuses] = ACTIONS(183),
+    [anon_sym_ATauthor] = ACTIONS(183),
+    [anon_sym_ATglobal] = ACTIONS(183),
+    [anon_sym_ATlink] = ACTIONS(183),
+    [anon_sym_ATmethod] = ACTIONS(183),
+    [anon_sym_ATparam] = ACTIONS(183),
+    [anon_sym_ATproperty] = ACTIONS(185),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(183),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(183),
+    [anon_sym_ATreturn] = ACTIONS(183),
+    [anon_sym_ATsee] = ACTIONS(183),
+    [anon_sym_ATthrows] = ACTIONS(183),
+    [anon_sym_ATvar] = ACTIONS(183),
+    [anon_sym_ATdeprecated] = ACTIONS(183),
+    [anon_sym_ATsince] = ACTIONS(183),
+    [anon_sym_ATversion] = ACTIONS(183),
+    [anon_sym_ATafter] = ACTIONS(185),
+    [anon_sym_ATafterClass] = ACTIONS(183),
+    [anon_sym_ATannotation] = ACTIONS(183),
+    [anon_sym_ATbackupGlobals] = ACTIONS(183),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(183),
+    [anon_sym_ATbefore] = ACTIONS(185),
+    [anon_sym_ATbeforeClass] = ACTIONS(183),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(185),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(183),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(183),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(183),
+    [anon_sym_ATcovers] = ACTIONS(185),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(185),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(183),
+    [anon_sym_ATcoversNothing] = ACTIONS(183),
+    [anon_sym_ATdataProvider] = ACTIONS(183),
+    [anon_sym_ATdepends] = ACTIONS(185),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(183),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(183),
+    [anon_sym_ATgroup] = ACTIONS(183),
+    [anon_sym_ATlarge] = ACTIONS(183),
+    [anon_sym_ATmedium] = ACTIONS(183),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(183),
+    [anon_sym_ATrequires] = ACTIONS(185),
+    [anon_sym_ATrequiresusages] = ACTIONS(183),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(183),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(183),
+    [anon_sym_ATsmall] = ACTIONS(183),
+    [anon_sym_ATtest] = ACTIONS(185),
+    [anon_sym_ATtestWith] = ACTIONS(183),
+    [anon_sym_ATtestdox] = ACTIONS(183),
+    [anon_sym_ATticket] = ACTIONS(183),
+    [sym__end] = ACTIONS(183),
+    [sym_text] = ACTIONS(49),
   },
   [20] = {
-    [sym_inline_tag] = STATE(50),
-    [sym_description] = STATE(63),
-    [aux_sym_description_repeat1] = STATE(50),
+    [sym_description] = STATE(60),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
     [anon_sym_LBRACE] = ACTIONS(5),
-    [anon_sym_ATapi] = ACTIONS(174),
-    [anon_sym_ATfilesource] = ACTIONS(174),
-    [anon_sym_ATignore] = ACTIONS(174),
-    [anon_sym_ATcategory] = ACTIONS(174),
-    [anon_sym_ATcopyright] = ACTIONS(174),
-    [anon_sym_ATtodo] = ACTIONS(174),
-    [anon_sym_ATexample] = ACTIONS(174),
-    [anon_sym_ATlicense] = ACTIONS(174),
-    [anon_sym_ATpackage] = ACTIONS(174),
-    [anon_sym_ATsource] = ACTIONS(174),
-    [anon_sym_ATsubpackage] = ACTIONS(174),
-    [anon_sym_ATuses] = ACTIONS(174),
-    [anon_sym_ATauthor] = ACTIONS(174),
-    [anon_sym_ATglobal] = ACTIONS(174),
-    [anon_sym_ATinternal] = ACTIONS(174),
-    [anon_sym_ATlink] = ACTIONS(174),
-    [anon_sym_ATmethod] = ACTIONS(174),
-    [anon_sym_ATparam] = ACTIONS(174),
-    [anon_sym_ATproperty] = ACTIONS(176),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(174),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(174),
-    [anon_sym_ATreturn] = ACTIONS(174),
-    [anon_sym_ATsee] = ACTIONS(174),
-    [anon_sym_ATthrows] = ACTIONS(174),
-    [anon_sym_ATvar] = ACTIONS(174),
-    [anon_sym_ATdeprecated] = ACTIONS(174),
-    [anon_sym_ATsince] = ACTIONS(174),
-    [anon_sym_ATversion] = ACTIONS(174),
-    [anon_sym_ATafter] = ACTIONS(176),
-    [anon_sym_ATafterClass] = ACTIONS(174),
-    [anon_sym_ATannotation] = ACTIONS(174),
-    [anon_sym_ATbackupGlobals] = ACTIONS(174),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(174),
-    [anon_sym_ATbefore] = ACTIONS(176),
-    [anon_sym_ATbeforeClass] = ACTIONS(174),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(176),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(174),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(174),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(174),
-    [anon_sym_ATcovers] = ACTIONS(176),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(176),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(174),
-    [anon_sym_ATcoversNothing] = ACTIONS(174),
-    [anon_sym_ATdataProvider] = ACTIONS(174),
-    [anon_sym_ATdepends] = ACTIONS(176),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(174),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(174),
-    [anon_sym_ATgroup] = ACTIONS(174),
-    [anon_sym_ATlarge] = ACTIONS(174),
-    [anon_sym_ATmedium] = ACTIONS(174),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(174),
-    [anon_sym_ATrequires] = ACTIONS(176),
-    [anon_sym_ATrequiresusages] = ACTIONS(174),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(174),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(174),
-    [anon_sym_ATsmall] = ACTIONS(174),
-    [anon_sym_ATtest] = ACTIONS(176),
-    [anon_sym_ATtestWith] = ACTIONS(174),
-    [anon_sym_ATtestdox] = ACTIONS(174),
-    [anon_sym_ATticket] = ACTIONS(174),
-    [sym_text] = ACTIONS(45),
-    [sym__end] = ACTIONS(174),
+    [anon_sym_ATinheritdoc] = ACTIONS(187),
+    [anon_sym_ATinheritDoc] = ACTIONS(187),
+    [anon_sym_ATapi] = ACTIONS(187),
+    [anon_sym_ATfilesource] = ACTIONS(187),
+    [anon_sym_ATignore] = ACTIONS(187),
+    [anon_sym_ATinternal] = ACTIONS(187),
+    [anon_sym_ATcategory] = ACTIONS(187),
+    [anon_sym_ATcopyright] = ACTIONS(187),
+    [anon_sym_ATtodo] = ACTIONS(187),
+    [anon_sym_ATexample] = ACTIONS(187),
+    [anon_sym_ATlicense] = ACTIONS(187),
+    [anon_sym_ATpackage] = ACTIONS(187),
+    [anon_sym_ATsource] = ACTIONS(187),
+    [anon_sym_ATsubpackage] = ACTIONS(187),
+    [anon_sym_ATuses] = ACTIONS(187),
+    [anon_sym_ATauthor] = ACTIONS(187),
+    [anon_sym_ATglobal] = ACTIONS(187),
+    [anon_sym_ATlink] = ACTIONS(187),
+    [anon_sym_ATmethod] = ACTIONS(187),
+    [anon_sym_ATparam] = ACTIONS(187),
+    [anon_sym_ATproperty] = ACTIONS(189),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(187),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(187),
+    [anon_sym_ATreturn] = ACTIONS(187),
+    [anon_sym_ATsee] = ACTIONS(187),
+    [anon_sym_ATthrows] = ACTIONS(187),
+    [anon_sym_ATvar] = ACTIONS(187),
+    [anon_sym_ATdeprecated] = ACTIONS(187),
+    [anon_sym_ATsince] = ACTIONS(187),
+    [anon_sym_ATversion] = ACTIONS(187),
+    [anon_sym_ATafter] = ACTIONS(189),
+    [anon_sym_ATafterClass] = ACTIONS(187),
+    [anon_sym_ATannotation] = ACTIONS(187),
+    [anon_sym_ATbackupGlobals] = ACTIONS(187),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(187),
+    [anon_sym_ATbefore] = ACTIONS(189),
+    [anon_sym_ATbeforeClass] = ACTIONS(187),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(189),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(187),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(187),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(187),
+    [anon_sym_ATcovers] = ACTIONS(189),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(189),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(187),
+    [anon_sym_ATcoversNothing] = ACTIONS(187),
+    [anon_sym_ATdataProvider] = ACTIONS(187),
+    [anon_sym_ATdepends] = ACTIONS(189),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(187),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(187),
+    [anon_sym_ATgroup] = ACTIONS(187),
+    [anon_sym_ATlarge] = ACTIONS(187),
+    [anon_sym_ATmedium] = ACTIONS(187),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(187),
+    [anon_sym_ATrequires] = ACTIONS(189),
+    [anon_sym_ATrequiresusages] = ACTIONS(187),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(187),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(187),
+    [anon_sym_ATsmall] = ACTIONS(187),
+    [anon_sym_ATtest] = ACTIONS(189),
+    [anon_sym_ATtestWith] = ACTIONS(187),
+    [anon_sym_ATtestdox] = ACTIONS(187),
+    [anon_sym_ATticket] = ACTIONS(187),
+    [sym__end] = ACTIONS(187),
+    [sym_text] = ACTIONS(49),
   },
   [21] = {
-    [anon_sym_LBRACE] = ACTIONS(160),
-    [anon_sym_ATapi] = ACTIONS(160),
-    [anon_sym_ATfilesource] = ACTIONS(160),
-    [anon_sym_ATignore] = ACTIONS(160),
-    [anon_sym_ATcategory] = ACTIONS(160),
-    [anon_sym_ATcopyright] = ACTIONS(160),
-    [anon_sym_ATtodo] = ACTIONS(160),
-    [anon_sym_ATexample] = ACTIONS(160),
-    [anon_sym_ATlicense] = ACTIONS(160),
-    [anon_sym_ATpackage] = ACTIONS(160),
-    [anon_sym_ATsource] = ACTIONS(160),
-    [anon_sym_ATsubpackage] = ACTIONS(160),
-    [anon_sym_ATuses] = ACTIONS(160),
-    [anon_sym_ATauthor] = ACTIONS(160),
-    [anon_sym_LT] = ACTIONS(160),
-    [anon_sym_ATglobal] = ACTIONS(160),
-    [anon_sym_ATinternal] = ACTIONS(160),
-    [anon_sym_ATlink] = ACTIONS(160),
-    [anon_sym_ATmethod] = ACTIONS(160),
-    [anon_sym_ATparam] = ACTIONS(160),
-    [anon_sym_ATproperty] = ACTIONS(162),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(160),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(160),
-    [anon_sym_ATreturn] = ACTIONS(160),
-    [anon_sym_ATsee] = ACTIONS(160),
-    [anon_sym_ATthrows] = ACTIONS(160),
-    [anon_sym_ATvar] = ACTIONS(160),
-    [anon_sym_ATdeprecated] = ACTIONS(160),
-    [anon_sym_ATsince] = ACTIONS(160),
-    [anon_sym_ATversion] = ACTIONS(160),
-    [anon_sym_ATafter] = ACTIONS(162),
-    [anon_sym_ATafterClass] = ACTIONS(160),
-    [anon_sym_ATannotation] = ACTIONS(160),
-    [anon_sym_ATbackupGlobals] = ACTIONS(160),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(160),
-    [anon_sym_ATbefore] = ACTIONS(162),
-    [anon_sym_ATbeforeClass] = ACTIONS(160),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(162),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(160),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(160),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(160),
-    [anon_sym_ATcovers] = ACTIONS(162),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(162),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(160),
-    [anon_sym_ATcoversNothing] = ACTIONS(160),
-    [anon_sym_ATdataProvider] = ACTIONS(160),
-    [anon_sym_ATdepends] = ACTIONS(162),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(160),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(160),
-    [anon_sym_ATgroup] = ACTIONS(160),
-    [anon_sym_ATlarge] = ACTIONS(160),
-    [anon_sym_ATmedium] = ACTIONS(160),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(160),
-    [anon_sym_ATrequires] = ACTIONS(162),
-    [anon_sym_ATrequiresusages] = ACTIONS(160),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(160),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(160),
-    [anon_sym_ATsmall] = ACTIONS(160),
-    [anon_sym_ATtest] = ACTIONS(162),
-    [anon_sym_ATtestWith] = ACTIONS(160),
-    [anon_sym_ATtestdox] = ACTIONS(160),
-    [anon_sym_ATticket] = ACTIONS(160),
-    [anon_sym_LBRACK_RBRACK] = ACTIONS(160),
-    [anon_sym_PIPE] = ACTIONS(160),
-    [sym_text] = ACTIONS(162),
-    [sym__end] = ACTIONS(160),
+    [sym_description] = STATE(64),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
+    [anon_sym_LBRACE] = ACTIONS(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(191),
+    [anon_sym_ATinheritDoc] = ACTIONS(191),
+    [anon_sym_ATapi] = ACTIONS(191),
+    [anon_sym_ATfilesource] = ACTIONS(191),
+    [anon_sym_ATignore] = ACTIONS(191),
+    [anon_sym_ATinternal] = ACTIONS(191),
+    [anon_sym_ATcategory] = ACTIONS(191),
+    [anon_sym_ATcopyright] = ACTIONS(191),
+    [anon_sym_ATtodo] = ACTIONS(191),
+    [anon_sym_ATexample] = ACTIONS(191),
+    [anon_sym_ATlicense] = ACTIONS(191),
+    [anon_sym_ATpackage] = ACTIONS(191),
+    [anon_sym_ATsource] = ACTIONS(191),
+    [anon_sym_ATsubpackage] = ACTIONS(191),
+    [anon_sym_ATuses] = ACTIONS(191),
+    [anon_sym_ATauthor] = ACTIONS(191),
+    [anon_sym_ATglobal] = ACTIONS(191),
+    [anon_sym_ATlink] = ACTIONS(191),
+    [anon_sym_ATmethod] = ACTIONS(191),
+    [anon_sym_ATparam] = ACTIONS(191),
+    [anon_sym_ATproperty] = ACTIONS(193),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(191),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(191),
+    [anon_sym_ATreturn] = ACTIONS(191),
+    [anon_sym_ATsee] = ACTIONS(191),
+    [anon_sym_ATthrows] = ACTIONS(191),
+    [anon_sym_ATvar] = ACTIONS(191),
+    [anon_sym_ATdeprecated] = ACTIONS(191),
+    [anon_sym_ATsince] = ACTIONS(191),
+    [anon_sym_ATversion] = ACTIONS(191),
+    [anon_sym_ATafter] = ACTIONS(193),
+    [anon_sym_ATafterClass] = ACTIONS(191),
+    [anon_sym_ATannotation] = ACTIONS(191),
+    [anon_sym_ATbackupGlobals] = ACTIONS(191),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(191),
+    [anon_sym_ATbefore] = ACTIONS(193),
+    [anon_sym_ATbeforeClass] = ACTIONS(191),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(193),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(191),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(191),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(191),
+    [anon_sym_ATcovers] = ACTIONS(193),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(193),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(191),
+    [anon_sym_ATcoversNothing] = ACTIONS(191),
+    [anon_sym_ATdataProvider] = ACTIONS(191),
+    [anon_sym_ATdepends] = ACTIONS(193),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(191),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(191),
+    [anon_sym_ATgroup] = ACTIONS(191),
+    [anon_sym_ATlarge] = ACTIONS(191),
+    [anon_sym_ATmedium] = ACTIONS(191),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(191),
+    [anon_sym_ATrequires] = ACTIONS(193),
+    [anon_sym_ATrequiresusages] = ACTIONS(191),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(191),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(191),
+    [anon_sym_ATsmall] = ACTIONS(191),
+    [anon_sym_ATtest] = ACTIONS(193),
+    [anon_sym_ATtestWith] = ACTIONS(191),
+    [anon_sym_ATtestdox] = ACTIONS(191),
+    [anon_sym_ATticket] = ACTIONS(191),
+    [sym__end] = ACTIONS(191),
+    [sym_text] = ACTIONS(49),
   },
   [22] = {
-    [aux_sym_union_type_repeat1] = STATE(31),
-    [anon_sym_LBRACE] = ACTIONS(178),
-    [anon_sym_ATapi] = ACTIONS(178),
-    [anon_sym_ATfilesource] = ACTIONS(178),
-    [anon_sym_ATignore] = ACTIONS(178),
-    [anon_sym_ATcategory] = ACTIONS(178),
-    [anon_sym_ATcopyright] = ACTIONS(178),
-    [anon_sym_ATtodo] = ACTIONS(178),
-    [anon_sym_ATexample] = ACTIONS(178),
-    [anon_sym_ATlicense] = ACTIONS(178),
-    [anon_sym_ATpackage] = ACTIONS(178),
-    [anon_sym_ATsource] = ACTIONS(178),
-    [anon_sym_ATsubpackage] = ACTIONS(178),
-    [anon_sym_ATuses] = ACTIONS(178),
-    [anon_sym_ATauthor] = ACTIONS(178),
-    [anon_sym_ATglobal] = ACTIONS(178),
-    [anon_sym_ATinternal] = ACTIONS(178),
-    [anon_sym_ATlink] = ACTIONS(178),
-    [anon_sym_ATmethod] = ACTIONS(178),
-    [anon_sym_ATparam] = ACTIONS(178),
-    [anon_sym_ATproperty] = ACTIONS(180),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(178),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(178),
-    [anon_sym_ATreturn] = ACTIONS(178),
-    [anon_sym_ATsee] = ACTIONS(178),
-    [anon_sym_ATthrows] = ACTIONS(178),
-    [anon_sym_ATvar] = ACTIONS(178),
-    [anon_sym_ATdeprecated] = ACTIONS(178),
-    [anon_sym_ATsince] = ACTIONS(178),
-    [anon_sym_ATversion] = ACTIONS(178),
-    [anon_sym_ATafter] = ACTIONS(180),
-    [anon_sym_ATafterClass] = ACTIONS(178),
-    [anon_sym_ATannotation] = ACTIONS(178),
-    [anon_sym_ATbackupGlobals] = ACTIONS(178),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(178),
-    [anon_sym_ATbefore] = ACTIONS(180),
-    [anon_sym_ATbeforeClass] = ACTIONS(178),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(180),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(178),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(178),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(178),
-    [anon_sym_ATcovers] = ACTIONS(180),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(180),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(178),
-    [anon_sym_ATcoversNothing] = ACTIONS(178),
-    [anon_sym_ATdataProvider] = ACTIONS(178),
-    [anon_sym_ATdepends] = ACTIONS(180),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(178),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(178),
-    [anon_sym_ATgroup] = ACTIONS(178),
-    [anon_sym_ATlarge] = ACTIONS(178),
-    [anon_sym_ATmedium] = ACTIONS(178),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(178),
-    [anon_sym_ATrequires] = ACTIONS(180),
-    [anon_sym_ATrequiresusages] = ACTIONS(178),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(178),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(178),
-    [anon_sym_ATsmall] = ACTIONS(178),
-    [anon_sym_ATtest] = ACTIONS(180),
-    [anon_sym_ATtestWith] = ACTIONS(178),
-    [anon_sym_ATtestdox] = ACTIONS(178),
-    [anon_sym_ATticket] = ACTIONS(178),
-    [anon_sym_PIPE] = ACTIONS(182),
-    [anon_sym_DOLLAR] = ACTIONS(178),
-    [sym_text] = ACTIONS(180),
-    [sym__end] = ACTIONS(178),
+    [sym_description] = STATE(65),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
+    [anon_sym_LBRACE] = ACTIONS(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(195),
+    [anon_sym_ATinheritDoc] = ACTIONS(195),
+    [anon_sym_ATapi] = ACTIONS(195),
+    [anon_sym_ATfilesource] = ACTIONS(195),
+    [anon_sym_ATignore] = ACTIONS(195),
+    [anon_sym_ATinternal] = ACTIONS(195),
+    [anon_sym_ATcategory] = ACTIONS(195),
+    [anon_sym_ATcopyright] = ACTIONS(195),
+    [anon_sym_ATtodo] = ACTIONS(195),
+    [anon_sym_ATexample] = ACTIONS(195),
+    [anon_sym_ATlicense] = ACTIONS(195),
+    [anon_sym_ATpackage] = ACTIONS(195),
+    [anon_sym_ATsource] = ACTIONS(195),
+    [anon_sym_ATsubpackage] = ACTIONS(195),
+    [anon_sym_ATuses] = ACTIONS(195),
+    [anon_sym_ATauthor] = ACTIONS(195),
+    [anon_sym_ATglobal] = ACTIONS(195),
+    [anon_sym_ATlink] = ACTIONS(195),
+    [anon_sym_ATmethod] = ACTIONS(195),
+    [anon_sym_ATparam] = ACTIONS(195),
+    [anon_sym_ATproperty] = ACTIONS(197),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(195),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(195),
+    [anon_sym_ATreturn] = ACTIONS(195),
+    [anon_sym_ATsee] = ACTIONS(195),
+    [anon_sym_ATthrows] = ACTIONS(195),
+    [anon_sym_ATvar] = ACTIONS(195),
+    [anon_sym_ATdeprecated] = ACTIONS(195),
+    [anon_sym_ATsince] = ACTIONS(195),
+    [anon_sym_ATversion] = ACTIONS(195),
+    [anon_sym_ATafter] = ACTIONS(197),
+    [anon_sym_ATafterClass] = ACTIONS(195),
+    [anon_sym_ATannotation] = ACTIONS(195),
+    [anon_sym_ATbackupGlobals] = ACTIONS(195),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(195),
+    [anon_sym_ATbefore] = ACTIONS(197),
+    [anon_sym_ATbeforeClass] = ACTIONS(195),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(197),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(195),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(195),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(195),
+    [anon_sym_ATcovers] = ACTIONS(197),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(197),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(195),
+    [anon_sym_ATcoversNothing] = ACTIONS(195),
+    [anon_sym_ATdataProvider] = ACTIONS(195),
+    [anon_sym_ATdepends] = ACTIONS(197),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(195),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(195),
+    [anon_sym_ATgroup] = ACTIONS(195),
+    [anon_sym_ATlarge] = ACTIONS(195),
+    [anon_sym_ATmedium] = ACTIONS(195),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(195),
+    [anon_sym_ATrequires] = ACTIONS(197),
+    [anon_sym_ATrequiresusages] = ACTIONS(195),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(195),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(195),
+    [anon_sym_ATsmall] = ACTIONS(195),
+    [anon_sym_ATtest] = ACTIONS(197),
+    [anon_sym_ATtestWith] = ACTIONS(195),
+    [anon_sym_ATtestdox] = ACTIONS(195),
+    [anon_sym_ATticket] = ACTIONS(195),
+    [sym__end] = ACTIONS(195),
+    [sym_text] = ACTIONS(49),
   },
   [23] = {
-    [sym_inline_tag] = STATE(50),
-    [sym_description] = STATE(69),
-    [aux_sym_description_repeat1] = STATE(50),
+    [sym_description] = STATE(59),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
     [anon_sym_LBRACE] = ACTIONS(5),
-    [anon_sym_ATapi] = ACTIONS(184),
-    [anon_sym_ATfilesource] = ACTIONS(184),
-    [anon_sym_ATignore] = ACTIONS(184),
-    [anon_sym_ATcategory] = ACTIONS(184),
-    [anon_sym_ATcopyright] = ACTIONS(184),
-    [anon_sym_ATtodo] = ACTIONS(184),
-    [anon_sym_ATexample] = ACTIONS(184),
-    [anon_sym_ATlicense] = ACTIONS(184),
-    [anon_sym_ATpackage] = ACTIONS(184),
-    [anon_sym_ATsource] = ACTIONS(184),
-    [anon_sym_ATsubpackage] = ACTIONS(184),
-    [anon_sym_ATuses] = ACTIONS(184),
-    [anon_sym_ATauthor] = ACTIONS(184),
-    [anon_sym_ATglobal] = ACTIONS(184),
-    [anon_sym_ATinternal] = ACTIONS(184),
-    [anon_sym_ATlink] = ACTIONS(184),
-    [anon_sym_ATmethod] = ACTIONS(184),
-    [anon_sym_ATparam] = ACTIONS(184),
-    [anon_sym_ATproperty] = ACTIONS(186),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(184),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(184),
-    [anon_sym_ATreturn] = ACTIONS(184),
-    [anon_sym_ATsee] = ACTIONS(184),
-    [anon_sym_ATthrows] = ACTIONS(184),
-    [anon_sym_ATvar] = ACTIONS(184),
-    [anon_sym_ATdeprecated] = ACTIONS(184),
-    [anon_sym_ATsince] = ACTIONS(184),
-    [anon_sym_ATversion] = ACTIONS(184),
-    [anon_sym_ATafter] = ACTIONS(186),
-    [anon_sym_ATafterClass] = ACTIONS(184),
-    [anon_sym_ATannotation] = ACTIONS(184),
-    [anon_sym_ATbackupGlobals] = ACTIONS(184),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(184),
-    [anon_sym_ATbefore] = ACTIONS(186),
-    [anon_sym_ATbeforeClass] = ACTIONS(184),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(186),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(184),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(184),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(184),
-    [anon_sym_ATcovers] = ACTIONS(186),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(186),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(184),
-    [anon_sym_ATcoversNothing] = ACTIONS(184),
-    [anon_sym_ATdataProvider] = ACTIONS(184),
-    [anon_sym_ATdepends] = ACTIONS(186),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(184),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(184),
-    [anon_sym_ATgroup] = ACTIONS(184),
-    [anon_sym_ATlarge] = ACTIONS(184),
-    [anon_sym_ATmedium] = ACTIONS(184),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(184),
-    [anon_sym_ATrequires] = ACTIONS(186),
-    [anon_sym_ATrequiresusages] = ACTIONS(184),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(184),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(184),
-    [anon_sym_ATsmall] = ACTIONS(184),
-    [anon_sym_ATtest] = ACTIONS(186),
-    [anon_sym_ATtestWith] = ACTIONS(184),
-    [anon_sym_ATtestdox] = ACTIONS(184),
-    [anon_sym_ATticket] = ACTIONS(184),
-    [sym_text] = ACTIONS(45),
-    [sym__end] = ACTIONS(184),
+    [anon_sym_ATinheritdoc] = ACTIONS(199),
+    [anon_sym_ATinheritDoc] = ACTIONS(199),
+    [anon_sym_ATapi] = ACTIONS(199),
+    [anon_sym_ATfilesource] = ACTIONS(199),
+    [anon_sym_ATignore] = ACTIONS(199),
+    [anon_sym_ATinternal] = ACTIONS(199),
+    [anon_sym_ATcategory] = ACTIONS(199),
+    [anon_sym_ATcopyright] = ACTIONS(199),
+    [anon_sym_ATtodo] = ACTIONS(199),
+    [anon_sym_ATexample] = ACTIONS(199),
+    [anon_sym_ATlicense] = ACTIONS(199),
+    [anon_sym_ATpackage] = ACTIONS(199),
+    [anon_sym_ATsource] = ACTIONS(199),
+    [anon_sym_ATsubpackage] = ACTIONS(199),
+    [anon_sym_ATuses] = ACTIONS(199),
+    [anon_sym_ATauthor] = ACTIONS(199),
+    [anon_sym_ATglobal] = ACTIONS(199),
+    [anon_sym_ATlink] = ACTIONS(199),
+    [anon_sym_ATmethod] = ACTIONS(199),
+    [anon_sym_ATparam] = ACTIONS(199),
+    [anon_sym_ATproperty] = ACTIONS(201),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(199),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(199),
+    [anon_sym_ATreturn] = ACTIONS(199),
+    [anon_sym_ATsee] = ACTIONS(199),
+    [anon_sym_ATthrows] = ACTIONS(199),
+    [anon_sym_ATvar] = ACTIONS(199),
+    [anon_sym_ATdeprecated] = ACTIONS(199),
+    [anon_sym_ATsince] = ACTIONS(199),
+    [anon_sym_ATversion] = ACTIONS(199),
+    [anon_sym_ATafter] = ACTIONS(201),
+    [anon_sym_ATafterClass] = ACTIONS(199),
+    [anon_sym_ATannotation] = ACTIONS(199),
+    [anon_sym_ATbackupGlobals] = ACTIONS(199),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(199),
+    [anon_sym_ATbefore] = ACTIONS(201),
+    [anon_sym_ATbeforeClass] = ACTIONS(199),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(201),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(199),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(199),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(199),
+    [anon_sym_ATcovers] = ACTIONS(201),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(201),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(199),
+    [anon_sym_ATcoversNothing] = ACTIONS(199),
+    [anon_sym_ATdataProvider] = ACTIONS(199),
+    [anon_sym_ATdepends] = ACTIONS(201),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(199),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(199),
+    [anon_sym_ATgroup] = ACTIONS(199),
+    [anon_sym_ATlarge] = ACTIONS(199),
+    [anon_sym_ATmedium] = ACTIONS(199),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(199),
+    [anon_sym_ATrequires] = ACTIONS(201),
+    [anon_sym_ATrequiresusages] = ACTIONS(199),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(199),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(199),
+    [anon_sym_ATsmall] = ACTIONS(199),
+    [anon_sym_ATtest] = ACTIONS(201),
+    [anon_sym_ATtestWith] = ACTIONS(199),
+    [anon_sym_ATtestdox] = ACTIONS(199),
+    [anon_sym_ATticket] = ACTIONS(199),
+    [sym__end] = ACTIONS(199),
+    [sym_text] = ACTIONS(49),
   },
   [24] = {
-    [sym_inline_tag] = STATE(50),
-    [sym_description] = STATE(71),
-    [aux_sym_description_repeat1] = STATE(50),
+    [sym_description] = STATE(66),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
     [anon_sym_LBRACE] = ACTIONS(5),
-    [anon_sym_ATapi] = ACTIONS(188),
-    [anon_sym_ATfilesource] = ACTIONS(188),
-    [anon_sym_ATignore] = ACTIONS(188),
-    [anon_sym_ATcategory] = ACTIONS(188),
-    [anon_sym_ATcopyright] = ACTIONS(188),
-    [anon_sym_ATtodo] = ACTIONS(188),
-    [anon_sym_ATexample] = ACTIONS(188),
-    [anon_sym_ATlicense] = ACTIONS(188),
-    [anon_sym_ATpackage] = ACTIONS(188),
-    [anon_sym_ATsource] = ACTIONS(188),
-    [anon_sym_ATsubpackage] = ACTIONS(188),
-    [anon_sym_ATuses] = ACTIONS(188),
-    [anon_sym_ATauthor] = ACTIONS(188),
-    [anon_sym_ATglobal] = ACTIONS(188),
-    [anon_sym_ATinternal] = ACTIONS(188),
-    [anon_sym_ATlink] = ACTIONS(188),
-    [anon_sym_ATmethod] = ACTIONS(188),
-    [anon_sym_ATparam] = ACTIONS(188),
-    [anon_sym_ATproperty] = ACTIONS(190),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(188),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(188),
-    [anon_sym_ATreturn] = ACTIONS(188),
-    [anon_sym_ATsee] = ACTIONS(188),
-    [anon_sym_ATthrows] = ACTIONS(188),
-    [anon_sym_ATvar] = ACTIONS(188),
-    [anon_sym_ATdeprecated] = ACTIONS(188),
-    [anon_sym_ATsince] = ACTIONS(188),
-    [anon_sym_ATversion] = ACTIONS(188),
-    [anon_sym_ATafter] = ACTIONS(190),
-    [anon_sym_ATafterClass] = ACTIONS(188),
-    [anon_sym_ATannotation] = ACTIONS(188),
-    [anon_sym_ATbackupGlobals] = ACTIONS(188),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(188),
-    [anon_sym_ATbefore] = ACTIONS(190),
-    [anon_sym_ATbeforeClass] = ACTIONS(188),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(190),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(188),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(188),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(188),
-    [anon_sym_ATcovers] = ACTIONS(190),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(190),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(188),
-    [anon_sym_ATcoversNothing] = ACTIONS(188),
-    [anon_sym_ATdataProvider] = ACTIONS(188),
-    [anon_sym_ATdepends] = ACTIONS(190),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(188),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(188),
-    [anon_sym_ATgroup] = ACTIONS(188),
-    [anon_sym_ATlarge] = ACTIONS(188),
-    [anon_sym_ATmedium] = ACTIONS(188),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(188),
-    [anon_sym_ATrequires] = ACTIONS(190),
-    [anon_sym_ATrequiresusages] = ACTIONS(188),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(188),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(188),
-    [anon_sym_ATsmall] = ACTIONS(188),
-    [anon_sym_ATtest] = ACTIONS(190),
-    [anon_sym_ATtestWith] = ACTIONS(188),
-    [anon_sym_ATtestdox] = ACTIONS(188),
-    [anon_sym_ATticket] = ACTIONS(188),
-    [sym_text] = ACTIONS(45),
-    [sym__end] = ACTIONS(188),
+    [anon_sym_ATinheritdoc] = ACTIONS(203),
+    [anon_sym_ATinheritDoc] = ACTIONS(203),
+    [anon_sym_ATapi] = ACTIONS(203),
+    [anon_sym_ATfilesource] = ACTIONS(203),
+    [anon_sym_ATignore] = ACTIONS(203),
+    [anon_sym_ATinternal] = ACTIONS(203),
+    [anon_sym_ATcategory] = ACTIONS(203),
+    [anon_sym_ATcopyright] = ACTIONS(203),
+    [anon_sym_ATtodo] = ACTIONS(203),
+    [anon_sym_ATexample] = ACTIONS(203),
+    [anon_sym_ATlicense] = ACTIONS(203),
+    [anon_sym_ATpackage] = ACTIONS(203),
+    [anon_sym_ATsource] = ACTIONS(203),
+    [anon_sym_ATsubpackage] = ACTIONS(203),
+    [anon_sym_ATuses] = ACTIONS(203),
+    [anon_sym_ATauthor] = ACTIONS(203),
+    [anon_sym_ATglobal] = ACTIONS(203),
+    [anon_sym_ATlink] = ACTIONS(203),
+    [anon_sym_ATmethod] = ACTIONS(203),
+    [anon_sym_ATparam] = ACTIONS(203),
+    [anon_sym_ATproperty] = ACTIONS(205),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(203),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(203),
+    [anon_sym_ATreturn] = ACTIONS(203),
+    [anon_sym_ATsee] = ACTIONS(203),
+    [anon_sym_ATthrows] = ACTIONS(203),
+    [anon_sym_ATvar] = ACTIONS(203),
+    [anon_sym_ATdeprecated] = ACTIONS(203),
+    [anon_sym_ATsince] = ACTIONS(203),
+    [anon_sym_ATversion] = ACTIONS(203),
+    [anon_sym_ATafter] = ACTIONS(205),
+    [anon_sym_ATafterClass] = ACTIONS(203),
+    [anon_sym_ATannotation] = ACTIONS(203),
+    [anon_sym_ATbackupGlobals] = ACTIONS(203),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(203),
+    [anon_sym_ATbefore] = ACTIONS(205),
+    [anon_sym_ATbeforeClass] = ACTIONS(203),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(205),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(203),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(203),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(203),
+    [anon_sym_ATcovers] = ACTIONS(205),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(205),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(203),
+    [anon_sym_ATcoversNothing] = ACTIONS(203),
+    [anon_sym_ATdataProvider] = ACTIONS(203),
+    [anon_sym_ATdepends] = ACTIONS(205),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(203),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(203),
+    [anon_sym_ATgroup] = ACTIONS(203),
+    [anon_sym_ATlarge] = ACTIONS(203),
+    [anon_sym_ATmedium] = ACTIONS(203),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(203),
+    [anon_sym_ATrequires] = ACTIONS(205),
+    [anon_sym_ATrequiresusages] = ACTIONS(203),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(203),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(203),
+    [anon_sym_ATsmall] = ACTIONS(203),
+    [anon_sym_ATtest] = ACTIONS(205),
+    [anon_sym_ATtestWith] = ACTIONS(203),
+    [anon_sym_ATtestdox] = ACTIONS(203),
+    [anon_sym_ATticket] = ACTIONS(203),
+    [sym__end] = ACTIONS(203),
+    [sym_text] = ACTIONS(49),
   },
   [25] = {
-    [sym_inline_tag] = STATE(50),
-    [sym_description] = STATE(70),
-    [aux_sym_description_repeat1] = STATE(50),
+    [sym_description] = STATE(75),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
     [anon_sym_LBRACE] = ACTIONS(5),
-    [anon_sym_ATapi] = ACTIONS(192),
-    [anon_sym_ATfilesource] = ACTIONS(192),
-    [anon_sym_ATignore] = ACTIONS(192),
-    [anon_sym_ATcategory] = ACTIONS(192),
-    [anon_sym_ATcopyright] = ACTIONS(192),
-    [anon_sym_ATtodo] = ACTIONS(192),
-    [anon_sym_ATexample] = ACTIONS(192),
-    [anon_sym_ATlicense] = ACTIONS(192),
-    [anon_sym_ATpackage] = ACTIONS(192),
-    [anon_sym_ATsource] = ACTIONS(192),
-    [anon_sym_ATsubpackage] = ACTIONS(192),
-    [anon_sym_ATuses] = ACTIONS(192),
-    [anon_sym_ATauthor] = ACTIONS(192),
-    [anon_sym_ATglobal] = ACTIONS(192),
-    [anon_sym_ATinternal] = ACTIONS(192),
-    [anon_sym_ATlink] = ACTIONS(192),
-    [anon_sym_ATmethod] = ACTIONS(192),
-    [anon_sym_ATparam] = ACTIONS(192),
-    [anon_sym_ATproperty] = ACTIONS(194),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(192),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(192),
-    [anon_sym_ATreturn] = ACTIONS(192),
-    [anon_sym_ATsee] = ACTIONS(192),
-    [anon_sym_ATthrows] = ACTIONS(192),
-    [anon_sym_ATvar] = ACTIONS(192),
-    [anon_sym_ATdeprecated] = ACTIONS(192),
-    [anon_sym_ATsince] = ACTIONS(192),
-    [anon_sym_ATversion] = ACTIONS(192),
-    [anon_sym_ATafter] = ACTIONS(194),
-    [anon_sym_ATafterClass] = ACTIONS(192),
-    [anon_sym_ATannotation] = ACTIONS(192),
-    [anon_sym_ATbackupGlobals] = ACTIONS(192),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(192),
-    [anon_sym_ATbefore] = ACTIONS(194),
-    [anon_sym_ATbeforeClass] = ACTIONS(192),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(194),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(192),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(192),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(192),
-    [anon_sym_ATcovers] = ACTIONS(194),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(194),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(192),
-    [anon_sym_ATcoversNothing] = ACTIONS(192),
-    [anon_sym_ATdataProvider] = ACTIONS(192),
-    [anon_sym_ATdepends] = ACTIONS(194),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(192),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(192),
-    [anon_sym_ATgroup] = ACTIONS(192),
-    [anon_sym_ATlarge] = ACTIONS(192),
-    [anon_sym_ATmedium] = ACTIONS(192),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(192),
-    [anon_sym_ATrequires] = ACTIONS(194),
-    [anon_sym_ATrequiresusages] = ACTIONS(192),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(192),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(192),
-    [anon_sym_ATsmall] = ACTIONS(192),
-    [anon_sym_ATtest] = ACTIONS(194),
-    [anon_sym_ATtestWith] = ACTIONS(192),
-    [anon_sym_ATtestdox] = ACTIONS(192),
-    [anon_sym_ATticket] = ACTIONS(192),
-    [sym_text] = ACTIONS(45),
-    [sym__end] = ACTIONS(192),
-  },
-  [26] = {
-    [sym_inline_tag] = STATE(50),
-    [sym_description] = STATE(65),
-    [aux_sym_description_repeat1] = STATE(50),
-    [anon_sym_LBRACE] = ACTIONS(5),
-    [anon_sym_ATapi] = ACTIONS(196),
-    [anon_sym_ATfilesource] = ACTIONS(196),
-    [anon_sym_ATignore] = ACTIONS(196),
-    [anon_sym_ATcategory] = ACTIONS(196),
-    [anon_sym_ATcopyright] = ACTIONS(196),
-    [anon_sym_ATtodo] = ACTIONS(196),
-    [anon_sym_ATexample] = ACTIONS(196),
-    [anon_sym_ATlicense] = ACTIONS(196),
-    [anon_sym_ATpackage] = ACTIONS(196),
-    [anon_sym_ATsource] = ACTIONS(196),
-    [anon_sym_ATsubpackage] = ACTIONS(196),
-    [anon_sym_ATuses] = ACTIONS(196),
-    [anon_sym_ATauthor] = ACTIONS(196),
-    [anon_sym_ATglobal] = ACTIONS(196),
-    [anon_sym_ATinternal] = ACTIONS(196),
-    [anon_sym_ATlink] = ACTIONS(196),
-    [anon_sym_ATmethod] = ACTIONS(196),
-    [anon_sym_ATparam] = ACTIONS(196),
-    [anon_sym_ATproperty] = ACTIONS(198),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(196),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(196),
-    [anon_sym_ATreturn] = ACTIONS(196),
-    [anon_sym_ATsee] = ACTIONS(196),
-    [anon_sym_ATthrows] = ACTIONS(196),
-    [anon_sym_ATvar] = ACTIONS(196),
-    [anon_sym_ATdeprecated] = ACTIONS(196),
-    [anon_sym_ATsince] = ACTIONS(196),
-    [anon_sym_ATversion] = ACTIONS(196),
-    [anon_sym_ATafter] = ACTIONS(198),
-    [anon_sym_ATafterClass] = ACTIONS(196),
-    [anon_sym_ATannotation] = ACTIONS(196),
-    [anon_sym_ATbackupGlobals] = ACTIONS(196),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(196),
-    [anon_sym_ATbefore] = ACTIONS(198),
-    [anon_sym_ATbeforeClass] = ACTIONS(196),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(198),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(196),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(196),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(196),
-    [anon_sym_ATcovers] = ACTIONS(198),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(198),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(196),
-    [anon_sym_ATcoversNothing] = ACTIONS(196),
-    [anon_sym_ATdataProvider] = ACTIONS(196),
-    [anon_sym_ATdepends] = ACTIONS(198),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(196),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(196),
-    [anon_sym_ATgroup] = ACTIONS(196),
-    [anon_sym_ATlarge] = ACTIONS(196),
-    [anon_sym_ATmedium] = ACTIONS(196),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(196),
-    [anon_sym_ATrequires] = ACTIONS(198),
-    [anon_sym_ATrequiresusages] = ACTIONS(196),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(196),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(196),
-    [anon_sym_ATsmall] = ACTIONS(196),
-    [anon_sym_ATtest] = ACTIONS(198),
-    [anon_sym_ATtestWith] = ACTIONS(196),
-    [anon_sym_ATtestdox] = ACTIONS(196),
-    [anon_sym_ATticket] = ACTIONS(196),
-    [sym_text] = ACTIONS(45),
-    [sym__end] = ACTIONS(196),
-  },
-  [27] = {
-    [sym_inline_tag] = STATE(50),
-    [sym_description] = STATE(81),
-    [aux_sym_description_repeat1] = STATE(50),
-    [anon_sym_LBRACE] = ACTIONS(5),
-    [anon_sym_ATapi] = ACTIONS(200),
-    [anon_sym_ATfilesource] = ACTIONS(200),
-    [anon_sym_ATignore] = ACTIONS(200),
-    [anon_sym_ATcategory] = ACTIONS(200),
-    [anon_sym_ATcopyright] = ACTIONS(200),
-    [anon_sym_ATtodo] = ACTIONS(200),
-    [anon_sym_ATexample] = ACTIONS(200),
-    [anon_sym_ATlicense] = ACTIONS(200),
-    [anon_sym_ATpackage] = ACTIONS(200),
-    [anon_sym_ATsource] = ACTIONS(200),
-    [anon_sym_ATsubpackage] = ACTIONS(200),
-    [anon_sym_ATuses] = ACTIONS(200),
-    [anon_sym_ATauthor] = ACTIONS(200),
-    [anon_sym_ATglobal] = ACTIONS(200),
-    [anon_sym_ATinternal] = ACTIONS(200),
-    [anon_sym_ATlink] = ACTIONS(200),
-    [anon_sym_ATmethod] = ACTIONS(200),
-    [anon_sym_ATparam] = ACTIONS(200),
-    [anon_sym_ATproperty] = ACTIONS(202),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(200),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(200),
-    [anon_sym_ATreturn] = ACTIONS(200),
-    [anon_sym_ATsee] = ACTIONS(200),
-    [anon_sym_ATthrows] = ACTIONS(200),
-    [anon_sym_ATvar] = ACTIONS(200),
-    [anon_sym_ATdeprecated] = ACTIONS(200),
-    [anon_sym_ATsince] = ACTIONS(200),
-    [anon_sym_ATversion] = ACTIONS(200),
-    [anon_sym_ATafter] = ACTIONS(202),
-    [anon_sym_ATafterClass] = ACTIONS(200),
-    [anon_sym_ATannotation] = ACTIONS(200),
-    [anon_sym_ATbackupGlobals] = ACTIONS(200),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(200),
-    [anon_sym_ATbefore] = ACTIONS(202),
-    [anon_sym_ATbeforeClass] = ACTIONS(200),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(202),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(200),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(200),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(200),
-    [anon_sym_ATcovers] = ACTIONS(202),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(202),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(200),
-    [anon_sym_ATcoversNothing] = ACTIONS(200),
-    [anon_sym_ATdataProvider] = ACTIONS(200),
-    [anon_sym_ATdepends] = ACTIONS(202),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(200),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(200),
-    [anon_sym_ATgroup] = ACTIONS(200),
-    [anon_sym_ATlarge] = ACTIONS(200),
-    [anon_sym_ATmedium] = ACTIONS(200),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(200),
-    [anon_sym_ATrequires] = ACTIONS(202),
-    [anon_sym_ATrequiresusages] = ACTIONS(200),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(200),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(200),
-    [anon_sym_ATsmall] = ACTIONS(200),
-    [anon_sym_ATtest] = ACTIONS(202),
-    [anon_sym_ATtestWith] = ACTIONS(200),
-    [anon_sym_ATtestdox] = ACTIONS(200),
-    [anon_sym_ATticket] = ACTIONS(200),
-    [sym_text] = ACTIONS(45),
-    [sym__end] = ACTIONS(200),
-  },
-  [28] = {
-    [aux_sym__phpdoc_array_types_repeat1] = STATE(28),
-    [anon_sym_LBRACE] = ACTIONS(143),
-    [anon_sym_ATapi] = ACTIONS(143),
-    [anon_sym_ATfilesource] = ACTIONS(143),
-    [anon_sym_ATignore] = ACTIONS(143),
-    [anon_sym_ATcategory] = ACTIONS(143),
-    [anon_sym_ATcopyright] = ACTIONS(143),
-    [anon_sym_ATtodo] = ACTIONS(143),
-    [anon_sym_ATexample] = ACTIONS(143),
-    [anon_sym_ATlicense] = ACTIONS(143),
-    [anon_sym_ATpackage] = ACTIONS(143),
-    [anon_sym_ATsource] = ACTIONS(143),
-    [anon_sym_ATsubpackage] = ACTIONS(143),
-    [anon_sym_ATuses] = ACTIONS(143),
-    [anon_sym_ATauthor] = ACTIONS(143),
-    [anon_sym_ATglobal] = ACTIONS(143),
-    [anon_sym_ATinternal] = ACTIONS(143),
-    [anon_sym_ATlink] = ACTIONS(143),
-    [anon_sym_ATmethod] = ACTIONS(143),
-    [anon_sym_ATparam] = ACTIONS(143),
-    [anon_sym_ATproperty] = ACTIONS(145),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(143),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(143),
-    [anon_sym_ATreturn] = ACTIONS(143),
-    [anon_sym_ATsee] = ACTIONS(143),
-    [anon_sym_ATthrows] = ACTIONS(143),
-    [anon_sym_ATvar] = ACTIONS(143),
-    [anon_sym_ATdeprecated] = ACTIONS(143),
-    [anon_sym_ATsince] = ACTIONS(143),
-    [anon_sym_ATversion] = ACTIONS(143),
-    [anon_sym_ATafter] = ACTIONS(145),
-    [anon_sym_ATafterClass] = ACTIONS(143),
-    [anon_sym_ATannotation] = ACTIONS(143),
-    [anon_sym_ATbackupGlobals] = ACTIONS(143),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(143),
-    [anon_sym_ATbefore] = ACTIONS(145),
-    [anon_sym_ATbeforeClass] = ACTIONS(143),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(145),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(143),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(143),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(143),
-    [anon_sym_ATcovers] = ACTIONS(145),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(145),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(143),
-    [anon_sym_ATcoversNothing] = ACTIONS(143),
-    [anon_sym_ATdataProvider] = ACTIONS(143),
-    [anon_sym_ATdepends] = ACTIONS(145),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(143),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(143),
-    [anon_sym_ATgroup] = ACTIONS(143),
-    [anon_sym_ATlarge] = ACTIONS(143),
-    [anon_sym_ATmedium] = ACTIONS(143),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(143),
-    [anon_sym_ATrequires] = ACTIONS(145),
-    [anon_sym_ATrequiresusages] = ACTIONS(143),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(143),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(143),
-    [anon_sym_ATsmall] = ACTIONS(143),
-    [anon_sym_ATtest] = ACTIONS(145),
-    [anon_sym_ATtestWith] = ACTIONS(143),
-    [anon_sym_ATtestdox] = ACTIONS(143),
-    [anon_sym_ATticket] = ACTIONS(143),
-    [anon_sym_LBRACK_RBRACK] = ACTIONS(204),
-    [anon_sym_PIPE] = ACTIONS(143),
-    [sym_text] = ACTIONS(145),
-    [sym__end] = ACTIONS(143),
-  },
-  [29] = {
-    [sym_inline_tag] = STATE(50),
-    [sym_description] = STATE(64),
-    [aux_sym_description_repeat1] = STATE(50),
-    [anon_sym_LBRACE] = ACTIONS(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(207),
+    [anon_sym_ATinheritDoc] = ACTIONS(207),
     [anon_sym_ATapi] = ACTIONS(207),
     [anon_sym_ATfilesource] = ACTIONS(207),
     [anon_sym_ATignore] = ACTIONS(207),
+    [anon_sym_ATinternal] = ACTIONS(207),
     [anon_sym_ATcategory] = ACTIONS(207),
     [anon_sym_ATcopyright] = ACTIONS(207),
     [anon_sym_ATtodo] = ACTIONS(207),
@@ -6172,7 +5936,6 @@ static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_ATuses] = ACTIONS(207),
     [anon_sym_ATauthor] = ACTIONS(207),
     [anon_sym_ATglobal] = ACTIONS(207),
-    [anon_sym_ATinternal] = ACTIONS(207),
     [anon_sym_ATlink] = ACTIONS(207),
     [anon_sym_ATmethod] = ACTIONS(207),
     [anon_sym_ATparam] = ACTIONS(207),
@@ -6218,17 +5981,20 @@ static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_ATtestWith] = ACTIONS(207),
     [anon_sym_ATtestdox] = ACTIONS(207),
     [anon_sym_ATticket] = ACTIONS(207),
-    [sym_text] = ACTIONS(45),
     [sym__end] = ACTIONS(207),
+    [sym_text] = ACTIONS(49),
   },
-  [30] = {
-    [sym_inline_tag] = STATE(50),
+  [26] = {
     [sym_description] = STATE(73),
-    [aux_sym_description_repeat1] = STATE(50),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
     [anon_sym_LBRACE] = ACTIONS(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(211),
+    [anon_sym_ATinheritDoc] = ACTIONS(211),
     [anon_sym_ATapi] = ACTIONS(211),
     [anon_sym_ATfilesource] = ACTIONS(211),
     [anon_sym_ATignore] = ACTIONS(211),
+    [anon_sym_ATinternal] = ACTIONS(211),
     [anon_sym_ATcategory] = ACTIONS(211),
     [anon_sym_ATcopyright] = ACTIONS(211),
     [anon_sym_ATtodo] = ACTIONS(211),
@@ -6240,7 +6006,6 @@ static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_ATuses] = ACTIONS(211),
     [anon_sym_ATauthor] = ACTIONS(211),
     [anon_sym_ATglobal] = ACTIONS(211),
-    [anon_sym_ATinternal] = ACTIONS(211),
     [anon_sym_ATlink] = ACTIONS(211),
     [anon_sym_ATmethod] = ACTIONS(211),
     [anon_sym_ATparam] = ACTIONS(211),
@@ -6286,1366 +6051,2136 @@ static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_ATtestWith] = ACTIONS(211),
     [anon_sym_ATtestdox] = ACTIONS(211),
     [anon_sym_ATticket] = ACTIONS(211),
-    [sym_text] = ACTIONS(45),
     [sym__end] = ACTIONS(211),
+    [sym_text] = ACTIONS(49),
+  },
+  [27] = {
+    [sym_description] = STATE(80),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
+    [anon_sym_LBRACE] = ACTIONS(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(215),
+    [anon_sym_ATinheritDoc] = ACTIONS(215),
+    [anon_sym_ATapi] = ACTIONS(215),
+    [anon_sym_ATfilesource] = ACTIONS(215),
+    [anon_sym_ATignore] = ACTIONS(215),
+    [anon_sym_ATinternal] = ACTIONS(215),
+    [anon_sym_ATcategory] = ACTIONS(215),
+    [anon_sym_ATcopyright] = ACTIONS(215),
+    [anon_sym_ATtodo] = ACTIONS(215),
+    [anon_sym_ATexample] = ACTIONS(215),
+    [anon_sym_ATlicense] = ACTIONS(215),
+    [anon_sym_ATpackage] = ACTIONS(215),
+    [anon_sym_ATsource] = ACTIONS(215),
+    [anon_sym_ATsubpackage] = ACTIONS(215),
+    [anon_sym_ATuses] = ACTIONS(215),
+    [anon_sym_ATauthor] = ACTIONS(215),
+    [anon_sym_ATglobal] = ACTIONS(215),
+    [anon_sym_ATlink] = ACTIONS(215),
+    [anon_sym_ATmethod] = ACTIONS(215),
+    [anon_sym_ATparam] = ACTIONS(215),
+    [anon_sym_ATproperty] = ACTIONS(217),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(215),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(215),
+    [anon_sym_ATreturn] = ACTIONS(215),
+    [anon_sym_ATsee] = ACTIONS(215),
+    [anon_sym_ATthrows] = ACTIONS(215),
+    [anon_sym_ATvar] = ACTIONS(215),
+    [anon_sym_ATdeprecated] = ACTIONS(215),
+    [anon_sym_ATsince] = ACTIONS(215),
+    [anon_sym_ATversion] = ACTIONS(215),
+    [anon_sym_ATafter] = ACTIONS(217),
+    [anon_sym_ATafterClass] = ACTIONS(215),
+    [anon_sym_ATannotation] = ACTIONS(215),
+    [anon_sym_ATbackupGlobals] = ACTIONS(215),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(215),
+    [anon_sym_ATbefore] = ACTIONS(217),
+    [anon_sym_ATbeforeClass] = ACTIONS(215),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(217),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(215),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(215),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(215),
+    [anon_sym_ATcovers] = ACTIONS(217),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(217),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(215),
+    [anon_sym_ATcoversNothing] = ACTIONS(215),
+    [anon_sym_ATdataProvider] = ACTIONS(215),
+    [anon_sym_ATdepends] = ACTIONS(217),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(215),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(215),
+    [anon_sym_ATgroup] = ACTIONS(215),
+    [anon_sym_ATlarge] = ACTIONS(215),
+    [anon_sym_ATmedium] = ACTIONS(215),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(215),
+    [anon_sym_ATrequires] = ACTIONS(217),
+    [anon_sym_ATrequiresusages] = ACTIONS(215),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(215),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(215),
+    [anon_sym_ATsmall] = ACTIONS(215),
+    [anon_sym_ATtest] = ACTIONS(217),
+    [anon_sym_ATtestWith] = ACTIONS(215),
+    [anon_sym_ATtestdox] = ACTIONS(215),
+    [anon_sym_ATticket] = ACTIONS(215),
+    [sym__end] = ACTIONS(215),
+    [sym_text] = ACTIONS(49),
+  },
+  [28] = {
+    [sym_description] = STATE(77),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
+    [anon_sym_LBRACE] = ACTIONS(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(219),
+    [anon_sym_ATinheritDoc] = ACTIONS(219),
+    [anon_sym_ATapi] = ACTIONS(219),
+    [anon_sym_ATfilesource] = ACTIONS(219),
+    [anon_sym_ATignore] = ACTIONS(219),
+    [anon_sym_ATinternal] = ACTIONS(219),
+    [anon_sym_ATcategory] = ACTIONS(219),
+    [anon_sym_ATcopyright] = ACTIONS(219),
+    [anon_sym_ATtodo] = ACTIONS(219),
+    [anon_sym_ATexample] = ACTIONS(219),
+    [anon_sym_ATlicense] = ACTIONS(219),
+    [anon_sym_ATpackage] = ACTIONS(219),
+    [anon_sym_ATsource] = ACTIONS(219),
+    [anon_sym_ATsubpackage] = ACTIONS(219),
+    [anon_sym_ATuses] = ACTIONS(219),
+    [anon_sym_ATauthor] = ACTIONS(219),
+    [anon_sym_ATglobal] = ACTIONS(219),
+    [anon_sym_ATlink] = ACTIONS(219),
+    [anon_sym_ATmethod] = ACTIONS(219),
+    [anon_sym_ATparam] = ACTIONS(219),
+    [anon_sym_ATproperty] = ACTIONS(221),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(219),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(219),
+    [anon_sym_ATreturn] = ACTIONS(219),
+    [anon_sym_ATsee] = ACTIONS(219),
+    [anon_sym_ATthrows] = ACTIONS(219),
+    [anon_sym_ATvar] = ACTIONS(219),
+    [anon_sym_ATdeprecated] = ACTIONS(219),
+    [anon_sym_ATsince] = ACTIONS(219),
+    [anon_sym_ATversion] = ACTIONS(219),
+    [anon_sym_ATafter] = ACTIONS(221),
+    [anon_sym_ATafterClass] = ACTIONS(219),
+    [anon_sym_ATannotation] = ACTIONS(219),
+    [anon_sym_ATbackupGlobals] = ACTIONS(219),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(219),
+    [anon_sym_ATbefore] = ACTIONS(221),
+    [anon_sym_ATbeforeClass] = ACTIONS(219),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(221),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(219),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(219),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(219),
+    [anon_sym_ATcovers] = ACTIONS(221),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(221),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(219),
+    [anon_sym_ATcoversNothing] = ACTIONS(219),
+    [anon_sym_ATdataProvider] = ACTIONS(219),
+    [anon_sym_ATdepends] = ACTIONS(221),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(219),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(219),
+    [anon_sym_ATgroup] = ACTIONS(219),
+    [anon_sym_ATlarge] = ACTIONS(219),
+    [anon_sym_ATmedium] = ACTIONS(219),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(219),
+    [anon_sym_ATrequires] = ACTIONS(221),
+    [anon_sym_ATrequiresusages] = ACTIONS(219),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(219),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(219),
+    [anon_sym_ATsmall] = ACTIONS(219),
+    [anon_sym_ATtest] = ACTIONS(221),
+    [anon_sym_ATtestWith] = ACTIONS(219),
+    [anon_sym_ATtestdox] = ACTIONS(219),
+    [anon_sym_ATticket] = ACTIONS(219),
+    [sym__end] = ACTIONS(219),
+    [sym_text] = ACTIONS(49),
+  },
+  [29] = {
+    [sym_description] = STATE(83),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
+    [anon_sym_LBRACE] = ACTIONS(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(223),
+    [anon_sym_ATinheritDoc] = ACTIONS(223),
+    [anon_sym_ATapi] = ACTIONS(223),
+    [anon_sym_ATfilesource] = ACTIONS(223),
+    [anon_sym_ATignore] = ACTIONS(223),
+    [anon_sym_ATinternal] = ACTIONS(223),
+    [anon_sym_ATcategory] = ACTIONS(223),
+    [anon_sym_ATcopyright] = ACTIONS(223),
+    [anon_sym_ATtodo] = ACTIONS(223),
+    [anon_sym_ATexample] = ACTIONS(223),
+    [anon_sym_ATlicense] = ACTIONS(223),
+    [anon_sym_ATpackage] = ACTIONS(223),
+    [anon_sym_ATsource] = ACTIONS(223),
+    [anon_sym_ATsubpackage] = ACTIONS(223),
+    [anon_sym_ATuses] = ACTIONS(223),
+    [anon_sym_ATauthor] = ACTIONS(223),
+    [anon_sym_ATglobal] = ACTIONS(223),
+    [anon_sym_ATlink] = ACTIONS(223),
+    [anon_sym_ATmethod] = ACTIONS(223),
+    [anon_sym_ATparam] = ACTIONS(223),
+    [anon_sym_ATproperty] = ACTIONS(225),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(223),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(223),
+    [anon_sym_ATreturn] = ACTIONS(223),
+    [anon_sym_ATsee] = ACTIONS(223),
+    [anon_sym_ATthrows] = ACTIONS(223),
+    [anon_sym_ATvar] = ACTIONS(223),
+    [anon_sym_ATdeprecated] = ACTIONS(223),
+    [anon_sym_ATsince] = ACTIONS(223),
+    [anon_sym_ATversion] = ACTIONS(223),
+    [anon_sym_ATafter] = ACTIONS(225),
+    [anon_sym_ATafterClass] = ACTIONS(223),
+    [anon_sym_ATannotation] = ACTIONS(223),
+    [anon_sym_ATbackupGlobals] = ACTIONS(223),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(223),
+    [anon_sym_ATbefore] = ACTIONS(225),
+    [anon_sym_ATbeforeClass] = ACTIONS(223),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(225),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(223),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(223),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(223),
+    [anon_sym_ATcovers] = ACTIONS(225),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(225),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(223),
+    [anon_sym_ATcoversNothing] = ACTIONS(223),
+    [anon_sym_ATdataProvider] = ACTIONS(223),
+    [anon_sym_ATdepends] = ACTIONS(225),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(223),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(223),
+    [anon_sym_ATgroup] = ACTIONS(223),
+    [anon_sym_ATlarge] = ACTIONS(223),
+    [anon_sym_ATmedium] = ACTIONS(223),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(223),
+    [anon_sym_ATrequires] = ACTIONS(225),
+    [anon_sym_ATrequiresusages] = ACTIONS(223),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(223),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(223),
+    [anon_sym_ATsmall] = ACTIONS(223),
+    [anon_sym_ATtest] = ACTIONS(225),
+    [anon_sym_ATtestWith] = ACTIONS(223),
+    [anon_sym_ATtestdox] = ACTIONS(223),
+    [anon_sym_ATticket] = ACTIONS(223),
+    [sym__end] = ACTIONS(223),
+    [sym_text] = ACTIONS(49),
+  },
+  [30] = {
+    [sym_description] = STATE(81),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
+    [anon_sym_LBRACE] = ACTIONS(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(227),
+    [anon_sym_ATinheritDoc] = ACTIONS(227),
+    [anon_sym_ATapi] = ACTIONS(227),
+    [anon_sym_ATfilesource] = ACTIONS(227),
+    [anon_sym_ATignore] = ACTIONS(227),
+    [anon_sym_ATinternal] = ACTIONS(227),
+    [anon_sym_ATcategory] = ACTIONS(227),
+    [anon_sym_ATcopyright] = ACTIONS(227),
+    [anon_sym_ATtodo] = ACTIONS(227),
+    [anon_sym_ATexample] = ACTIONS(227),
+    [anon_sym_ATlicense] = ACTIONS(227),
+    [anon_sym_ATpackage] = ACTIONS(227),
+    [anon_sym_ATsource] = ACTIONS(227),
+    [anon_sym_ATsubpackage] = ACTIONS(227),
+    [anon_sym_ATuses] = ACTIONS(227),
+    [anon_sym_ATauthor] = ACTIONS(227),
+    [anon_sym_ATglobal] = ACTIONS(227),
+    [anon_sym_ATlink] = ACTIONS(227),
+    [anon_sym_ATmethod] = ACTIONS(227),
+    [anon_sym_ATparam] = ACTIONS(227),
+    [anon_sym_ATproperty] = ACTIONS(229),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(227),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(227),
+    [anon_sym_ATreturn] = ACTIONS(227),
+    [anon_sym_ATsee] = ACTIONS(227),
+    [anon_sym_ATthrows] = ACTIONS(227),
+    [anon_sym_ATvar] = ACTIONS(227),
+    [anon_sym_ATdeprecated] = ACTIONS(227),
+    [anon_sym_ATsince] = ACTIONS(227),
+    [anon_sym_ATversion] = ACTIONS(227),
+    [anon_sym_ATafter] = ACTIONS(229),
+    [anon_sym_ATafterClass] = ACTIONS(227),
+    [anon_sym_ATannotation] = ACTIONS(227),
+    [anon_sym_ATbackupGlobals] = ACTIONS(227),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(227),
+    [anon_sym_ATbefore] = ACTIONS(229),
+    [anon_sym_ATbeforeClass] = ACTIONS(227),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(229),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(227),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(227),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(227),
+    [anon_sym_ATcovers] = ACTIONS(229),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(229),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(227),
+    [anon_sym_ATcoversNothing] = ACTIONS(227),
+    [anon_sym_ATdataProvider] = ACTIONS(227),
+    [anon_sym_ATdepends] = ACTIONS(229),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(227),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(227),
+    [anon_sym_ATgroup] = ACTIONS(227),
+    [anon_sym_ATlarge] = ACTIONS(227),
+    [anon_sym_ATmedium] = ACTIONS(227),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(227),
+    [anon_sym_ATrequires] = ACTIONS(229),
+    [anon_sym_ATrequiresusages] = ACTIONS(227),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(227),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(227),
+    [anon_sym_ATsmall] = ACTIONS(227),
+    [anon_sym_ATtest] = ACTIONS(229),
+    [anon_sym_ATtestWith] = ACTIONS(227),
+    [anon_sym_ATtestdox] = ACTIONS(227),
+    [anon_sym_ATticket] = ACTIONS(227),
+    [sym__end] = ACTIONS(227),
+    [sym_text] = ACTIONS(49),
   },
   [31] = {
-    [aux_sym_union_type_repeat1] = STATE(33),
-    [anon_sym_LBRACE] = ACTIONS(215),
-    [anon_sym_ATapi] = ACTIONS(215),
-    [anon_sym_ATfilesource] = ACTIONS(215),
-    [anon_sym_ATignore] = ACTIONS(215),
-    [anon_sym_ATcategory] = ACTIONS(215),
-    [anon_sym_ATcopyright] = ACTIONS(215),
-    [anon_sym_ATtodo] = ACTIONS(215),
-    [anon_sym_ATexample] = ACTIONS(215),
-    [anon_sym_ATlicense] = ACTIONS(215),
-    [anon_sym_ATpackage] = ACTIONS(215),
-    [anon_sym_ATsource] = ACTIONS(215),
-    [anon_sym_ATsubpackage] = ACTIONS(215),
-    [anon_sym_ATuses] = ACTIONS(215),
-    [anon_sym_ATauthor] = ACTIONS(215),
-    [anon_sym_ATglobal] = ACTIONS(215),
-    [anon_sym_ATinternal] = ACTIONS(215),
-    [anon_sym_ATlink] = ACTIONS(215),
-    [anon_sym_ATmethod] = ACTIONS(215),
-    [anon_sym_ATparam] = ACTIONS(215),
-    [anon_sym_ATproperty] = ACTIONS(217),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(215),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(215),
-    [anon_sym_ATreturn] = ACTIONS(215),
-    [anon_sym_ATsee] = ACTIONS(215),
-    [anon_sym_ATthrows] = ACTIONS(215),
-    [anon_sym_ATvar] = ACTIONS(215),
-    [anon_sym_ATdeprecated] = ACTIONS(215),
-    [anon_sym_ATsince] = ACTIONS(215),
-    [anon_sym_ATversion] = ACTIONS(215),
-    [anon_sym_ATafter] = ACTIONS(217),
-    [anon_sym_ATafterClass] = ACTIONS(215),
-    [anon_sym_ATannotation] = ACTIONS(215),
-    [anon_sym_ATbackupGlobals] = ACTIONS(215),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(215),
-    [anon_sym_ATbefore] = ACTIONS(217),
-    [anon_sym_ATbeforeClass] = ACTIONS(215),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(217),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(215),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(215),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(215),
-    [anon_sym_ATcovers] = ACTIONS(217),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(217),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(215),
-    [anon_sym_ATcoversNothing] = ACTIONS(215),
-    [anon_sym_ATdataProvider] = ACTIONS(215),
-    [anon_sym_ATdepends] = ACTIONS(217),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(215),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(215),
-    [anon_sym_ATgroup] = ACTIONS(215),
-    [anon_sym_ATlarge] = ACTIONS(215),
-    [anon_sym_ATmedium] = ACTIONS(215),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(215),
-    [anon_sym_ATrequires] = ACTIONS(217),
-    [anon_sym_ATrequiresusages] = ACTIONS(215),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(215),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(215),
-    [anon_sym_ATsmall] = ACTIONS(215),
-    [anon_sym_ATtest] = ACTIONS(217),
-    [anon_sym_ATtestWith] = ACTIONS(215),
-    [anon_sym_ATtestdox] = ACTIONS(215),
-    [anon_sym_ATticket] = ACTIONS(215),
-    [anon_sym_PIPE] = ACTIONS(182),
-    [anon_sym_DOLLAR] = ACTIONS(215),
-    [sym_text] = ACTIONS(217),
-    [sym__end] = ACTIONS(215),
+    [sym_description] = STATE(84),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
+    [anon_sym_LBRACE] = ACTIONS(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(231),
+    [anon_sym_ATinheritDoc] = ACTIONS(231),
+    [anon_sym_ATapi] = ACTIONS(231),
+    [anon_sym_ATfilesource] = ACTIONS(231),
+    [anon_sym_ATignore] = ACTIONS(231),
+    [anon_sym_ATinternal] = ACTIONS(231),
+    [anon_sym_ATcategory] = ACTIONS(231),
+    [anon_sym_ATcopyright] = ACTIONS(231),
+    [anon_sym_ATtodo] = ACTIONS(231),
+    [anon_sym_ATexample] = ACTIONS(231),
+    [anon_sym_ATlicense] = ACTIONS(231),
+    [anon_sym_ATpackage] = ACTIONS(231),
+    [anon_sym_ATsource] = ACTIONS(231),
+    [anon_sym_ATsubpackage] = ACTIONS(231),
+    [anon_sym_ATuses] = ACTIONS(231),
+    [anon_sym_ATauthor] = ACTIONS(231),
+    [anon_sym_ATglobal] = ACTIONS(231),
+    [anon_sym_ATlink] = ACTIONS(231),
+    [anon_sym_ATmethod] = ACTIONS(231),
+    [anon_sym_ATparam] = ACTIONS(231),
+    [anon_sym_ATproperty] = ACTIONS(233),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(231),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(231),
+    [anon_sym_ATreturn] = ACTIONS(231),
+    [anon_sym_ATsee] = ACTIONS(231),
+    [anon_sym_ATthrows] = ACTIONS(231),
+    [anon_sym_ATvar] = ACTIONS(231),
+    [anon_sym_ATdeprecated] = ACTIONS(231),
+    [anon_sym_ATsince] = ACTIONS(231),
+    [anon_sym_ATversion] = ACTIONS(231),
+    [anon_sym_ATafter] = ACTIONS(233),
+    [anon_sym_ATafterClass] = ACTIONS(231),
+    [anon_sym_ATannotation] = ACTIONS(231),
+    [anon_sym_ATbackupGlobals] = ACTIONS(231),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(231),
+    [anon_sym_ATbefore] = ACTIONS(233),
+    [anon_sym_ATbeforeClass] = ACTIONS(231),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(233),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(231),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(231),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(231),
+    [anon_sym_ATcovers] = ACTIONS(233),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(233),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(231),
+    [anon_sym_ATcoversNothing] = ACTIONS(231),
+    [anon_sym_ATdataProvider] = ACTIONS(231),
+    [anon_sym_ATdepends] = ACTIONS(233),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(231),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(231),
+    [anon_sym_ATgroup] = ACTIONS(231),
+    [anon_sym_ATlarge] = ACTIONS(231),
+    [anon_sym_ATmedium] = ACTIONS(231),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(231),
+    [anon_sym_ATrequires] = ACTIONS(233),
+    [anon_sym_ATrequiresusages] = ACTIONS(231),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(231),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(231),
+    [anon_sym_ATsmall] = ACTIONS(231),
+    [anon_sym_ATtest] = ACTIONS(233),
+    [anon_sym_ATtestWith] = ACTIONS(231),
+    [anon_sym_ATtestdox] = ACTIONS(231),
+    [anon_sym_ATticket] = ACTIONS(231),
+    [sym__end] = ACTIONS(231),
+    [sym_text] = ACTIONS(49),
   },
   [32] = {
-    [aux_sym__phpdoc_array_types_repeat1] = STATE(28),
-    [anon_sym_LBRACE] = ACTIONS(154),
-    [anon_sym_ATapi] = ACTIONS(154),
-    [anon_sym_ATfilesource] = ACTIONS(154),
-    [anon_sym_ATignore] = ACTIONS(154),
-    [anon_sym_ATcategory] = ACTIONS(154),
-    [anon_sym_ATcopyright] = ACTIONS(154),
-    [anon_sym_ATtodo] = ACTIONS(154),
-    [anon_sym_ATexample] = ACTIONS(154),
-    [anon_sym_ATlicense] = ACTIONS(154),
-    [anon_sym_ATpackage] = ACTIONS(154),
-    [anon_sym_ATsource] = ACTIONS(154),
-    [anon_sym_ATsubpackage] = ACTIONS(154),
-    [anon_sym_ATuses] = ACTIONS(154),
-    [anon_sym_ATauthor] = ACTIONS(154),
-    [anon_sym_ATglobal] = ACTIONS(154),
-    [anon_sym_ATinternal] = ACTIONS(154),
-    [anon_sym_ATlink] = ACTIONS(154),
-    [anon_sym_ATmethod] = ACTIONS(154),
-    [anon_sym_ATparam] = ACTIONS(154),
-    [anon_sym_ATproperty] = ACTIONS(156),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(154),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(154),
-    [anon_sym_ATreturn] = ACTIONS(154),
-    [anon_sym_ATsee] = ACTIONS(154),
-    [anon_sym_ATthrows] = ACTIONS(154),
-    [anon_sym_ATvar] = ACTIONS(154),
-    [anon_sym_ATdeprecated] = ACTIONS(154),
-    [anon_sym_ATsince] = ACTIONS(154),
-    [anon_sym_ATversion] = ACTIONS(154),
-    [anon_sym_ATafter] = ACTIONS(156),
-    [anon_sym_ATafterClass] = ACTIONS(154),
-    [anon_sym_ATannotation] = ACTIONS(154),
-    [anon_sym_ATbackupGlobals] = ACTIONS(154),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(154),
-    [anon_sym_ATbefore] = ACTIONS(156),
-    [anon_sym_ATbeforeClass] = ACTIONS(154),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(156),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(154),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(154),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(154),
-    [anon_sym_ATcovers] = ACTIONS(156),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(156),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(154),
-    [anon_sym_ATcoversNothing] = ACTIONS(154),
-    [anon_sym_ATdataProvider] = ACTIONS(154),
-    [anon_sym_ATdepends] = ACTIONS(156),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(154),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(154),
-    [anon_sym_ATgroup] = ACTIONS(154),
-    [anon_sym_ATlarge] = ACTIONS(154),
-    [anon_sym_ATmedium] = ACTIONS(154),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(154),
-    [anon_sym_ATrequires] = ACTIONS(156),
-    [anon_sym_ATrequiresusages] = ACTIONS(154),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(154),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(154),
-    [anon_sym_ATsmall] = ACTIONS(154),
-    [anon_sym_ATtest] = ACTIONS(156),
-    [anon_sym_ATtestWith] = ACTIONS(154),
-    [anon_sym_ATtestdox] = ACTIONS(154),
-    [anon_sym_ATticket] = ACTIONS(154),
-    [anon_sym_LBRACK_RBRACK] = ACTIONS(219),
-    [anon_sym_PIPE] = ACTIONS(154),
-    [sym_text] = ACTIONS(156),
-    [sym__end] = ACTIONS(154),
+    [sym_description] = STATE(78),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
+    [anon_sym_LBRACE] = ACTIONS(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(235),
+    [anon_sym_ATinheritDoc] = ACTIONS(235),
+    [anon_sym_ATapi] = ACTIONS(235),
+    [anon_sym_ATfilesource] = ACTIONS(235),
+    [anon_sym_ATignore] = ACTIONS(235),
+    [anon_sym_ATinternal] = ACTIONS(235),
+    [anon_sym_ATcategory] = ACTIONS(235),
+    [anon_sym_ATcopyright] = ACTIONS(235),
+    [anon_sym_ATtodo] = ACTIONS(235),
+    [anon_sym_ATexample] = ACTIONS(235),
+    [anon_sym_ATlicense] = ACTIONS(235),
+    [anon_sym_ATpackage] = ACTIONS(235),
+    [anon_sym_ATsource] = ACTIONS(235),
+    [anon_sym_ATsubpackage] = ACTIONS(235),
+    [anon_sym_ATuses] = ACTIONS(235),
+    [anon_sym_ATauthor] = ACTIONS(235),
+    [anon_sym_ATglobal] = ACTIONS(235),
+    [anon_sym_ATlink] = ACTIONS(235),
+    [anon_sym_ATmethod] = ACTIONS(235),
+    [anon_sym_ATparam] = ACTIONS(235),
+    [anon_sym_ATproperty] = ACTIONS(237),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(235),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(235),
+    [anon_sym_ATreturn] = ACTIONS(235),
+    [anon_sym_ATsee] = ACTIONS(235),
+    [anon_sym_ATthrows] = ACTIONS(235),
+    [anon_sym_ATvar] = ACTIONS(235),
+    [anon_sym_ATdeprecated] = ACTIONS(235),
+    [anon_sym_ATsince] = ACTIONS(235),
+    [anon_sym_ATversion] = ACTIONS(235),
+    [anon_sym_ATafter] = ACTIONS(237),
+    [anon_sym_ATafterClass] = ACTIONS(235),
+    [anon_sym_ATannotation] = ACTIONS(235),
+    [anon_sym_ATbackupGlobals] = ACTIONS(235),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(235),
+    [anon_sym_ATbefore] = ACTIONS(237),
+    [anon_sym_ATbeforeClass] = ACTIONS(235),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(237),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(235),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(235),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(235),
+    [anon_sym_ATcovers] = ACTIONS(237),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(237),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(235),
+    [anon_sym_ATcoversNothing] = ACTIONS(235),
+    [anon_sym_ATdataProvider] = ACTIONS(235),
+    [anon_sym_ATdepends] = ACTIONS(237),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(235),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(235),
+    [anon_sym_ATgroup] = ACTIONS(235),
+    [anon_sym_ATlarge] = ACTIONS(235),
+    [anon_sym_ATmedium] = ACTIONS(235),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(235),
+    [anon_sym_ATrequires] = ACTIONS(237),
+    [anon_sym_ATrequiresusages] = ACTIONS(235),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(235),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(235),
+    [anon_sym_ATsmall] = ACTIONS(235),
+    [anon_sym_ATtest] = ACTIONS(237),
+    [anon_sym_ATtestWith] = ACTIONS(235),
+    [anon_sym_ATtestdox] = ACTIONS(235),
+    [anon_sym_ATticket] = ACTIONS(235),
+    [sym__end] = ACTIONS(235),
+    [sym_text] = ACTIONS(49),
   },
   [33] = {
-    [aux_sym_union_type_repeat1] = STATE(33),
-    [anon_sym_LBRACE] = ACTIONS(221),
-    [anon_sym_ATapi] = ACTIONS(221),
-    [anon_sym_ATfilesource] = ACTIONS(221),
-    [anon_sym_ATignore] = ACTIONS(221),
-    [anon_sym_ATcategory] = ACTIONS(221),
-    [anon_sym_ATcopyright] = ACTIONS(221),
-    [anon_sym_ATtodo] = ACTIONS(221),
-    [anon_sym_ATexample] = ACTIONS(221),
-    [anon_sym_ATlicense] = ACTIONS(221),
-    [anon_sym_ATpackage] = ACTIONS(221),
-    [anon_sym_ATsource] = ACTIONS(221),
-    [anon_sym_ATsubpackage] = ACTIONS(221),
-    [anon_sym_ATuses] = ACTIONS(221),
-    [anon_sym_ATauthor] = ACTIONS(221),
-    [anon_sym_ATglobal] = ACTIONS(221),
-    [anon_sym_ATinternal] = ACTIONS(221),
-    [anon_sym_ATlink] = ACTIONS(221),
-    [anon_sym_ATmethod] = ACTIONS(221),
-    [anon_sym_ATparam] = ACTIONS(221),
-    [anon_sym_ATproperty] = ACTIONS(223),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(221),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(221),
-    [anon_sym_ATreturn] = ACTIONS(221),
-    [anon_sym_ATsee] = ACTIONS(221),
-    [anon_sym_ATthrows] = ACTIONS(221),
-    [anon_sym_ATvar] = ACTIONS(221),
-    [anon_sym_ATdeprecated] = ACTIONS(221),
-    [anon_sym_ATsince] = ACTIONS(221),
-    [anon_sym_ATversion] = ACTIONS(221),
-    [anon_sym_ATafter] = ACTIONS(223),
-    [anon_sym_ATafterClass] = ACTIONS(221),
-    [anon_sym_ATannotation] = ACTIONS(221),
-    [anon_sym_ATbackupGlobals] = ACTIONS(221),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(221),
-    [anon_sym_ATbefore] = ACTIONS(223),
-    [anon_sym_ATbeforeClass] = ACTIONS(221),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(223),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(221),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(221),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(221),
-    [anon_sym_ATcovers] = ACTIONS(223),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(223),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(221),
-    [anon_sym_ATcoversNothing] = ACTIONS(221),
-    [anon_sym_ATdataProvider] = ACTIONS(221),
-    [anon_sym_ATdepends] = ACTIONS(223),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(221),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(221),
-    [anon_sym_ATgroup] = ACTIONS(221),
-    [anon_sym_ATlarge] = ACTIONS(221),
-    [anon_sym_ATmedium] = ACTIONS(221),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(221),
-    [anon_sym_ATrequires] = ACTIONS(223),
-    [anon_sym_ATrequiresusages] = ACTIONS(221),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(221),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(221),
-    [anon_sym_ATsmall] = ACTIONS(221),
-    [anon_sym_ATtest] = ACTIONS(223),
-    [anon_sym_ATtestWith] = ACTIONS(221),
-    [anon_sym_ATtestdox] = ACTIONS(221),
-    [anon_sym_ATticket] = ACTIONS(221),
-    [anon_sym_PIPE] = ACTIONS(225),
-    [anon_sym_DOLLAR] = ACTIONS(221),
-    [sym_text] = ACTIONS(223),
-    [sym__end] = ACTIONS(221),
+    [sym_description] = STATE(82),
+    [sym_inline_tag] = STATE(38),
+    [aux_sym_description_repeat1] = STATE(38),
+    [anon_sym_LBRACE] = ACTIONS(5),
+    [anon_sym_ATinheritdoc] = ACTIONS(239),
+    [anon_sym_ATinheritDoc] = ACTIONS(239),
+    [anon_sym_ATapi] = ACTIONS(239),
+    [anon_sym_ATfilesource] = ACTIONS(239),
+    [anon_sym_ATignore] = ACTIONS(239),
+    [anon_sym_ATinternal] = ACTIONS(239),
+    [anon_sym_ATcategory] = ACTIONS(239),
+    [anon_sym_ATcopyright] = ACTIONS(239),
+    [anon_sym_ATtodo] = ACTIONS(239),
+    [anon_sym_ATexample] = ACTIONS(239),
+    [anon_sym_ATlicense] = ACTIONS(239),
+    [anon_sym_ATpackage] = ACTIONS(239),
+    [anon_sym_ATsource] = ACTIONS(239),
+    [anon_sym_ATsubpackage] = ACTIONS(239),
+    [anon_sym_ATuses] = ACTIONS(239),
+    [anon_sym_ATauthor] = ACTIONS(239),
+    [anon_sym_ATglobal] = ACTIONS(239),
+    [anon_sym_ATlink] = ACTIONS(239),
+    [anon_sym_ATmethod] = ACTIONS(239),
+    [anon_sym_ATparam] = ACTIONS(239),
+    [anon_sym_ATproperty] = ACTIONS(241),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(239),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(239),
+    [anon_sym_ATreturn] = ACTIONS(239),
+    [anon_sym_ATsee] = ACTIONS(239),
+    [anon_sym_ATthrows] = ACTIONS(239),
+    [anon_sym_ATvar] = ACTIONS(239),
+    [anon_sym_ATdeprecated] = ACTIONS(239),
+    [anon_sym_ATsince] = ACTIONS(239),
+    [anon_sym_ATversion] = ACTIONS(239),
+    [anon_sym_ATafter] = ACTIONS(241),
+    [anon_sym_ATafterClass] = ACTIONS(239),
+    [anon_sym_ATannotation] = ACTIONS(239),
+    [anon_sym_ATbackupGlobals] = ACTIONS(239),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(239),
+    [anon_sym_ATbefore] = ACTIONS(241),
+    [anon_sym_ATbeforeClass] = ACTIONS(239),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(241),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(239),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(239),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(239),
+    [anon_sym_ATcovers] = ACTIONS(241),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(241),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(239),
+    [anon_sym_ATcoversNothing] = ACTIONS(239),
+    [anon_sym_ATdataProvider] = ACTIONS(239),
+    [anon_sym_ATdepends] = ACTIONS(241),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(239),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(239),
+    [anon_sym_ATgroup] = ACTIONS(239),
+    [anon_sym_ATlarge] = ACTIONS(239),
+    [anon_sym_ATmedium] = ACTIONS(239),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(239),
+    [anon_sym_ATrequires] = ACTIONS(241),
+    [anon_sym_ATrequiresusages] = ACTIONS(239),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(239),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(239),
+    [anon_sym_ATsmall] = ACTIONS(239),
+    [anon_sym_ATtest] = ACTIONS(241),
+    [anon_sym_ATtestWith] = ACTIONS(239),
+    [anon_sym_ATtestdox] = ACTIONS(239),
+    [anon_sym_ATticket] = ACTIONS(239),
+    [sym__end] = ACTIONS(239),
+    [sym_text] = ACTIONS(49),
   },
   [34] = {
-    [sym_inline_tag] = STATE(50),
-    [sym_description] = STATE(79),
-    [aux_sym_description_repeat1] = STATE(50),
-    [anon_sym_LBRACE] = ACTIONS(5),
-    [anon_sym_ATapi] = ACTIONS(137),
-    [anon_sym_ATfilesource] = ACTIONS(137),
-    [anon_sym_ATignore] = ACTIONS(137),
-    [anon_sym_ATcategory] = ACTIONS(137),
-    [anon_sym_ATcopyright] = ACTIONS(137),
-    [anon_sym_ATtodo] = ACTIONS(137),
-    [anon_sym_ATexample] = ACTIONS(137),
-    [anon_sym_ATlicense] = ACTIONS(137),
-    [anon_sym_ATpackage] = ACTIONS(137),
-    [anon_sym_ATsource] = ACTIONS(137),
-    [anon_sym_ATsubpackage] = ACTIONS(137),
-    [anon_sym_ATuses] = ACTIONS(137),
-    [anon_sym_ATauthor] = ACTIONS(137),
-    [anon_sym_ATglobal] = ACTIONS(137),
-    [anon_sym_ATinternal] = ACTIONS(137),
-    [anon_sym_ATlink] = ACTIONS(137),
-    [anon_sym_ATmethod] = ACTIONS(137),
-    [anon_sym_ATparam] = ACTIONS(137),
-    [anon_sym_ATproperty] = ACTIONS(141),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(137),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(137),
-    [anon_sym_ATreturn] = ACTIONS(137),
-    [anon_sym_ATsee] = ACTIONS(137),
-    [anon_sym_ATthrows] = ACTIONS(137),
-    [anon_sym_ATvar] = ACTIONS(137),
-    [anon_sym_ATdeprecated] = ACTIONS(137),
-    [anon_sym_ATsince] = ACTIONS(137),
-    [anon_sym_ATversion] = ACTIONS(137),
-    [anon_sym_ATafter] = ACTIONS(141),
-    [anon_sym_ATafterClass] = ACTIONS(137),
-    [anon_sym_ATannotation] = ACTIONS(137),
-    [anon_sym_ATbackupGlobals] = ACTIONS(137),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(137),
-    [anon_sym_ATbefore] = ACTIONS(141),
-    [anon_sym_ATbeforeClass] = ACTIONS(137),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(141),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(137),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(137),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(137),
-    [anon_sym_ATcovers] = ACTIONS(141),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(141),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(137),
-    [anon_sym_ATcoversNothing] = ACTIONS(137),
-    [anon_sym_ATdataProvider] = ACTIONS(137),
-    [anon_sym_ATdepends] = ACTIONS(141),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(137),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(137),
-    [anon_sym_ATgroup] = ACTIONS(137),
-    [anon_sym_ATlarge] = ACTIONS(137),
-    [anon_sym_ATmedium] = ACTIONS(137),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(137),
-    [anon_sym_ATrequires] = ACTIONS(141),
-    [anon_sym_ATrequiresusages] = ACTIONS(137),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(137),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(137),
-    [anon_sym_ATsmall] = ACTIONS(137),
-    [anon_sym_ATtest] = ACTIONS(141),
-    [anon_sym_ATtestWith] = ACTIONS(137),
-    [anon_sym_ATtestdox] = ACTIONS(137),
-    [anon_sym_ATticket] = ACTIONS(137),
-    [sym_text] = ACTIONS(45),
-    [sym__end] = ACTIONS(137),
+    [sym_inline_tag] = STATE(54),
+    [aux_sym__description_not_version_repeat1] = STATE(42),
+    [anon_sym_LBRACE] = ACTIONS(117),
+    [anon_sym_ATinheritdoc] = ACTIONS(243),
+    [anon_sym_ATinheritDoc] = ACTIONS(243),
+    [anon_sym_ATapi] = ACTIONS(243),
+    [anon_sym_ATfilesource] = ACTIONS(243),
+    [anon_sym_ATignore] = ACTIONS(243),
+    [anon_sym_ATinternal] = ACTIONS(243),
+    [anon_sym_ATcategory] = ACTIONS(243),
+    [anon_sym_ATcopyright] = ACTIONS(243),
+    [anon_sym_ATtodo] = ACTIONS(243),
+    [anon_sym_ATexample] = ACTIONS(243),
+    [anon_sym_ATlicense] = ACTIONS(243),
+    [anon_sym_ATpackage] = ACTIONS(243),
+    [anon_sym_ATsource] = ACTIONS(243),
+    [anon_sym_ATsubpackage] = ACTIONS(243),
+    [anon_sym_ATuses] = ACTIONS(243),
+    [anon_sym_ATauthor] = ACTIONS(243),
+    [anon_sym_ATglobal] = ACTIONS(243),
+    [anon_sym_ATlink] = ACTIONS(243),
+    [anon_sym_ATmethod] = ACTIONS(243),
+    [anon_sym_ATparam] = ACTIONS(243),
+    [anon_sym_ATproperty] = ACTIONS(245),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(243),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(243),
+    [anon_sym_ATreturn] = ACTIONS(243),
+    [anon_sym_ATsee] = ACTIONS(243),
+    [anon_sym_ATthrows] = ACTIONS(243),
+    [anon_sym_ATvar] = ACTIONS(243),
+    [anon_sym_ATdeprecated] = ACTIONS(243),
+    [anon_sym_ATsince] = ACTIONS(243),
+    [anon_sym_ATversion] = ACTIONS(243),
+    [anon_sym_ATafter] = ACTIONS(245),
+    [anon_sym_ATafterClass] = ACTIONS(243),
+    [anon_sym_ATannotation] = ACTIONS(243),
+    [anon_sym_ATbackupGlobals] = ACTIONS(243),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(243),
+    [anon_sym_ATbefore] = ACTIONS(245),
+    [anon_sym_ATbeforeClass] = ACTIONS(243),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(245),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(243),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(243),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(243),
+    [anon_sym_ATcovers] = ACTIONS(245),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(245),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(243),
+    [anon_sym_ATcoversNothing] = ACTIONS(243),
+    [anon_sym_ATdataProvider] = ACTIONS(243),
+    [anon_sym_ATdepends] = ACTIONS(245),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(243),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(243),
+    [anon_sym_ATgroup] = ACTIONS(243),
+    [anon_sym_ATlarge] = ACTIONS(243),
+    [anon_sym_ATmedium] = ACTIONS(243),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(243),
+    [anon_sym_ATrequires] = ACTIONS(245),
+    [anon_sym_ATrequiresusages] = ACTIONS(243),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(243),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(243),
+    [anon_sym_ATsmall] = ACTIONS(243),
+    [anon_sym_ATtest] = ACTIONS(245),
+    [anon_sym_ATtestWith] = ACTIONS(243),
+    [anon_sym_ATtestdox] = ACTIONS(243),
+    [anon_sym_ATticket] = ACTIONS(243),
+    [sym__end] = ACTIONS(243),
+    [sym__text_not_version] = ACTIONS(127),
   },
   [35] = {
-    [sym_inline_tag] = STATE(50),
-    [sym_description] = STATE(72),
-    [aux_sym_description_repeat1] = STATE(50),
-    [anon_sym_LBRACE] = ACTIONS(5),
-    [anon_sym_ATapi] = ACTIONS(228),
-    [anon_sym_ATfilesource] = ACTIONS(228),
-    [anon_sym_ATignore] = ACTIONS(228),
-    [anon_sym_ATcategory] = ACTIONS(228),
-    [anon_sym_ATcopyright] = ACTIONS(228),
-    [anon_sym_ATtodo] = ACTIONS(228),
-    [anon_sym_ATexample] = ACTIONS(228),
-    [anon_sym_ATlicense] = ACTIONS(228),
-    [anon_sym_ATpackage] = ACTIONS(228),
-    [anon_sym_ATsource] = ACTIONS(228),
-    [anon_sym_ATsubpackage] = ACTIONS(228),
-    [anon_sym_ATuses] = ACTIONS(228),
-    [anon_sym_ATauthor] = ACTIONS(228),
-    [anon_sym_ATglobal] = ACTIONS(228),
-    [anon_sym_ATinternal] = ACTIONS(228),
-    [anon_sym_ATlink] = ACTIONS(228),
-    [anon_sym_ATmethod] = ACTIONS(228),
-    [anon_sym_ATparam] = ACTIONS(228),
-    [anon_sym_ATproperty] = ACTIONS(230),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(228),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(228),
-    [anon_sym_ATreturn] = ACTIONS(228),
-    [anon_sym_ATsee] = ACTIONS(228),
-    [anon_sym_ATthrows] = ACTIONS(228),
-    [anon_sym_ATvar] = ACTIONS(228),
-    [anon_sym_ATdeprecated] = ACTIONS(228),
-    [anon_sym_ATsince] = ACTIONS(228),
-    [anon_sym_ATversion] = ACTIONS(228),
-    [anon_sym_ATafter] = ACTIONS(230),
-    [anon_sym_ATafterClass] = ACTIONS(228),
-    [anon_sym_ATannotation] = ACTIONS(228),
-    [anon_sym_ATbackupGlobals] = ACTIONS(228),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(228),
-    [anon_sym_ATbefore] = ACTIONS(230),
-    [anon_sym_ATbeforeClass] = ACTIONS(228),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(230),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(228),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(228),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(228),
-    [anon_sym_ATcovers] = ACTIONS(230),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(230),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(228),
-    [anon_sym_ATcoversNothing] = ACTIONS(228),
-    [anon_sym_ATdataProvider] = ACTIONS(228),
-    [anon_sym_ATdepends] = ACTIONS(230),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(228),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(228),
-    [anon_sym_ATgroup] = ACTIONS(228),
-    [anon_sym_ATlarge] = ACTIONS(228),
-    [anon_sym_ATmedium] = ACTIONS(228),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(228),
-    [anon_sym_ATrequires] = ACTIONS(230),
-    [anon_sym_ATrequiresusages] = ACTIONS(228),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(228),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(228),
-    [anon_sym_ATsmall] = ACTIONS(228),
-    [anon_sym_ATtest] = ACTIONS(230),
-    [anon_sym_ATtestWith] = ACTIONS(228),
-    [anon_sym_ATtestdox] = ACTIONS(228),
-    [anon_sym_ATticket] = ACTIONS(228),
-    [sym_text] = ACTIONS(45),
-    [sym__end] = ACTIONS(228),
+    [aux_sym_union_type_repeat1] = STATE(39),
+    [anon_sym_LBRACE] = ACTIONS(247),
+    [anon_sym_ATinheritdoc] = ACTIONS(247),
+    [anon_sym_ATinheritDoc] = ACTIONS(247),
+    [anon_sym_ATapi] = ACTIONS(247),
+    [anon_sym_ATfilesource] = ACTIONS(247),
+    [anon_sym_ATignore] = ACTIONS(247),
+    [anon_sym_ATinternal] = ACTIONS(247),
+    [anon_sym_ATcategory] = ACTIONS(247),
+    [anon_sym_ATcopyright] = ACTIONS(247),
+    [anon_sym_ATtodo] = ACTIONS(247),
+    [anon_sym_ATexample] = ACTIONS(247),
+    [anon_sym_ATlicense] = ACTIONS(247),
+    [anon_sym_ATpackage] = ACTIONS(247),
+    [anon_sym_ATsource] = ACTIONS(247),
+    [anon_sym_ATsubpackage] = ACTIONS(247),
+    [anon_sym_ATuses] = ACTIONS(247),
+    [anon_sym_ATauthor] = ACTIONS(247),
+    [anon_sym_ATglobal] = ACTIONS(247),
+    [anon_sym_ATlink] = ACTIONS(247),
+    [anon_sym_ATmethod] = ACTIONS(247),
+    [anon_sym_ATparam] = ACTIONS(247),
+    [anon_sym_ATproperty] = ACTIONS(249),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(247),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(247),
+    [anon_sym_ATreturn] = ACTIONS(247),
+    [anon_sym_ATsee] = ACTIONS(247),
+    [anon_sym_ATthrows] = ACTIONS(247),
+    [anon_sym_ATvar] = ACTIONS(247),
+    [anon_sym_ATdeprecated] = ACTIONS(247),
+    [anon_sym_ATsince] = ACTIONS(247),
+    [anon_sym_ATversion] = ACTIONS(247),
+    [anon_sym_ATafter] = ACTIONS(249),
+    [anon_sym_ATafterClass] = ACTIONS(247),
+    [anon_sym_ATannotation] = ACTIONS(247),
+    [anon_sym_ATbackupGlobals] = ACTIONS(247),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(247),
+    [anon_sym_ATbefore] = ACTIONS(249),
+    [anon_sym_ATbeforeClass] = ACTIONS(247),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(249),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(247),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(247),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(247),
+    [anon_sym_ATcovers] = ACTIONS(249),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(249),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(247),
+    [anon_sym_ATcoversNothing] = ACTIONS(247),
+    [anon_sym_ATdataProvider] = ACTIONS(247),
+    [anon_sym_ATdepends] = ACTIONS(249),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(247),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(247),
+    [anon_sym_ATgroup] = ACTIONS(247),
+    [anon_sym_ATlarge] = ACTIONS(247),
+    [anon_sym_ATmedium] = ACTIONS(247),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(247),
+    [anon_sym_ATrequires] = ACTIONS(249),
+    [anon_sym_ATrequiresusages] = ACTIONS(247),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(247),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(247),
+    [anon_sym_ATsmall] = ACTIONS(247),
+    [anon_sym_ATtest] = ACTIONS(249),
+    [anon_sym_ATtestWith] = ACTIONS(247),
+    [anon_sym_ATtestdox] = ACTIONS(247),
+    [anon_sym_ATticket] = ACTIONS(247),
+    [anon_sym_PIPE] = ACTIONS(251),
+    [sym__end] = ACTIONS(247),
+    [sym_text] = ACTIONS(247),
   },
   [36] = {
-    [anon_sym_LBRACE] = ACTIONS(112),
-    [anon_sym_ATapi] = ACTIONS(112),
-    [anon_sym_ATfilesource] = ACTIONS(112),
-    [anon_sym_ATignore] = ACTIONS(112),
-    [anon_sym_ATcategory] = ACTIONS(112),
-    [anon_sym_ATcopyright] = ACTIONS(112),
-    [anon_sym_ATtodo] = ACTIONS(112),
-    [anon_sym_ATexample] = ACTIONS(112),
-    [anon_sym_ATlicense] = ACTIONS(112),
-    [anon_sym_ATpackage] = ACTIONS(112),
-    [anon_sym_ATsource] = ACTIONS(112),
-    [anon_sym_ATsubpackage] = ACTIONS(112),
-    [anon_sym_ATuses] = ACTIONS(112),
-    [anon_sym_ATauthor] = ACTIONS(112),
-    [anon_sym_LT] = ACTIONS(112),
-    [anon_sym_ATglobal] = ACTIONS(112),
-    [anon_sym_ATinternal] = ACTIONS(112),
-    [anon_sym_ATlink] = ACTIONS(112),
-    [anon_sym_ATmethod] = ACTIONS(112),
-    [anon_sym_ATparam] = ACTIONS(112),
-    [anon_sym_ATproperty] = ACTIONS(114),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(112),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(112),
-    [anon_sym_ATreturn] = ACTIONS(112),
-    [anon_sym_ATsee] = ACTIONS(112),
-    [anon_sym_ATthrows] = ACTIONS(112),
-    [anon_sym_ATvar] = ACTIONS(112),
-    [anon_sym_ATdeprecated] = ACTIONS(112),
-    [anon_sym_ATsince] = ACTIONS(112),
-    [anon_sym_ATversion] = ACTIONS(112),
-    [anon_sym_ATafter] = ACTIONS(114),
-    [anon_sym_ATafterClass] = ACTIONS(112),
-    [anon_sym_ATannotation] = ACTIONS(112),
-    [anon_sym_ATbackupGlobals] = ACTIONS(112),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(112),
-    [anon_sym_ATbefore] = ACTIONS(114),
-    [anon_sym_ATbeforeClass] = ACTIONS(112),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(114),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(112),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(112),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(112),
-    [anon_sym_ATcovers] = ACTIONS(114),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(114),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(112),
-    [anon_sym_ATcoversNothing] = ACTIONS(112),
-    [anon_sym_ATdataProvider] = ACTIONS(112),
-    [anon_sym_ATdepends] = ACTIONS(114),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(112),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(112),
-    [anon_sym_ATgroup] = ACTIONS(112),
-    [anon_sym_ATlarge] = ACTIONS(112),
-    [anon_sym_ATmedium] = ACTIONS(112),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(112),
-    [anon_sym_ATrequires] = ACTIONS(114),
-    [anon_sym_ATrequiresusages] = ACTIONS(112),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(112),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(112),
-    [anon_sym_ATsmall] = ACTIONS(112),
-    [anon_sym_ATtest] = ACTIONS(114),
-    [anon_sym_ATtestWith] = ACTIONS(112),
-    [anon_sym_ATtestdox] = ACTIONS(112),
-    [anon_sym_ATticket] = ACTIONS(112),
-    [anon_sym_LBRACK_RBRACK] = ACTIONS(112),
-    [anon_sym_PIPE] = ACTIONS(112),
-    [sym_text] = ACTIONS(114),
-    [sym__end] = ACTIONS(112),
+    [sym_inline_tag] = STATE(47),
+    [aux_sym__description_after_type_repeat1] = STATE(36),
+    [anon_sym_LBRACE] = ACTIONS(253),
+    [anon_sym_ATinheritdoc] = ACTIONS(256),
+    [anon_sym_ATinheritDoc] = ACTIONS(256),
+    [anon_sym_ATapi] = ACTIONS(256),
+    [anon_sym_ATfilesource] = ACTIONS(256),
+    [anon_sym_ATignore] = ACTIONS(256),
+    [anon_sym_ATinternal] = ACTIONS(256),
+    [anon_sym_ATcategory] = ACTIONS(256),
+    [anon_sym_ATcopyright] = ACTIONS(256),
+    [anon_sym_ATtodo] = ACTIONS(256),
+    [anon_sym_ATexample] = ACTIONS(256),
+    [anon_sym_ATlicense] = ACTIONS(256),
+    [anon_sym_ATpackage] = ACTIONS(256),
+    [anon_sym_ATsource] = ACTIONS(256),
+    [anon_sym_ATsubpackage] = ACTIONS(256),
+    [anon_sym_ATuses] = ACTIONS(256),
+    [anon_sym_ATauthor] = ACTIONS(256),
+    [anon_sym_ATglobal] = ACTIONS(256),
+    [anon_sym_ATlink] = ACTIONS(256),
+    [anon_sym_ATmethod] = ACTIONS(256),
+    [anon_sym_ATparam] = ACTIONS(256),
+    [anon_sym_ATproperty] = ACTIONS(258),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(256),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(256),
+    [anon_sym_ATreturn] = ACTIONS(256),
+    [anon_sym_ATsee] = ACTIONS(256),
+    [anon_sym_ATthrows] = ACTIONS(256),
+    [anon_sym_ATvar] = ACTIONS(256),
+    [anon_sym_ATdeprecated] = ACTIONS(256),
+    [anon_sym_ATsince] = ACTIONS(256),
+    [anon_sym_ATversion] = ACTIONS(256),
+    [anon_sym_ATafter] = ACTIONS(258),
+    [anon_sym_ATafterClass] = ACTIONS(256),
+    [anon_sym_ATannotation] = ACTIONS(256),
+    [anon_sym_ATbackupGlobals] = ACTIONS(256),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(256),
+    [anon_sym_ATbefore] = ACTIONS(258),
+    [anon_sym_ATbeforeClass] = ACTIONS(256),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(258),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(256),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(256),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(256),
+    [anon_sym_ATcovers] = ACTIONS(258),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(258),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(256),
+    [anon_sym_ATcoversNothing] = ACTIONS(256),
+    [anon_sym_ATdataProvider] = ACTIONS(256),
+    [anon_sym_ATdepends] = ACTIONS(258),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(256),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(256),
+    [anon_sym_ATgroup] = ACTIONS(256),
+    [anon_sym_ATlarge] = ACTIONS(256),
+    [anon_sym_ATmedium] = ACTIONS(256),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(256),
+    [anon_sym_ATrequires] = ACTIONS(258),
+    [anon_sym_ATrequiresusages] = ACTIONS(256),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(256),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(256),
+    [anon_sym_ATsmall] = ACTIONS(256),
+    [anon_sym_ATtest] = ACTIONS(258),
+    [anon_sym_ATtestWith] = ACTIONS(256),
+    [anon_sym_ATtestdox] = ACTIONS(256),
+    [anon_sym_ATticket] = ACTIONS(256),
+    [sym__end] = ACTIONS(256),
+    [sym__text_after_type] = ACTIONS(260),
   },
   [37] = {
-    [sym_inline_tag] = STATE(50),
-    [sym_description] = STATE(77),
-    [aux_sym_description_repeat1] = STATE(50),
-    [anon_sym_LBRACE] = ACTIONS(5),
-    [anon_sym_ATapi] = ACTIONS(232),
-    [anon_sym_ATfilesource] = ACTIONS(232),
-    [anon_sym_ATignore] = ACTIONS(232),
-    [anon_sym_ATcategory] = ACTIONS(232),
-    [anon_sym_ATcopyright] = ACTIONS(232),
-    [anon_sym_ATtodo] = ACTIONS(232),
-    [anon_sym_ATexample] = ACTIONS(232),
-    [anon_sym_ATlicense] = ACTIONS(232),
-    [anon_sym_ATpackage] = ACTIONS(232),
-    [anon_sym_ATsource] = ACTIONS(232),
-    [anon_sym_ATsubpackage] = ACTIONS(232),
-    [anon_sym_ATuses] = ACTIONS(232),
-    [anon_sym_ATauthor] = ACTIONS(232),
-    [anon_sym_ATglobal] = ACTIONS(232),
-    [anon_sym_ATinternal] = ACTIONS(232),
-    [anon_sym_ATlink] = ACTIONS(232),
-    [anon_sym_ATmethod] = ACTIONS(232),
-    [anon_sym_ATparam] = ACTIONS(232),
-    [anon_sym_ATproperty] = ACTIONS(234),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(232),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(232),
-    [anon_sym_ATreturn] = ACTIONS(232),
-    [anon_sym_ATsee] = ACTIONS(232),
-    [anon_sym_ATthrows] = ACTIONS(232),
-    [anon_sym_ATvar] = ACTIONS(232),
-    [anon_sym_ATdeprecated] = ACTIONS(232),
-    [anon_sym_ATsince] = ACTIONS(232),
-    [anon_sym_ATversion] = ACTIONS(232),
-    [anon_sym_ATafter] = ACTIONS(234),
-    [anon_sym_ATafterClass] = ACTIONS(232),
-    [anon_sym_ATannotation] = ACTIONS(232),
-    [anon_sym_ATbackupGlobals] = ACTIONS(232),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(232),
-    [anon_sym_ATbefore] = ACTIONS(234),
-    [anon_sym_ATbeforeClass] = ACTIONS(232),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(234),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(232),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(232),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(232),
-    [anon_sym_ATcovers] = ACTIONS(234),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(234),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(232),
-    [anon_sym_ATcoversNothing] = ACTIONS(232),
-    [anon_sym_ATdataProvider] = ACTIONS(232),
-    [anon_sym_ATdepends] = ACTIONS(234),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(232),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(232),
-    [anon_sym_ATgroup] = ACTIONS(232),
-    [anon_sym_ATlarge] = ACTIONS(232),
-    [anon_sym_ATmedium] = ACTIONS(232),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(232),
-    [anon_sym_ATrequires] = ACTIONS(234),
-    [anon_sym_ATrequiresusages] = ACTIONS(232),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(232),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(232),
-    [anon_sym_ATsmall] = ACTIONS(232),
-    [anon_sym_ATtest] = ACTIONS(234),
-    [anon_sym_ATtestWith] = ACTIONS(232),
-    [anon_sym_ATtestdox] = ACTIONS(232),
-    [anon_sym_ATticket] = ACTIONS(232),
-    [sym_text] = ACTIONS(45),
-    [sym__end] = ACTIONS(232),
+    [sym_inline_tag] = STATE(37),
+    [aux_sym_description_repeat1] = STATE(37),
+    [anon_sym_LBRACE] = ACTIONS(263),
+    [anon_sym_ATinheritdoc] = ACTIONS(266),
+    [anon_sym_ATinheritDoc] = ACTIONS(266),
+    [anon_sym_ATapi] = ACTIONS(266),
+    [anon_sym_ATfilesource] = ACTIONS(266),
+    [anon_sym_ATignore] = ACTIONS(266),
+    [anon_sym_ATinternal] = ACTIONS(266),
+    [anon_sym_ATcategory] = ACTIONS(266),
+    [anon_sym_ATcopyright] = ACTIONS(266),
+    [anon_sym_ATtodo] = ACTIONS(266),
+    [anon_sym_ATexample] = ACTIONS(266),
+    [anon_sym_ATlicense] = ACTIONS(266),
+    [anon_sym_ATpackage] = ACTIONS(266),
+    [anon_sym_ATsource] = ACTIONS(266),
+    [anon_sym_ATsubpackage] = ACTIONS(266),
+    [anon_sym_ATuses] = ACTIONS(266),
+    [anon_sym_ATauthor] = ACTIONS(266),
+    [anon_sym_ATglobal] = ACTIONS(266),
+    [anon_sym_ATlink] = ACTIONS(266),
+    [anon_sym_ATmethod] = ACTIONS(266),
+    [anon_sym_ATparam] = ACTIONS(266),
+    [anon_sym_ATproperty] = ACTIONS(268),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(266),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(266),
+    [anon_sym_ATreturn] = ACTIONS(266),
+    [anon_sym_ATsee] = ACTIONS(266),
+    [anon_sym_ATthrows] = ACTIONS(266),
+    [anon_sym_ATvar] = ACTIONS(266),
+    [anon_sym_ATdeprecated] = ACTIONS(266),
+    [anon_sym_ATsince] = ACTIONS(266),
+    [anon_sym_ATversion] = ACTIONS(266),
+    [anon_sym_ATafter] = ACTIONS(268),
+    [anon_sym_ATafterClass] = ACTIONS(266),
+    [anon_sym_ATannotation] = ACTIONS(266),
+    [anon_sym_ATbackupGlobals] = ACTIONS(266),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(266),
+    [anon_sym_ATbefore] = ACTIONS(268),
+    [anon_sym_ATbeforeClass] = ACTIONS(266),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(268),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(266),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(266),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(266),
+    [anon_sym_ATcovers] = ACTIONS(268),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(268),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(266),
+    [anon_sym_ATcoversNothing] = ACTIONS(266),
+    [anon_sym_ATdataProvider] = ACTIONS(266),
+    [anon_sym_ATdepends] = ACTIONS(268),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(266),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(266),
+    [anon_sym_ATgroup] = ACTIONS(266),
+    [anon_sym_ATlarge] = ACTIONS(266),
+    [anon_sym_ATmedium] = ACTIONS(266),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(266),
+    [anon_sym_ATrequires] = ACTIONS(268),
+    [anon_sym_ATrequiresusages] = ACTIONS(266),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(266),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(266),
+    [anon_sym_ATsmall] = ACTIONS(266),
+    [anon_sym_ATtest] = ACTIONS(268),
+    [anon_sym_ATtestWith] = ACTIONS(266),
+    [anon_sym_ATtestdox] = ACTIONS(266),
+    [anon_sym_ATticket] = ACTIONS(266),
+    [sym__end] = ACTIONS(266),
+    [sym_text] = ACTIONS(270),
   },
   [38] = {
-    [sym_inline_tag] = STATE(50),
-    [sym_description] = STATE(78),
-    [aux_sym_description_repeat1] = STATE(50),
+    [sym_inline_tag] = STATE(37),
+    [aux_sym_description_repeat1] = STATE(37),
     [anon_sym_LBRACE] = ACTIONS(5),
-    [anon_sym_ATapi] = ACTIONS(236),
-    [anon_sym_ATfilesource] = ACTIONS(236),
-    [anon_sym_ATignore] = ACTIONS(236),
-    [anon_sym_ATcategory] = ACTIONS(236),
-    [anon_sym_ATcopyright] = ACTIONS(236),
-    [anon_sym_ATtodo] = ACTIONS(236),
-    [anon_sym_ATexample] = ACTIONS(236),
-    [anon_sym_ATlicense] = ACTIONS(236),
-    [anon_sym_ATpackage] = ACTIONS(236),
-    [anon_sym_ATsource] = ACTIONS(236),
-    [anon_sym_ATsubpackage] = ACTIONS(236),
-    [anon_sym_ATuses] = ACTIONS(236),
-    [anon_sym_ATauthor] = ACTIONS(236),
-    [anon_sym_ATglobal] = ACTIONS(236),
-    [anon_sym_ATinternal] = ACTIONS(236),
-    [anon_sym_ATlink] = ACTIONS(236),
-    [anon_sym_ATmethod] = ACTIONS(236),
-    [anon_sym_ATparam] = ACTIONS(236),
-    [anon_sym_ATproperty] = ACTIONS(238),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(236),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(236),
-    [anon_sym_ATreturn] = ACTIONS(236),
-    [anon_sym_ATsee] = ACTIONS(236),
-    [anon_sym_ATthrows] = ACTIONS(236),
-    [anon_sym_ATvar] = ACTIONS(236),
-    [anon_sym_ATdeprecated] = ACTIONS(236),
-    [anon_sym_ATsince] = ACTIONS(236),
-    [anon_sym_ATversion] = ACTIONS(236),
-    [anon_sym_ATafter] = ACTIONS(238),
-    [anon_sym_ATafterClass] = ACTIONS(236),
-    [anon_sym_ATannotation] = ACTIONS(236),
-    [anon_sym_ATbackupGlobals] = ACTIONS(236),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(236),
-    [anon_sym_ATbefore] = ACTIONS(238),
-    [anon_sym_ATbeforeClass] = ACTIONS(236),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(238),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(236),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(236),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(236),
-    [anon_sym_ATcovers] = ACTIONS(238),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(238),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(236),
-    [anon_sym_ATcoversNothing] = ACTIONS(236),
-    [anon_sym_ATdataProvider] = ACTIONS(236),
-    [anon_sym_ATdepends] = ACTIONS(238),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(236),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(236),
-    [anon_sym_ATgroup] = ACTIONS(236),
-    [anon_sym_ATlarge] = ACTIONS(236),
-    [anon_sym_ATmedium] = ACTIONS(236),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(236),
-    [anon_sym_ATrequires] = ACTIONS(238),
-    [anon_sym_ATrequiresusages] = ACTIONS(236),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(236),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(236),
-    [anon_sym_ATsmall] = ACTIONS(236),
-    [anon_sym_ATtest] = ACTIONS(238),
-    [anon_sym_ATtestWith] = ACTIONS(236),
-    [anon_sym_ATtestdox] = ACTIONS(236),
-    [anon_sym_ATticket] = ACTIONS(236),
-    [sym_text] = ACTIONS(45),
-    [sym__end] = ACTIONS(236),
+    [anon_sym_ATinheritdoc] = ACTIONS(273),
+    [anon_sym_ATinheritDoc] = ACTIONS(273),
+    [anon_sym_ATapi] = ACTIONS(273),
+    [anon_sym_ATfilesource] = ACTIONS(273),
+    [anon_sym_ATignore] = ACTIONS(273),
+    [anon_sym_ATinternal] = ACTIONS(273),
+    [anon_sym_ATcategory] = ACTIONS(273),
+    [anon_sym_ATcopyright] = ACTIONS(273),
+    [anon_sym_ATtodo] = ACTIONS(273),
+    [anon_sym_ATexample] = ACTIONS(273),
+    [anon_sym_ATlicense] = ACTIONS(273),
+    [anon_sym_ATpackage] = ACTIONS(273),
+    [anon_sym_ATsource] = ACTIONS(273),
+    [anon_sym_ATsubpackage] = ACTIONS(273),
+    [anon_sym_ATuses] = ACTIONS(273),
+    [anon_sym_ATauthor] = ACTIONS(273),
+    [anon_sym_ATglobal] = ACTIONS(273),
+    [anon_sym_ATlink] = ACTIONS(273),
+    [anon_sym_ATmethod] = ACTIONS(273),
+    [anon_sym_ATparam] = ACTIONS(273),
+    [anon_sym_ATproperty] = ACTIONS(275),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(273),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(273),
+    [anon_sym_ATreturn] = ACTIONS(273),
+    [anon_sym_ATsee] = ACTIONS(273),
+    [anon_sym_ATthrows] = ACTIONS(273),
+    [anon_sym_ATvar] = ACTIONS(273),
+    [anon_sym_ATdeprecated] = ACTIONS(273),
+    [anon_sym_ATsince] = ACTIONS(273),
+    [anon_sym_ATversion] = ACTIONS(273),
+    [anon_sym_ATafter] = ACTIONS(275),
+    [anon_sym_ATafterClass] = ACTIONS(273),
+    [anon_sym_ATannotation] = ACTIONS(273),
+    [anon_sym_ATbackupGlobals] = ACTIONS(273),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(273),
+    [anon_sym_ATbefore] = ACTIONS(275),
+    [anon_sym_ATbeforeClass] = ACTIONS(273),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(275),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(273),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(273),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(273),
+    [anon_sym_ATcovers] = ACTIONS(275),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(275),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(273),
+    [anon_sym_ATcoversNothing] = ACTIONS(273),
+    [anon_sym_ATdataProvider] = ACTIONS(273),
+    [anon_sym_ATdepends] = ACTIONS(275),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(273),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(273),
+    [anon_sym_ATgroup] = ACTIONS(273),
+    [anon_sym_ATlarge] = ACTIONS(273),
+    [anon_sym_ATmedium] = ACTIONS(273),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(273),
+    [anon_sym_ATrequires] = ACTIONS(275),
+    [anon_sym_ATrequiresusages] = ACTIONS(273),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(273),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(273),
+    [anon_sym_ATsmall] = ACTIONS(273),
+    [anon_sym_ATtest] = ACTIONS(275),
+    [anon_sym_ATtestWith] = ACTIONS(273),
+    [anon_sym_ATtestdox] = ACTIONS(273),
+    [anon_sym_ATticket] = ACTIONS(273),
+    [sym__end] = ACTIONS(273),
+    [sym_text] = ACTIONS(277),
   },
   [39] = {
-    [anon_sym_LBRACE] = ACTIONS(164),
-    [anon_sym_ATapi] = ACTIONS(164),
-    [anon_sym_ATfilesource] = ACTIONS(164),
-    [anon_sym_ATignore] = ACTIONS(164),
-    [anon_sym_ATcategory] = ACTIONS(164),
-    [anon_sym_ATcopyright] = ACTIONS(164),
-    [anon_sym_ATtodo] = ACTIONS(164),
-    [anon_sym_ATexample] = ACTIONS(164),
-    [anon_sym_ATlicense] = ACTIONS(164),
-    [anon_sym_ATpackage] = ACTIONS(164),
-    [anon_sym_ATsource] = ACTIONS(164),
-    [anon_sym_ATsubpackage] = ACTIONS(164),
-    [anon_sym_ATuses] = ACTIONS(164),
-    [anon_sym_ATauthor] = ACTIONS(164),
-    [anon_sym_LT] = ACTIONS(164),
-    [anon_sym_ATglobal] = ACTIONS(164),
-    [anon_sym_ATinternal] = ACTIONS(164),
-    [anon_sym_ATlink] = ACTIONS(164),
-    [anon_sym_ATmethod] = ACTIONS(164),
-    [anon_sym_ATparam] = ACTIONS(164),
-    [anon_sym_ATproperty] = ACTIONS(166),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(164),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(164),
-    [anon_sym_ATreturn] = ACTIONS(164),
-    [anon_sym_ATsee] = ACTIONS(164),
-    [anon_sym_ATthrows] = ACTIONS(164),
-    [anon_sym_ATvar] = ACTIONS(164),
-    [anon_sym_ATdeprecated] = ACTIONS(164),
-    [anon_sym_ATsince] = ACTIONS(164),
-    [anon_sym_ATversion] = ACTIONS(164),
-    [anon_sym_ATafter] = ACTIONS(166),
-    [anon_sym_ATafterClass] = ACTIONS(164),
-    [anon_sym_ATannotation] = ACTIONS(164),
-    [anon_sym_ATbackupGlobals] = ACTIONS(164),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(164),
-    [anon_sym_ATbefore] = ACTIONS(166),
-    [anon_sym_ATbeforeClass] = ACTIONS(164),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(166),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(164),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(164),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(164),
-    [anon_sym_ATcovers] = ACTIONS(166),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(166),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(164),
-    [anon_sym_ATcoversNothing] = ACTIONS(164),
-    [anon_sym_ATdataProvider] = ACTIONS(164),
-    [anon_sym_ATdepends] = ACTIONS(166),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(164),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(164),
-    [anon_sym_ATgroup] = ACTIONS(164),
-    [anon_sym_ATlarge] = ACTIONS(164),
-    [anon_sym_ATmedium] = ACTIONS(164),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(164),
-    [anon_sym_ATrequires] = ACTIONS(166),
-    [anon_sym_ATrequiresusages] = ACTIONS(164),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(164),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(164),
-    [anon_sym_ATsmall] = ACTIONS(164),
-    [anon_sym_ATtest] = ACTIONS(166),
-    [anon_sym_ATtestWith] = ACTIONS(164),
-    [anon_sym_ATtestdox] = ACTIONS(164),
-    [anon_sym_ATticket] = ACTIONS(164),
-    [anon_sym_LBRACK_RBRACK] = ACTIONS(164),
-    [anon_sym_PIPE] = ACTIONS(164),
-    [sym_text] = ACTIONS(166),
-    [sym__end] = ACTIONS(164),
+    [aux_sym_union_type_repeat1] = STATE(41),
+    [anon_sym_LBRACE] = ACTIONS(279),
+    [anon_sym_ATinheritdoc] = ACTIONS(279),
+    [anon_sym_ATinheritDoc] = ACTIONS(279),
+    [anon_sym_ATapi] = ACTIONS(279),
+    [anon_sym_ATfilesource] = ACTIONS(279),
+    [anon_sym_ATignore] = ACTIONS(279),
+    [anon_sym_ATinternal] = ACTIONS(279),
+    [anon_sym_ATcategory] = ACTIONS(279),
+    [anon_sym_ATcopyright] = ACTIONS(279),
+    [anon_sym_ATtodo] = ACTIONS(279),
+    [anon_sym_ATexample] = ACTIONS(279),
+    [anon_sym_ATlicense] = ACTIONS(279),
+    [anon_sym_ATpackage] = ACTIONS(279),
+    [anon_sym_ATsource] = ACTIONS(279),
+    [anon_sym_ATsubpackage] = ACTIONS(279),
+    [anon_sym_ATuses] = ACTIONS(279),
+    [anon_sym_ATauthor] = ACTIONS(279),
+    [anon_sym_ATglobal] = ACTIONS(279),
+    [anon_sym_ATlink] = ACTIONS(279),
+    [anon_sym_ATmethod] = ACTIONS(279),
+    [anon_sym_ATparam] = ACTIONS(279),
+    [anon_sym_ATproperty] = ACTIONS(281),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(279),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(279),
+    [anon_sym_ATreturn] = ACTIONS(279),
+    [anon_sym_ATsee] = ACTIONS(279),
+    [anon_sym_ATthrows] = ACTIONS(279),
+    [anon_sym_ATvar] = ACTIONS(279),
+    [anon_sym_ATdeprecated] = ACTIONS(279),
+    [anon_sym_ATsince] = ACTIONS(279),
+    [anon_sym_ATversion] = ACTIONS(279),
+    [anon_sym_ATafter] = ACTIONS(281),
+    [anon_sym_ATafterClass] = ACTIONS(279),
+    [anon_sym_ATannotation] = ACTIONS(279),
+    [anon_sym_ATbackupGlobals] = ACTIONS(279),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(279),
+    [anon_sym_ATbefore] = ACTIONS(281),
+    [anon_sym_ATbeforeClass] = ACTIONS(279),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(281),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(279),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(279),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(279),
+    [anon_sym_ATcovers] = ACTIONS(281),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(281),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(279),
+    [anon_sym_ATcoversNothing] = ACTIONS(279),
+    [anon_sym_ATdataProvider] = ACTIONS(279),
+    [anon_sym_ATdepends] = ACTIONS(281),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(279),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(279),
+    [anon_sym_ATgroup] = ACTIONS(279),
+    [anon_sym_ATlarge] = ACTIONS(279),
+    [anon_sym_ATmedium] = ACTIONS(279),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(279),
+    [anon_sym_ATrequires] = ACTIONS(281),
+    [anon_sym_ATrequiresusages] = ACTIONS(279),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(279),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(279),
+    [anon_sym_ATsmall] = ACTIONS(279),
+    [anon_sym_ATtest] = ACTIONS(281),
+    [anon_sym_ATtestWith] = ACTIONS(279),
+    [anon_sym_ATtestdox] = ACTIONS(279),
+    [anon_sym_ATticket] = ACTIONS(279),
+    [anon_sym_PIPE] = ACTIONS(251),
+    [sym__end] = ACTIONS(279),
+    [sym_text] = ACTIONS(279),
   },
   [40] = {
-    [anon_sym_LBRACE] = ACTIONS(133),
-    [anon_sym_ATapi] = ACTIONS(133),
-    [anon_sym_ATfilesource] = ACTIONS(133),
-    [anon_sym_ATignore] = ACTIONS(133),
-    [anon_sym_ATcategory] = ACTIONS(133),
-    [anon_sym_ATcopyright] = ACTIONS(133),
-    [anon_sym_ATtodo] = ACTIONS(133),
-    [anon_sym_ATexample] = ACTIONS(133),
-    [anon_sym_ATlicense] = ACTIONS(133),
-    [anon_sym_ATpackage] = ACTIONS(133),
-    [anon_sym_ATsource] = ACTIONS(133),
-    [anon_sym_ATsubpackage] = ACTIONS(133),
-    [anon_sym_ATuses] = ACTIONS(133),
-    [anon_sym_ATauthor] = ACTIONS(133),
-    [anon_sym_LT] = ACTIONS(133),
-    [anon_sym_ATglobal] = ACTIONS(133),
-    [anon_sym_ATinternal] = ACTIONS(133),
-    [anon_sym_ATlink] = ACTIONS(133),
-    [anon_sym_ATmethod] = ACTIONS(133),
-    [anon_sym_ATparam] = ACTIONS(133),
-    [anon_sym_ATproperty] = ACTIONS(135),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(133),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(133),
-    [anon_sym_ATreturn] = ACTIONS(133),
-    [anon_sym_ATsee] = ACTIONS(133),
-    [anon_sym_ATthrows] = ACTIONS(133),
-    [anon_sym_ATvar] = ACTIONS(133),
-    [anon_sym_ATdeprecated] = ACTIONS(133),
-    [anon_sym_ATsince] = ACTIONS(133),
-    [anon_sym_ATversion] = ACTIONS(133),
-    [anon_sym_ATafter] = ACTIONS(135),
-    [anon_sym_ATafterClass] = ACTIONS(133),
-    [anon_sym_ATannotation] = ACTIONS(133),
-    [anon_sym_ATbackupGlobals] = ACTIONS(133),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(133),
-    [anon_sym_ATbefore] = ACTIONS(135),
-    [anon_sym_ATbeforeClass] = ACTIONS(133),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(135),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(133),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(133),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(133),
-    [anon_sym_ATcovers] = ACTIONS(135),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(135),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(133),
-    [anon_sym_ATcoversNothing] = ACTIONS(133),
-    [anon_sym_ATdataProvider] = ACTIONS(133),
-    [anon_sym_ATdepends] = ACTIONS(135),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(133),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(133),
-    [anon_sym_ATgroup] = ACTIONS(133),
-    [anon_sym_ATlarge] = ACTIONS(133),
-    [anon_sym_ATmedium] = ACTIONS(133),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(133),
-    [anon_sym_ATrequires] = ACTIONS(135),
-    [anon_sym_ATrequiresusages] = ACTIONS(133),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(133),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(133),
-    [anon_sym_ATsmall] = ACTIONS(133),
-    [anon_sym_ATtest] = ACTIONS(135),
-    [anon_sym_ATtestWith] = ACTIONS(133),
-    [anon_sym_ATtestdox] = ACTIONS(133),
-    [anon_sym_ATticket] = ACTIONS(133),
-    [anon_sym_LBRACK_RBRACK] = ACTIONS(133),
-    [anon_sym_PIPE] = ACTIONS(133),
-    [sym_text] = ACTIONS(135),
-    [sym__end] = ACTIONS(133),
+    [sym_inline_tag] = STATE(47),
+    [aux_sym__description_after_type_repeat1] = STATE(36),
+    [anon_sym_LBRACE] = ACTIONS(283),
+    [anon_sym_ATinheritdoc] = ACTIONS(285),
+    [anon_sym_ATinheritDoc] = ACTIONS(285),
+    [anon_sym_ATapi] = ACTIONS(285),
+    [anon_sym_ATfilesource] = ACTIONS(285),
+    [anon_sym_ATignore] = ACTIONS(285),
+    [anon_sym_ATinternal] = ACTIONS(285),
+    [anon_sym_ATcategory] = ACTIONS(285),
+    [anon_sym_ATcopyright] = ACTIONS(285),
+    [anon_sym_ATtodo] = ACTIONS(285),
+    [anon_sym_ATexample] = ACTIONS(285),
+    [anon_sym_ATlicense] = ACTIONS(285),
+    [anon_sym_ATpackage] = ACTIONS(285),
+    [anon_sym_ATsource] = ACTIONS(285),
+    [anon_sym_ATsubpackage] = ACTIONS(285),
+    [anon_sym_ATuses] = ACTIONS(285),
+    [anon_sym_ATauthor] = ACTIONS(285),
+    [anon_sym_ATglobal] = ACTIONS(285),
+    [anon_sym_ATlink] = ACTIONS(285),
+    [anon_sym_ATmethod] = ACTIONS(285),
+    [anon_sym_ATparam] = ACTIONS(285),
+    [anon_sym_ATproperty] = ACTIONS(287),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(285),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(285),
+    [anon_sym_ATreturn] = ACTIONS(285),
+    [anon_sym_ATsee] = ACTIONS(285),
+    [anon_sym_ATthrows] = ACTIONS(285),
+    [anon_sym_ATvar] = ACTIONS(285),
+    [anon_sym_ATdeprecated] = ACTIONS(285),
+    [anon_sym_ATsince] = ACTIONS(285),
+    [anon_sym_ATversion] = ACTIONS(285),
+    [anon_sym_ATafter] = ACTIONS(287),
+    [anon_sym_ATafterClass] = ACTIONS(285),
+    [anon_sym_ATannotation] = ACTIONS(285),
+    [anon_sym_ATbackupGlobals] = ACTIONS(285),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(285),
+    [anon_sym_ATbefore] = ACTIONS(287),
+    [anon_sym_ATbeforeClass] = ACTIONS(285),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(287),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(285),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(285),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(285),
+    [anon_sym_ATcovers] = ACTIONS(287),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(287),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(285),
+    [anon_sym_ATcoversNothing] = ACTIONS(285),
+    [anon_sym_ATdataProvider] = ACTIONS(285),
+    [anon_sym_ATdepends] = ACTIONS(287),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(285),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(285),
+    [anon_sym_ATgroup] = ACTIONS(285),
+    [anon_sym_ATlarge] = ACTIONS(285),
+    [anon_sym_ATmedium] = ACTIONS(285),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(285),
+    [anon_sym_ATrequires] = ACTIONS(287),
+    [anon_sym_ATrequiresusages] = ACTIONS(285),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(285),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(285),
+    [anon_sym_ATsmall] = ACTIONS(285),
+    [anon_sym_ATtest] = ACTIONS(287),
+    [anon_sym_ATtestWith] = ACTIONS(285),
+    [anon_sym_ATtestdox] = ACTIONS(285),
+    [anon_sym_ATticket] = ACTIONS(285),
+    [sym__end] = ACTIONS(285),
+    [sym__text_after_type] = ACTIONS(289),
   },
   [41] = {
-    [sym_inline_tag] = STATE(50),
-    [sym_description] = STATE(75),
-    [aux_sym_description_repeat1] = STATE(50),
-    [anon_sym_LBRACE] = ACTIONS(5),
-    [anon_sym_ATapi] = ACTIONS(240),
-    [anon_sym_ATfilesource] = ACTIONS(240),
-    [anon_sym_ATignore] = ACTIONS(240),
-    [anon_sym_ATcategory] = ACTIONS(240),
-    [anon_sym_ATcopyright] = ACTIONS(240),
-    [anon_sym_ATtodo] = ACTIONS(240),
-    [anon_sym_ATexample] = ACTIONS(240),
-    [anon_sym_ATlicense] = ACTIONS(240),
-    [anon_sym_ATpackage] = ACTIONS(240),
-    [anon_sym_ATsource] = ACTIONS(240),
-    [anon_sym_ATsubpackage] = ACTIONS(240),
-    [anon_sym_ATuses] = ACTIONS(240),
-    [anon_sym_ATauthor] = ACTIONS(240),
-    [anon_sym_ATglobal] = ACTIONS(240),
-    [anon_sym_ATinternal] = ACTIONS(240),
-    [anon_sym_ATlink] = ACTIONS(240),
-    [anon_sym_ATmethod] = ACTIONS(240),
-    [anon_sym_ATparam] = ACTIONS(240),
-    [anon_sym_ATproperty] = ACTIONS(242),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(240),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(240),
-    [anon_sym_ATreturn] = ACTIONS(240),
-    [anon_sym_ATsee] = ACTIONS(240),
-    [anon_sym_ATthrows] = ACTIONS(240),
-    [anon_sym_ATvar] = ACTIONS(240),
-    [anon_sym_ATdeprecated] = ACTIONS(240),
-    [anon_sym_ATsince] = ACTIONS(240),
-    [anon_sym_ATversion] = ACTIONS(240),
-    [anon_sym_ATafter] = ACTIONS(242),
-    [anon_sym_ATafterClass] = ACTIONS(240),
-    [anon_sym_ATannotation] = ACTIONS(240),
-    [anon_sym_ATbackupGlobals] = ACTIONS(240),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(240),
-    [anon_sym_ATbefore] = ACTIONS(242),
-    [anon_sym_ATbeforeClass] = ACTIONS(240),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(242),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(240),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(240),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(240),
-    [anon_sym_ATcovers] = ACTIONS(242),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(242),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(240),
-    [anon_sym_ATcoversNothing] = ACTIONS(240),
-    [anon_sym_ATdataProvider] = ACTIONS(240),
-    [anon_sym_ATdepends] = ACTIONS(242),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(240),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(240),
-    [anon_sym_ATgroup] = ACTIONS(240),
-    [anon_sym_ATlarge] = ACTIONS(240),
-    [anon_sym_ATmedium] = ACTIONS(240),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(240),
-    [anon_sym_ATrequires] = ACTIONS(242),
-    [anon_sym_ATrequiresusages] = ACTIONS(240),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(240),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(240),
-    [anon_sym_ATsmall] = ACTIONS(240),
-    [anon_sym_ATtest] = ACTIONS(242),
-    [anon_sym_ATtestWith] = ACTIONS(240),
-    [anon_sym_ATtestdox] = ACTIONS(240),
-    [anon_sym_ATticket] = ACTIONS(240),
-    [sym_text] = ACTIONS(45),
-    [sym__end] = ACTIONS(240),
+    [aux_sym_union_type_repeat1] = STATE(41),
+    [anon_sym_LBRACE] = ACTIONS(291),
+    [anon_sym_ATinheritdoc] = ACTIONS(291),
+    [anon_sym_ATinheritDoc] = ACTIONS(291),
+    [anon_sym_ATapi] = ACTIONS(291),
+    [anon_sym_ATfilesource] = ACTIONS(291),
+    [anon_sym_ATignore] = ACTIONS(291),
+    [anon_sym_ATinternal] = ACTIONS(291),
+    [anon_sym_ATcategory] = ACTIONS(291),
+    [anon_sym_ATcopyright] = ACTIONS(291),
+    [anon_sym_ATtodo] = ACTIONS(291),
+    [anon_sym_ATexample] = ACTIONS(291),
+    [anon_sym_ATlicense] = ACTIONS(291),
+    [anon_sym_ATpackage] = ACTIONS(291),
+    [anon_sym_ATsource] = ACTIONS(291),
+    [anon_sym_ATsubpackage] = ACTIONS(291),
+    [anon_sym_ATuses] = ACTIONS(291),
+    [anon_sym_ATauthor] = ACTIONS(291),
+    [anon_sym_ATglobal] = ACTIONS(291),
+    [anon_sym_ATlink] = ACTIONS(291),
+    [anon_sym_ATmethod] = ACTIONS(291),
+    [anon_sym_ATparam] = ACTIONS(291),
+    [anon_sym_ATproperty] = ACTIONS(293),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(291),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(291),
+    [anon_sym_ATreturn] = ACTIONS(291),
+    [anon_sym_ATsee] = ACTIONS(291),
+    [anon_sym_ATthrows] = ACTIONS(291),
+    [anon_sym_ATvar] = ACTIONS(291),
+    [anon_sym_ATdeprecated] = ACTIONS(291),
+    [anon_sym_ATsince] = ACTIONS(291),
+    [anon_sym_ATversion] = ACTIONS(291),
+    [anon_sym_ATafter] = ACTIONS(293),
+    [anon_sym_ATafterClass] = ACTIONS(291),
+    [anon_sym_ATannotation] = ACTIONS(291),
+    [anon_sym_ATbackupGlobals] = ACTIONS(291),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(291),
+    [anon_sym_ATbefore] = ACTIONS(293),
+    [anon_sym_ATbeforeClass] = ACTIONS(291),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(293),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(291),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(291),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(291),
+    [anon_sym_ATcovers] = ACTIONS(293),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(293),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(291),
+    [anon_sym_ATcoversNothing] = ACTIONS(291),
+    [anon_sym_ATdataProvider] = ACTIONS(291),
+    [anon_sym_ATdepends] = ACTIONS(293),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(291),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(291),
+    [anon_sym_ATgroup] = ACTIONS(291),
+    [anon_sym_ATlarge] = ACTIONS(291),
+    [anon_sym_ATmedium] = ACTIONS(291),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(291),
+    [anon_sym_ATrequires] = ACTIONS(293),
+    [anon_sym_ATrequiresusages] = ACTIONS(291),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(291),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(291),
+    [anon_sym_ATsmall] = ACTIONS(291),
+    [anon_sym_ATtest] = ACTIONS(293),
+    [anon_sym_ATtestWith] = ACTIONS(291),
+    [anon_sym_ATtestdox] = ACTIONS(291),
+    [anon_sym_ATticket] = ACTIONS(291),
+    [anon_sym_PIPE] = ACTIONS(295),
+    [sym__end] = ACTIONS(291),
+    [sym_text] = ACTIONS(291),
   },
   [42] = {
-    [sym_inline_tag] = STATE(50),
-    [sym_description] = STATE(76),
-    [aux_sym_description_repeat1] = STATE(50),
-    [anon_sym_LBRACE] = ACTIONS(5),
-    [anon_sym_ATapi] = ACTIONS(244),
-    [anon_sym_ATfilesource] = ACTIONS(244),
-    [anon_sym_ATignore] = ACTIONS(244),
-    [anon_sym_ATcategory] = ACTIONS(244),
-    [anon_sym_ATcopyright] = ACTIONS(244),
-    [anon_sym_ATtodo] = ACTIONS(244),
-    [anon_sym_ATexample] = ACTIONS(244),
-    [anon_sym_ATlicense] = ACTIONS(244),
-    [anon_sym_ATpackage] = ACTIONS(244),
-    [anon_sym_ATsource] = ACTIONS(244),
-    [anon_sym_ATsubpackage] = ACTIONS(244),
-    [anon_sym_ATuses] = ACTIONS(244),
-    [anon_sym_ATauthor] = ACTIONS(244),
-    [anon_sym_ATglobal] = ACTIONS(244),
-    [anon_sym_ATinternal] = ACTIONS(244),
-    [anon_sym_ATlink] = ACTIONS(244),
-    [anon_sym_ATmethod] = ACTIONS(244),
-    [anon_sym_ATparam] = ACTIONS(244),
-    [anon_sym_ATproperty] = ACTIONS(246),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(244),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(244),
-    [anon_sym_ATreturn] = ACTIONS(244),
-    [anon_sym_ATsee] = ACTIONS(244),
-    [anon_sym_ATthrows] = ACTIONS(244),
-    [anon_sym_ATvar] = ACTIONS(244),
-    [anon_sym_ATdeprecated] = ACTIONS(244),
-    [anon_sym_ATsince] = ACTIONS(244),
-    [anon_sym_ATversion] = ACTIONS(244),
-    [anon_sym_ATafter] = ACTIONS(246),
-    [anon_sym_ATafterClass] = ACTIONS(244),
-    [anon_sym_ATannotation] = ACTIONS(244),
-    [anon_sym_ATbackupGlobals] = ACTIONS(244),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(244),
-    [anon_sym_ATbefore] = ACTIONS(246),
-    [anon_sym_ATbeforeClass] = ACTIONS(244),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(246),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(244),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(244),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(244),
-    [anon_sym_ATcovers] = ACTIONS(246),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(246),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(244),
-    [anon_sym_ATcoversNothing] = ACTIONS(244),
-    [anon_sym_ATdataProvider] = ACTIONS(244),
-    [anon_sym_ATdepends] = ACTIONS(246),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(244),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(244),
-    [anon_sym_ATgroup] = ACTIONS(244),
-    [anon_sym_ATlarge] = ACTIONS(244),
-    [anon_sym_ATmedium] = ACTIONS(244),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(244),
-    [anon_sym_ATrequires] = ACTIONS(246),
-    [anon_sym_ATrequiresusages] = ACTIONS(244),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(244),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(244),
-    [anon_sym_ATsmall] = ACTIONS(244),
-    [anon_sym_ATtest] = ACTIONS(246),
-    [anon_sym_ATtestWith] = ACTIONS(244),
-    [anon_sym_ATtestdox] = ACTIONS(244),
-    [anon_sym_ATticket] = ACTIONS(244),
-    [sym_text] = ACTIONS(45),
-    [sym__end] = ACTIONS(244),
+    [sym_inline_tag] = STATE(54),
+    [aux_sym__description_not_version_repeat1] = STATE(42),
+    [anon_sym_LBRACE] = ACTIONS(298),
+    [anon_sym_ATinheritdoc] = ACTIONS(301),
+    [anon_sym_ATinheritDoc] = ACTIONS(301),
+    [anon_sym_ATapi] = ACTIONS(301),
+    [anon_sym_ATfilesource] = ACTIONS(301),
+    [anon_sym_ATignore] = ACTIONS(301),
+    [anon_sym_ATinternal] = ACTIONS(301),
+    [anon_sym_ATcategory] = ACTIONS(301),
+    [anon_sym_ATcopyright] = ACTIONS(301),
+    [anon_sym_ATtodo] = ACTIONS(301),
+    [anon_sym_ATexample] = ACTIONS(301),
+    [anon_sym_ATlicense] = ACTIONS(301),
+    [anon_sym_ATpackage] = ACTIONS(301),
+    [anon_sym_ATsource] = ACTIONS(301),
+    [anon_sym_ATsubpackage] = ACTIONS(301),
+    [anon_sym_ATuses] = ACTIONS(301),
+    [anon_sym_ATauthor] = ACTIONS(301),
+    [anon_sym_ATglobal] = ACTIONS(301),
+    [anon_sym_ATlink] = ACTIONS(301),
+    [anon_sym_ATmethod] = ACTIONS(301),
+    [anon_sym_ATparam] = ACTIONS(301),
+    [anon_sym_ATproperty] = ACTIONS(303),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(301),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(301),
+    [anon_sym_ATreturn] = ACTIONS(301),
+    [anon_sym_ATsee] = ACTIONS(301),
+    [anon_sym_ATthrows] = ACTIONS(301),
+    [anon_sym_ATvar] = ACTIONS(301),
+    [anon_sym_ATdeprecated] = ACTIONS(301),
+    [anon_sym_ATsince] = ACTIONS(301),
+    [anon_sym_ATversion] = ACTIONS(301),
+    [anon_sym_ATafter] = ACTIONS(303),
+    [anon_sym_ATafterClass] = ACTIONS(301),
+    [anon_sym_ATannotation] = ACTIONS(301),
+    [anon_sym_ATbackupGlobals] = ACTIONS(301),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(301),
+    [anon_sym_ATbefore] = ACTIONS(303),
+    [anon_sym_ATbeforeClass] = ACTIONS(301),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(303),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(301),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(301),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(301),
+    [anon_sym_ATcovers] = ACTIONS(303),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(303),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(301),
+    [anon_sym_ATcoversNothing] = ACTIONS(301),
+    [anon_sym_ATdataProvider] = ACTIONS(301),
+    [anon_sym_ATdepends] = ACTIONS(303),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(301),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(301),
+    [anon_sym_ATgroup] = ACTIONS(301),
+    [anon_sym_ATlarge] = ACTIONS(301),
+    [anon_sym_ATmedium] = ACTIONS(301),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(301),
+    [anon_sym_ATrequires] = ACTIONS(303),
+    [anon_sym_ATrequiresusages] = ACTIONS(301),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(301),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(301),
+    [anon_sym_ATsmall] = ACTIONS(301),
+    [anon_sym_ATtest] = ACTIONS(303),
+    [anon_sym_ATtestWith] = ACTIONS(301),
+    [anon_sym_ATtestdox] = ACTIONS(301),
+    [anon_sym_ATticket] = ACTIONS(301),
+    [sym__end] = ACTIONS(301),
+    [sym__text_not_version] = ACTIONS(305),
   },
   [43] = {
-    [aux_sym_union_type_repeat1] = STATE(47),
-    [anon_sym_LBRACE] = ACTIONS(178),
-    [anon_sym_ATapi] = ACTIONS(178),
-    [anon_sym_ATfilesource] = ACTIONS(178),
-    [anon_sym_ATignore] = ACTIONS(178),
-    [anon_sym_ATcategory] = ACTIONS(178),
-    [anon_sym_ATcopyright] = ACTIONS(178),
-    [anon_sym_ATtodo] = ACTIONS(178),
-    [anon_sym_ATexample] = ACTIONS(178),
-    [anon_sym_ATlicense] = ACTIONS(178),
-    [anon_sym_ATpackage] = ACTIONS(178),
-    [anon_sym_ATsource] = ACTIONS(178),
-    [anon_sym_ATsubpackage] = ACTIONS(178),
-    [anon_sym_ATuses] = ACTIONS(178),
-    [anon_sym_ATauthor] = ACTIONS(178),
-    [anon_sym_ATglobal] = ACTIONS(178),
-    [anon_sym_ATinternal] = ACTIONS(178),
-    [anon_sym_ATlink] = ACTIONS(178),
-    [anon_sym_ATmethod] = ACTIONS(178),
-    [anon_sym_ATparam] = ACTIONS(178),
-    [anon_sym_ATproperty] = ACTIONS(180),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(178),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(178),
-    [anon_sym_ATreturn] = ACTIONS(178),
-    [anon_sym_ATsee] = ACTIONS(178),
-    [anon_sym_ATthrows] = ACTIONS(178),
-    [anon_sym_ATvar] = ACTIONS(178),
-    [anon_sym_ATdeprecated] = ACTIONS(178),
-    [anon_sym_ATsince] = ACTIONS(178),
-    [anon_sym_ATversion] = ACTIONS(178),
-    [anon_sym_ATafter] = ACTIONS(180),
-    [anon_sym_ATafterClass] = ACTIONS(178),
-    [anon_sym_ATannotation] = ACTIONS(178),
-    [anon_sym_ATbackupGlobals] = ACTIONS(178),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(178),
-    [anon_sym_ATbefore] = ACTIONS(180),
-    [anon_sym_ATbeforeClass] = ACTIONS(178),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(180),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(178),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(178),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(178),
-    [anon_sym_ATcovers] = ACTIONS(180),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(180),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(178),
-    [anon_sym_ATcoversNothing] = ACTIONS(178),
-    [anon_sym_ATdataProvider] = ACTIONS(178),
-    [anon_sym_ATdepends] = ACTIONS(180),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(178),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(178),
-    [anon_sym_ATgroup] = ACTIONS(178),
-    [anon_sym_ATlarge] = ACTIONS(178),
-    [anon_sym_ATmedium] = ACTIONS(178),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(178),
-    [anon_sym_ATrequires] = ACTIONS(180),
-    [anon_sym_ATrequiresusages] = ACTIONS(178),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(178),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(178),
-    [anon_sym_ATsmall] = ACTIONS(178),
-    [anon_sym_ATtest] = ACTIONS(180),
-    [anon_sym_ATtestWith] = ACTIONS(178),
-    [anon_sym_ATtestdox] = ACTIONS(178),
-    [anon_sym_ATticket] = ACTIONS(178),
-    [anon_sym_PIPE] = ACTIONS(248),
-    [sym_text] = ACTIONS(180),
-    [sym__end] = ACTIONS(178),
+    [anon_sym_LBRACE] = ACTIONS(291),
+    [anon_sym_ATinheritdoc] = ACTIONS(291),
+    [anon_sym_ATinheritDoc] = ACTIONS(291),
+    [anon_sym_ATapi] = ACTIONS(291),
+    [anon_sym_ATfilesource] = ACTIONS(291),
+    [anon_sym_ATignore] = ACTIONS(291),
+    [anon_sym_ATinternal] = ACTIONS(291),
+    [anon_sym_ATcategory] = ACTIONS(291),
+    [anon_sym_ATcopyright] = ACTIONS(291),
+    [anon_sym_ATtodo] = ACTIONS(291),
+    [anon_sym_ATexample] = ACTIONS(291),
+    [anon_sym_ATlicense] = ACTIONS(291),
+    [anon_sym_ATpackage] = ACTIONS(291),
+    [anon_sym_ATsource] = ACTIONS(291),
+    [anon_sym_ATsubpackage] = ACTIONS(291),
+    [anon_sym_ATuses] = ACTIONS(291),
+    [anon_sym_ATauthor] = ACTIONS(291),
+    [anon_sym_ATglobal] = ACTIONS(291),
+    [anon_sym_ATlink] = ACTIONS(291),
+    [anon_sym_ATmethod] = ACTIONS(291),
+    [anon_sym_ATparam] = ACTIONS(291),
+    [anon_sym_ATproperty] = ACTIONS(293),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(291),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(291),
+    [anon_sym_ATreturn] = ACTIONS(291),
+    [anon_sym_ATsee] = ACTIONS(291),
+    [anon_sym_ATthrows] = ACTIONS(291),
+    [anon_sym_ATvar] = ACTIONS(291),
+    [anon_sym_ATdeprecated] = ACTIONS(291),
+    [anon_sym_ATsince] = ACTIONS(291),
+    [anon_sym_ATversion] = ACTIONS(291),
+    [anon_sym_ATafter] = ACTIONS(293),
+    [anon_sym_ATafterClass] = ACTIONS(291),
+    [anon_sym_ATannotation] = ACTIONS(291),
+    [anon_sym_ATbackupGlobals] = ACTIONS(291),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(291),
+    [anon_sym_ATbefore] = ACTIONS(293),
+    [anon_sym_ATbeforeClass] = ACTIONS(291),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(293),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(291),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(291),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(291),
+    [anon_sym_ATcovers] = ACTIONS(293),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(293),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(291),
+    [anon_sym_ATcoversNothing] = ACTIONS(291),
+    [anon_sym_ATdataProvider] = ACTIONS(291),
+    [anon_sym_ATdepends] = ACTIONS(293),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(291),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(291),
+    [anon_sym_ATgroup] = ACTIONS(291),
+    [anon_sym_ATlarge] = ACTIONS(291),
+    [anon_sym_ATmedium] = ACTIONS(291),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(291),
+    [anon_sym_ATrequires] = ACTIONS(293),
+    [anon_sym_ATrequiresusages] = ACTIONS(291),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(291),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(291),
+    [anon_sym_ATsmall] = ACTIONS(291),
+    [anon_sym_ATtest] = ACTIONS(293),
+    [anon_sym_ATtestWith] = ACTIONS(291),
+    [anon_sym_ATtestdox] = ACTIONS(291),
+    [anon_sym_ATticket] = ACTIONS(291),
+    [anon_sym_PIPE] = ACTIONS(291),
+    [sym__end] = ACTIONS(291),
+    [sym_text] = ACTIONS(291),
   },
   [44] = {
-    [sym_inline_tag] = STATE(44),
-    [aux_sym_description_repeat1] = STATE(44),
-    [anon_sym_LBRACE] = ACTIONS(250),
-    [anon_sym_ATapi] = ACTIONS(253),
-    [anon_sym_ATfilesource] = ACTIONS(253),
-    [anon_sym_ATignore] = ACTIONS(253),
-    [anon_sym_ATcategory] = ACTIONS(253),
-    [anon_sym_ATcopyright] = ACTIONS(253),
-    [anon_sym_ATtodo] = ACTIONS(253),
-    [anon_sym_ATexample] = ACTIONS(253),
-    [anon_sym_ATlicense] = ACTIONS(253),
-    [anon_sym_ATpackage] = ACTIONS(253),
-    [anon_sym_ATsource] = ACTIONS(253),
-    [anon_sym_ATsubpackage] = ACTIONS(253),
-    [anon_sym_ATuses] = ACTIONS(253),
-    [anon_sym_ATauthor] = ACTIONS(253),
-    [anon_sym_ATglobal] = ACTIONS(253),
-    [anon_sym_ATinternal] = ACTIONS(253),
-    [anon_sym_ATlink] = ACTIONS(253),
-    [anon_sym_ATmethod] = ACTIONS(253),
-    [anon_sym_ATparam] = ACTIONS(253),
-    [anon_sym_ATproperty] = ACTIONS(255),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(253),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(253),
-    [anon_sym_ATreturn] = ACTIONS(253),
-    [anon_sym_ATsee] = ACTIONS(253),
-    [anon_sym_ATthrows] = ACTIONS(253),
-    [anon_sym_ATvar] = ACTIONS(253),
-    [anon_sym_ATdeprecated] = ACTIONS(253),
-    [anon_sym_ATsince] = ACTIONS(253),
-    [anon_sym_ATversion] = ACTIONS(253),
-    [anon_sym_ATafter] = ACTIONS(255),
-    [anon_sym_ATafterClass] = ACTIONS(253),
-    [anon_sym_ATannotation] = ACTIONS(253),
-    [anon_sym_ATbackupGlobals] = ACTIONS(253),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(253),
-    [anon_sym_ATbefore] = ACTIONS(255),
-    [anon_sym_ATbeforeClass] = ACTIONS(253),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(255),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(253),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(253),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(253),
-    [anon_sym_ATcovers] = ACTIONS(255),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(255),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(253),
-    [anon_sym_ATcoversNothing] = ACTIONS(253),
-    [anon_sym_ATdataProvider] = ACTIONS(253),
-    [anon_sym_ATdepends] = ACTIONS(255),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(253),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(253),
-    [anon_sym_ATgroup] = ACTIONS(253),
-    [anon_sym_ATlarge] = ACTIONS(253),
-    [anon_sym_ATmedium] = ACTIONS(253),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(253),
-    [anon_sym_ATrequires] = ACTIONS(255),
-    [anon_sym_ATrequiresusages] = ACTIONS(253),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(253),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(253),
-    [anon_sym_ATsmall] = ACTIONS(253),
-    [anon_sym_ATtest] = ACTIONS(255),
-    [anon_sym_ATtestWith] = ACTIONS(253),
-    [anon_sym_ATtestdox] = ACTIONS(253),
-    [anon_sym_ATticket] = ACTIONS(253),
-    [sym_text] = ACTIONS(257),
-    [sym__end] = ACTIONS(253),
+    [anon_sym_ATinheritdoc] = ACTIONS(308),
+    [anon_sym_ATinheritDoc] = ACTIONS(308),
+    [anon_sym_ATapi] = ACTIONS(308),
+    [anon_sym_ATfilesource] = ACTIONS(308),
+    [anon_sym_ATignore] = ACTIONS(308),
+    [anon_sym_ATinternal] = ACTIONS(308),
+    [anon_sym_ATcategory] = ACTIONS(308),
+    [anon_sym_ATcopyright] = ACTIONS(308),
+    [anon_sym_ATtodo] = ACTIONS(308),
+    [anon_sym_ATexample] = ACTIONS(308),
+    [anon_sym_ATlicense] = ACTIONS(308),
+    [anon_sym_ATpackage] = ACTIONS(308),
+    [anon_sym_ATsource] = ACTIONS(308),
+    [anon_sym_ATsubpackage] = ACTIONS(308),
+    [anon_sym_ATuses] = ACTIONS(308),
+    [anon_sym_ATauthor] = ACTIONS(308),
+    [anon_sym_ATglobal] = ACTIONS(308),
+    [anon_sym_ATlink] = ACTIONS(308),
+    [anon_sym_ATmethod] = ACTIONS(308),
+    [anon_sym_ATparam] = ACTIONS(308),
+    [anon_sym_ATproperty] = ACTIONS(310),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(308),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(308),
+    [anon_sym_ATreturn] = ACTIONS(308),
+    [anon_sym_ATsee] = ACTIONS(308),
+    [anon_sym_ATthrows] = ACTIONS(308),
+    [anon_sym_ATvar] = ACTIONS(308),
+    [anon_sym_ATdeprecated] = ACTIONS(308),
+    [anon_sym_ATsince] = ACTIONS(308),
+    [anon_sym_ATversion] = ACTIONS(308),
+    [anon_sym_ATafter] = ACTIONS(310),
+    [anon_sym_ATafterClass] = ACTIONS(308),
+    [anon_sym_ATannotation] = ACTIONS(308),
+    [anon_sym_ATbackupGlobals] = ACTIONS(308),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(308),
+    [anon_sym_ATbefore] = ACTIONS(310),
+    [anon_sym_ATbeforeClass] = ACTIONS(308),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(310),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(308),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(308),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(308),
+    [anon_sym_ATcovers] = ACTIONS(310),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(310),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(308),
+    [anon_sym_ATcoversNothing] = ACTIONS(308),
+    [anon_sym_ATdataProvider] = ACTIONS(308),
+    [anon_sym_ATdepends] = ACTIONS(310),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(308),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(308),
+    [anon_sym_ATgroup] = ACTIONS(308),
+    [anon_sym_ATlarge] = ACTIONS(308),
+    [anon_sym_ATmedium] = ACTIONS(308),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(308),
+    [anon_sym_ATrequires] = ACTIONS(310),
+    [anon_sym_ATrequiresusages] = ACTIONS(308),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(308),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(308),
+    [anon_sym_ATsmall] = ACTIONS(308),
+    [anon_sym_ATtest] = ACTIONS(310),
+    [anon_sym_ATtestWith] = ACTIONS(308),
+    [anon_sym_ATtestdox] = ACTIONS(308),
+    [anon_sym_ATticket] = ACTIONS(308),
+    [anon_sym_COMMA] = ACTIONS(308),
+    [anon_sym_RPAREN] = ACTIONS(308),
+    [anon_sym_EQ] = ACTIONS(308),
+    [sym__end] = ACTIONS(308),
   },
   [45] = {
-    [anon_sym_LBRACE] = ACTIONS(221),
-    [anon_sym_ATapi] = ACTIONS(221),
-    [anon_sym_ATfilesource] = ACTIONS(221),
-    [anon_sym_ATignore] = ACTIONS(221),
-    [anon_sym_ATcategory] = ACTIONS(221),
-    [anon_sym_ATcopyright] = ACTIONS(221),
-    [anon_sym_ATtodo] = ACTIONS(221),
-    [anon_sym_ATexample] = ACTIONS(221),
-    [anon_sym_ATlicense] = ACTIONS(221),
-    [anon_sym_ATpackage] = ACTIONS(221),
-    [anon_sym_ATsource] = ACTIONS(221),
-    [anon_sym_ATsubpackage] = ACTIONS(221),
-    [anon_sym_ATuses] = ACTIONS(221),
-    [anon_sym_ATauthor] = ACTIONS(221),
-    [anon_sym_ATglobal] = ACTIONS(221),
-    [anon_sym_ATinternal] = ACTIONS(221),
-    [anon_sym_ATlink] = ACTIONS(221),
-    [anon_sym_ATmethod] = ACTIONS(221),
-    [anon_sym_ATparam] = ACTIONS(221),
-    [anon_sym_ATproperty] = ACTIONS(223),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(221),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(221),
-    [anon_sym_ATreturn] = ACTIONS(221),
-    [anon_sym_ATsee] = ACTIONS(221),
-    [anon_sym_ATthrows] = ACTIONS(221),
-    [anon_sym_ATvar] = ACTIONS(221),
-    [anon_sym_ATdeprecated] = ACTIONS(221),
-    [anon_sym_ATsince] = ACTIONS(221),
-    [anon_sym_ATversion] = ACTIONS(221),
-    [anon_sym_ATafter] = ACTIONS(223),
-    [anon_sym_ATafterClass] = ACTIONS(221),
-    [anon_sym_ATannotation] = ACTIONS(221),
-    [anon_sym_ATbackupGlobals] = ACTIONS(221),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(221),
-    [anon_sym_ATbefore] = ACTIONS(223),
-    [anon_sym_ATbeforeClass] = ACTIONS(221),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(223),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(221),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(221),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(221),
-    [anon_sym_ATcovers] = ACTIONS(223),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(223),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(221),
-    [anon_sym_ATcoversNothing] = ACTIONS(221),
-    [anon_sym_ATdataProvider] = ACTIONS(221),
-    [anon_sym_ATdepends] = ACTIONS(223),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(221),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(221),
-    [anon_sym_ATgroup] = ACTIONS(221),
-    [anon_sym_ATlarge] = ACTIONS(221),
-    [anon_sym_ATmedium] = ACTIONS(221),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(221),
-    [anon_sym_ATrequires] = ACTIONS(223),
-    [anon_sym_ATrequiresusages] = ACTIONS(221),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(221),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(221),
-    [anon_sym_ATsmall] = ACTIONS(221),
-    [anon_sym_ATtest] = ACTIONS(223),
-    [anon_sym_ATtestWith] = ACTIONS(221),
-    [anon_sym_ATtestdox] = ACTIONS(221),
-    [anon_sym_ATticket] = ACTIONS(221),
-    [anon_sym_PIPE] = ACTIONS(221),
-    [anon_sym_DOLLAR] = ACTIONS(221),
-    [sym_text] = ACTIONS(223),
-    [sym__end] = ACTIONS(221),
+    [anon_sym_LBRACE] = ACTIONS(312),
+    [anon_sym_ATinheritdoc] = ACTIONS(312),
+    [anon_sym_ATinheritDoc] = ACTIONS(312),
+    [anon_sym_ATapi] = ACTIONS(312),
+    [anon_sym_ATfilesource] = ACTIONS(312),
+    [anon_sym_ATignore] = ACTIONS(312),
+    [anon_sym_ATinternal] = ACTIONS(312),
+    [anon_sym_ATcategory] = ACTIONS(312),
+    [anon_sym_ATcopyright] = ACTIONS(312),
+    [anon_sym_ATtodo] = ACTIONS(312),
+    [anon_sym_ATexample] = ACTIONS(312),
+    [anon_sym_ATlicense] = ACTIONS(312),
+    [anon_sym_ATpackage] = ACTIONS(312),
+    [anon_sym_ATsource] = ACTIONS(312),
+    [anon_sym_ATsubpackage] = ACTIONS(312),
+    [anon_sym_ATuses] = ACTIONS(312),
+    [anon_sym_ATauthor] = ACTIONS(312),
+    [anon_sym_ATglobal] = ACTIONS(312),
+    [anon_sym_ATlink] = ACTIONS(312),
+    [anon_sym_ATmethod] = ACTIONS(312),
+    [anon_sym_ATparam] = ACTIONS(312),
+    [anon_sym_ATproperty] = ACTIONS(314),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(312),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(312),
+    [anon_sym_ATreturn] = ACTIONS(312),
+    [anon_sym_ATsee] = ACTIONS(312),
+    [anon_sym_ATthrows] = ACTIONS(312),
+    [anon_sym_ATvar] = ACTIONS(312),
+    [anon_sym_ATdeprecated] = ACTIONS(312),
+    [anon_sym_ATsince] = ACTIONS(312),
+    [anon_sym_ATversion] = ACTIONS(312),
+    [anon_sym_ATafter] = ACTIONS(314),
+    [anon_sym_ATafterClass] = ACTIONS(312),
+    [anon_sym_ATannotation] = ACTIONS(312),
+    [anon_sym_ATbackupGlobals] = ACTIONS(312),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(312),
+    [anon_sym_ATbefore] = ACTIONS(314),
+    [anon_sym_ATbeforeClass] = ACTIONS(312),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(314),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(312),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(312),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(312),
+    [anon_sym_ATcovers] = ACTIONS(314),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(314),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(312),
+    [anon_sym_ATcoversNothing] = ACTIONS(312),
+    [anon_sym_ATdataProvider] = ACTIONS(312),
+    [anon_sym_ATdepends] = ACTIONS(314),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(312),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(312),
+    [anon_sym_ATgroup] = ACTIONS(312),
+    [anon_sym_ATlarge] = ACTIONS(312),
+    [anon_sym_ATmedium] = ACTIONS(312),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(312),
+    [anon_sym_ATrequires] = ACTIONS(314),
+    [anon_sym_ATrequiresusages] = ACTIONS(312),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(312),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(312),
+    [anon_sym_ATsmall] = ACTIONS(312),
+    [anon_sym_ATtest] = ACTIONS(314),
+    [anon_sym_ATtestWith] = ACTIONS(312),
+    [anon_sym_ATtestdox] = ACTIONS(312),
+    [anon_sym_ATticket] = ACTIONS(312),
+    [anon_sym_PIPE] = ACTIONS(312),
+    [sym__end] = ACTIONS(312),
+    [sym_text] = ACTIONS(312),
   },
   [46] = {
-    [anon_sym_LBRACE] = ACTIONS(260),
-    [anon_sym_ATapi] = ACTIONS(260),
-    [anon_sym_ATfilesource] = ACTIONS(260),
-    [anon_sym_ATignore] = ACTIONS(260),
-    [anon_sym_ATcategory] = ACTIONS(260),
-    [anon_sym_ATcopyright] = ACTIONS(260),
-    [anon_sym_ATtodo] = ACTIONS(260),
-    [anon_sym_ATexample] = ACTIONS(260),
-    [anon_sym_ATlicense] = ACTIONS(260),
-    [anon_sym_ATpackage] = ACTIONS(260),
-    [anon_sym_ATsource] = ACTIONS(260),
-    [anon_sym_ATsubpackage] = ACTIONS(260),
-    [anon_sym_ATuses] = ACTIONS(260),
-    [anon_sym_ATauthor] = ACTIONS(260),
-    [anon_sym_ATglobal] = ACTIONS(260),
-    [anon_sym_ATinternal] = ACTIONS(260),
-    [anon_sym_ATlink] = ACTIONS(260),
-    [anon_sym_ATmethod] = ACTIONS(260),
-    [anon_sym_ATparam] = ACTIONS(260),
-    [anon_sym_ATproperty] = ACTIONS(262),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(260),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(260),
-    [anon_sym_ATreturn] = ACTIONS(260),
-    [anon_sym_ATsee] = ACTIONS(260),
-    [anon_sym_ATthrows] = ACTIONS(260),
-    [anon_sym_ATvar] = ACTIONS(260),
-    [anon_sym_ATdeprecated] = ACTIONS(260),
-    [anon_sym_ATsince] = ACTIONS(260),
-    [anon_sym_ATversion] = ACTIONS(260),
-    [anon_sym_ATafter] = ACTIONS(262),
-    [anon_sym_ATafterClass] = ACTIONS(260),
-    [anon_sym_ATannotation] = ACTIONS(260),
-    [anon_sym_ATbackupGlobals] = ACTIONS(260),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(260),
-    [anon_sym_ATbefore] = ACTIONS(262),
-    [anon_sym_ATbeforeClass] = ACTIONS(260),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(262),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(260),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(260),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(260),
-    [anon_sym_ATcovers] = ACTIONS(262),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(262),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(260),
-    [anon_sym_ATcoversNothing] = ACTIONS(260),
-    [anon_sym_ATdataProvider] = ACTIONS(260),
-    [anon_sym_ATdepends] = ACTIONS(262),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(260),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(260),
-    [anon_sym_ATgroup] = ACTIONS(260),
-    [anon_sym_ATlarge] = ACTIONS(260),
-    [anon_sym_ATmedium] = ACTIONS(260),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(260),
-    [anon_sym_ATrequires] = ACTIONS(262),
-    [anon_sym_ATrequiresusages] = ACTIONS(260),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(260),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(260),
-    [anon_sym_ATsmall] = ACTIONS(260),
-    [anon_sym_ATtest] = ACTIONS(262),
-    [anon_sym_ATtestWith] = ACTIONS(260),
-    [anon_sym_ATtestdox] = ACTIONS(260),
-    [anon_sym_ATticket] = ACTIONS(260),
-    [anon_sym_PIPE] = ACTIONS(260),
-    [anon_sym_DOLLAR] = ACTIONS(260),
-    [sym_text] = ACTIONS(262),
-    [sym__end] = ACTIONS(260),
+    [anon_sym_LBRACE] = ACTIONS(316),
+    [anon_sym_ATinheritdoc] = ACTIONS(316),
+    [anon_sym_ATinheritDoc] = ACTIONS(316),
+    [anon_sym_ATapi] = ACTIONS(316),
+    [anon_sym_ATfilesource] = ACTIONS(316),
+    [anon_sym_ATignore] = ACTIONS(316),
+    [anon_sym_ATinternal] = ACTIONS(316),
+    [anon_sym_ATcategory] = ACTIONS(316),
+    [anon_sym_ATcopyright] = ACTIONS(316),
+    [anon_sym_ATtodo] = ACTIONS(316),
+    [anon_sym_ATexample] = ACTIONS(316),
+    [anon_sym_ATlicense] = ACTIONS(316),
+    [anon_sym_ATpackage] = ACTIONS(316),
+    [anon_sym_ATsource] = ACTIONS(316),
+    [anon_sym_ATsubpackage] = ACTIONS(316),
+    [anon_sym_ATuses] = ACTIONS(316),
+    [anon_sym_ATauthor] = ACTIONS(316),
+    [anon_sym_ATglobal] = ACTIONS(316),
+    [anon_sym_ATlink] = ACTIONS(316),
+    [anon_sym_ATmethod] = ACTIONS(316),
+    [anon_sym_ATparam] = ACTIONS(316),
+    [anon_sym_ATproperty] = ACTIONS(318),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(316),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(316),
+    [anon_sym_ATreturn] = ACTIONS(316),
+    [anon_sym_ATsee] = ACTIONS(316),
+    [anon_sym_ATthrows] = ACTIONS(316),
+    [anon_sym_ATvar] = ACTIONS(316),
+    [anon_sym_ATdeprecated] = ACTIONS(316),
+    [anon_sym_ATsince] = ACTIONS(316),
+    [anon_sym_ATversion] = ACTIONS(316),
+    [anon_sym_ATafter] = ACTIONS(318),
+    [anon_sym_ATafterClass] = ACTIONS(316),
+    [anon_sym_ATannotation] = ACTIONS(316),
+    [anon_sym_ATbackupGlobals] = ACTIONS(316),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(316),
+    [anon_sym_ATbefore] = ACTIONS(318),
+    [anon_sym_ATbeforeClass] = ACTIONS(316),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(318),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(316),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(316),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(316),
+    [anon_sym_ATcovers] = ACTIONS(318),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(318),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(316),
+    [anon_sym_ATcoversNothing] = ACTIONS(316),
+    [anon_sym_ATdataProvider] = ACTIONS(316),
+    [anon_sym_ATdepends] = ACTIONS(318),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(316),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(316),
+    [anon_sym_ATgroup] = ACTIONS(316),
+    [anon_sym_ATlarge] = ACTIONS(316),
+    [anon_sym_ATmedium] = ACTIONS(316),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(316),
+    [anon_sym_ATrequires] = ACTIONS(318),
+    [anon_sym_ATrequiresusages] = ACTIONS(316),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(316),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(316),
+    [anon_sym_ATsmall] = ACTIONS(316),
+    [anon_sym_ATtest] = ACTIONS(318),
+    [anon_sym_ATtestWith] = ACTIONS(316),
+    [anon_sym_ATtestdox] = ACTIONS(316),
+    [anon_sym_ATticket] = ACTIONS(316),
+    [anon_sym_PIPE] = ACTIONS(316),
+    [sym__end] = ACTIONS(316),
+    [sym_text] = ACTIONS(316),
   },
   [47] = {
-    [aux_sym_union_type_repeat1] = STATE(49),
-    [anon_sym_LBRACE] = ACTIONS(215),
-    [anon_sym_ATapi] = ACTIONS(215),
-    [anon_sym_ATfilesource] = ACTIONS(215),
-    [anon_sym_ATignore] = ACTIONS(215),
-    [anon_sym_ATcategory] = ACTIONS(215),
-    [anon_sym_ATcopyright] = ACTIONS(215),
-    [anon_sym_ATtodo] = ACTIONS(215),
-    [anon_sym_ATexample] = ACTIONS(215),
-    [anon_sym_ATlicense] = ACTIONS(215),
-    [anon_sym_ATpackage] = ACTIONS(215),
-    [anon_sym_ATsource] = ACTIONS(215),
-    [anon_sym_ATsubpackage] = ACTIONS(215),
-    [anon_sym_ATuses] = ACTIONS(215),
-    [anon_sym_ATauthor] = ACTIONS(215),
-    [anon_sym_ATglobal] = ACTIONS(215),
-    [anon_sym_ATinternal] = ACTIONS(215),
-    [anon_sym_ATlink] = ACTIONS(215),
-    [anon_sym_ATmethod] = ACTIONS(215),
-    [anon_sym_ATparam] = ACTIONS(215),
-    [anon_sym_ATproperty] = ACTIONS(217),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(215),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(215),
-    [anon_sym_ATreturn] = ACTIONS(215),
-    [anon_sym_ATsee] = ACTIONS(215),
-    [anon_sym_ATthrows] = ACTIONS(215),
-    [anon_sym_ATvar] = ACTIONS(215),
-    [anon_sym_ATdeprecated] = ACTIONS(215),
-    [anon_sym_ATsince] = ACTIONS(215),
-    [anon_sym_ATversion] = ACTIONS(215),
-    [anon_sym_ATafter] = ACTIONS(217),
-    [anon_sym_ATafterClass] = ACTIONS(215),
-    [anon_sym_ATannotation] = ACTIONS(215),
-    [anon_sym_ATbackupGlobals] = ACTIONS(215),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(215),
-    [anon_sym_ATbefore] = ACTIONS(217),
-    [anon_sym_ATbeforeClass] = ACTIONS(215),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(217),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(215),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(215),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(215),
-    [anon_sym_ATcovers] = ACTIONS(217),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(217),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(215),
-    [anon_sym_ATcoversNothing] = ACTIONS(215),
-    [anon_sym_ATdataProvider] = ACTIONS(215),
-    [anon_sym_ATdepends] = ACTIONS(217),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(215),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(215),
-    [anon_sym_ATgroup] = ACTIONS(215),
-    [anon_sym_ATlarge] = ACTIONS(215),
-    [anon_sym_ATmedium] = ACTIONS(215),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(215),
-    [anon_sym_ATrequires] = ACTIONS(217),
-    [anon_sym_ATrequiresusages] = ACTIONS(215),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(215),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(215),
-    [anon_sym_ATsmall] = ACTIONS(215),
-    [anon_sym_ATtest] = ACTIONS(217),
-    [anon_sym_ATtestWith] = ACTIONS(215),
-    [anon_sym_ATtestdox] = ACTIONS(215),
-    [anon_sym_ATticket] = ACTIONS(215),
-    [anon_sym_PIPE] = ACTIONS(248),
-    [sym_text] = ACTIONS(217),
-    [sym__end] = ACTIONS(215),
+    [anon_sym_LBRACE] = ACTIONS(320),
+    [anon_sym_ATinheritdoc] = ACTIONS(320),
+    [anon_sym_ATinheritDoc] = ACTIONS(320),
+    [anon_sym_ATapi] = ACTIONS(320),
+    [anon_sym_ATfilesource] = ACTIONS(320),
+    [anon_sym_ATignore] = ACTIONS(320),
+    [anon_sym_ATinternal] = ACTIONS(320),
+    [anon_sym_ATcategory] = ACTIONS(320),
+    [anon_sym_ATcopyright] = ACTIONS(320),
+    [anon_sym_ATtodo] = ACTIONS(320),
+    [anon_sym_ATexample] = ACTIONS(320),
+    [anon_sym_ATlicense] = ACTIONS(320),
+    [anon_sym_ATpackage] = ACTIONS(320),
+    [anon_sym_ATsource] = ACTIONS(320),
+    [anon_sym_ATsubpackage] = ACTIONS(320),
+    [anon_sym_ATuses] = ACTIONS(320),
+    [anon_sym_ATauthor] = ACTIONS(320),
+    [anon_sym_ATglobal] = ACTIONS(320),
+    [anon_sym_ATlink] = ACTIONS(320),
+    [anon_sym_ATmethod] = ACTIONS(320),
+    [anon_sym_ATparam] = ACTIONS(320),
+    [anon_sym_ATproperty] = ACTIONS(322),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(320),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(320),
+    [anon_sym_ATreturn] = ACTIONS(320),
+    [anon_sym_ATsee] = ACTIONS(320),
+    [anon_sym_ATthrows] = ACTIONS(320),
+    [anon_sym_ATvar] = ACTIONS(320),
+    [anon_sym_ATdeprecated] = ACTIONS(320),
+    [anon_sym_ATsince] = ACTIONS(320),
+    [anon_sym_ATversion] = ACTIONS(320),
+    [anon_sym_ATafter] = ACTIONS(322),
+    [anon_sym_ATafterClass] = ACTIONS(320),
+    [anon_sym_ATannotation] = ACTIONS(320),
+    [anon_sym_ATbackupGlobals] = ACTIONS(320),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(320),
+    [anon_sym_ATbefore] = ACTIONS(322),
+    [anon_sym_ATbeforeClass] = ACTIONS(320),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(322),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(320),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(320),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(320),
+    [anon_sym_ATcovers] = ACTIONS(322),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(322),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(320),
+    [anon_sym_ATcoversNothing] = ACTIONS(320),
+    [anon_sym_ATdataProvider] = ACTIONS(320),
+    [anon_sym_ATdepends] = ACTIONS(322),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(320),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(320),
+    [anon_sym_ATgroup] = ACTIONS(320),
+    [anon_sym_ATlarge] = ACTIONS(320),
+    [anon_sym_ATmedium] = ACTIONS(320),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(320),
+    [anon_sym_ATrequires] = ACTIONS(322),
+    [anon_sym_ATrequiresusages] = ACTIONS(320),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(320),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(320),
+    [anon_sym_ATsmall] = ACTIONS(320),
+    [anon_sym_ATtest] = ACTIONS(322),
+    [anon_sym_ATtestWith] = ACTIONS(320),
+    [anon_sym_ATtestdox] = ACTIONS(320),
+    [anon_sym_ATticket] = ACTIONS(320),
+    [sym__end] = ACTIONS(320),
+    [sym__text_after_type] = ACTIONS(320),
   },
   [48] = {
-    [anon_sym_LBRACE] = ACTIONS(264),
-    [anon_sym_ATapi] = ACTIONS(264),
-    [anon_sym_ATfilesource] = ACTIONS(264),
-    [anon_sym_ATignore] = ACTIONS(264),
-    [anon_sym_ATcategory] = ACTIONS(264),
-    [anon_sym_ATcopyright] = ACTIONS(264),
-    [anon_sym_ATtodo] = ACTIONS(264),
-    [anon_sym_ATexample] = ACTIONS(264),
-    [anon_sym_ATlicense] = ACTIONS(264),
-    [anon_sym_ATpackage] = ACTIONS(264),
-    [anon_sym_ATsource] = ACTIONS(264),
-    [anon_sym_ATsubpackage] = ACTIONS(264),
-    [anon_sym_ATuses] = ACTIONS(264),
-    [anon_sym_ATauthor] = ACTIONS(264),
-    [anon_sym_ATglobal] = ACTIONS(264),
-    [anon_sym_ATinternal] = ACTIONS(264),
-    [anon_sym_ATlink] = ACTIONS(264),
-    [anon_sym_ATmethod] = ACTIONS(264),
-    [anon_sym_ATparam] = ACTIONS(264),
-    [anon_sym_ATproperty] = ACTIONS(266),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(264),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(264),
-    [anon_sym_ATreturn] = ACTIONS(264),
-    [anon_sym_ATsee] = ACTIONS(264),
-    [anon_sym_ATthrows] = ACTIONS(264),
-    [anon_sym_ATvar] = ACTIONS(264),
-    [anon_sym_ATdeprecated] = ACTIONS(264),
-    [anon_sym_ATsince] = ACTIONS(264),
-    [anon_sym_ATversion] = ACTIONS(264),
-    [anon_sym_ATafter] = ACTIONS(266),
-    [anon_sym_ATafterClass] = ACTIONS(264),
-    [anon_sym_ATannotation] = ACTIONS(264),
-    [anon_sym_ATbackupGlobals] = ACTIONS(264),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(264),
-    [anon_sym_ATbefore] = ACTIONS(266),
-    [anon_sym_ATbeforeClass] = ACTIONS(264),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(266),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(264),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(264),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(264),
-    [anon_sym_ATcovers] = ACTIONS(266),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(266),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(264),
-    [anon_sym_ATcoversNothing] = ACTIONS(264),
-    [anon_sym_ATdataProvider] = ACTIONS(264),
-    [anon_sym_ATdepends] = ACTIONS(266),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(264),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(264),
-    [anon_sym_ATgroup] = ACTIONS(264),
-    [anon_sym_ATlarge] = ACTIONS(264),
-    [anon_sym_ATmedium] = ACTIONS(264),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(264),
-    [anon_sym_ATrequires] = ACTIONS(266),
-    [anon_sym_ATrequiresusages] = ACTIONS(264),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(264),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(264),
-    [anon_sym_ATsmall] = ACTIONS(264),
-    [anon_sym_ATtest] = ACTIONS(266),
-    [anon_sym_ATtestWith] = ACTIONS(264),
-    [anon_sym_ATtestdox] = ACTIONS(264),
-    [anon_sym_ATticket] = ACTIONS(264),
-    [anon_sym_PIPE] = ACTIONS(264),
-    [anon_sym_DOLLAR] = ACTIONS(264),
-    [sym_text] = ACTIONS(266),
-    [sym__end] = ACTIONS(264),
+    [anon_sym_LBRACE] = ACTIONS(308),
+    [anon_sym_ATinheritdoc] = ACTIONS(308),
+    [anon_sym_ATinheritDoc] = ACTIONS(308),
+    [anon_sym_ATapi] = ACTIONS(308),
+    [anon_sym_ATfilesource] = ACTIONS(308),
+    [anon_sym_ATignore] = ACTIONS(308),
+    [anon_sym_ATinternal] = ACTIONS(308),
+    [anon_sym_ATcategory] = ACTIONS(308),
+    [anon_sym_ATcopyright] = ACTIONS(308),
+    [anon_sym_ATtodo] = ACTIONS(308),
+    [anon_sym_ATexample] = ACTIONS(308),
+    [anon_sym_ATlicense] = ACTIONS(308),
+    [anon_sym_ATpackage] = ACTIONS(308),
+    [anon_sym_ATsource] = ACTIONS(308),
+    [anon_sym_ATsubpackage] = ACTIONS(308),
+    [anon_sym_ATuses] = ACTIONS(308),
+    [anon_sym_ATauthor] = ACTIONS(308),
+    [anon_sym_ATglobal] = ACTIONS(308),
+    [anon_sym_ATlink] = ACTIONS(308),
+    [anon_sym_ATmethod] = ACTIONS(308),
+    [anon_sym_ATparam] = ACTIONS(308),
+    [anon_sym_ATproperty] = ACTIONS(310),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(308),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(308),
+    [anon_sym_ATreturn] = ACTIONS(308),
+    [anon_sym_ATsee] = ACTIONS(308),
+    [anon_sym_ATthrows] = ACTIONS(308),
+    [anon_sym_ATvar] = ACTIONS(308),
+    [anon_sym_ATdeprecated] = ACTIONS(308),
+    [anon_sym_ATsince] = ACTIONS(308),
+    [anon_sym_ATversion] = ACTIONS(308),
+    [anon_sym_ATafter] = ACTIONS(310),
+    [anon_sym_ATafterClass] = ACTIONS(308),
+    [anon_sym_ATannotation] = ACTIONS(308),
+    [anon_sym_ATbackupGlobals] = ACTIONS(308),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(308),
+    [anon_sym_ATbefore] = ACTIONS(310),
+    [anon_sym_ATbeforeClass] = ACTIONS(308),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(310),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(308),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(308),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(308),
+    [anon_sym_ATcovers] = ACTIONS(310),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(310),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(308),
+    [anon_sym_ATcoversNothing] = ACTIONS(308),
+    [anon_sym_ATdataProvider] = ACTIONS(308),
+    [anon_sym_ATdepends] = ACTIONS(310),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(308),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(308),
+    [anon_sym_ATgroup] = ACTIONS(308),
+    [anon_sym_ATlarge] = ACTIONS(308),
+    [anon_sym_ATmedium] = ACTIONS(308),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(308),
+    [anon_sym_ATrequires] = ACTIONS(310),
+    [anon_sym_ATrequiresusages] = ACTIONS(308),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(308),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(308),
+    [anon_sym_ATsmall] = ACTIONS(308),
+    [anon_sym_ATtest] = ACTIONS(310),
+    [anon_sym_ATtestWith] = ACTIONS(308),
+    [anon_sym_ATtestdox] = ACTIONS(308),
+    [anon_sym_ATticket] = ACTIONS(308),
+    [sym__end] = ACTIONS(308),
+    [sym_text] = ACTIONS(308),
   },
   [49] = {
-    [aux_sym_union_type_repeat1] = STATE(49),
-    [anon_sym_LBRACE] = ACTIONS(221),
-    [anon_sym_ATapi] = ACTIONS(221),
-    [anon_sym_ATfilesource] = ACTIONS(221),
-    [anon_sym_ATignore] = ACTIONS(221),
-    [anon_sym_ATcategory] = ACTIONS(221),
-    [anon_sym_ATcopyright] = ACTIONS(221),
-    [anon_sym_ATtodo] = ACTIONS(221),
-    [anon_sym_ATexample] = ACTIONS(221),
-    [anon_sym_ATlicense] = ACTIONS(221),
-    [anon_sym_ATpackage] = ACTIONS(221),
-    [anon_sym_ATsource] = ACTIONS(221),
-    [anon_sym_ATsubpackage] = ACTIONS(221),
-    [anon_sym_ATuses] = ACTIONS(221),
-    [anon_sym_ATauthor] = ACTIONS(221),
-    [anon_sym_ATglobal] = ACTIONS(221),
-    [anon_sym_ATinternal] = ACTIONS(221),
-    [anon_sym_ATlink] = ACTIONS(221),
-    [anon_sym_ATmethod] = ACTIONS(221),
-    [anon_sym_ATparam] = ACTIONS(221),
-    [anon_sym_ATproperty] = ACTIONS(223),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(221),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(221),
-    [anon_sym_ATreturn] = ACTIONS(221),
-    [anon_sym_ATsee] = ACTIONS(221),
-    [anon_sym_ATthrows] = ACTIONS(221),
-    [anon_sym_ATvar] = ACTIONS(221),
-    [anon_sym_ATdeprecated] = ACTIONS(221),
-    [anon_sym_ATsince] = ACTIONS(221),
-    [anon_sym_ATversion] = ACTIONS(221),
-    [anon_sym_ATafter] = ACTIONS(223),
-    [anon_sym_ATafterClass] = ACTIONS(221),
-    [anon_sym_ATannotation] = ACTIONS(221),
-    [anon_sym_ATbackupGlobals] = ACTIONS(221),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(221),
-    [anon_sym_ATbefore] = ACTIONS(223),
-    [anon_sym_ATbeforeClass] = ACTIONS(221),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(223),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(221),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(221),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(221),
-    [anon_sym_ATcovers] = ACTIONS(223),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(223),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(221),
-    [anon_sym_ATcoversNothing] = ACTIONS(221),
-    [anon_sym_ATdataProvider] = ACTIONS(221),
-    [anon_sym_ATdepends] = ACTIONS(223),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(221),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(221),
-    [anon_sym_ATgroup] = ACTIONS(221),
-    [anon_sym_ATlarge] = ACTIONS(221),
-    [anon_sym_ATmedium] = ACTIONS(221),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(221),
-    [anon_sym_ATrequires] = ACTIONS(223),
-    [anon_sym_ATrequiresusages] = ACTIONS(221),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(221),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(221),
-    [anon_sym_ATsmall] = ACTIONS(221),
-    [anon_sym_ATtest] = ACTIONS(223),
-    [anon_sym_ATtestWith] = ACTIONS(221),
-    [anon_sym_ATtestdox] = ACTIONS(221),
-    [anon_sym_ATticket] = ACTIONS(221),
-    [anon_sym_PIPE] = ACTIONS(268),
-    [sym_text] = ACTIONS(223),
-    [sym__end] = ACTIONS(221),
+    [anon_sym_LBRACE] = ACTIONS(324),
+    [anon_sym_ATinheritdoc] = ACTIONS(324),
+    [anon_sym_ATinheritDoc] = ACTIONS(324),
+    [anon_sym_ATapi] = ACTIONS(324),
+    [anon_sym_ATfilesource] = ACTIONS(324),
+    [anon_sym_ATignore] = ACTIONS(324),
+    [anon_sym_ATinternal] = ACTIONS(324),
+    [anon_sym_ATcategory] = ACTIONS(324),
+    [anon_sym_ATcopyright] = ACTIONS(324),
+    [anon_sym_ATtodo] = ACTIONS(324),
+    [anon_sym_ATexample] = ACTIONS(324),
+    [anon_sym_ATlicense] = ACTIONS(324),
+    [anon_sym_ATpackage] = ACTIONS(324),
+    [anon_sym_ATsource] = ACTIONS(324),
+    [anon_sym_ATsubpackage] = ACTIONS(324),
+    [anon_sym_ATuses] = ACTIONS(324),
+    [anon_sym_ATauthor] = ACTIONS(324),
+    [anon_sym_ATglobal] = ACTIONS(324),
+    [anon_sym_ATlink] = ACTIONS(324),
+    [anon_sym_ATmethod] = ACTIONS(324),
+    [anon_sym_ATparam] = ACTIONS(324),
+    [anon_sym_ATproperty] = ACTIONS(326),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(324),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(324),
+    [anon_sym_ATreturn] = ACTIONS(324),
+    [anon_sym_ATsee] = ACTIONS(324),
+    [anon_sym_ATthrows] = ACTIONS(324),
+    [anon_sym_ATvar] = ACTIONS(324),
+    [anon_sym_ATdeprecated] = ACTIONS(324),
+    [anon_sym_ATsince] = ACTIONS(324),
+    [anon_sym_ATversion] = ACTIONS(324),
+    [anon_sym_ATafter] = ACTIONS(326),
+    [anon_sym_ATafterClass] = ACTIONS(324),
+    [anon_sym_ATannotation] = ACTIONS(324),
+    [anon_sym_ATbackupGlobals] = ACTIONS(324),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(324),
+    [anon_sym_ATbefore] = ACTIONS(326),
+    [anon_sym_ATbeforeClass] = ACTIONS(324),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(326),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(324),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(324),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(324),
+    [anon_sym_ATcovers] = ACTIONS(326),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(326),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(324),
+    [anon_sym_ATcoversNothing] = ACTIONS(324),
+    [anon_sym_ATdataProvider] = ACTIONS(324),
+    [anon_sym_ATdepends] = ACTIONS(326),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(324),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(324),
+    [anon_sym_ATgroup] = ACTIONS(324),
+    [anon_sym_ATlarge] = ACTIONS(324),
+    [anon_sym_ATmedium] = ACTIONS(324),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(324),
+    [anon_sym_ATrequires] = ACTIONS(326),
+    [anon_sym_ATrequiresusages] = ACTIONS(324),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(324),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(324),
+    [anon_sym_ATsmall] = ACTIONS(324),
+    [anon_sym_ATtest] = ACTIONS(326),
+    [anon_sym_ATtestWith] = ACTIONS(324),
+    [anon_sym_ATtestdox] = ACTIONS(324),
+    [anon_sym_ATticket] = ACTIONS(324),
+    [sym__end] = ACTIONS(324),
+    [sym_text] = ACTIONS(324),
   },
   [50] = {
-    [sym_inline_tag] = STATE(44),
-    [aux_sym_description_repeat1] = STATE(44),
-    [anon_sym_LBRACE] = ACTIONS(5),
-    [anon_sym_ATapi] = ACTIONS(271),
-    [anon_sym_ATfilesource] = ACTIONS(271),
-    [anon_sym_ATignore] = ACTIONS(271),
-    [anon_sym_ATcategory] = ACTIONS(271),
-    [anon_sym_ATcopyright] = ACTIONS(271),
-    [anon_sym_ATtodo] = ACTIONS(271),
-    [anon_sym_ATexample] = ACTIONS(271),
-    [anon_sym_ATlicense] = ACTIONS(271),
-    [anon_sym_ATpackage] = ACTIONS(271),
-    [anon_sym_ATsource] = ACTIONS(271),
-    [anon_sym_ATsubpackage] = ACTIONS(271),
-    [anon_sym_ATuses] = ACTIONS(271),
-    [anon_sym_ATauthor] = ACTIONS(271),
-    [anon_sym_ATglobal] = ACTIONS(271),
-    [anon_sym_ATinternal] = ACTIONS(271),
-    [anon_sym_ATlink] = ACTIONS(271),
-    [anon_sym_ATmethod] = ACTIONS(271),
-    [anon_sym_ATparam] = ACTIONS(271),
-    [anon_sym_ATproperty] = ACTIONS(273),
-    [anon_sym_ATproperty_DASHread] = ACTIONS(271),
-    [anon_sym_ATproperty_DASHwrite] = ACTIONS(271),
-    [anon_sym_ATreturn] = ACTIONS(271),
-    [anon_sym_ATsee] = ACTIONS(271),
-    [anon_sym_ATthrows] = ACTIONS(271),
-    [anon_sym_ATvar] = ACTIONS(271),
-    [anon_sym_ATdeprecated] = ACTIONS(271),
-    [anon_sym_ATsince] = ACTIONS(271),
-    [anon_sym_ATversion] = ACTIONS(271),
-    [anon_sym_ATafter] = ACTIONS(273),
-    [anon_sym_ATafterClass] = ACTIONS(271),
-    [anon_sym_ATannotation] = ACTIONS(271),
-    [anon_sym_ATbackupGlobals] = ACTIONS(271),
-    [anon_sym_ATbackupStaticAttributes] = ACTIONS(271),
-    [anon_sym_ATbefore] = ACTIONS(273),
-    [anon_sym_ATbeforeClass] = ACTIONS(271),
-    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(273),
-    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(271),
-    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(271),
-    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(271),
-    [anon_sym_ATcovers] = ACTIONS(273),
-    [anon_sym_ATcoversDefaultClass] = ACTIONS(273),
-    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(271),
-    [anon_sym_ATcoversNothing] = ACTIONS(271),
-    [anon_sym_ATdataProvider] = ACTIONS(271),
-    [anon_sym_ATdepends] = ACTIONS(273),
-    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(271),
-    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(271),
-    [anon_sym_ATgroup] = ACTIONS(271),
-    [anon_sym_ATlarge] = ACTIONS(271),
-    [anon_sym_ATmedium] = ACTIONS(271),
-    [anon_sym_ATpreserveGlobalState] = ACTIONS(271),
-    [anon_sym_ATrequires] = ACTIONS(273),
-    [anon_sym_ATrequiresusages] = ACTIONS(271),
-    [anon_sym_ATrunInSeparateProcess] = ACTIONS(271),
-    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(271),
-    [anon_sym_ATsmall] = ACTIONS(271),
-    [anon_sym_ATtest] = ACTIONS(273),
-    [anon_sym_ATtestWith] = ACTIONS(271),
-    [anon_sym_ATtestdox] = ACTIONS(271),
-    [anon_sym_ATticket] = ACTIONS(271),
-    [sym_text] = ACTIONS(275),
-    [sym__end] = ACTIONS(271),
+    [anon_sym_LBRACE] = ACTIONS(324),
+    [anon_sym_ATinheritdoc] = ACTIONS(324),
+    [anon_sym_ATinheritDoc] = ACTIONS(324),
+    [anon_sym_ATapi] = ACTIONS(324),
+    [anon_sym_ATfilesource] = ACTIONS(324),
+    [anon_sym_ATignore] = ACTIONS(324),
+    [anon_sym_ATinternal] = ACTIONS(324),
+    [anon_sym_ATcategory] = ACTIONS(324),
+    [anon_sym_ATcopyright] = ACTIONS(324),
+    [anon_sym_ATtodo] = ACTIONS(324),
+    [anon_sym_ATexample] = ACTIONS(324),
+    [anon_sym_ATlicense] = ACTIONS(324),
+    [anon_sym_ATpackage] = ACTIONS(324),
+    [anon_sym_ATsource] = ACTIONS(324),
+    [anon_sym_ATsubpackage] = ACTIONS(324),
+    [anon_sym_ATuses] = ACTIONS(324),
+    [anon_sym_ATauthor] = ACTIONS(324),
+    [anon_sym_ATglobal] = ACTIONS(324),
+    [anon_sym_ATlink] = ACTIONS(324),
+    [anon_sym_ATmethod] = ACTIONS(324),
+    [anon_sym_ATparam] = ACTIONS(324),
+    [anon_sym_ATproperty] = ACTIONS(326),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(324),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(324),
+    [anon_sym_ATreturn] = ACTIONS(324),
+    [anon_sym_ATsee] = ACTIONS(324),
+    [anon_sym_ATthrows] = ACTIONS(324),
+    [anon_sym_ATvar] = ACTIONS(324),
+    [anon_sym_ATdeprecated] = ACTIONS(324),
+    [anon_sym_ATsince] = ACTIONS(324),
+    [anon_sym_ATversion] = ACTIONS(324),
+    [anon_sym_ATafter] = ACTIONS(326),
+    [anon_sym_ATafterClass] = ACTIONS(324),
+    [anon_sym_ATannotation] = ACTIONS(324),
+    [anon_sym_ATbackupGlobals] = ACTIONS(324),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(324),
+    [anon_sym_ATbefore] = ACTIONS(326),
+    [anon_sym_ATbeforeClass] = ACTIONS(324),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(326),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(324),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(324),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(324),
+    [anon_sym_ATcovers] = ACTIONS(326),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(326),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(324),
+    [anon_sym_ATcoversNothing] = ACTIONS(324),
+    [anon_sym_ATdataProvider] = ACTIONS(324),
+    [anon_sym_ATdepends] = ACTIONS(326),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(324),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(324),
+    [anon_sym_ATgroup] = ACTIONS(324),
+    [anon_sym_ATlarge] = ACTIONS(324),
+    [anon_sym_ATmedium] = ACTIONS(324),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(324),
+    [anon_sym_ATrequires] = ACTIONS(326),
+    [anon_sym_ATrequiresusages] = ACTIONS(324),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(324),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(324),
+    [anon_sym_ATsmall] = ACTIONS(324),
+    [anon_sym_ATtest] = ACTIONS(326),
+    [anon_sym_ATtestWith] = ACTIONS(324),
+    [anon_sym_ATtestdox] = ACTIONS(324),
+    [anon_sym_ATticket] = ACTIONS(324),
+    [sym__end] = ACTIONS(324),
+    [sym__text_not_version] = ACTIONS(324),
+  },
+  [51] = {
+    [anon_sym_LBRACE] = ACTIONS(328),
+    [anon_sym_ATinheritdoc] = ACTIONS(328),
+    [anon_sym_ATinheritDoc] = ACTIONS(328),
+    [anon_sym_ATapi] = ACTIONS(328),
+    [anon_sym_ATfilesource] = ACTIONS(328),
+    [anon_sym_ATignore] = ACTIONS(328),
+    [anon_sym_ATinternal] = ACTIONS(328),
+    [anon_sym_ATcategory] = ACTIONS(328),
+    [anon_sym_ATcopyright] = ACTIONS(328),
+    [anon_sym_ATtodo] = ACTIONS(328),
+    [anon_sym_ATexample] = ACTIONS(328),
+    [anon_sym_ATlicense] = ACTIONS(328),
+    [anon_sym_ATpackage] = ACTIONS(328),
+    [anon_sym_ATsource] = ACTIONS(328),
+    [anon_sym_ATsubpackage] = ACTIONS(328),
+    [anon_sym_ATuses] = ACTIONS(328),
+    [anon_sym_ATauthor] = ACTIONS(328),
+    [anon_sym_ATglobal] = ACTIONS(328),
+    [anon_sym_ATlink] = ACTIONS(328),
+    [anon_sym_ATmethod] = ACTIONS(328),
+    [anon_sym_ATparam] = ACTIONS(328),
+    [anon_sym_ATproperty] = ACTIONS(330),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(328),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(328),
+    [anon_sym_ATreturn] = ACTIONS(328),
+    [anon_sym_ATsee] = ACTIONS(328),
+    [anon_sym_ATthrows] = ACTIONS(328),
+    [anon_sym_ATvar] = ACTIONS(328),
+    [anon_sym_ATdeprecated] = ACTIONS(328),
+    [anon_sym_ATsince] = ACTIONS(328),
+    [anon_sym_ATversion] = ACTIONS(328),
+    [anon_sym_ATafter] = ACTIONS(330),
+    [anon_sym_ATafterClass] = ACTIONS(328),
+    [anon_sym_ATannotation] = ACTIONS(328),
+    [anon_sym_ATbackupGlobals] = ACTIONS(328),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(328),
+    [anon_sym_ATbefore] = ACTIONS(330),
+    [anon_sym_ATbeforeClass] = ACTIONS(328),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(330),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(328),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(328),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(328),
+    [anon_sym_ATcovers] = ACTIONS(330),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(330),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(328),
+    [anon_sym_ATcoversNothing] = ACTIONS(328),
+    [anon_sym_ATdataProvider] = ACTIONS(328),
+    [anon_sym_ATdepends] = ACTIONS(330),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(328),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(328),
+    [anon_sym_ATgroup] = ACTIONS(328),
+    [anon_sym_ATlarge] = ACTIONS(328),
+    [anon_sym_ATmedium] = ACTIONS(328),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(328),
+    [anon_sym_ATrequires] = ACTIONS(330),
+    [anon_sym_ATrequiresusages] = ACTIONS(328),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(328),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(328),
+    [anon_sym_ATsmall] = ACTIONS(328),
+    [anon_sym_ATtest] = ACTIONS(330),
+    [anon_sym_ATtestWith] = ACTIONS(328),
+    [anon_sym_ATtestdox] = ACTIONS(328),
+    [anon_sym_ATticket] = ACTIONS(328),
+    [sym__end] = ACTIONS(328),
+    [sym_text] = ACTIONS(328),
+  },
+  [52] = {
+    [anon_sym_LBRACE] = ACTIONS(332),
+    [anon_sym_ATinheritdoc] = ACTIONS(332),
+    [anon_sym_ATinheritDoc] = ACTIONS(332),
+    [anon_sym_ATapi] = ACTIONS(332),
+    [anon_sym_ATfilesource] = ACTIONS(332),
+    [anon_sym_ATignore] = ACTIONS(332),
+    [anon_sym_ATinternal] = ACTIONS(332),
+    [anon_sym_ATcategory] = ACTIONS(332),
+    [anon_sym_ATcopyright] = ACTIONS(332),
+    [anon_sym_ATtodo] = ACTIONS(332),
+    [anon_sym_ATexample] = ACTIONS(332),
+    [anon_sym_ATlicense] = ACTIONS(332),
+    [anon_sym_ATpackage] = ACTIONS(332),
+    [anon_sym_ATsource] = ACTIONS(332),
+    [anon_sym_ATsubpackage] = ACTIONS(332),
+    [anon_sym_ATuses] = ACTIONS(332),
+    [anon_sym_ATauthor] = ACTIONS(332),
+    [anon_sym_ATglobal] = ACTIONS(332),
+    [anon_sym_ATlink] = ACTIONS(332),
+    [anon_sym_ATmethod] = ACTIONS(332),
+    [anon_sym_ATparam] = ACTIONS(332),
+    [anon_sym_ATproperty] = ACTIONS(334),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(332),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(332),
+    [anon_sym_ATreturn] = ACTIONS(332),
+    [anon_sym_ATsee] = ACTIONS(332),
+    [anon_sym_ATthrows] = ACTIONS(332),
+    [anon_sym_ATvar] = ACTIONS(332),
+    [anon_sym_ATdeprecated] = ACTIONS(332),
+    [anon_sym_ATsince] = ACTIONS(332),
+    [anon_sym_ATversion] = ACTIONS(332),
+    [anon_sym_ATafter] = ACTIONS(334),
+    [anon_sym_ATafterClass] = ACTIONS(332),
+    [anon_sym_ATannotation] = ACTIONS(332),
+    [anon_sym_ATbackupGlobals] = ACTIONS(332),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(332),
+    [anon_sym_ATbefore] = ACTIONS(334),
+    [anon_sym_ATbeforeClass] = ACTIONS(332),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(334),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(332),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(332),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(332),
+    [anon_sym_ATcovers] = ACTIONS(334),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(334),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(332),
+    [anon_sym_ATcoversNothing] = ACTIONS(332),
+    [anon_sym_ATdataProvider] = ACTIONS(332),
+    [anon_sym_ATdepends] = ACTIONS(334),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(332),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(332),
+    [anon_sym_ATgroup] = ACTIONS(332),
+    [anon_sym_ATlarge] = ACTIONS(332),
+    [anon_sym_ATmedium] = ACTIONS(332),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(332),
+    [anon_sym_ATrequires] = ACTIONS(334),
+    [anon_sym_ATrequiresusages] = ACTIONS(332),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(332),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(332),
+    [anon_sym_ATsmall] = ACTIONS(332),
+    [anon_sym_ATtest] = ACTIONS(334),
+    [anon_sym_ATtestWith] = ACTIONS(332),
+    [anon_sym_ATtestdox] = ACTIONS(332),
+    [anon_sym_ATticket] = ACTIONS(332),
+    [sym__end] = ACTIONS(332),
+    [sym_text] = ACTIONS(332),
+  },
+  [53] = {
+    [anon_sym_LBRACE] = ACTIONS(336),
+    [anon_sym_ATinheritdoc] = ACTIONS(336),
+    [anon_sym_ATinheritDoc] = ACTIONS(336),
+    [anon_sym_ATapi] = ACTIONS(336),
+    [anon_sym_ATfilesource] = ACTIONS(336),
+    [anon_sym_ATignore] = ACTIONS(336),
+    [anon_sym_ATinternal] = ACTIONS(336),
+    [anon_sym_ATcategory] = ACTIONS(336),
+    [anon_sym_ATcopyright] = ACTIONS(336),
+    [anon_sym_ATtodo] = ACTIONS(336),
+    [anon_sym_ATexample] = ACTIONS(336),
+    [anon_sym_ATlicense] = ACTIONS(336),
+    [anon_sym_ATpackage] = ACTIONS(336),
+    [anon_sym_ATsource] = ACTIONS(336),
+    [anon_sym_ATsubpackage] = ACTIONS(336),
+    [anon_sym_ATuses] = ACTIONS(336),
+    [anon_sym_ATauthor] = ACTIONS(336),
+    [anon_sym_ATglobal] = ACTIONS(336),
+    [anon_sym_ATlink] = ACTIONS(336),
+    [anon_sym_ATmethod] = ACTIONS(336),
+    [anon_sym_ATparam] = ACTIONS(336),
+    [anon_sym_ATproperty] = ACTIONS(338),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(336),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(336),
+    [anon_sym_ATreturn] = ACTIONS(336),
+    [anon_sym_ATsee] = ACTIONS(336),
+    [anon_sym_ATthrows] = ACTIONS(336),
+    [anon_sym_ATvar] = ACTIONS(336),
+    [anon_sym_ATdeprecated] = ACTIONS(336),
+    [anon_sym_ATsince] = ACTIONS(336),
+    [anon_sym_ATversion] = ACTIONS(336),
+    [anon_sym_ATafter] = ACTIONS(338),
+    [anon_sym_ATafterClass] = ACTIONS(336),
+    [anon_sym_ATannotation] = ACTIONS(336),
+    [anon_sym_ATbackupGlobals] = ACTIONS(336),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(336),
+    [anon_sym_ATbefore] = ACTIONS(338),
+    [anon_sym_ATbeforeClass] = ACTIONS(336),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(338),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(336),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(336),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(336),
+    [anon_sym_ATcovers] = ACTIONS(338),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(338),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(336),
+    [anon_sym_ATcoversNothing] = ACTIONS(336),
+    [anon_sym_ATdataProvider] = ACTIONS(336),
+    [anon_sym_ATdepends] = ACTIONS(338),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(336),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(336),
+    [anon_sym_ATgroup] = ACTIONS(336),
+    [anon_sym_ATlarge] = ACTIONS(336),
+    [anon_sym_ATmedium] = ACTIONS(336),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(336),
+    [anon_sym_ATrequires] = ACTIONS(338),
+    [anon_sym_ATrequiresusages] = ACTIONS(336),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(336),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(336),
+    [anon_sym_ATsmall] = ACTIONS(336),
+    [anon_sym_ATtest] = ACTIONS(338),
+    [anon_sym_ATtestWith] = ACTIONS(336),
+    [anon_sym_ATtestdox] = ACTIONS(336),
+    [anon_sym_ATticket] = ACTIONS(336),
+    [sym__end] = ACTIONS(336),
+    [sym_text] = ACTIONS(336),
+  },
+  [54] = {
+    [anon_sym_LBRACE] = ACTIONS(340),
+    [anon_sym_ATinheritdoc] = ACTIONS(340),
+    [anon_sym_ATinheritDoc] = ACTIONS(340),
+    [anon_sym_ATapi] = ACTIONS(340),
+    [anon_sym_ATfilesource] = ACTIONS(340),
+    [anon_sym_ATignore] = ACTIONS(340),
+    [anon_sym_ATinternal] = ACTIONS(340),
+    [anon_sym_ATcategory] = ACTIONS(340),
+    [anon_sym_ATcopyright] = ACTIONS(340),
+    [anon_sym_ATtodo] = ACTIONS(340),
+    [anon_sym_ATexample] = ACTIONS(340),
+    [anon_sym_ATlicense] = ACTIONS(340),
+    [anon_sym_ATpackage] = ACTIONS(340),
+    [anon_sym_ATsource] = ACTIONS(340),
+    [anon_sym_ATsubpackage] = ACTIONS(340),
+    [anon_sym_ATuses] = ACTIONS(340),
+    [anon_sym_ATauthor] = ACTIONS(340),
+    [anon_sym_ATglobal] = ACTIONS(340),
+    [anon_sym_ATlink] = ACTIONS(340),
+    [anon_sym_ATmethod] = ACTIONS(340),
+    [anon_sym_ATparam] = ACTIONS(340),
+    [anon_sym_ATproperty] = ACTIONS(342),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(340),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(340),
+    [anon_sym_ATreturn] = ACTIONS(340),
+    [anon_sym_ATsee] = ACTIONS(340),
+    [anon_sym_ATthrows] = ACTIONS(340),
+    [anon_sym_ATvar] = ACTIONS(340),
+    [anon_sym_ATdeprecated] = ACTIONS(340),
+    [anon_sym_ATsince] = ACTIONS(340),
+    [anon_sym_ATversion] = ACTIONS(340),
+    [anon_sym_ATafter] = ACTIONS(342),
+    [anon_sym_ATafterClass] = ACTIONS(340),
+    [anon_sym_ATannotation] = ACTIONS(340),
+    [anon_sym_ATbackupGlobals] = ACTIONS(340),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(340),
+    [anon_sym_ATbefore] = ACTIONS(342),
+    [anon_sym_ATbeforeClass] = ACTIONS(340),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(342),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(340),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(340),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(340),
+    [anon_sym_ATcovers] = ACTIONS(342),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(342),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(340),
+    [anon_sym_ATcoversNothing] = ACTIONS(340),
+    [anon_sym_ATdataProvider] = ACTIONS(340),
+    [anon_sym_ATdepends] = ACTIONS(342),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(340),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(340),
+    [anon_sym_ATgroup] = ACTIONS(340),
+    [anon_sym_ATlarge] = ACTIONS(340),
+    [anon_sym_ATmedium] = ACTIONS(340),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(340),
+    [anon_sym_ATrequires] = ACTIONS(342),
+    [anon_sym_ATrequiresusages] = ACTIONS(340),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(340),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(340),
+    [anon_sym_ATsmall] = ACTIONS(340),
+    [anon_sym_ATtest] = ACTIONS(342),
+    [anon_sym_ATtestWith] = ACTIONS(340),
+    [anon_sym_ATtestdox] = ACTIONS(340),
+    [anon_sym_ATticket] = ACTIONS(340),
+    [sym__end] = ACTIONS(340),
+    [sym__text_not_version] = ACTIONS(340),
+  },
+  [55] = {
+    [anon_sym_LBRACE] = ACTIONS(344),
+    [anon_sym_ATinheritdoc] = ACTIONS(344),
+    [anon_sym_ATinheritDoc] = ACTIONS(344),
+    [anon_sym_ATapi] = ACTIONS(344),
+    [anon_sym_ATfilesource] = ACTIONS(344),
+    [anon_sym_ATignore] = ACTIONS(344),
+    [anon_sym_ATinternal] = ACTIONS(344),
+    [anon_sym_ATcategory] = ACTIONS(344),
+    [anon_sym_ATcopyright] = ACTIONS(344),
+    [anon_sym_ATtodo] = ACTIONS(344),
+    [anon_sym_ATexample] = ACTIONS(344),
+    [anon_sym_ATlicense] = ACTIONS(344),
+    [anon_sym_ATpackage] = ACTIONS(344),
+    [anon_sym_ATsource] = ACTIONS(344),
+    [anon_sym_ATsubpackage] = ACTIONS(344),
+    [anon_sym_ATuses] = ACTIONS(344),
+    [anon_sym_ATauthor] = ACTIONS(344),
+    [anon_sym_ATglobal] = ACTIONS(344),
+    [anon_sym_ATlink] = ACTIONS(344),
+    [anon_sym_ATmethod] = ACTIONS(344),
+    [anon_sym_ATparam] = ACTIONS(344),
+    [anon_sym_ATproperty] = ACTIONS(346),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(344),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(344),
+    [anon_sym_ATreturn] = ACTIONS(344),
+    [anon_sym_ATsee] = ACTIONS(344),
+    [anon_sym_ATthrows] = ACTIONS(344),
+    [anon_sym_ATvar] = ACTIONS(344),
+    [anon_sym_ATdeprecated] = ACTIONS(344),
+    [anon_sym_ATsince] = ACTIONS(344),
+    [anon_sym_ATversion] = ACTIONS(344),
+    [anon_sym_ATafter] = ACTIONS(346),
+    [anon_sym_ATafterClass] = ACTIONS(344),
+    [anon_sym_ATannotation] = ACTIONS(344),
+    [anon_sym_ATbackupGlobals] = ACTIONS(344),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(344),
+    [anon_sym_ATbefore] = ACTIONS(346),
+    [anon_sym_ATbeforeClass] = ACTIONS(344),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(346),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(344),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(344),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(344),
+    [anon_sym_ATcovers] = ACTIONS(346),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(346),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(344),
+    [anon_sym_ATcoversNothing] = ACTIONS(344),
+    [anon_sym_ATdataProvider] = ACTIONS(344),
+    [anon_sym_ATdepends] = ACTIONS(346),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(344),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(344),
+    [anon_sym_ATgroup] = ACTIONS(344),
+    [anon_sym_ATlarge] = ACTIONS(344),
+    [anon_sym_ATmedium] = ACTIONS(344),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(344),
+    [anon_sym_ATrequires] = ACTIONS(346),
+    [anon_sym_ATrequiresusages] = ACTIONS(344),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(344),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(344),
+    [anon_sym_ATsmall] = ACTIONS(344),
+    [anon_sym_ATtest] = ACTIONS(346),
+    [anon_sym_ATtestWith] = ACTIONS(344),
+    [anon_sym_ATtestdox] = ACTIONS(344),
+    [anon_sym_ATticket] = ACTIONS(344),
+    [sym__end] = ACTIONS(344),
+    [sym_text] = ACTIONS(344),
+  },
+  [56] = {
+    [anon_sym_LBRACE] = ACTIONS(324),
+    [anon_sym_ATinheritdoc] = ACTIONS(324),
+    [anon_sym_ATinheritDoc] = ACTIONS(324),
+    [anon_sym_ATapi] = ACTIONS(324),
+    [anon_sym_ATfilesource] = ACTIONS(324),
+    [anon_sym_ATignore] = ACTIONS(324),
+    [anon_sym_ATinternal] = ACTIONS(324),
+    [anon_sym_ATcategory] = ACTIONS(324),
+    [anon_sym_ATcopyright] = ACTIONS(324),
+    [anon_sym_ATtodo] = ACTIONS(324),
+    [anon_sym_ATexample] = ACTIONS(324),
+    [anon_sym_ATlicense] = ACTIONS(324),
+    [anon_sym_ATpackage] = ACTIONS(324),
+    [anon_sym_ATsource] = ACTIONS(324),
+    [anon_sym_ATsubpackage] = ACTIONS(324),
+    [anon_sym_ATuses] = ACTIONS(324),
+    [anon_sym_ATauthor] = ACTIONS(324),
+    [anon_sym_ATglobal] = ACTIONS(324),
+    [anon_sym_ATlink] = ACTIONS(324),
+    [anon_sym_ATmethod] = ACTIONS(324),
+    [anon_sym_ATparam] = ACTIONS(324),
+    [anon_sym_ATproperty] = ACTIONS(326),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(324),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(324),
+    [anon_sym_ATreturn] = ACTIONS(324),
+    [anon_sym_ATsee] = ACTIONS(324),
+    [anon_sym_ATthrows] = ACTIONS(324),
+    [anon_sym_ATvar] = ACTIONS(324),
+    [anon_sym_ATdeprecated] = ACTIONS(324),
+    [anon_sym_ATsince] = ACTIONS(324),
+    [anon_sym_ATversion] = ACTIONS(324),
+    [anon_sym_ATafter] = ACTIONS(326),
+    [anon_sym_ATafterClass] = ACTIONS(324),
+    [anon_sym_ATannotation] = ACTIONS(324),
+    [anon_sym_ATbackupGlobals] = ACTIONS(324),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(324),
+    [anon_sym_ATbefore] = ACTIONS(326),
+    [anon_sym_ATbeforeClass] = ACTIONS(324),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(326),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(324),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(324),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(324),
+    [anon_sym_ATcovers] = ACTIONS(326),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(326),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(324),
+    [anon_sym_ATcoversNothing] = ACTIONS(324),
+    [anon_sym_ATdataProvider] = ACTIONS(324),
+    [anon_sym_ATdepends] = ACTIONS(326),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(324),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(324),
+    [anon_sym_ATgroup] = ACTIONS(324),
+    [anon_sym_ATlarge] = ACTIONS(324),
+    [anon_sym_ATmedium] = ACTIONS(324),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(324),
+    [anon_sym_ATrequires] = ACTIONS(326),
+    [anon_sym_ATrequiresusages] = ACTIONS(324),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(324),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(324),
+    [anon_sym_ATsmall] = ACTIONS(324),
+    [anon_sym_ATtest] = ACTIONS(326),
+    [anon_sym_ATtestWith] = ACTIONS(324),
+    [anon_sym_ATtestdox] = ACTIONS(324),
+    [anon_sym_ATticket] = ACTIONS(324),
+    [sym__end] = ACTIONS(324),
+    [sym__text_after_type] = ACTIONS(324),
+  },
+  [57] = {
+    [anon_sym_LBRACE] = ACTIONS(348),
+    [anon_sym_ATinheritdoc] = ACTIONS(348),
+    [anon_sym_ATinheritDoc] = ACTIONS(348),
+    [anon_sym_ATapi] = ACTIONS(348),
+    [anon_sym_ATfilesource] = ACTIONS(348),
+    [anon_sym_ATignore] = ACTIONS(348),
+    [anon_sym_ATinternal] = ACTIONS(348),
+    [anon_sym_ATcategory] = ACTIONS(348),
+    [anon_sym_ATcopyright] = ACTIONS(348),
+    [anon_sym_ATtodo] = ACTIONS(348),
+    [anon_sym_ATexample] = ACTIONS(348),
+    [anon_sym_ATlicense] = ACTIONS(348),
+    [anon_sym_ATpackage] = ACTIONS(348),
+    [anon_sym_ATsource] = ACTIONS(348),
+    [anon_sym_ATsubpackage] = ACTIONS(348),
+    [anon_sym_ATuses] = ACTIONS(348),
+    [anon_sym_ATauthor] = ACTIONS(348),
+    [anon_sym_ATglobal] = ACTIONS(348),
+    [anon_sym_ATlink] = ACTIONS(348),
+    [anon_sym_ATmethod] = ACTIONS(348),
+    [anon_sym_ATparam] = ACTIONS(348),
+    [anon_sym_ATproperty] = ACTIONS(350),
+    [anon_sym_ATproperty_DASHread] = ACTIONS(348),
+    [anon_sym_ATproperty_DASHwrite] = ACTIONS(348),
+    [anon_sym_ATreturn] = ACTIONS(348),
+    [anon_sym_ATsee] = ACTIONS(348),
+    [anon_sym_ATthrows] = ACTIONS(348),
+    [anon_sym_ATvar] = ACTIONS(348),
+    [anon_sym_ATdeprecated] = ACTIONS(348),
+    [anon_sym_ATsince] = ACTIONS(348),
+    [anon_sym_ATversion] = ACTIONS(348),
+    [anon_sym_ATafter] = ACTIONS(350),
+    [anon_sym_ATafterClass] = ACTIONS(348),
+    [anon_sym_ATannotation] = ACTIONS(348),
+    [anon_sym_ATbackupGlobals] = ACTIONS(348),
+    [anon_sym_ATbackupStaticAttributes] = ACTIONS(348),
+    [anon_sym_ATbefore] = ACTIONS(350),
+    [anon_sym_ATbeforeClass] = ACTIONS(348),
+    [anon_sym_ATcodeCoverageIgnore] = ACTIONS(350),
+    [anon_sym_ATcodeCoverageIgnore_STAR] = ACTIONS(348),
+    [anon_sym_ATcodeCoverageIgnoreEnd] = ACTIONS(348),
+    [anon_sym_ATcodeCoverageIgnoreStart] = ACTIONS(348),
+    [anon_sym_ATcovers] = ACTIONS(350),
+    [anon_sym_ATcoversDefaultClass] = ACTIONS(350),
+    [anon_sym_ATcoversDefaultClasstoshortenannotations] = ACTIONS(348),
+    [anon_sym_ATcoversNothing] = ACTIONS(348),
+    [anon_sym_ATdataProvider] = ACTIONS(348),
+    [anon_sym_ATdepends] = ACTIONS(350),
+    [anon_sym_ATdependsannotationtoexpressdependencies] = ACTIONS(348),
+    [anon_sym_ATdoesNotPerformAssertions] = ACTIONS(348),
+    [anon_sym_ATgroup] = ACTIONS(348),
+    [anon_sym_ATlarge] = ACTIONS(348),
+    [anon_sym_ATmedium] = ACTIONS(348),
+    [anon_sym_ATpreserveGlobalState] = ACTIONS(348),
+    [anon_sym_ATrequires] = ACTIONS(350),
+    [anon_sym_ATrequiresusages] = ACTIONS(348),
+    [anon_sym_ATrunInSeparateProcess] = ACTIONS(348),
+    [anon_sym_ATrunTestsInSeparateProcesses] = ACTIONS(348),
+    [anon_sym_ATsmall] = ACTIONS(348),
+    [anon_sym_ATtest] = ACTIONS(350),
+    [anon_sym_ATtestWith] = ACTIONS(348),
+    [anon_sym_ATtestdox] = ACTIONS(348),
+    [anon_sym_ATticket] = ACTIONS(348),
+    [sym__end] = ACTIONS(348),
+    [sym_text] = ACTIONS(348),
   },
 };
 
 static uint16_t ts_small_parse_table[] = {
-  [0] = 2,
-    ACTIONS(135), 10,
+  [0] = 3,
+    ACTIONS(354), 1,
+      anon_sym_LT,
+    ACTIONS(356), 9,
       anon_sym_ATproperty,
       anon_sym_ATafter,
       anon_sym_ATbefore,
@@ -7655,12 +8190,13 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATdepends,
       anon_sym_ATrequires,
       anon_sym_ATtest,
-      sym_text,
-    ACTIONS(133), 54,
-      anon_sym_LBRACE,
+    ACTIONS(352), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
       anon_sym_ATapi,
       anon_sym_ATfilesource,
       anon_sym_ATignore,
+      anon_sym_ATinternal,
       anon_sym_ATcategory,
       anon_sym_ATcopyright,
       anon_sym_ATtodo,
@@ -7672,9 +8208,7 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATuses,
       anon_sym_ATauthor,
       anon_sym_ATglobal,
-      anon_sym_ATinternal,
       anon_sym_ATlink,
-      anon_sym_LPAREN_RPAREN,
       anon_sym_ATmethod,
       anon_sym_ATparam,
       anon_sym_ATproperty_DASHread,
@@ -7711,8 +8245,8 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATtestdox,
       anon_sym_ATticket,
       sym__end,
-  [69] = 2,
-    ACTIONS(262), 10,
+  [71] = 2,
+    ACTIONS(360), 9,
       anon_sym_ATproperty,
       anon_sym_ATafter,
       anon_sym_ATbefore,
@@ -7722,12 +8256,13 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATdepends,
       anon_sym_ATrequires,
       anon_sym_ATtest,
-      sym_text,
-    ACTIONS(260), 54,
-      anon_sym_LBRACE,
+    ACTIONS(358), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
       anon_sym_ATapi,
       anon_sym_ATfilesource,
       anon_sym_ATignore,
+      anon_sym_ATinternal,
       anon_sym_ATcategory,
       anon_sym_ATcopyright,
       anon_sym_ATtodo,
@@ -7739,7 +8274,6 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATuses,
       anon_sym_ATauthor,
       anon_sym_ATglobal,
-      anon_sym_ATinternal,
       anon_sym_ATlink,
       anon_sym_ATmethod,
       anon_sym_ATparam,
@@ -7776,10 +8310,9 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATtestWith,
       anon_sym_ATtestdox,
       anon_sym_ATticket,
-      anon_sym_PIPE,
       sym__end,
-  [138] = 2,
-    ACTIONS(223), 10,
+  [139] = 2,
+    ACTIONS(185), 9,
       anon_sym_ATproperty,
       anon_sym_ATafter,
       anon_sym_ATbefore,
@@ -7789,12 +8322,13 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATdepends,
       anon_sym_ATrequires,
       anon_sym_ATtest,
-      sym_text,
-    ACTIONS(221), 54,
-      anon_sym_LBRACE,
+    ACTIONS(183), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
       anon_sym_ATapi,
       anon_sym_ATfilesource,
       anon_sym_ATignore,
+      anon_sym_ATinternal,
       anon_sym_ATcategory,
       anon_sym_ATcopyright,
       anon_sym_ATtodo,
@@ -7806,7 +8340,6 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATuses,
       anon_sym_ATauthor,
       anon_sym_ATglobal,
-      anon_sym_ATinternal,
       anon_sym_ATlink,
       anon_sym_ATmethod,
       anon_sym_ATparam,
@@ -7843,10 +8376,9 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATtestWith,
       anon_sym_ATtestdox,
       anon_sym_ATticket,
-      anon_sym_PIPE,
       sym__end,
   [207] = 2,
-    ACTIONS(266), 10,
+    ACTIONS(364), 9,
       anon_sym_ATproperty,
       anon_sym_ATafter,
       anon_sym_ATbefore,
@@ -7856,12 +8388,13 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATdepends,
       anon_sym_ATrequires,
       anon_sym_ATtest,
-      sym_text,
-    ACTIONS(264), 54,
-      anon_sym_LBRACE,
+    ACTIONS(362), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
       anon_sym_ATapi,
       anon_sym_ATfilesource,
       anon_sym_ATignore,
+      anon_sym_ATinternal,
       anon_sym_ATcategory,
       anon_sym_ATcopyright,
       anon_sym_ATtodo,
@@ -7873,74 +8406,6 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATuses,
       anon_sym_ATauthor,
       anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      anon_sym_PIPE,
-      sym__end,
-  [276] = 2,
-    ACTIONS(279), 10,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-      sym_text,
-    ACTIONS(277), 53,
-      anon_sym_LBRACE,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
       anon_sym_ATlink,
       anon_sym_ATmethod,
       anon_sym_ATparam,
@@ -7978,8 +8443,8 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATtestdox,
       anon_sym_ATticket,
       sym__end,
-  [344] = 2,
-    ACTIONS(283), 10,
+  [275] = 2,
+    ACTIONS(368), 9,
       anon_sym_ATproperty,
       anon_sym_ATafter,
       anon_sym_ATbefore,
@@ -7989,12 +8454,13 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATdepends,
       anon_sym_ATrequires,
       anon_sym_ATtest,
-      sym_text,
-    ACTIONS(281), 53,
-      anon_sym_LBRACE,
+    ACTIONS(366), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
       anon_sym_ATapi,
       anon_sym_ATfilesource,
       anon_sym_ATignore,
+      anon_sym_ATinternal,
       anon_sym_ATcategory,
       anon_sym_ATcopyright,
       anon_sym_ATtodo,
@@ -8006,7 +8472,6 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATuses,
       anon_sym_ATauthor,
       anon_sym_ATglobal,
-      anon_sym_ATinternal,
       anon_sym_ATlink,
       anon_sym_ATmethod,
       anon_sym_ATparam,
@@ -8044,8 +8509,8 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATtestdox,
       anon_sym_ATticket,
       sym__end,
-  [412] = 2,
-    ACTIONS(287), 10,
+  [343] = 2,
+    ACTIONS(193), 9,
       anon_sym_ATproperty,
       anon_sym_ATafter,
       anon_sym_ATbefore,
@@ -8055,12 +8520,13 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATdepends,
       anon_sym_ATrequires,
       anon_sym_ATtest,
-      sym_text,
-    ACTIONS(285), 53,
-      anon_sym_LBRACE,
+    ACTIONS(191), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
       anon_sym_ATapi,
       anon_sym_ATfilesource,
       anon_sym_ATignore,
+      anon_sym_ATinternal,
       anon_sym_ATcategory,
       anon_sym_ATcopyright,
       anon_sym_ATtodo,
@@ -8072,7 +8538,6 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATuses,
       anon_sym_ATauthor,
       anon_sym_ATglobal,
-      anon_sym_ATinternal,
       anon_sym_ATlink,
       anon_sym_ATmethod,
       anon_sym_ATparam,
@@ -8110,8 +8575,8 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATtestdox,
       anon_sym_ATticket,
       sym__end,
-  [480] = 2,
-    ACTIONS(291), 10,
+  [411] = 2,
+    ACTIONS(372), 9,
       anon_sym_ATproperty,
       anon_sym_ATafter,
       anon_sym_ATbefore,
@@ -8121,12 +8586,13 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATdepends,
       anon_sym_ATrequires,
       anon_sym_ATtest,
-      sym_text,
-    ACTIONS(289), 53,
-      anon_sym_LBRACE,
+    ACTIONS(370), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
       anon_sym_ATapi,
       anon_sym_ATfilesource,
       anon_sym_ATignore,
+      anon_sym_ATinternal,
       anon_sym_ATcategory,
       anon_sym_ATcopyright,
       anon_sym_ATtodo,
@@ -8138,7 +8604,6 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATuses,
       anon_sym_ATauthor,
       anon_sym_ATglobal,
-      anon_sym_ATinternal,
       anon_sym_ATlink,
       anon_sym_ATmethod,
       anon_sym_ATparam,
@@ -8176,8 +8641,8 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATtestdox,
       anon_sym_ATticket,
       sym__end,
-  [548] = 2,
-    ACTIONS(295), 10,
+  [479] = 2,
+    ACTIONS(376), 9,
       anon_sym_ATproperty,
       anon_sym_ATafter,
       anon_sym_ATbefore,
@@ -8187,12 +8652,13 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATdepends,
       anon_sym_ATrequires,
       anon_sym_ATtest,
-      sym_text,
-    ACTIONS(293), 53,
-      anon_sym_LBRACE,
+    ACTIONS(374), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
       anon_sym_ATapi,
       anon_sym_ATfilesource,
       anon_sym_ATignore,
+      anon_sym_ATinternal,
       anon_sym_ATcategory,
       anon_sym_ATcopyright,
       anon_sym_ATtodo,
@@ -8204,7 +8670,6 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATuses,
       anon_sym_ATauthor,
       anon_sym_ATglobal,
-      anon_sym_ATinternal,
       anon_sym_ATlink,
       anon_sym_ATmethod,
       anon_sym_ATparam,
@@ -8242,8 +8707,8 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATtestdox,
       anon_sym_ATticket,
       sym__end,
-  [616] = 2,
-    ACTIONS(299), 10,
+  [547] = 2,
+    ACTIONS(380), 9,
       anon_sym_ATproperty,
       anon_sym_ATafter,
       anon_sym_ATbefore,
@@ -8253,12 +8718,13 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATdepends,
       anon_sym_ATrequires,
       anon_sym_ATtest,
-      sym_text,
-    ACTIONS(297), 53,
-      anon_sym_LBRACE,
+    ACTIONS(378), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
       anon_sym_ATapi,
       anon_sym_ATfilesource,
       anon_sym_ATignore,
+      anon_sym_ATinternal,
       anon_sym_ATcategory,
       anon_sym_ATcopyright,
       anon_sym_ATtodo,
@@ -8270,7 +8736,6 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATuses,
       anon_sym_ATauthor,
       anon_sym_ATglobal,
-      anon_sym_ATinternal,
       anon_sym_ATlink,
       anon_sym_ATmethod,
       anon_sym_ATparam,
@@ -8308,10 +8773,8 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATtestdox,
       anon_sym_ATticket,
       sym__end,
-  [684] = 3,
-    ACTIONS(303), 1,
-      anon_sym_LT,
-    ACTIONS(305), 9,
+  [615] = 2,
+    ACTIONS(384), 9,
       anon_sym_ATproperty,
       anon_sym_ATafter,
       anon_sym_ATbefore,
@@ -8321,10 +8784,13 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATdepends,
       anon_sym_ATrequires,
       anon_sym_ATtest,
-    ACTIONS(301), 52,
+    ACTIONS(382), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
       anon_sym_ATapi,
       anon_sym_ATfilesource,
       anon_sym_ATignore,
+      anon_sym_ATinternal,
       anon_sym_ATcategory,
       anon_sym_ATcopyright,
       anon_sym_ATtodo,
@@ -8336,7 +8802,6 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATuses,
       anon_sym_ATauthor,
       anon_sym_ATglobal,
-      anon_sym_ATinternal,
       anon_sym_ATlink,
       anon_sym_ATmethod,
       anon_sym_ATparam,
@@ -8374,8 +8839,8 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATtestdox,
       anon_sym_ATticket,
       sym__end,
-  [753] = 2,
-    ACTIONS(234), 9,
+  [683] = 2,
+    ACTIONS(388), 9,
       anon_sym_ATproperty,
       anon_sym_ATafter,
       anon_sym_ATbefore,
@@ -8385,10 +8850,13 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATdepends,
       anon_sym_ATrequires,
       anon_sym_ATtest,
-    ACTIONS(232), 52,
+    ACTIONS(386), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
       anon_sym_ATapi,
       anon_sym_ATfilesource,
       anon_sym_ATignore,
+      anon_sym_ATinternal,
       anon_sym_ATcategory,
       anon_sym_ATcopyright,
       anon_sym_ATtodo,
@@ -8400,7 +8868,72 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATuses,
       anon_sym_ATauthor,
       anon_sym_ATglobal,
+      anon_sym_ATlink,
+      anon_sym_ATmethod,
+      anon_sym_ATparam,
+      anon_sym_ATproperty_DASHread,
+      anon_sym_ATproperty_DASHwrite,
+      anon_sym_ATreturn,
+      anon_sym_ATsee,
+      anon_sym_ATthrows,
+      anon_sym_ATvar,
+      anon_sym_ATdeprecated,
+      anon_sym_ATsince,
+      anon_sym_ATversion,
+      anon_sym_ATafterClass,
+      anon_sym_ATannotation,
+      anon_sym_ATbackupGlobals,
+      anon_sym_ATbackupStaticAttributes,
+      anon_sym_ATbeforeClass,
+      anon_sym_ATcodeCoverageIgnore_STAR,
+      anon_sym_ATcodeCoverageIgnoreEnd,
+      anon_sym_ATcodeCoverageIgnoreStart,
+      anon_sym_ATcoversDefaultClasstoshortenannotations,
+      anon_sym_ATcoversNothing,
+      anon_sym_ATdataProvider,
+      anon_sym_ATdependsannotationtoexpressdependencies,
+      anon_sym_ATdoesNotPerformAssertions,
+      anon_sym_ATgroup,
+      anon_sym_ATlarge,
+      anon_sym_ATmedium,
+      anon_sym_ATpreserveGlobalState,
+      anon_sym_ATrequiresusages,
+      anon_sym_ATrunInSeparateProcess,
+      anon_sym_ATrunTestsInSeparateProcesses,
+      anon_sym_ATsmall,
+      anon_sym_ATtestWith,
+      anon_sym_ATtestdox,
+      anon_sym_ATticket,
+      sym__end,
+  [751] = 2,
+    ACTIONS(392), 9,
+      anon_sym_ATproperty,
+      anon_sym_ATafter,
+      anon_sym_ATbefore,
+      anon_sym_ATcodeCoverageIgnore,
+      anon_sym_ATcovers,
+      anon_sym_ATcoversDefaultClass,
+      anon_sym_ATdepends,
+      anon_sym_ATrequires,
+      anon_sym_ATtest,
+    ACTIONS(390), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+      anon_sym_ATapi,
+      anon_sym_ATfilesource,
+      anon_sym_ATignore,
       anon_sym_ATinternal,
+      anon_sym_ATcategory,
+      anon_sym_ATcopyright,
+      anon_sym_ATtodo,
+      anon_sym_ATexample,
+      anon_sym_ATlicense,
+      anon_sym_ATpackage,
+      anon_sym_ATsource,
+      anon_sym_ATsubpackage,
+      anon_sym_ATuses,
+      anon_sym_ATauthor,
+      anon_sym_ATglobal,
       anon_sym_ATlink,
       anon_sym_ATmethod,
       anon_sym_ATparam,
@@ -8439,7 +8972,7 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATticket,
       sym__end,
   [819] = 2,
-    ACTIONS(238), 9,
+    ACTIONS(221), 9,
       anon_sym_ATproperty,
       anon_sym_ATafter,
       anon_sym_ATbefore,
@@ -8449,3232 +8982,3238 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_ATdepends,
       anon_sym_ATrequires,
       anon_sym_ATtest,
-    ACTIONS(236), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [885] = 2,
-    ACTIONS(309), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(307), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [951] = 2,
-    ACTIONS(313), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(311), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [1017] = 2,
-    ACTIONS(317), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(315), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [1083] = 2,
-    ACTIONS(321), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(319), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [1149] = 2,
-    ACTIONS(190), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(188), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [1215] = 2,
-    ACTIONS(325), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(323), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [1281] = 2,
-    ACTIONS(329), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(327), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [1347] = 2,
-    ACTIONS(333), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(331), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [1413] = 2,
-    ACTIONS(337), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(335), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [1479] = 2,
-    ACTIONS(341), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(339), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [1545] = 2,
-    ACTIONS(345), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(343), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [1611] = 2,
-    ACTIONS(349), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(347), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [1677] = 2,
-    ACTIONS(198), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(196), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [1743] = 2,
-    ACTIONS(353), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(351), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [1809] = 2,
-    ACTIONS(357), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(355), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [1875] = 2,
-    ACTIONS(230), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(228), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [1941] = 2,
-    ACTIONS(361), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(359), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [2007] = 2,
-    ACTIONS(365), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(363), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [2073] = 2,
-    ACTIONS(194), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(192), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [2139] = 2,
-    ACTIONS(369), 9,
-      anon_sym_ATproperty,
-      anon_sym_ATafter,
-      anon_sym_ATbefore,
-      anon_sym_ATcodeCoverageIgnore,
-      anon_sym_ATcovers,
-      anon_sym_ATcoversDefaultClass,
-      anon_sym_ATdepends,
-      anon_sym_ATrequires,
-      anon_sym_ATtest,
-    ACTIONS(367), 52,
-      anon_sym_ATapi,
-      anon_sym_ATfilesource,
-      anon_sym_ATignore,
-      anon_sym_ATcategory,
-      anon_sym_ATcopyright,
-      anon_sym_ATtodo,
-      anon_sym_ATexample,
-      anon_sym_ATlicense,
-      anon_sym_ATpackage,
-      anon_sym_ATsource,
-      anon_sym_ATsubpackage,
-      anon_sym_ATuses,
-      anon_sym_ATauthor,
-      anon_sym_ATglobal,
-      anon_sym_ATinternal,
-      anon_sym_ATlink,
-      anon_sym_ATmethod,
-      anon_sym_ATparam,
-      anon_sym_ATproperty_DASHread,
-      anon_sym_ATproperty_DASHwrite,
-      anon_sym_ATreturn,
-      anon_sym_ATsee,
-      anon_sym_ATthrows,
-      anon_sym_ATvar,
-      anon_sym_ATdeprecated,
-      anon_sym_ATsince,
-      anon_sym_ATversion,
-      anon_sym_ATafterClass,
-      anon_sym_ATannotation,
-      anon_sym_ATbackupGlobals,
-      anon_sym_ATbackupStaticAttributes,
-      anon_sym_ATbeforeClass,
-      anon_sym_ATcodeCoverageIgnore_STAR,
-      anon_sym_ATcodeCoverageIgnoreEnd,
-      anon_sym_ATcodeCoverageIgnoreStart,
-      anon_sym_ATcoversDefaultClasstoshortenannotations,
-      anon_sym_ATcoversNothing,
-      anon_sym_ATdataProvider,
-      anon_sym_ATdependsannotationtoexpressdependencies,
-      anon_sym_ATdoesNotPerformAssertions,
-      anon_sym_ATgroup,
-      anon_sym_ATlarge,
-      anon_sym_ATmedium,
-      anon_sym_ATpreserveGlobalState,
-      anon_sym_ATrequiresusages,
-      anon_sym_ATrunInSeparateProcess,
-      anon_sym_ATrunTestsInSeparateProcesses,
-      anon_sym_ATsmall,
-      anon_sym_ATtestWith,
-      anon_sym_ATtestdox,
-      anon_sym_ATticket,
-      sym__end,
-  [2205] = 16,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(373), 1,
-      anon_sym_list,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    ACTIONS(383), 1,
-      anon_sym_DOLLAR,
-    ACTIONS(385), 1,
-      anon_sym_RPAREN,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(127), 1,
-      sym_parameter,
-    STATE(135), 1,
-      sym_variable_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(144), 2,
-      sym__type,
-      sym_union_type,
-    STATE(118), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    STATE(124), 4,
-      sym__types,
-      sym__phpdoc_array_types,
-      sym__psalm_generic_array_types,
-      sym__psalm_list_array_types,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [2272] = 15,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(373), 1,
-      anon_sym_list,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    ACTIONS(383), 1,
-      anon_sym_DOLLAR,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(135), 1,
-      sym_variable_name,
-    STATE(149), 1,
-      sym_parameter,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(144), 2,
-      sym__type,
-      sym_union_type,
-    STATE(118), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    STATE(124), 4,
-      sym__types,
-      sym__phpdoc_array_types,
-      sym__psalm_generic_array_types,
-      sym__psalm_list_array_types,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [2336] = 14,
-    ACTIONS(123), 1,
-      anon_sym_DOLLAR,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(373), 1,
-      anon_sym_list,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    STATE(42), 1,
-      sym_variable_name,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(150), 2,
-      sym__type,
-      sym_union_type,
-    STATE(118), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    STATE(124), 4,
-      sym__types,
-      sym__phpdoc_array_types,
-      sym__psalm_generic_array_types,
-      sym__psalm_list_array_types,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [2397] = 14,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(373), 1,
-      anon_sym_list,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    ACTIONS(387), 1,
-      anon_sym_static,
-    STATE(88), 1,
-      sym_static,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(198), 2,
-      sym__type,
-      sym_union_type,
-    STATE(118), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    STATE(124), 4,
-      sym__types,
-      sym__phpdoc_array_types,
-      sym__psalm_generic_array_types,
-      sym__psalm_list_array_types,
-    ACTIONS(381), 11,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_false,
-      anon_sym_null,
-  [2457] = 12,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(373), 1,
-      anon_sym_list,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(175), 2,
-      sym__type,
-      sym_union_type,
-    STATE(118), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    STATE(124), 4,
-      sym__types,
-      sym__phpdoc_array_types,
-      sym__psalm_generic_array_types,
-      sym__psalm_list_array_types,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [2512] = 12,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(389), 1,
-      sym_name,
-    ACTIONS(391), 1,
-      anon_sym_list,
-    ACTIONS(393), 1,
-      anon_sym_QMARK,
-    STATE(17), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(192), 1,
-      sym_namespace_name_as_prefix,
-    STATE(8), 2,
-      sym__type,
-      sym_union_type,
-    STATE(10), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    STATE(22), 4,
-      sym__types,
-      sym__phpdoc_array_types,
-      sym__psalm_generic_array_types,
-      sym__psalm_list_array_types,
-    ACTIONS(395), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [2567] = 12,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(397), 1,
-      sym_name,
-    ACTIONS(399), 1,
-      anon_sym_list,
-    ACTIONS(401), 1,
-      anon_sym_QMARK,
-    STATE(36), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(188), 1,
-      sym_namespace_name_as_prefix,
-    STATE(30), 2,
-      sym__type,
-      sym_union_type,
-    STATE(14), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    STATE(43), 4,
-      sym__types,
-      sym__phpdoc_array_types,
-      sym__psalm_generic_array_types,
-      sym__psalm_list_array_types,
-    ACTIONS(403), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [2622] = 12,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(373), 1,
-      anon_sym_list,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(152), 2,
-      sym__type,
-      sym_union_type,
-    STATE(118), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    STATE(124), 4,
-      sym__types,
-      sym__phpdoc_array_types,
-      sym__psalm_generic_array_types,
-      sym__psalm_list_array_types,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [2677] = 12,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(397), 1,
-      sym_name,
-    ACTIONS(399), 1,
-      anon_sym_list,
-    ACTIONS(401), 1,
-      anon_sym_QMARK,
-    STATE(36), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(188), 1,
-      sym_namespace_name_as_prefix,
-    STATE(41), 2,
-      sym__type,
-      sym_union_type,
-    STATE(14), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    STATE(43), 4,
-      sym__types,
-      sym__phpdoc_array_types,
-      sym__psalm_generic_array_types,
-      sym__psalm_list_array_types,
-    ACTIONS(403), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [2732] = 12,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(373), 1,
-      anon_sym_list,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(146), 2,
-      sym__type,
-      sym_union_type,
-    STATE(118), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    STATE(124), 4,
-      sym__types,
-      sym__phpdoc_array_types,
-      sym__psalm_generic_array_types,
-      sym__psalm_list_array_types,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [2787] = 11,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(397), 1,
-      sym_name,
-    ACTIONS(399), 1,
-      anon_sym_list,
-    ACTIONS(401), 1,
-      anon_sym_QMARK,
-    STATE(36), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(188), 1,
-      sym_namespace_name_as_prefix,
-    STATE(14), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    STATE(53), 4,
-      sym__types,
-      sym__phpdoc_array_types,
-      sym__psalm_generic_array_types,
-      sym__psalm_list_array_types,
-    ACTIONS(403), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [2838] = 11,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(389), 1,
-      sym_name,
-    ACTIONS(391), 1,
-      anon_sym_list,
-    ACTIONS(393), 1,
-      anon_sym_QMARK,
-    STATE(17), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(192), 1,
-      sym_namespace_name_as_prefix,
-    STATE(10), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    STATE(45), 4,
-      sym__types,
-      sym__phpdoc_array_types,
-      sym__psalm_generic_array_types,
-      sym__psalm_list_array_types,
-    ACTIONS(395), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [2889] = 11,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(373), 1,
-      anon_sym_list,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(118), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    STATE(129), 4,
-      sym__types,
-      sym__phpdoc_array_types,
-      sym__psalm_generic_array_types,
-      sym__psalm_list_array_types,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [2940] = 9,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(186), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [2982] = 9,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(168), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [3024] = 9,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(158), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [3066] = 9,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(185), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [3108] = 9,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(139), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [3150] = 9,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(187), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [3192] = 9,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(189), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [3234] = 9,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(140), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [3276] = 9,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(379), 1,
-      anon_sym_QMARK,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(191), 4,
-      sym__regular_types,
-      sym_named_type,
-      sym_optional_type,
-      sym_primitive_type,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [3318] = 8,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(389), 1,
-      sym_name,
-    STATE(17), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(192), 1,
-      sym_namespace_name_as_prefix,
-    STATE(16), 2,
-      sym_named_type,
-      sym_primitive_type,
-    ACTIONS(395), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [3355] = 4,
-    ACTIONS(405), 1,
-      sym_name,
-    ACTIONS(410), 2,
-      anon_sym_BSLASH,
-      anon_sym_QMARK,
-    ACTIONS(164), 3,
-      anon_sym_LT,
-      anon_sym_LBRACK_RBRACK,
-      anon_sym_PIPE,
-    ACTIONS(408), 14,
-      anon_sym_list,
-      aux_sym_namespace_name_as_prefix_token1,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [3384] = 8,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(397), 1,
-      sym_name,
-    STATE(36), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(188), 1,
-      sym_namespace_name_as_prefix,
-    STATE(21), 2,
-      sym_named_type,
-      sym_primitive_type,
-    ACTIONS(403), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [3421] = 8,
-    ACTIONS(371), 1,
-      sym_name,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    STATE(116), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(190), 1,
-      sym_namespace_name_as_prefix,
-    STATE(113), 2,
-      sym_named_type,
-      sym_primitive_type,
-    ACTIONS(381), 12,
-      anon_sym_array,
-      anon_sym_callable,
-      anon_sym_iterable,
-      anon_sym_bool,
-      anon_sym_float,
-      anon_sym_int,
-      anon_sym_string,
-      anon_sym_void,
-      anon_sym_mixed,
-      anon_sym_static,
-      anon_sym_false,
-      anon_sym_null,
-  [3458] = 3,
-    ACTIONS(116), 1,
-      anon_sym_BSLASH,
-    STATE(145), 1,
-      aux_sym_namespace_name_repeat1,
-    ACTIONS(112), 7,
-      anon_sym_LT,
-      anon_sym_GT,
-      anon_sym_LBRACK_RBRACK,
-      anon_sym_COMMA,
-      sym_name,
-      anon_sym_PIPE,
-      anon_sym_DOLLAR,
-  [3474] = 5,
-    ACTIONS(412), 1,
+    ACTIONS(219), 54,
+      anon_sym_ATinheritdoc,
       anon_sym_ATinheritDoc,
-    ACTIONS(414), 1,
+      anon_sym_ATapi,
+      anon_sym_ATfilesource,
+      anon_sym_ATignore,
       anon_sym_ATinternal,
-    ACTIONS(416), 1,
+      anon_sym_ATcategory,
+      anon_sym_ATcopyright,
+      anon_sym_ATtodo,
+      anon_sym_ATexample,
+      anon_sym_ATlicense,
+      anon_sym_ATpackage,
+      anon_sym_ATsource,
+      anon_sym_ATsubpackage,
+      anon_sym_ATuses,
+      anon_sym_ATauthor,
+      anon_sym_ATglobal,
       anon_sym_ATlink,
-    ACTIONS(418), 1,
+      anon_sym_ATmethod,
+      anon_sym_ATparam,
+      anon_sym_ATproperty_DASHread,
+      anon_sym_ATproperty_DASHwrite,
+      anon_sym_ATreturn,
       anon_sym_ATsee,
-    STATE(164), 3,
-      sym__internal_inline_tag,
-      sym__link_inline_tag,
-      sym__see_inline_tag,
-  [3492] = 7,
-    ACTIONS(375), 1,
+      anon_sym_ATthrows,
+      anon_sym_ATvar,
+      anon_sym_ATdeprecated,
+      anon_sym_ATsince,
+      anon_sym_ATversion,
+      anon_sym_ATafterClass,
+      anon_sym_ATannotation,
+      anon_sym_ATbackupGlobals,
+      anon_sym_ATbackupStaticAttributes,
+      anon_sym_ATbeforeClass,
+      anon_sym_ATcodeCoverageIgnore_STAR,
+      anon_sym_ATcodeCoverageIgnoreEnd,
+      anon_sym_ATcodeCoverageIgnoreStart,
+      anon_sym_ATcoversDefaultClasstoshortenannotations,
+      anon_sym_ATcoversNothing,
+      anon_sym_ATdataProvider,
+      anon_sym_ATdependsannotationtoexpressdependencies,
+      anon_sym_ATdoesNotPerformAssertions,
+      anon_sym_ATgroup,
+      anon_sym_ATlarge,
+      anon_sym_ATmedium,
+      anon_sym_ATpreserveGlobalState,
+      anon_sym_ATrequiresusages,
+      anon_sym_ATrunInSeparateProcess,
+      anon_sym_ATrunTestsInSeparateProcesses,
+      anon_sym_ATsmall,
+      anon_sym_ATtestWith,
+      anon_sym_ATtestdox,
+      anon_sym_ATticket,
+      sym__end,
+  [887] = 2,
+    ACTIONS(217), 9,
+      anon_sym_ATproperty,
+      anon_sym_ATafter,
+      anon_sym_ATbefore,
+      anon_sym_ATcodeCoverageIgnore,
+      anon_sym_ATcovers,
+      anon_sym_ATcoversDefaultClass,
+      anon_sym_ATdepends,
+      anon_sym_ATrequires,
+      anon_sym_ATtest,
+    ACTIONS(215), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+      anon_sym_ATapi,
+      anon_sym_ATfilesource,
+      anon_sym_ATignore,
+      anon_sym_ATinternal,
+      anon_sym_ATcategory,
+      anon_sym_ATcopyright,
+      anon_sym_ATtodo,
+      anon_sym_ATexample,
+      anon_sym_ATlicense,
+      anon_sym_ATpackage,
+      anon_sym_ATsource,
+      anon_sym_ATsubpackage,
+      anon_sym_ATuses,
+      anon_sym_ATauthor,
+      anon_sym_ATglobal,
+      anon_sym_ATlink,
+      anon_sym_ATmethod,
+      anon_sym_ATparam,
+      anon_sym_ATproperty_DASHread,
+      anon_sym_ATproperty_DASHwrite,
+      anon_sym_ATreturn,
+      anon_sym_ATsee,
+      anon_sym_ATthrows,
+      anon_sym_ATvar,
+      anon_sym_ATdeprecated,
+      anon_sym_ATsince,
+      anon_sym_ATversion,
+      anon_sym_ATafterClass,
+      anon_sym_ATannotation,
+      anon_sym_ATbackupGlobals,
+      anon_sym_ATbackupStaticAttributes,
+      anon_sym_ATbeforeClass,
+      anon_sym_ATcodeCoverageIgnore_STAR,
+      anon_sym_ATcodeCoverageIgnoreEnd,
+      anon_sym_ATcodeCoverageIgnoreStart,
+      anon_sym_ATcoversDefaultClasstoshortenannotations,
+      anon_sym_ATcoversNothing,
+      anon_sym_ATdataProvider,
+      anon_sym_ATdependsannotationtoexpressdependencies,
+      anon_sym_ATdoesNotPerformAssertions,
+      anon_sym_ATgroup,
+      anon_sym_ATlarge,
+      anon_sym_ATmedium,
+      anon_sym_ATpreserveGlobalState,
+      anon_sym_ATrequiresusages,
+      anon_sym_ATrunInSeparateProcess,
+      anon_sym_ATrunTestsInSeparateProcesses,
+      anon_sym_ATsmall,
+      anon_sym_ATtestWith,
+      anon_sym_ATtestdox,
+      anon_sym_ATticket,
+      sym__end,
+  [955] = 2,
+    ACTIONS(241), 9,
+      anon_sym_ATproperty,
+      anon_sym_ATafter,
+      anon_sym_ATbefore,
+      anon_sym_ATcodeCoverageIgnore,
+      anon_sym_ATcovers,
+      anon_sym_ATcoversDefaultClass,
+      anon_sym_ATdepends,
+      anon_sym_ATrequires,
+      anon_sym_ATtest,
+    ACTIONS(239), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+      anon_sym_ATapi,
+      anon_sym_ATfilesource,
+      anon_sym_ATignore,
+      anon_sym_ATinternal,
+      anon_sym_ATcategory,
+      anon_sym_ATcopyright,
+      anon_sym_ATtodo,
+      anon_sym_ATexample,
+      anon_sym_ATlicense,
+      anon_sym_ATpackage,
+      anon_sym_ATsource,
+      anon_sym_ATsubpackage,
+      anon_sym_ATuses,
+      anon_sym_ATauthor,
+      anon_sym_ATglobal,
+      anon_sym_ATlink,
+      anon_sym_ATmethod,
+      anon_sym_ATparam,
+      anon_sym_ATproperty_DASHread,
+      anon_sym_ATproperty_DASHwrite,
+      anon_sym_ATreturn,
+      anon_sym_ATsee,
+      anon_sym_ATthrows,
+      anon_sym_ATvar,
+      anon_sym_ATdeprecated,
+      anon_sym_ATsince,
+      anon_sym_ATversion,
+      anon_sym_ATafterClass,
+      anon_sym_ATannotation,
+      anon_sym_ATbackupGlobals,
+      anon_sym_ATbackupStaticAttributes,
+      anon_sym_ATbeforeClass,
+      anon_sym_ATcodeCoverageIgnore_STAR,
+      anon_sym_ATcodeCoverageIgnoreEnd,
+      anon_sym_ATcodeCoverageIgnoreStart,
+      anon_sym_ATcoversDefaultClasstoshortenannotations,
+      anon_sym_ATcoversNothing,
+      anon_sym_ATdataProvider,
+      anon_sym_ATdependsannotationtoexpressdependencies,
+      anon_sym_ATdoesNotPerformAssertions,
+      anon_sym_ATgroup,
+      anon_sym_ATlarge,
+      anon_sym_ATmedium,
+      anon_sym_ATpreserveGlobalState,
+      anon_sym_ATrequiresusages,
+      anon_sym_ATrunInSeparateProcess,
+      anon_sym_ATrunTestsInSeparateProcesses,
+      anon_sym_ATsmall,
+      anon_sym_ATtestWith,
+      anon_sym_ATtestdox,
+      anon_sym_ATticket,
+      sym__end,
+  [1023] = 2,
+    ACTIONS(396), 9,
+      anon_sym_ATproperty,
+      anon_sym_ATafter,
+      anon_sym_ATbefore,
+      anon_sym_ATcodeCoverageIgnore,
+      anon_sym_ATcovers,
+      anon_sym_ATcoversDefaultClass,
+      anon_sym_ATdepends,
+      anon_sym_ATrequires,
+      anon_sym_ATtest,
+    ACTIONS(394), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+      anon_sym_ATapi,
+      anon_sym_ATfilesource,
+      anon_sym_ATignore,
+      anon_sym_ATinternal,
+      anon_sym_ATcategory,
+      anon_sym_ATcopyright,
+      anon_sym_ATtodo,
+      anon_sym_ATexample,
+      anon_sym_ATlicense,
+      anon_sym_ATpackage,
+      anon_sym_ATsource,
+      anon_sym_ATsubpackage,
+      anon_sym_ATuses,
+      anon_sym_ATauthor,
+      anon_sym_ATglobal,
+      anon_sym_ATlink,
+      anon_sym_ATmethod,
+      anon_sym_ATparam,
+      anon_sym_ATproperty_DASHread,
+      anon_sym_ATproperty_DASHwrite,
+      anon_sym_ATreturn,
+      anon_sym_ATsee,
+      anon_sym_ATthrows,
+      anon_sym_ATvar,
+      anon_sym_ATdeprecated,
+      anon_sym_ATsince,
+      anon_sym_ATversion,
+      anon_sym_ATafterClass,
+      anon_sym_ATannotation,
+      anon_sym_ATbackupGlobals,
+      anon_sym_ATbackupStaticAttributes,
+      anon_sym_ATbeforeClass,
+      anon_sym_ATcodeCoverageIgnore_STAR,
+      anon_sym_ATcodeCoverageIgnoreEnd,
+      anon_sym_ATcodeCoverageIgnoreStart,
+      anon_sym_ATcoversDefaultClasstoshortenannotations,
+      anon_sym_ATcoversNothing,
+      anon_sym_ATdataProvider,
+      anon_sym_ATdependsannotationtoexpressdependencies,
+      anon_sym_ATdoesNotPerformAssertions,
+      anon_sym_ATgroup,
+      anon_sym_ATlarge,
+      anon_sym_ATmedium,
+      anon_sym_ATpreserveGlobalState,
+      anon_sym_ATrequiresusages,
+      anon_sym_ATrunInSeparateProcess,
+      anon_sym_ATrunTestsInSeparateProcesses,
+      anon_sym_ATsmall,
+      anon_sym_ATtestWith,
+      anon_sym_ATtestdox,
+      anon_sym_ATticket,
+      sym__end,
+  [1091] = 2,
+    ACTIONS(400), 9,
+      anon_sym_ATproperty,
+      anon_sym_ATafter,
+      anon_sym_ATbefore,
+      anon_sym_ATcodeCoverageIgnore,
+      anon_sym_ATcovers,
+      anon_sym_ATcoversDefaultClass,
+      anon_sym_ATdepends,
+      anon_sym_ATrequires,
+      anon_sym_ATtest,
+    ACTIONS(398), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+      anon_sym_ATapi,
+      anon_sym_ATfilesource,
+      anon_sym_ATignore,
+      anon_sym_ATinternal,
+      anon_sym_ATcategory,
+      anon_sym_ATcopyright,
+      anon_sym_ATtodo,
+      anon_sym_ATexample,
+      anon_sym_ATlicense,
+      anon_sym_ATpackage,
+      anon_sym_ATsource,
+      anon_sym_ATsubpackage,
+      anon_sym_ATuses,
+      anon_sym_ATauthor,
+      anon_sym_ATglobal,
+      anon_sym_ATlink,
+      anon_sym_ATmethod,
+      anon_sym_ATparam,
+      anon_sym_ATproperty_DASHread,
+      anon_sym_ATproperty_DASHwrite,
+      anon_sym_ATreturn,
+      anon_sym_ATsee,
+      anon_sym_ATthrows,
+      anon_sym_ATvar,
+      anon_sym_ATdeprecated,
+      anon_sym_ATsince,
+      anon_sym_ATversion,
+      anon_sym_ATafterClass,
+      anon_sym_ATannotation,
+      anon_sym_ATbackupGlobals,
+      anon_sym_ATbackupStaticAttributes,
+      anon_sym_ATbeforeClass,
+      anon_sym_ATcodeCoverageIgnore_STAR,
+      anon_sym_ATcodeCoverageIgnoreEnd,
+      anon_sym_ATcodeCoverageIgnoreStart,
+      anon_sym_ATcoversDefaultClasstoshortenannotations,
+      anon_sym_ATcoversNothing,
+      anon_sym_ATdataProvider,
+      anon_sym_ATdependsannotationtoexpressdependencies,
+      anon_sym_ATdoesNotPerformAssertions,
+      anon_sym_ATgroup,
+      anon_sym_ATlarge,
+      anon_sym_ATmedium,
+      anon_sym_ATpreserveGlobalState,
+      anon_sym_ATrequiresusages,
+      anon_sym_ATrunInSeparateProcess,
+      anon_sym_ATrunTestsInSeparateProcesses,
+      anon_sym_ATsmall,
+      anon_sym_ATtestWith,
+      anon_sym_ATtestdox,
+      anon_sym_ATticket,
+      sym__end,
+  [1159] = 2,
+    ACTIONS(404), 9,
+      anon_sym_ATproperty,
+      anon_sym_ATafter,
+      anon_sym_ATbefore,
+      anon_sym_ATcodeCoverageIgnore,
+      anon_sym_ATcovers,
+      anon_sym_ATcoversDefaultClass,
+      anon_sym_ATdepends,
+      anon_sym_ATrequires,
+      anon_sym_ATtest,
+    ACTIONS(402), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+      anon_sym_ATapi,
+      anon_sym_ATfilesource,
+      anon_sym_ATignore,
+      anon_sym_ATinternal,
+      anon_sym_ATcategory,
+      anon_sym_ATcopyright,
+      anon_sym_ATtodo,
+      anon_sym_ATexample,
+      anon_sym_ATlicense,
+      anon_sym_ATpackage,
+      anon_sym_ATsource,
+      anon_sym_ATsubpackage,
+      anon_sym_ATuses,
+      anon_sym_ATauthor,
+      anon_sym_ATglobal,
+      anon_sym_ATlink,
+      anon_sym_ATmethod,
+      anon_sym_ATparam,
+      anon_sym_ATproperty_DASHread,
+      anon_sym_ATproperty_DASHwrite,
+      anon_sym_ATreturn,
+      anon_sym_ATsee,
+      anon_sym_ATthrows,
+      anon_sym_ATvar,
+      anon_sym_ATdeprecated,
+      anon_sym_ATsince,
+      anon_sym_ATversion,
+      anon_sym_ATafterClass,
+      anon_sym_ATannotation,
+      anon_sym_ATbackupGlobals,
+      anon_sym_ATbackupStaticAttributes,
+      anon_sym_ATbeforeClass,
+      anon_sym_ATcodeCoverageIgnore_STAR,
+      anon_sym_ATcodeCoverageIgnoreEnd,
+      anon_sym_ATcodeCoverageIgnoreStart,
+      anon_sym_ATcoversDefaultClasstoshortenannotations,
+      anon_sym_ATcoversNothing,
+      anon_sym_ATdataProvider,
+      anon_sym_ATdependsannotationtoexpressdependencies,
+      anon_sym_ATdoesNotPerformAssertions,
+      anon_sym_ATgroup,
+      anon_sym_ATlarge,
+      anon_sym_ATmedium,
+      anon_sym_ATpreserveGlobalState,
+      anon_sym_ATrequiresusages,
+      anon_sym_ATrunInSeparateProcess,
+      anon_sym_ATrunTestsInSeparateProcesses,
+      anon_sym_ATsmall,
+      anon_sym_ATtestWith,
+      anon_sym_ATtestdox,
+      anon_sym_ATticket,
+      sym__end,
+  [1227] = 2,
+    ACTIONS(197), 9,
+      anon_sym_ATproperty,
+      anon_sym_ATafter,
+      anon_sym_ATbefore,
+      anon_sym_ATcodeCoverageIgnore,
+      anon_sym_ATcovers,
+      anon_sym_ATcoversDefaultClass,
+      anon_sym_ATdepends,
+      anon_sym_ATrequires,
+      anon_sym_ATtest,
+    ACTIONS(195), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+      anon_sym_ATapi,
+      anon_sym_ATfilesource,
+      anon_sym_ATignore,
+      anon_sym_ATinternal,
+      anon_sym_ATcategory,
+      anon_sym_ATcopyright,
+      anon_sym_ATtodo,
+      anon_sym_ATexample,
+      anon_sym_ATlicense,
+      anon_sym_ATpackage,
+      anon_sym_ATsource,
+      anon_sym_ATsubpackage,
+      anon_sym_ATuses,
+      anon_sym_ATauthor,
+      anon_sym_ATglobal,
+      anon_sym_ATlink,
+      anon_sym_ATmethod,
+      anon_sym_ATparam,
+      anon_sym_ATproperty_DASHread,
+      anon_sym_ATproperty_DASHwrite,
+      anon_sym_ATreturn,
+      anon_sym_ATsee,
+      anon_sym_ATthrows,
+      anon_sym_ATvar,
+      anon_sym_ATdeprecated,
+      anon_sym_ATsince,
+      anon_sym_ATversion,
+      anon_sym_ATafterClass,
+      anon_sym_ATannotation,
+      anon_sym_ATbackupGlobals,
+      anon_sym_ATbackupStaticAttributes,
+      anon_sym_ATbeforeClass,
+      anon_sym_ATcodeCoverageIgnore_STAR,
+      anon_sym_ATcodeCoverageIgnoreEnd,
+      anon_sym_ATcodeCoverageIgnoreStart,
+      anon_sym_ATcoversDefaultClasstoshortenannotations,
+      anon_sym_ATcoversNothing,
+      anon_sym_ATdataProvider,
+      anon_sym_ATdependsannotationtoexpressdependencies,
+      anon_sym_ATdoesNotPerformAssertions,
+      anon_sym_ATgroup,
+      anon_sym_ATlarge,
+      anon_sym_ATmedium,
+      anon_sym_ATpreserveGlobalState,
+      anon_sym_ATrequiresusages,
+      anon_sym_ATrunInSeparateProcess,
+      anon_sym_ATrunTestsInSeparateProcesses,
+      anon_sym_ATsmall,
+      anon_sym_ATtestWith,
+      anon_sym_ATtestdox,
+      anon_sym_ATticket,
+      sym__end,
+  [1295] = 2,
+    ACTIONS(408), 9,
+      anon_sym_ATproperty,
+      anon_sym_ATafter,
+      anon_sym_ATbefore,
+      anon_sym_ATcodeCoverageIgnore,
+      anon_sym_ATcovers,
+      anon_sym_ATcoversDefaultClass,
+      anon_sym_ATdepends,
+      anon_sym_ATrequires,
+      anon_sym_ATtest,
+    ACTIONS(406), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+      anon_sym_ATapi,
+      anon_sym_ATfilesource,
+      anon_sym_ATignore,
+      anon_sym_ATinternal,
+      anon_sym_ATcategory,
+      anon_sym_ATcopyright,
+      anon_sym_ATtodo,
+      anon_sym_ATexample,
+      anon_sym_ATlicense,
+      anon_sym_ATpackage,
+      anon_sym_ATsource,
+      anon_sym_ATsubpackage,
+      anon_sym_ATuses,
+      anon_sym_ATauthor,
+      anon_sym_ATglobal,
+      anon_sym_ATlink,
+      anon_sym_ATmethod,
+      anon_sym_ATparam,
+      anon_sym_ATproperty_DASHread,
+      anon_sym_ATproperty_DASHwrite,
+      anon_sym_ATreturn,
+      anon_sym_ATsee,
+      anon_sym_ATthrows,
+      anon_sym_ATvar,
+      anon_sym_ATdeprecated,
+      anon_sym_ATsince,
+      anon_sym_ATversion,
+      anon_sym_ATafterClass,
+      anon_sym_ATannotation,
+      anon_sym_ATbackupGlobals,
+      anon_sym_ATbackupStaticAttributes,
+      anon_sym_ATbeforeClass,
+      anon_sym_ATcodeCoverageIgnore_STAR,
+      anon_sym_ATcodeCoverageIgnoreEnd,
+      anon_sym_ATcodeCoverageIgnoreStart,
+      anon_sym_ATcoversDefaultClasstoshortenannotations,
+      anon_sym_ATcoversNothing,
+      anon_sym_ATdataProvider,
+      anon_sym_ATdependsannotationtoexpressdependencies,
+      anon_sym_ATdoesNotPerformAssertions,
+      anon_sym_ATgroup,
+      anon_sym_ATlarge,
+      anon_sym_ATmedium,
+      anon_sym_ATpreserveGlobalState,
+      anon_sym_ATrequiresusages,
+      anon_sym_ATrunInSeparateProcess,
+      anon_sym_ATrunTestsInSeparateProcesses,
+      anon_sym_ATsmall,
+      anon_sym_ATtestWith,
+      anon_sym_ATtestdox,
+      anon_sym_ATticket,
+      sym__end,
+  [1363] = 2,
+    ACTIONS(412), 9,
+      anon_sym_ATproperty,
+      anon_sym_ATafter,
+      anon_sym_ATbefore,
+      anon_sym_ATcodeCoverageIgnore,
+      anon_sym_ATcovers,
+      anon_sym_ATcoversDefaultClass,
+      anon_sym_ATdepends,
+      anon_sym_ATrequires,
+      anon_sym_ATtest,
+    ACTIONS(410), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+      anon_sym_ATapi,
+      anon_sym_ATfilesource,
+      anon_sym_ATignore,
+      anon_sym_ATinternal,
+      anon_sym_ATcategory,
+      anon_sym_ATcopyright,
+      anon_sym_ATtodo,
+      anon_sym_ATexample,
+      anon_sym_ATlicense,
+      anon_sym_ATpackage,
+      anon_sym_ATsource,
+      anon_sym_ATsubpackage,
+      anon_sym_ATuses,
+      anon_sym_ATauthor,
+      anon_sym_ATglobal,
+      anon_sym_ATlink,
+      anon_sym_ATmethod,
+      anon_sym_ATparam,
+      anon_sym_ATproperty_DASHread,
+      anon_sym_ATproperty_DASHwrite,
+      anon_sym_ATreturn,
+      anon_sym_ATsee,
+      anon_sym_ATthrows,
+      anon_sym_ATvar,
+      anon_sym_ATdeprecated,
+      anon_sym_ATsince,
+      anon_sym_ATversion,
+      anon_sym_ATafterClass,
+      anon_sym_ATannotation,
+      anon_sym_ATbackupGlobals,
+      anon_sym_ATbackupStaticAttributes,
+      anon_sym_ATbeforeClass,
+      anon_sym_ATcodeCoverageIgnore_STAR,
+      anon_sym_ATcodeCoverageIgnoreEnd,
+      anon_sym_ATcodeCoverageIgnoreStart,
+      anon_sym_ATcoversDefaultClasstoshortenannotations,
+      anon_sym_ATcoversNothing,
+      anon_sym_ATdataProvider,
+      anon_sym_ATdependsannotationtoexpressdependencies,
+      anon_sym_ATdoesNotPerformAssertions,
+      anon_sym_ATgroup,
+      anon_sym_ATlarge,
+      anon_sym_ATmedium,
+      anon_sym_ATpreserveGlobalState,
+      anon_sym_ATrequiresusages,
+      anon_sym_ATrunInSeparateProcess,
+      anon_sym_ATrunTestsInSeparateProcesses,
+      anon_sym_ATsmall,
+      anon_sym_ATtestWith,
+      anon_sym_ATtestdox,
+      anon_sym_ATticket,
+      sym__end,
+  [1431] = 2,
+    ACTIONS(416), 9,
+      anon_sym_ATproperty,
+      anon_sym_ATafter,
+      anon_sym_ATbefore,
+      anon_sym_ATcodeCoverageIgnore,
+      anon_sym_ATcovers,
+      anon_sym_ATcoversDefaultClass,
+      anon_sym_ATdepends,
+      anon_sym_ATrequires,
+      anon_sym_ATtest,
+    ACTIONS(414), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+      anon_sym_ATapi,
+      anon_sym_ATfilesource,
+      anon_sym_ATignore,
+      anon_sym_ATinternal,
+      anon_sym_ATcategory,
+      anon_sym_ATcopyright,
+      anon_sym_ATtodo,
+      anon_sym_ATexample,
+      anon_sym_ATlicense,
+      anon_sym_ATpackage,
+      anon_sym_ATsource,
+      anon_sym_ATsubpackage,
+      anon_sym_ATuses,
+      anon_sym_ATauthor,
+      anon_sym_ATglobal,
+      anon_sym_ATlink,
+      anon_sym_ATmethod,
+      anon_sym_ATparam,
+      anon_sym_ATproperty_DASHread,
+      anon_sym_ATproperty_DASHwrite,
+      anon_sym_ATreturn,
+      anon_sym_ATsee,
+      anon_sym_ATthrows,
+      anon_sym_ATvar,
+      anon_sym_ATdeprecated,
+      anon_sym_ATsince,
+      anon_sym_ATversion,
+      anon_sym_ATafterClass,
+      anon_sym_ATannotation,
+      anon_sym_ATbackupGlobals,
+      anon_sym_ATbackupStaticAttributes,
+      anon_sym_ATbeforeClass,
+      anon_sym_ATcodeCoverageIgnore_STAR,
+      anon_sym_ATcodeCoverageIgnoreEnd,
+      anon_sym_ATcodeCoverageIgnoreStart,
+      anon_sym_ATcoversDefaultClasstoshortenannotations,
+      anon_sym_ATcoversNothing,
+      anon_sym_ATdataProvider,
+      anon_sym_ATdependsannotationtoexpressdependencies,
+      anon_sym_ATdoesNotPerformAssertions,
+      anon_sym_ATgroup,
+      anon_sym_ATlarge,
+      anon_sym_ATmedium,
+      anon_sym_ATpreserveGlobalState,
+      anon_sym_ATrequiresusages,
+      anon_sym_ATrunInSeparateProcess,
+      anon_sym_ATrunTestsInSeparateProcesses,
+      anon_sym_ATsmall,
+      anon_sym_ATtestWith,
+      anon_sym_ATtestdox,
+      anon_sym_ATticket,
+      sym__end,
+  [1499] = 2,
+    ACTIONS(420), 9,
+      anon_sym_ATproperty,
+      anon_sym_ATafter,
+      anon_sym_ATbefore,
+      anon_sym_ATcodeCoverageIgnore,
+      anon_sym_ATcovers,
+      anon_sym_ATcoversDefaultClass,
+      anon_sym_ATdepends,
+      anon_sym_ATrequires,
+      anon_sym_ATtest,
+    ACTIONS(418), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+      anon_sym_ATapi,
+      anon_sym_ATfilesource,
+      anon_sym_ATignore,
+      anon_sym_ATinternal,
+      anon_sym_ATcategory,
+      anon_sym_ATcopyright,
+      anon_sym_ATtodo,
+      anon_sym_ATexample,
+      anon_sym_ATlicense,
+      anon_sym_ATpackage,
+      anon_sym_ATsource,
+      anon_sym_ATsubpackage,
+      anon_sym_ATuses,
+      anon_sym_ATauthor,
+      anon_sym_ATglobal,
+      anon_sym_ATlink,
+      anon_sym_ATmethod,
+      anon_sym_ATparam,
+      anon_sym_ATproperty_DASHread,
+      anon_sym_ATproperty_DASHwrite,
+      anon_sym_ATreturn,
+      anon_sym_ATsee,
+      anon_sym_ATthrows,
+      anon_sym_ATvar,
+      anon_sym_ATdeprecated,
+      anon_sym_ATsince,
+      anon_sym_ATversion,
+      anon_sym_ATafterClass,
+      anon_sym_ATannotation,
+      anon_sym_ATbackupGlobals,
+      anon_sym_ATbackupStaticAttributes,
+      anon_sym_ATbeforeClass,
+      anon_sym_ATcodeCoverageIgnore_STAR,
+      anon_sym_ATcodeCoverageIgnoreEnd,
+      anon_sym_ATcodeCoverageIgnoreStart,
+      anon_sym_ATcoversDefaultClasstoshortenannotations,
+      anon_sym_ATcoversNothing,
+      anon_sym_ATdataProvider,
+      anon_sym_ATdependsannotationtoexpressdependencies,
+      anon_sym_ATdoesNotPerformAssertions,
+      anon_sym_ATgroup,
+      anon_sym_ATlarge,
+      anon_sym_ATmedium,
+      anon_sym_ATpreserveGlobalState,
+      anon_sym_ATrequiresusages,
+      anon_sym_ATrunInSeparateProcess,
+      anon_sym_ATrunTestsInSeparateProcesses,
+      anon_sym_ATsmall,
+      anon_sym_ATtestWith,
+      anon_sym_ATtestdox,
+      anon_sym_ATticket,
+      sym__end,
+  [1567] = 2,
+    ACTIONS(424), 9,
+      anon_sym_ATproperty,
+      anon_sym_ATafter,
+      anon_sym_ATbefore,
+      anon_sym_ATcodeCoverageIgnore,
+      anon_sym_ATcovers,
+      anon_sym_ATcoversDefaultClass,
+      anon_sym_ATdepends,
+      anon_sym_ATrequires,
+      anon_sym_ATtest,
+    ACTIONS(422), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+      anon_sym_ATapi,
+      anon_sym_ATfilesource,
+      anon_sym_ATignore,
+      anon_sym_ATinternal,
+      anon_sym_ATcategory,
+      anon_sym_ATcopyright,
+      anon_sym_ATtodo,
+      anon_sym_ATexample,
+      anon_sym_ATlicense,
+      anon_sym_ATpackage,
+      anon_sym_ATsource,
+      anon_sym_ATsubpackage,
+      anon_sym_ATuses,
+      anon_sym_ATauthor,
+      anon_sym_ATglobal,
+      anon_sym_ATlink,
+      anon_sym_ATmethod,
+      anon_sym_ATparam,
+      anon_sym_ATproperty_DASHread,
+      anon_sym_ATproperty_DASHwrite,
+      anon_sym_ATreturn,
+      anon_sym_ATsee,
+      anon_sym_ATthrows,
+      anon_sym_ATvar,
+      anon_sym_ATdeprecated,
+      anon_sym_ATsince,
+      anon_sym_ATversion,
+      anon_sym_ATafterClass,
+      anon_sym_ATannotation,
+      anon_sym_ATbackupGlobals,
+      anon_sym_ATbackupStaticAttributes,
+      anon_sym_ATbeforeClass,
+      anon_sym_ATcodeCoverageIgnore_STAR,
+      anon_sym_ATcodeCoverageIgnoreEnd,
+      anon_sym_ATcodeCoverageIgnoreStart,
+      anon_sym_ATcoversDefaultClasstoshortenannotations,
+      anon_sym_ATcoversNothing,
+      anon_sym_ATdataProvider,
+      anon_sym_ATdependsannotationtoexpressdependencies,
+      anon_sym_ATdoesNotPerformAssertions,
+      anon_sym_ATgroup,
+      anon_sym_ATlarge,
+      anon_sym_ATmedium,
+      anon_sym_ATpreserveGlobalState,
+      anon_sym_ATrequiresusages,
+      anon_sym_ATrunInSeparateProcess,
+      anon_sym_ATrunTestsInSeparateProcesses,
+      anon_sym_ATsmall,
+      anon_sym_ATtestWith,
+      anon_sym_ATtestdox,
+      anon_sym_ATticket,
+      sym__end,
+  [1635] = 2,
+    ACTIONS(428), 9,
+      anon_sym_ATproperty,
+      anon_sym_ATafter,
+      anon_sym_ATbefore,
+      anon_sym_ATcodeCoverageIgnore,
+      anon_sym_ATcovers,
+      anon_sym_ATcoversDefaultClass,
+      anon_sym_ATdepends,
+      anon_sym_ATrequires,
+      anon_sym_ATtest,
+    ACTIONS(426), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+      anon_sym_ATapi,
+      anon_sym_ATfilesource,
+      anon_sym_ATignore,
+      anon_sym_ATinternal,
+      anon_sym_ATcategory,
+      anon_sym_ATcopyright,
+      anon_sym_ATtodo,
+      anon_sym_ATexample,
+      anon_sym_ATlicense,
+      anon_sym_ATpackage,
+      anon_sym_ATsource,
+      anon_sym_ATsubpackage,
+      anon_sym_ATuses,
+      anon_sym_ATauthor,
+      anon_sym_ATglobal,
+      anon_sym_ATlink,
+      anon_sym_ATmethod,
+      anon_sym_ATparam,
+      anon_sym_ATproperty_DASHread,
+      anon_sym_ATproperty_DASHwrite,
+      anon_sym_ATreturn,
+      anon_sym_ATsee,
+      anon_sym_ATthrows,
+      anon_sym_ATvar,
+      anon_sym_ATdeprecated,
+      anon_sym_ATsince,
+      anon_sym_ATversion,
+      anon_sym_ATafterClass,
+      anon_sym_ATannotation,
+      anon_sym_ATbackupGlobals,
+      anon_sym_ATbackupStaticAttributes,
+      anon_sym_ATbeforeClass,
+      anon_sym_ATcodeCoverageIgnore_STAR,
+      anon_sym_ATcodeCoverageIgnoreEnd,
+      anon_sym_ATcodeCoverageIgnoreStart,
+      anon_sym_ATcoversDefaultClasstoshortenannotations,
+      anon_sym_ATcoversNothing,
+      anon_sym_ATdataProvider,
+      anon_sym_ATdependsannotationtoexpressdependencies,
+      anon_sym_ATdoesNotPerformAssertions,
+      anon_sym_ATgroup,
+      anon_sym_ATlarge,
+      anon_sym_ATmedium,
+      anon_sym_ATpreserveGlobalState,
+      anon_sym_ATrequiresusages,
+      anon_sym_ATrunInSeparateProcess,
+      anon_sym_ATrunTestsInSeparateProcesses,
+      anon_sym_ATsmall,
+      anon_sym_ATtestWith,
+      anon_sym_ATtestdox,
+      anon_sym_ATticket,
+      sym__end,
+  [1703] = 2,
+    ACTIONS(205), 9,
+      anon_sym_ATproperty,
+      anon_sym_ATafter,
+      anon_sym_ATbefore,
+      anon_sym_ATcodeCoverageIgnore,
+      anon_sym_ATcovers,
+      anon_sym_ATcoversDefaultClass,
+      anon_sym_ATdepends,
+      anon_sym_ATrequires,
+      anon_sym_ATtest,
+    ACTIONS(203), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+      anon_sym_ATapi,
+      anon_sym_ATfilesource,
+      anon_sym_ATignore,
+      anon_sym_ATinternal,
+      anon_sym_ATcategory,
+      anon_sym_ATcopyright,
+      anon_sym_ATtodo,
+      anon_sym_ATexample,
+      anon_sym_ATlicense,
+      anon_sym_ATpackage,
+      anon_sym_ATsource,
+      anon_sym_ATsubpackage,
+      anon_sym_ATuses,
+      anon_sym_ATauthor,
+      anon_sym_ATglobal,
+      anon_sym_ATlink,
+      anon_sym_ATmethod,
+      anon_sym_ATparam,
+      anon_sym_ATproperty_DASHread,
+      anon_sym_ATproperty_DASHwrite,
+      anon_sym_ATreturn,
+      anon_sym_ATsee,
+      anon_sym_ATthrows,
+      anon_sym_ATvar,
+      anon_sym_ATdeprecated,
+      anon_sym_ATsince,
+      anon_sym_ATversion,
+      anon_sym_ATafterClass,
+      anon_sym_ATannotation,
+      anon_sym_ATbackupGlobals,
+      anon_sym_ATbackupStaticAttributes,
+      anon_sym_ATbeforeClass,
+      anon_sym_ATcodeCoverageIgnore_STAR,
+      anon_sym_ATcodeCoverageIgnoreEnd,
+      anon_sym_ATcodeCoverageIgnoreStart,
+      anon_sym_ATcoversDefaultClasstoshortenannotations,
+      anon_sym_ATcoversNothing,
+      anon_sym_ATdataProvider,
+      anon_sym_ATdependsannotationtoexpressdependencies,
+      anon_sym_ATdoesNotPerformAssertions,
+      anon_sym_ATgroup,
+      anon_sym_ATlarge,
+      anon_sym_ATmedium,
+      anon_sym_ATpreserveGlobalState,
+      anon_sym_ATrequiresusages,
+      anon_sym_ATrunInSeparateProcess,
+      anon_sym_ATrunTestsInSeparateProcesses,
+      anon_sym_ATsmall,
+      anon_sym_ATtestWith,
+      anon_sym_ATtestdox,
+      anon_sym_ATticket,
+      sym__end,
+  [1771] = 2,
+    ACTIONS(432), 9,
+      anon_sym_ATproperty,
+      anon_sym_ATafter,
+      anon_sym_ATbefore,
+      anon_sym_ATcodeCoverageIgnore,
+      anon_sym_ATcovers,
+      anon_sym_ATcoversDefaultClass,
+      anon_sym_ATdepends,
+      anon_sym_ATrequires,
+      anon_sym_ATtest,
+    ACTIONS(430), 54,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+      anon_sym_ATapi,
+      anon_sym_ATfilesource,
+      anon_sym_ATignore,
+      anon_sym_ATinternal,
+      anon_sym_ATcategory,
+      anon_sym_ATcopyright,
+      anon_sym_ATtodo,
+      anon_sym_ATexample,
+      anon_sym_ATlicense,
+      anon_sym_ATpackage,
+      anon_sym_ATsource,
+      anon_sym_ATsubpackage,
+      anon_sym_ATuses,
+      anon_sym_ATauthor,
+      anon_sym_ATglobal,
+      anon_sym_ATlink,
+      anon_sym_ATmethod,
+      anon_sym_ATparam,
+      anon_sym_ATproperty_DASHread,
+      anon_sym_ATproperty_DASHwrite,
+      anon_sym_ATreturn,
+      anon_sym_ATsee,
+      anon_sym_ATthrows,
+      anon_sym_ATvar,
+      anon_sym_ATdeprecated,
+      anon_sym_ATsince,
+      anon_sym_ATversion,
+      anon_sym_ATafterClass,
+      anon_sym_ATannotation,
+      anon_sym_ATbackupGlobals,
+      anon_sym_ATbackupStaticAttributes,
+      anon_sym_ATbeforeClass,
+      anon_sym_ATcodeCoverageIgnore_STAR,
+      anon_sym_ATcodeCoverageIgnoreEnd,
+      anon_sym_ATcodeCoverageIgnoreStart,
+      anon_sym_ATcoversDefaultClasstoshortenannotations,
+      anon_sym_ATcoversNothing,
+      anon_sym_ATdataProvider,
+      anon_sym_ATdependsannotationtoexpressdependencies,
+      anon_sym_ATdoesNotPerformAssertions,
+      anon_sym_ATgroup,
+      anon_sym_ATlarge,
+      anon_sym_ATmedium,
+      anon_sym_ATpreserveGlobalState,
+      anon_sym_ATrequiresusages,
+      anon_sym_ATrunInSeparateProcess,
+      anon_sym_ATrunTestsInSeparateProcesses,
+      anon_sym_ATsmall,
+      anon_sym_ATtestWith,
+      anon_sym_ATtestdox,
+      anon_sym_ATticket,
+      sym__end,
+  [1839] = 16,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(436), 1,
+      anon_sym_list,
+    ACTIONS(438), 1,
       anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(420), 1,
-      sym_name,
-    ACTIONS(422), 1,
-      sym_uri,
-    STATE(12), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(183), 1,
-      sym_namespace_name_as_prefix,
-  [3514] = 1,
-    ACTIONS(160), 7,
-      anon_sym_LT,
-      anon_sym_GT,
-      anon_sym_LBRACK_RBRACK,
-      anon_sym_COMMA,
-      sym_name,
-      anon_sym_PIPE,
-      anon_sym_DOLLAR,
-  [3524] = 7,
-    ACTIONS(375), 1,
-      anon_sym_BSLASH,
-    ACTIONS(377), 1,
-      aux_sym_namespace_name_as_prefix_token1,
-    ACTIONS(420), 1,
-      sym_name,
-    ACTIONS(424), 1,
-      sym_uri,
-    STATE(128), 1,
-      sym_qualified_name,
-    STATE(178), 1,
-      sym_namespace_name,
-    STATE(193), 1,
-      sym_namespace_name_as_prefix,
-  [3546] = 1,
-    ACTIONS(133), 7,
-      anon_sym_LT,
-      anon_sym_GT,
-      anon_sym_LBRACK_RBRACK,
-      anon_sym_COMMA,
-      sym_name,
-      anon_sym_PIPE,
-      anon_sym_DOLLAR,
-  [3556] = 1,
-    ACTIONS(112), 7,
-      anon_sym_LT,
-      anon_sym_GT,
-      anon_sym_LBRACK_RBRACK,
-      anon_sym_COMMA,
-      sym_name,
-      anon_sym_PIPE,
-      anon_sym_DOLLAR,
-  [3566] = 1,
-    ACTIONS(164), 7,
-      anon_sym_LT,
-      anon_sym_GT,
-      anon_sym_LBRACK_RBRACK,
-      anon_sym_COMMA,
-      sym_name,
-      anon_sym_PIPE,
-      anon_sym_DOLLAR,
-  [3576] = 4,
-    ACTIONS(426), 1,
-      anon_sym_LT,
-    ACTIONS(428), 1,
-      anon_sym_LBRACK_RBRACK,
-    STATE(122), 1,
-      aux_sym__phpdoc_array_types_repeat1,
-    ACTIONS(125), 3,
-      sym_name,
-      anon_sym_PIPE,
-      anon_sym_DOLLAR,
-  [3591] = 4,
-    ACTIONS(5), 1,
-      anon_sym_LBRACE,
-    ACTIONS(45), 1,
-      sym_text,
-    STATE(74), 1,
-      sym_description,
-    STATE(50), 2,
-      sym_inline_tag,
-      aux_sym_description_repeat1,
-  [3605] = 4,
-    ACTIONS(5), 1,
-      anon_sym_LBRACE,
-    ACTIONS(45), 1,
-      sym_text,
-    STATE(80), 1,
-      sym_description,
-    STATE(50), 2,
-      sym_inline_tag,
-      aux_sym_description_repeat1,
-  [3619] = 4,
-    ACTIONS(5), 1,
-      anon_sym_LBRACE,
-    ACTIONS(45), 1,
-      sym_text,
-    STATE(67), 1,
-      sym_description,
-    STATE(50), 2,
-      sym_inline_tag,
-      aux_sym_description_repeat1,
-  [3633] = 3,
-    ACTIONS(430), 1,
-      anon_sym_LBRACK_RBRACK,
-    STATE(123), 1,
-      aux_sym__phpdoc_array_types_repeat1,
-    ACTIONS(154), 3,
-      sym_name,
-      anon_sym_PIPE,
-      anon_sym_DOLLAR,
-  [3645] = 3,
-    ACTIONS(432), 1,
-      anon_sym_LBRACK_RBRACK,
-    STATE(123), 1,
-      aux_sym__phpdoc_array_types_repeat1,
-    ACTIONS(143), 3,
-      sym_name,
-      anon_sym_PIPE,
-      anon_sym_DOLLAR,
-  [3657] = 3,
-    ACTIONS(435), 1,
-      anon_sym_PIPE,
-    STATE(125), 1,
-      aux_sym_union_type_repeat1,
-    ACTIONS(178), 2,
-      sym_name,
-      anon_sym_DOLLAR,
-  [3668] = 3,
-    ACTIONS(435), 1,
-      anon_sym_PIPE,
-    STATE(126), 1,
-      aux_sym_union_type_repeat1,
-    ACTIONS(215), 2,
-      sym_name,
-      anon_sym_DOLLAR,
-  [3679] = 3,
-    ACTIONS(437), 1,
-      anon_sym_PIPE,
-    STATE(126), 1,
-      aux_sym_union_type_repeat1,
-    ACTIONS(221), 2,
-      sym_name,
-      anon_sym_DOLLAR,
-  [3690] = 3,
     ACTIONS(440), 1,
-      anon_sym_COMMA,
+      aux_sym_namespace_name_as_prefix_token1,
     ACTIONS(442), 1,
-      anon_sym_RPAREN,
-    STATE(134), 1,
-      aux_sym_parameters_repeat1,
-  [3700] = 3,
-    ACTIONS(444), 1,
-      anon_sym_RBRACE,
+      anon_sym_QMARK,
     ACTIONS(446), 1,
-      anon_sym_LPAREN_RPAREN,
+      anon_sym_DOLLAR,
     ACTIONS(448), 1,
-      sym_text,
-  [3710] = 1,
-    ACTIONS(221), 3,
-      sym_name,
-      anon_sym_PIPE,
-      anon_sym_DOLLAR,
-  [3716] = 3,
-    ACTIONS(450), 1,
-      sym_name,
-    ACTIONS(452), 1,
-      anon_sym_BSLASH,
-    STATE(171), 1,
-      sym_namespace_name,
-  [3726] = 3,
-    ACTIONS(454), 1,
-      anon_sym_COMMA,
-    ACTIONS(457), 1,
       anon_sym_RPAREN,
-    STATE(131), 1,
-      aux_sym_parameters_repeat1,
-  [3736] = 1,
-    ACTIONS(264), 3,
-      sym_name,
-      anon_sym_PIPE,
-      anon_sym_DOLLAR,
-  [3742] = 1,
-    ACTIONS(260), 3,
-      sym_name,
-      anon_sym_PIPE,
-      anon_sym_DOLLAR,
-  [3748] = 3,
-    ACTIONS(440), 1,
-      anon_sym_COMMA,
-    ACTIONS(459), 1,
-      anon_sym_RPAREN,
-    STATE(131), 1,
-      aux_sym_parameters_repeat1,
-  [3758] = 2,
-    ACTIONS(463), 1,
-      anon_sym_EQ,
-    ACTIONS(461), 2,
-      anon_sym_COMMA,
-      anon_sym_RPAREN,
-  [3766] = 1,
-    ACTIONS(281), 3,
-      anon_sym_COMMA,
-      anon_sym_RPAREN,
-      anon_sym_EQ,
-  [3772] = 2,
-    ACTIONS(467), 1,
-      anon_sym_EQ,
-    ACTIONS(465), 2,
-      anon_sym_COMMA,
-      anon_sym_RPAREN,
-  [3780] = 2,
-    ACTIONS(135), 1,
-      sym_text,
-    ACTIONS(133), 2,
-      anon_sym_RBRACE,
-      anon_sym_LPAREN_RPAREN,
-  [3788] = 2,
-    ACTIONS(469), 1,
-      anon_sym_GT,
-    ACTIONS(471), 1,
-      anon_sym_COMMA,
-  [3795] = 2,
-    ACTIONS(473), 1,
-      anon_sym_GT,
-    ACTIONS(475), 1,
-      anon_sym_COMMA,
-  [3802] = 2,
-    ACTIONS(477), 1,
-      anon_sym_RBRACE,
-    ACTIONS(479), 1,
-      sym_text,
-  [3809] = 2,
-    ACTIONS(444), 1,
-      anon_sym_RBRACE,
-    ACTIONS(448), 1,
-      sym_text,
-  [3816] = 2,
-    ACTIONS(481), 1,
-      anon_sym_RBRACE,
-    ACTIONS(483), 1,
-      sym_text,
-  [3823] = 2,
-    ACTIONS(383), 1,
-      anon_sym_DOLLAR,
-    STATE(137), 1,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(155), 1,
+      sym_parameter,
+    STATE(159), 1,
       sym_variable_name,
-  [3830] = 2,
-    ACTIONS(485), 1,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(171), 2,
+      sym__type,
+      sym_union_type,
+    STATE(127), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    STATE(148), 4,
+      sym__types,
+      sym__phpdoc_array_types,
+      sym__psalm_generic_array_types,
+      sym__psalm_list_array_types,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [1906] = 15,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(436), 1,
+      anon_sym_list,
+    ACTIONS(438), 1,
       anon_sym_BSLASH,
-    STATE(157), 1,
-      aux_sym_namespace_name_repeat1,
-  [3837] = 2,
-    ACTIONS(123), 1,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(442), 1,
+      anon_sym_QMARK,
+    ACTIONS(446), 1,
+      anon_sym_DOLLAR,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(159), 1,
+      sym_variable_name,
+    STATE(170), 1,
+      sym_parameter,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(171), 2,
+      sym__type,
+      sym_union_type,
+    STATE(127), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    STATE(148), 4,
+      sym__types,
+      sym__phpdoc_array_types,
+      sym__psalm_generic_array_types,
+      sym__psalm_list_array_types,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [1970] = 14,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(436), 1,
+      anon_sym_list,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(442), 1,
+      anon_sym_QMARK,
+    ACTIONS(450), 1,
       anon_sym_DOLLAR,
     STATE(29), 1,
       sym_variable_name,
-  [3844] = 2,
-    ACTIONS(488), 1,
-      sym_name,
-    STATE(180), 1,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
       sym_namespace_name,
-  [3851] = 1,
-    ACTIONS(491), 2,
+    STATE(182), 2,
+      sym__type,
+      sym_union_type,
+    STATE(127), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    STATE(148), 4,
+      sym__types,
+      sym__phpdoc_array_types,
+      sym__psalm_generic_array_types,
+      sym__psalm_list_array_types,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2031] = 14,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(436), 1,
+      anon_sym_list,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(442), 1,
+      anon_sym_QMARK,
+    ACTIONS(452), 1,
+      anon_sym_static,
+    STATE(92), 1,
+      sym_static,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(206), 2,
+      sym__type,
+      sym_union_type,
+    STATE(127), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    STATE(148), 4,
+      sym__types,
+      sym__phpdoc_array_types,
+      sym__psalm_generic_array_types,
+      sym__psalm_list_array_types,
+    ACTIONS(444), 11,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_false,
+      anon_sym_null,
+  [2091] = 12,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(454), 1,
+      sym_name,
+    ACTIONS(456), 1,
+      anon_sym_list,
+    ACTIONS(458), 1,
+      anon_sym_QMARK,
+    STATE(131), 1,
+      sym_qualified_name,
+    STATE(214), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(125), 2,
+      sym__type,
+      sym_union_type,
+    STATE(126), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    STATE(138), 4,
+      sym__types,
+      sym__phpdoc_array_types,
+      sym__psalm_generic_array_types,
+      sym__psalm_list_array_types,
+    ACTIONS(460), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2146] = 12,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(436), 1,
+      anon_sym_list,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(442), 1,
+      anon_sym_QMARK,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(184), 2,
+      sym__type,
+      sym_union_type,
+    STATE(127), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    STATE(148), 4,
+      sym__types,
+      sym__phpdoc_array_types,
+      sym__psalm_generic_array_types,
+      sym__psalm_list_array_types,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2201] = 12,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(436), 1,
+      anon_sym_list,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(442), 1,
+      anon_sym_QMARK,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(174), 2,
+      sym__type,
+      sym_union_type,
+    STATE(127), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    STATE(148), 4,
+      sym__types,
+      sym__phpdoc_array_types,
+      sym__psalm_generic_array_types,
+      sym__psalm_list_array_types,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2256] = 12,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(436), 1,
+      anon_sym_list,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(442), 1,
+      anon_sym_QMARK,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(220), 2,
+      sym__type,
+      sym_union_type,
+    STATE(127), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    STATE(148), 4,
+      sym__types,
+      sym__phpdoc_array_types,
+      sym__psalm_generic_array_types,
+      sym__psalm_list_array_types,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2311] = 12,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(462), 1,
+      sym_name,
+    ACTIONS(464), 1,
+      anon_sym_list,
+    ACTIONS(466), 1,
+      anon_sym_QMARK,
+    STATE(17), 1,
+      sym_qualified_name,
+    STATE(186), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(25), 2,
+      sym__type,
+      sym_union_type,
+    STATE(10), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    STATE(35), 4,
+      sym__types,
+      sym__phpdoc_array_types,
+      sym__psalm_generic_array_types,
+      sym__psalm_list_array_types,
+    ACTIONS(468), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2366] = 12,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(462), 1,
+      sym_name,
+    ACTIONS(464), 1,
+      anon_sym_list,
+    ACTIONS(466), 1,
+      anon_sym_QMARK,
+    STATE(17), 1,
+      sym_qualified_name,
+    STATE(186), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(31), 2,
+      sym__type,
+      sym_union_type,
+    STATE(10), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    STATE(35), 4,
+      sym__types,
+      sym__phpdoc_array_types,
+      sym__psalm_generic_array_types,
+      sym__psalm_list_array_types,
+    ACTIONS(468), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2421] = 11,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(436), 1,
+      anon_sym_list,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(442), 1,
+      anon_sym_QMARK,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(127), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    STATE(156), 4,
+      sym__types,
+      sym__phpdoc_array_types,
+      sym__psalm_generic_array_types,
+      sym__psalm_list_array_types,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2472] = 11,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(462), 1,
+      sym_name,
+    ACTIONS(464), 1,
+      anon_sym_list,
+    ACTIONS(466), 1,
+      anon_sym_QMARK,
+    STATE(17), 1,
+      sym_qualified_name,
+    STATE(186), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(10), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    STATE(43), 4,
+      sym__types,
+      sym__phpdoc_array_types,
+      sym__psalm_generic_array_types,
+      sym__psalm_list_array_types,
+    ACTIONS(468), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2523] = 11,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(454), 1,
+      sym_name,
+    ACTIONS(456), 1,
+      anon_sym_list,
+    ACTIONS(458), 1,
+      anon_sym_QMARK,
+    STATE(131), 1,
+      sym_qualified_name,
+    STATE(214), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(126), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    STATE(151), 4,
+      sym__types,
+      sym__phpdoc_array_types,
+      sym__psalm_generic_array_types,
+      sym__psalm_list_array_types,
+    ACTIONS(460), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2574] = 9,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(442), 1,
+      anon_sym_QMARK,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(172), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2616] = 9,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(442), 1,
+      anon_sym_QMARK,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(192), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2658] = 9,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(442), 1,
+      anon_sym_QMARK,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(217), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2700] = 9,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(442), 1,
+      anon_sym_QMARK,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(198), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2742] = 9,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(442), 1,
+      anon_sym_QMARK,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(176), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2784] = 9,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(442), 1,
+      anon_sym_QMARK,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(215), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2826] = 9,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(442), 1,
+      anon_sym_QMARK,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(212), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2868] = 9,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(442), 1,
+      anon_sym_QMARK,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(167), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2910] = 9,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(442), 1,
+      anon_sym_QMARK,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(210), 4,
+      sym__regular_types,
+      sym_named_type,
+      sym_optional_type,
+      sym_primitive_type,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2952] = 8,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(462), 1,
+      sym_name,
+    STATE(17), 1,
+      sym_qualified_name,
+    STATE(186), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(16), 2,
+      sym_named_type,
+      sym_primitive_type,
+    ACTIONS(468), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [2989] = 8,
+    ACTIONS(434), 1,
+      sym_name,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    STATE(121), 1,
+      sym_qualified_name,
+    STATE(202), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(123), 2,
+      sym_named_type,
+      sym_primitive_type,
+    ACTIONS(444), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [3026] = 4,
+    ACTIONS(470), 1,
+      sym_name,
+    ACTIONS(475), 2,
+      anon_sym_BSLASH,
+      anon_sym_QMARK,
+    ACTIONS(154), 3,
+      anon_sym_LT,
+      anon_sym_LBRACK_RBRACK,
+      anon_sym_PIPE,
+    ACTIONS(473), 14,
+      anon_sym_list,
+      aux_sym_namespace_name_as_prefix_token1,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [3055] = 8,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(454), 1,
+      sym_name,
+    STATE(131), 1,
+      sym_qualified_name,
+    STATE(214), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+    STATE(130), 2,
+      sym_named_type,
+      sym_primitive_type,
+    ACTIONS(460), 12,
+      anon_sym_array,
+      anon_sym_callable,
+      anon_sym_iterable,
+      anon_sym_bool,
+      anon_sym_float,
+      anon_sym_int,
+      anon_sym_string,
+      anon_sym_void,
+      anon_sym_mixed,
+      anon_sym_static,
+      anon_sym_false,
+      anon_sym_null,
+  [3092] = 8,
+    ACTIONS(117), 1,
+      anon_sym_LBRACE,
+    ACTIONS(125), 1,
+      aux_sym_version_token2,
+    ACTIONS(127), 1,
+      sym__text_not_version,
+    STATE(33), 1,
+      sym_version,
+    STATE(34), 1,
+      aux_sym__description_not_version_repeat1,
+    STATE(54), 1,
+      sym_inline_tag,
+    STATE(72), 1,
+      sym__description_not_version,
+    ACTIONS(123), 3,
+      aux_sym_version_token1,
+      anon_sym_ATpackage_version_AT,
+      sym__version_vector,
+  [3119] = 8,
+    ACTIONS(117), 1,
+      anon_sym_LBRACE,
+    ACTIONS(125), 1,
+      aux_sym_version_token2,
+    ACTIONS(127), 1,
+      sym__text_not_version,
+    STATE(27), 1,
+      sym_version,
+    STATE(34), 1,
+      aux_sym__description_not_version_repeat1,
+    STATE(54), 1,
+      sym_inline_tag,
+    STATE(71), 1,
+      sym__description_not_version,
+    ACTIONS(123), 3,
+      aux_sym_version_token1,
+      anon_sym_ATpackage_version_AT,
+      sym__version_vector,
+  [3146] = 3,
+    ACTIONS(133), 1,
+      anon_sym_BSLASH,
+    STATE(181), 1,
+      aux_sym_namespace_name_repeat1,
+    ACTIONS(129), 7,
+      anon_sym_LT,
+      anon_sym_GT,
+      anon_sym_LBRACK_RBRACK,
       anon_sym_COMMA,
-      anon_sym_RPAREN,
-  [3856] = 1,
-    ACTIONS(457), 2,
-      anon_sym_COMMA,
-      anon_sym_RPAREN,
-  [3861] = 2,
-    ACTIONS(123), 1,
+      sym_name,
+      anon_sym_PIPE,
       anon_sym_DOLLAR,
-    STATE(26), 1,
-      sym_variable_name,
-  [3868] = 1,
-    ACTIONS(493), 2,
-      anon_sym_COMMA,
-      anon_sym_RPAREN,
-  [3873] = 2,
-    ACTIONS(123), 1,
+  [3162] = 5,
+    ACTIONS(479), 1,
+      anon_sym_ATinternal,
+    ACTIONS(481), 1,
+      anon_sym_ATlink,
+    ACTIONS(483), 1,
+      anon_sym_ATsee,
+    ACTIONS(477), 2,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+    STATE(213), 3,
+      sym__inline_internal_tag,
+      sym__inline_link_tag,
+      sym__inline_see_tag,
+  [3181] = 5,
+    ACTIONS(479), 1,
+      anon_sym_ATinternal,
+    ACTIONS(481), 1,
+      anon_sym_ATlink,
+    ACTIONS(483), 1,
+      anon_sym_ATsee,
+    ACTIONS(485), 2,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+    STATE(188), 3,
+      sym__inline_internal_tag,
+      sym__inline_link_tag,
+      sym__inline_see_tag,
+  [3200] = 5,
+    ACTIONS(479), 1,
+      anon_sym_ATinternal,
+    ACTIONS(481), 1,
+      anon_sym_ATlink,
+    ACTIONS(483), 1,
+      anon_sym_ATsee,
+    ACTIONS(487), 2,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+    STATE(218), 3,
+      sym__inline_internal_tag,
+      sym__inline_link_tag,
+      sym__inline_see_tag,
+  [3219] = 3,
+    ACTIONS(133), 1,
+      anon_sym_BSLASH,
+    STATE(181), 1,
+      aux_sym_namespace_name_repeat1,
+    ACTIONS(129), 6,
+      sym__text_after_type,
+      anon_sym_LBRACE,
+      anon_sym_LT,
+      anon_sym_LBRACK_RBRACK,
+      anon_sym_PIPE,
       anon_sym_DOLLAR,
-    STATE(83), 1,
-      sym_variable_name,
-  [3880] = 2,
+  [3234] = 5,
+    ACTIONS(479), 1,
+      anon_sym_ATinternal,
+    ACTIONS(481), 1,
+      anon_sym_ATlink,
+    ACTIONS(483), 1,
+      anon_sym_ATsee,
+    ACTIONS(489), 2,
+      anon_sym_ATinheritdoc,
+      anon_sym_ATinheritDoc,
+    STATE(207), 3,
+      sym__inline_internal_tag,
+      sym__inline_link_tag,
+      sym__inline_see_tag,
+  [3253] = 7,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(491), 1,
+      sym_name,
+    ACTIONS(493), 1,
+      sym_uri,
+    STATE(11), 1,
+      sym_qualified_name,
+    STATE(186), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+  [3275] = 1,
+    ACTIONS(136), 7,
+      anon_sym_LT,
+      anon_sym_GT,
+      anon_sym_LBRACK_RBRACK,
+      anon_sym_COMMA,
+      sym_name,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3285] = 1,
+    ACTIONS(129), 7,
+      anon_sym_LT,
+      anon_sym_GT,
+      anon_sym_LBRACK_RBRACK,
+      anon_sym_COMMA,
+      sym_name,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3295] = 1,
+    ACTIONS(154), 7,
+      anon_sym_LT,
+      anon_sym_GT,
+      anon_sym_LBRACK_RBRACK,
+      anon_sym_COMMA,
+      sym_name,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3305] = 1,
+    ACTIONS(175), 7,
+      anon_sym_LT,
+      anon_sym_GT,
+      anon_sym_LBRACK_RBRACK,
+      anon_sym_COMMA,
+      sym_name,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3315] = 7,
+    ACTIONS(438), 1,
+      anon_sym_BSLASH,
+    ACTIONS(440), 1,
+      aux_sym_namespace_name_as_prefix_token1,
+    ACTIONS(491), 1,
+      sym_name,
     ACTIONS(495), 1,
-      anon_sym_LPAREN,
-    STATE(38), 1,
-      sym_parameters,
-  [3887] = 2,
+      sym_uri,
+    STATE(142), 1,
+      sym_qualified_name,
+    STATE(219), 1,
+      sym_namespace_name_as_prefix,
+    STATE(223), 1,
+      sym_namespace_name,
+  [3337] = 7,
+    ACTIONS(283), 1,
+      anon_sym_LBRACE,
+    ACTIONS(289), 1,
+      sym__text_after_type,
+    ACTIONS(450), 1,
+      anon_sym_DOLLAR,
+    STATE(21), 1,
+      sym_variable_name,
+    STATE(40), 1,
+      aux_sym__description_after_type_repeat1,
+    STATE(47), 1,
+      sym_inline_tag,
+    STATE(63), 1,
+      sym__description_after_type,
+  [3359] = 4,
     ACTIONS(497), 1,
+      anon_sym_LT,
+    ACTIONS(499), 1,
+      anon_sym_LBRACK_RBRACK,
+    STATE(129), 1,
+      aux_sym__phpdoc_array_types_repeat1,
+    ACTIONS(140), 4,
+      sym__text_after_type,
+      anon_sym_LBRACE,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3375] = 4,
+    ACTIONS(501), 1,
+      anon_sym_LT,
+    ACTIONS(503), 1,
+      anon_sym_LBRACK_RBRACK,
+    STATE(140), 1,
+      aux_sym__phpdoc_array_types_repeat1,
+    ACTIONS(140), 3,
       sym_name,
-    STATE(171), 1,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3390] = 1,
+    ACTIONS(136), 6,
+      sym__text_after_type,
+      anon_sym_LBRACE,
+      anon_sym_LT,
+      anon_sym_LBRACK_RBRACK,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3399] = 3,
+    ACTIONS(505), 1,
+      anon_sym_LBRACK_RBRACK,
+    STATE(133), 1,
+      aux_sym__phpdoc_array_types_repeat1,
+    ACTIONS(169), 4,
+      sym__text_after_type,
+      anon_sym_LBRACE,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3412] = 1,
+    ACTIONS(175), 6,
+      sym__text_after_type,
+      anon_sym_LBRACE,
+      anon_sym_LT,
+      anon_sym_LBRACK_RBRACK,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3421] = 1,
+    ACTIONS(129), 6,
+      sym__text_after_type,
+      anon_sym_LBRACE,
+      anon_sym_LT,
+      anon_sym_LBRACK_RBRACK,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3430] = 6,
+    ACTIONS(507), 1,
+      anon_sym_LBRACE,
+    ACTIONS(509), 1,
+      anon_sym_RBRACE,
+    ACTIONS(511), 1,
+      sym__text_in_inline_tag,
+    STATE(135), 1,
+      aux_sym__description_in_inline_tag_with_nesting_repeat1,
+    STATE(163), 1,
+      sym_inline_tag,
+    STATE(216), 1,
+      sym__description_in_inline_tag_with_nesting,
+  [3449] = 3,
+    ACTIONS(513), 1,
+      anon_sym_LBRACK_RBRACK,
+    STATE(133), 1,
+      aux_sym__phpdoc_array_types_repeat1,
+    ACTIONS(162), 4,
+      sym__text_after_type,
+      anon_sym_LBRACE,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3462] = 1,
+    ACTIONS(154), 6,
+      sym__text_after_type,
+      anon_sym_LBRACE,
+      anon_sym_LT,
+      anon_sym_LBRACK_RBRACK,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3471] = 5,
+    ACTIONS(507), 1,
+      anon_sym_LBRACE,
+    ACTIONS(511), 1,
+      sym__text_in_inline_tag,
+    ACTIONS(516), 1,
+      anon_sym_RBRACE,
+    STATE(139), 1,
+      aux_sym__description_in_inline_tag_with_nesting_repeat1,
+    STATE(163), 1,
+      sym_inline_tag,
+  [3487] = 3,
+    ACTIONS(518), 1,
+      anon_sym_PIPE,
+    STATE(136), 1,
+      aux_sym_union_type_repeat1,
+    ACTIONS(291), 3,
+      sym__text_after_type,
+      anon_sym_LBRACE,
+      anon_sym_DOLLAR,
+  [3499] = 3,
+    ACTIONS(521), 1,
+      anon_sym_LBRACK_RBRACK,
+    STATE(137), 1,
+      aux_sym__phpdoc_array_types_repeat1,
+    ACTIONS(162), 3,
+      sym_name,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3511] = 3,
+    ACTIONS(524), 1,
+      anon_sym_PIPE,
+    STATE(141), 1,
+      aux_sym_union_type_repeat1,
+    ACTIONS(247), 3,
+      sym__text_after_type,
+      anon_sym_LBRACE,
+      anon_sym_DOLLAR,
+  [3523] = 5,
+    ACTIONS(526), 1,
+      anon_sym_LBRACE,
+    ACTIONS(529), 1,
+      anon_sym_RBRACE,
+    ACTIONS(531), 1,
+      sym__text_in_inline_tag,
+    STATE(139), 1,
+      aux_sym__description_in_inline_tag_with_nesting_repeat1,
+    STATE(163), 1,
+      sym_inline_tag,
+  [3539] = 3,
+    ACTIONS(534), 1,
+      anon_sym_LBRACK_RBRACK,
+    STATE(137), 1,
+      aux_sym__phpdoc_array_types_repeat1,
+    ACTIONS(169), 3,
+      sym_name,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3551] = 3,
+    ACTIONS(524), 1,
+      anon_sym_PIPE,
+    STATE(136), 1,
+      aux_sym_union_type_repeat1,
+    ACTIONS(279), 3,
+      sym__text_after_type,
+      anon_sym_LBRACE,
+      anon_sym_DOLLAR,
+  [3563] = 5,
+    ACTIONS(536), 1,
+      anon_sym_RBRACE,
+    ACTIONS(538), 1,
+      anon_sym_LPAREN_RPAREN,
+    ACTIONS(540), 1,
+      sym__text_in_inline_tag,
+    STATE(160), 1,
+      aux_sym__description_in_inline_tag_repeat1,
+    STATE(200), 1,
+      sym__description_in_inline_tag,
+  [3579] = 4,
+    ACTIONS(5), 1,
+      anon_sym_LBRACE,
+    ACTIONS(49), 1,
+      sym_text,
+    STATE(67), 1,
+      sym_description,
+    STATE(38), 2,
+      sym_inline_tag,
+      aux_sym_description_repeat1,
+  [3593] = 1,
+    ACTIONS(312), 4,
+      sym__text_after_type,
+      anon_sym_LBRACE,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3600] = 1,
+    ACTIONS(316), 4,
+      sym__text_after_type,
+      anon_sym_LBRACE,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3607] = 3,
+    ACTIONS(542), 1,
+      anon_sym_PIPE,
+    STATE(152), 1,
+      aux_sym_union_type_repeat1,
+    ACTIONS(279), 2,
+      sym_name,
+      anon_sym_DOLLAR,
+  [3618] = 4,
+    ACTIONS(540), 1,
+      sym__text_in_inline_tag,
+    ACTIONS(544), 1,
+      anon_sym_RBRACE,
+    STATE(160), 1,
+      aux_sym__description_in_inline_tag_repeat1,
+    STATE(194), 1,
+      sym__description_in_inline_tag,
+  [3631] = 3,
+    ACTIONS(542), 1,
+      anon_sym_PIPE,
+    STATE(146), 1,
+      aux_sym_union_type_repeat1,
+    ACTIONS(247), 2,
+      sym_name,
+      anon_sym_DOLLAR,
+  [3642] = 4,
+    ACTIONS(540), 1,
+      sym__text_in_inline_tag,
+    ACTIONS(546), 1,
+      anon_sym_RBRACE,
+    STATE(160), 1,
+      aux_sym__description_in_inline_tag_repeat1,
+    STATE(201), 1,
+      sym__description_in_inline_tag,
+  [3655] = 4,
+    ACTIONS(540), 1,
+      sym__text_in_inline_tag,
+    ACTIONS(548), 1,
+      anon_sym_RBRACE,
+    STATE(160), 1,
+      aux_sym__description_in_inline_tag_repeat1,
+    STATE(224), 1,
+      sym__description_in_inline_tag,
+  [3668] = 1,
+    ACTIONS(291), 4,
+      sym__text_after_type,
+      anon_sym_LBRACE,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3675] = 3,
+    ACTIONS(550), 1,
+      anon_sym_PIPE,
+    STATE(152), 1,
+      aux_sym_union_type_repeat1,
+    ACTIONS(291), 2,
+      sym_name,
+      anon_sym_DOLLAR,
+  [3686] = 1,
+    ACTIONS(316), 3,
+      sym_name,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3692] = 3,
+    ACTIONS(553), 1,
+      anon_sym_COMMA,
+    ACTIONS(556), 1,
+      anon_sym_RPAREN,
+    STATE(154), 1,
+      aux_sym_parameters_repeat1,
+  [3702] = 3,
+    ACTIONS(558), 1,
+      anon_sym_COMMA,
+    ACTIONS(560), 1,
+      anon_sym_RPAREN,
+    STATE(161), 1,
+      aux_sym_parameters_repeat1,
+  [3712] = 1,
+    ACTIONS(291), 3,
+      sym_name,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3718] = 3,
+    ACTIONS(562), 1,
+      anon_sym_RBRACE,
+    ACTIONS(564), 1,
+      sym__text_in_inline_tag,
+    STATE(157), 1,
+      aux_sym__description_in_inline_tag_repeat1,
+  [3728] = 2,
+    ACTIONS(569), 1,
+      anon_sym_EQ,
+    ACTIONS(567), 2,
+      anon_sym_COMMA,
+      anon_sym_RPAREN,
+  [3736] = 2,
+    ACTIONS(573), 1,
+      anon_sym_EQ,
+    ACTIONS(571), 2,
+      anon_sym_COMMA,
+      anon_sym_RPAREN,
+  [3744] = 3,
+    ACTIONS(540), 1,
+      sym__text_in_inline_tag,
+    ACTIONS(575), 1,
+      anon_sym_RBRACE,
+    STATE(157), 1,
+      aux_sym__description_in_inline_tag_repeat1,
+  [3754] = 3,
+    ACTIONS(558), 1,
+      anon_sym_COMMA,
+    ACTIONS(577), 1,
+      anon_sym_RPAREN,
+    STATE(154), 1,
+      aux_sym_parameters_repeat1,
+  [3764] = 3,
+    ACTIONS(579), 1,
+      sym_name,
+    ACTIONS(581), 1,
+      anon_sym_BSLASH,
+    STATE(225), 1,
       sym_namespace_name,
-  [3894] = 2,
-    ACTIONS(495), 1,
+  [3774] = 1,
+    ACTIONS(583), 3,
+      sym__text_in_inline_tag,
+      anon_sym_LBRACE,
+      anon_sym_RBRACE,
+  [3780] = 1,
+    ACTIONS(324), 3,
+      sym__text_in_inline_tag,
+      anon_sym_LBRACE,
+      anon_sym_RBRACE,
+  [3786] = 1,
+    ACTIONS(312), 3,
+      sym_name,
+      anon_sym_PIPE,
+      anon_sym_DOLLAR,
+  [3792] = 1,
+    ACTIONS(136), 3,
+      sym__text_in_inline_tag,
+      anon_sym_RBRACE,
+      anon_sym_LPAREN_RPAREN,
+  [3798] = 2,
+    ACTIONS(585), 1,
+      anon_sym_GT,
+    ACTIONS(587), 1,
+      anon_sym_COMMA,
+  [3805] = 2,
+    ACTIONS(589), 1,
+      anon_sym_LPAREN,
+    STATE(19), 1,
+      sym_parameters,
+  [3812] = 1,
+    ACTIONS(591), 2,
+      anon_sym_COMMA,
+      anon_sym_RPAREN,
+  [3817] = 1,
+    ACTIONS(556), 2,
+      anon_sym_COMMA,
+      anon_sym_RPAREN,
+  [3822] = 2,
+    ACTIONS(446), 1,
+      anon_sym_DOLLAR,
+    STATE(158), 1,
+      sym_variable_name,
+  [3829] = 2,
+    ACTIONS(593), 1,
+      anon_sym_GT,
+    ACTIONS(595), 1,
+      anon_sym_COMMA,
+  [3836] = 2,
+    ACTIONS(597), 1,
+      anon_sym_BSLASH,
+    STATE(173), 1,
+      aux_sym_namespace_name_repeat1,
+  [3843] = 2,
+    ACTIONS(446), 1,
+      anon_sym_DOLLAR,
+    STATE(69), 1,
+      sym_variable_name,
+  [3850] = 1,
+    ACTIONS(600), 2,
+      anon_sym_COMMA,
+      anon_sym_RPAREN,
+  [3855] = 2,
+    ACTIONS(602), 1,
+      anon_sym_GT,
+    ACTIONS(604), 1,
+      anon_sym_COMMA,
+  [3862] = 2,
+    ACTIONS(589), 1,
       anon_sym_LPAREN,
     STATE(20), 1,
       sym_parameters,
-  [3901] = 2,
-    ACTIONS(116), 1,
-      anon_sym_BSLASH,
-    STATE(145), 1,
-      aux_sym_namespace_name_repeat1,
-  [3908] = 2,
-    ACTIONS(500), 1,
-      anon_sym_BSLASH,
-    STATE(157), 1,
-      aux_sym_namespace_name_repeat1,
-  [3915] = 2,
-    ACTIONS(503), 1,
-      anon_sym_GT,
-    ACTIONS(505), 1,
-      anon_sym_COMMA,
-  [3922] = 1,
-    ACTIONS(507), 1,
-      sym_text,
-  [3926] = 1,
-    ACTIONS(509), 1,
-      ts_builtin_sym_end,
-  [3930] = 1,
-    ACTIONS(511), 1,
+  [3869] = 2,
+    ACTIONS(606), 1,
       sym_name,
-  [3934] = 1,
-    ACTIONS(513), 1,
-      sym_uri,
-  [3938] = 1,
-    ACTIONS(515), 1,
+    STATE(193), 1,
+      sym_namespace_name,
+  [3876] = 2,
+    ACTIONS(609), 1,
       sym_name,
-  [3942] = 1,
-    ACTIONS(517), 1,
-      anon_sym_RBRACE,
-  [3946] = 1,
-    ACTIONS(519), 1,
-      anon_sym_RBRACE,
-  [3950] = 1,
-    ACTIONS(521), 1,
+    STATE(225), 1,
+      sym_namespace_name,
+  [3883] = 2,
+    ACTIONS(133), 1,
       anon_sym_BSLASH,
-  [3954] = 1,
-    ACTIONS(523), 1,
-      ts_builtin_sym_end,
-  [3958] = 1,
-    ACTIONS(503), 1,
-      anon_sym_GT,
-  [3962] = 1,
-    ACTIONS(525), 1,
+    STATE(181), 1,
+      aux_sym_namespace_name_repeat1,
+  [3890] = 2,
+    ACTIONS(612), 1,
+      anon_sym_BSLASH,
+    STATE(173), 1,
+      aux_sym_namespace_name_repeat1,
+  [3897] = 2,
+    ACTIONS(450), 1,
+      anon_sym_DOLLAR,
+    STATE(24), 1,
+      sym_variable_name,
+  [3904] = 1,
+    ACTIONS(615), 2,
+      sym__text_in_inline_tag,
+      anon_sym_RBRACE,
+  [3909] = 2,
+    ACTIONS(450), 1,
+      anon_sym_DOLLAR,
+    STATE(23), 1,
+      sym_variable_name,
+  [3916] = 1,
+    ACTIONS(617), 1,
       anon_sym_LT,
-  [3966] = 1,
-    ACTIONS(527), 1,
+  [3920] = 1,
+    ACTIONS(619), 1,
+      sym_name,
+  [3924] = 1,
+    ACTIONS(621), 1,
       sym_uri,
-  [3970] = 1,
-    ACTIONS(529), 1,
-      anon_sym_BSLASH,
-  [3974] = 1,
-    ACTIONS(531), 1,
-      sym_default_value,
-  [3978] = 1,
-    ACTIONS(533), 1,
-      sym_name,
-  [3982] = 1,
-    ACTIONS(535), 1,
-      sym_email_address,
-  [3986] = 1,
-    ACTIONS(537), 1,
-      sym_name,
-  [3990] = 1,
-    ACTIONS(539), 1,
-      anon_sym_GT,
-  [3994] = 1,
-    ACTIONS(541), 1,
+  [3928] = 1,
+    ACTIONS(623), 1,
       anon_sym_RBRACE,
-  [3998] = 1,
-    ACTIONS(543), 1,
+  [3932] = 1,
+    ACTIONS(625), 1,
+      sym__version_vector,
+  [3936] = 1,
+    ACTIONS(627), 1,
+      ts_builtin_sym_end,
+  [3940] = 1,
+    ACTIONS(629), 1,
+      ts_builtin_sym_end,
+  [3944] = 1,
+    ACTIONS(631), 1,
+      anon_sym_GT,
+  [3948] = 1,
+    ACTIONS(633), 1,
       anon_sym_BSLASH,
-  [4002] = 1,
-    ACTIONS(545), 1,
+  [3952] = 1,
+    ACTIONS(635), 1,
+      anon_sym_RBRACE,
+  [3956] = 1,
+    ACTIONS(637), 1,
+      sym_name,
+  [3960] = 1,
+    ACTIONS(639), 1,
+      sym_name,
+  [3964] = 1,
+    ACTIONS(641), 1,
+      anon_sym_BSLASH,
+  [3968] = 1,
+    ACTIONS(593), 1,
+      anon_sym_GT,
+  [3972] = 1,
+    ACTIONS(643), 1,
+      anon_sym_GT,
+  [3976] = 1,
+    ACTIONS(544), 1,
+      anon_sym_RBRACE,
+  [3980] = 1,
+    ACTIONS(645), 1,
+      anon_sym_RBRACE,
+  [3984] = 1,
+    ACTIONS(647), 1,
+      sym_name,
+  [3988] = 1,
+    ACTIONS(649), 1,
+      ts_builtin_sym_end,
+  [3992] = 1,
+    ACTIONS(651), 1,
       sym_author_name,
-  [4006] = 1,
-    ACTIONS(547), 1,
-      anon_sym_BSLASH,
-  [4010] = 1,
-    ACTIONS(549), 1,
-      sym_default_value,
-  [4014] = 1,
-    ACTIONS(551), 1,
+  [3996] = 1,
+    ACTIONS(653), 1,
+      sym_name,
+  [4000] = 1,
+    ACTIONS(655), 1,
+      sym_name,
+  [4004] = 1,
+    ACTIONS(657), 1,
       anon_sym_RBRACE,
-  [4018] = 1,
-    ACTIONS(553), 1,
+  [4008] = 1,
+    ACTIONS(659), 1,
+      sym_uri,
+  [4012] = 1,
+    ACTIONS(661), 1,
       sym_name,
-  [4022] = 1,
-    ACTIONS(555), 1,
-      sym_name,
-  [4026] = 1,
-    ACTIONS(469), 1,
-      anon_sym_GT,
-  [4030] = 1,
-    ACTIONS(557), 1,
-      anon_sym_GT,
-  [4034] = 1,
-    ACTIONS(559), 1,
-      anon_sym_GT,
-  [4038] = 1,
-    ACTIONS(561), 1,
-      sym_name,
-  [4042] = 1,
-    ACTIONS(473), 1,
-      anon_sym_GT,
-  [4046] = 1,
-    ACTIONS(563), 1,
-      sym_name,
-  [4050] = 1,
-    ACTIONS(565), 1,
-      anon_sym_GT,
-  [4054] = 1,
-    ACTIONS(567), 1,
-      sym_name,
-  [4058] = 1,
-    ACTIONS(569), 1,
-      sym_name,
-  [4062] = 1,
-    ACTIONS(571), 1,
-      sym_name,
-  [4066] = 1,
-    ACTIONS(573), 1,
-      anon_sym_RBRACE,
-  [4070] = 1,
-    ACTIONS(575), 1,
-      ts_builtin_sym_end,
-  [4074] = 1,
-    ACTIONS(577), 1,
-      ts_builtin_sym_end,
-  [4078] = 1,
-    ACTIONS(579), 1,
-      sym_name,
-  [4082] = 1,
-    ACTIONS(581), 1,
-      sym_name,
-  [4086] = 1,
-    ACTIONS(583), 1,
-      anon_sym_LT,
-  [4090] = 1,
+  [4016] = 1,
     ACTIONS(585), 1,
+      anon_sym_GT,
+  [4020] = 1,
+    ACTIONS(663), 1,
+      ts_builtin_sym_end,
+  [4024] = 1,
+    ACTIONS(665), 1,
+      anon_sym_GT,
+  [4028] = 1,
+    ACTIONS(667), 1,
+      anon_sym_RBRACE,
+  [4032] = 1,
+    ACTIONS(669), 1,
+      sym_name,
+  [4036] = 1,
+    ACTIONS(602), 1,
+      anon_sym_GT,
+  [4040] = 1,
+    ACTIONS(671), 1,
+      anon_sym_RBRACE,
+  [4044] = 1,
+    ACTIONS(673), 1,
+      anon_sym_GT,
+  [4048] = 1,
+    ACTIONS(675), 1,
+      anon_sym_RBRACE,
+  [4052] = 1,
+    ACTIONS(677), 1,
+      sym_name,
+  [4056] = 1,
+    ACTIONS(679), 1,
+      sym_name,
+  [4060] = 1,
+    ACTIONS(681), 1,
+      sym_default_value,
+  [4064] = 1,
+    ACTIONS(683), 1,
+      sym_name,
+  [4068] = 1,
+    ACTIONS(685), 1,
+      anon_sym_BSLASH,
+  [4072] = 1,
+    ACTIONS(687), 1,
+      anon_sym_RBRACE,
+  [4076] = 1,
+    ACTIONS(689), 1,
+      anon_sym_BSLASH,
+  [4080] = 1,
+    ACTIONS(691), 1,
+      sym_default_value,
+  [4084] = 1,
+    ACTIONS(693), 1,
+      sym_name,
+  [4088] = 1,
+    ACTIONS(695), 1,
+      sym_email_address,
+  [4092] = 1,
+    ACTIONS(697), 1,
+      anon_sym_LT,
+  [4096] = 1,
+    ACTIONS(699), 1,
       anon_sym_LT,
 };
 
 static uint32_t ts_small_parse_table_map[] = {
-  [SMALL_STATE(51)] = 0,
-  [SMALL_STATE(52)] = 69,
-  [SMALL_STATE(53)] = 138,
-  [SMALL_STATE(54)] = 207,
-  [SMALL_STATE(55)] = 276,
-  [SMALL_STATE(56)] = 344,
-  [SMALL_STATE(57)] = 412,
-  [SMALL_STATE(58)] = 480,
-  [SMALL_STATE(59)] = 548,
-  [SMALL_STATE(60)] = 616,
-  [SMALL_STATE(61)] = 684,
-  [SMALL_STATE(62)] = 753,
-  [SMALL_STATE(63)] = 819,
-  [SMALL_STATE(64)] = 885,
-  [SMALL_STATE(65)] = 951,
-  [SMALL_STATE(66)] = 1017,
-  [SMALL_STATE(67)] = 1083,
-  [SMALL_STATE(68)] = 1149,
-  [SMALL_STATE(69)] = 1215,
-  [SMALL_STATE(70)] = 1281,
-  [SMALL_STATE(71)] = 1347,
-  [SMALL_STATE(72)] = 1413,
-  [SMALL_STATE(73)] = 1479,
-  [SMALL_STATE(74)] = 1545,
-  [SMALL_STATE(75)] = 1611,
-  [SMALL_STATE(76)] = 1677,
-  [SMALL_STATE(77)] = 1743,
-  [SMALL_STATE(78)] = 1809,
-  [SMALL_STATE(79)] = 1875,
-  [SMALL_STATE(80)] = 1941,
-  [SMALL_STATE(81)] = 2007,
-  [SMALL_STATE(82)] = 2073,
-  [SMALL_STATE(83)] = 2139,
-  [SMALL_STATE(84)] = 2205,
-  [SMALL_STATE(85)] = 2272,
-  [SMALL_STATE(86)] = 2336,
-  [SMALL_STATE(87)] = 2397,
-  [SMALL_STATE(88)] = 2457,
-  [SMALL_STATE(89)] = 2512,
-  [SMALL_STATE(90)] = 2567,
-  [SMALL_STATE(91)] = 2622,
-  [SMALL_STATE(92)] = 2677,
-  [SMALL_STATE(93)] = 2732,
-  [SMALL_STATE(94)] = 2787,
-  [SMALL_STATE(95)] = 2838,
-  [SMALL_STATE(96)] = 2889,
-  [SMALL_STATE(97)] = 2940,
-  [SMALL_STATE(98)] = 2982,
-  [SMALL_STATE(99)] = 3024,
-  [SMALL_STATE(100)] = 3066,
-  [SMALL_STATE(101)] = 3108,
-  [SMALL_STATE(102)] = 3150,
-  [SMALL_STATE(103)] = 3192,
-  [SMALL_STATE(104)] = 3234,
-  [SMALL_STATE(105)] = 3276,
-  [SMALL_STATE(106)] = 3318,
-  [SMALL_STATE(107)] = 3355,
-  [SMALL_STATE(108)] = 3384,
-  [SMALL_STATE(109)] = 3421,
-  [SMALL_STATE(110)] = 3458,
-  [SMALL_STATE(111)] = 3474,
-  [SMALL_STATE(112)] = 3492,
-  [SMALL_STATE(113)] = 3514,
-  [SMALL_STATE(114)] = 3524,
-  [SMALL_STATE(115)] = 3546,
-  [SMALL_STATE(116)] = 3556,
-  [SMALL_STATE(117)] = 3566,
-  [SMALL_STATE(118)] = 3576,
-  [SMALL_STATE(119)] = 3591,
-  [SMALL_STATE(120)] = 3605,
-  [SMALL_STATE(121)] = 3619,
-  [SMALL_STATE(122)] = 3633,
-  [SMALL_STATE(123)] = 3645,
-  [SMALL_STATE(124)] = 3657,
-  [SMALL_STATE(125)] = 3668,
-  [SMALL_STATE(126)] = 3679,
-  [SMALL_STATE(127)] = 3690,
-  [SMALL_STATE(128)] = 3700,
-  [SMALL_STATE(129)] = 3710,
-  [SMALL_STATE(130)] = 3716,
-  [SMALL_STATE(131)] = 3726,
-  [SMALL_STATE(132)] = 3736,
-  [SMALL_STATE(133)] = 3742,
-  [SMALL_STATE(134)] = 3748,
-  [SMALL_STATE(135)] = 3758,
-  [SMALL_STATE(136)] = 3766,
-  [SMALL_STATE(137)] = 3772,
-  [SMALL_STATE(138)] = 3780,
-  [SMALL_STATE(139)] = 3788,
-  [SMALL_STATE(140)] = 3795,
-  [SMALL_STATE(141)] = 3802,
-  [SMALL_STATE(142)] = 3809,
-  [SMALL_STATE(143)] = 3816,
-  [SMALL_STATE(144)] = 3823,
-  [SMALL_STATE(145)] = 3830,
-  [SMALL_STATE(146)] = 3837,
-  [SMALL_STATE(147)] = 3844,
-  [SMALL_STATE(148)] = 3851,
-  [SMALL_STATE(149)] = 3856,
-  [SMALL_STATE(150)] = 3861,
-  [SMALL_STATE(151)] = 3868,
-  [SMALL_STATE(152)] = 3873,
-  [SMALL_STATE(153)] = 3880,
-  [SMALL_STATE(154)] = 3887,
-  [SMALL_STATE(155)] = 3894,
-  [SMALL_STATE(156)] = 3901,
-  [SMALL_STATE(157)] = 3908,
-  [SMALL_STATE(158)] = 3915,
-  [SMALL_STATE(159)] = 3922,
-  [SMALL_STATE(160)] = 3926,
-  [SMALL_STATE(161)] = 3930,
-  [SMALL_STATE(162)] = 3934,
-  [SMALL_STATE(163)] = 3938,
-  [SMALL_STATE(164)] = 3942,
-  [SMALL_STATE(165)] = 3946,
-  [SMALL_STATE(166)] = 3950,
-  [SMALL_STATE(167)] = 3954,
-  [SMALL_STATE(168)] = 3958,
-  [SMALL_STATE(169)] = 3962,
-  [SMALL_STATE(170)] = 3966,
-  [SMALL_STATE(171)] = 3970,
-  [SMALL_STATE(172)] = 3974,
-  [SMALL_STATE(173)] = 3978,
-  [SMALL_STATE(174)] = 3982,
-  [SMALL_STATE(175)] = 3986,
-  [SMALL_STATE(176)] = 3990,
-  [SMALL_STATE(177)] = 3994,
-  [SMALL_STATE(178)] = 3998,
-  [SMALL_STATE(179)] = 4002,
-  [SMALL_STATE(180)] = 4006,
-  [SMALL_STATE(181)] = 4010,
-  [SMALL_STATE(182)] = 4014,
-  [SMALL_STATE(183)] = 4018,
-  [SMALL_STATE(184)] = 4022,
-  [SMALL_STATE(185)] = 4026,
-  [SMALL_STATE(186)] = 4030,
-  [SMALL_STATE(187)] = 4034,
-  [SMALL_STATE(188)] = 4038,
-  [SMALL_STATE(189)] = 4042,
-  [SMALL_STATE(190)] = 4046,
-  [SMALL_STATE(191)] = 4050,
-  [SMALL_STATE(192)] = 4054,
-  [SMALL_STATE(193)] = 4058,
-  [SMALL_STATE(194)] = 4062,
-  [SMALL_STATE(195)] = 4066,
-  [SMALL_STATE(196)] = 4070,
-  [SMALL_STATE(197)] = 4074,
-  [SMALL_STATE(198)] = 4078,
-  [SMALL_STATE(199)] = 4082,
-  [SMALL_STATE(200)] = 4086,
-  [SMALL_STATE(201)] = 4090,
+  [SMALL_STATE(58)] = 0,
+  [SMALL_STATE(59)] = 71,
+  [SMALL_STATE(60)] = 139,
+  [SMALL_STATE(61)] = 207,
+  [SMALL_STATE(62)] = 275,
+  [SMALL_STATE(63)] = 343,
+  [SMALL_STATE(64)] = 411,
+  [SMALL_STATE(65)] = 479,
+  [SMALL_STATE(66)] = 547,
+  [SMALL_STATE(67)] = 615,
+  [SMALL_STATE(68)] = 683,
+  [SMALL_STATE(69)] = 751,
+  [SMALL_STATE(70)] = 819,
+  [SMALL_STATE(71)] = 887,
+  [SMALL_STATE(72)] = 955,
+  [SMALL_STATE(73)] = 1023,
+  [SMALL_STATE(74)] = 1091,
+  [SMALL_STATE(75)] = 1159,
+  [SMALL_STATE(76)] = 1227,
+  [SMALL_STATE(77)] = 1295,
+  [SMALL_STATE(78)] = 1363,
+  [SMALL_STATE(79)] = 1431,
+  [SMALL_STATE(80)] = 1499,
+  [SMALL_STATE(81)] = 1567,
+  [SMALL_STATE(82)] = 1635,
+  [SMALL_STATE(83)] = 1703,
+  [SMALL_STATE(84)] = 1771,
+  [SMALL_STATE(85)] = 1839,
+  [SMALL_STATE(86)] = 1906,
+  [SMALL_STATE(87)] = 1970,
+  [SMALL_STATE(88)] = 2031,
+  [SMALL_STATE(89)] = 2091,
+  [SMALL_STATE(90)] = 2146,
+  [SMALL_STATE(91)] = 2201,
+  [SMALL_STATE(92)] = 2256,
+  [SMALL_STATE(93)] = 2311,
+  [SMALL_STATE(94)] = 2366,
+  [SMALL_STATE(95)] = 2421,
+  [SMALL_STATE(96)] = 2472,
+  [SMALL_STATE(97)] = 2523,
+  [SMALL_STATE(98)] = 2574,
+  [SMALL_STATE(99)] = 2616,
+  [SMALL_STATE(100)] = 2658,
+  [SMALL_STATE(101)] = 2700,
+  [SMALL_STATE(102)] = 2742,
+  [SMALL_STATE(103)] = 2784,
+  [SMALL_STATE(104)] = 2826,
+  [SMALL_STATE(105)] = 2868,
+  [SMALL_STATE(106)] = 2910,
+  [SMALL_STATE(107)] = 2952,
+  [SMALL_STATE(108)] = 2989,
+  [SMALL_STATE(109)] = 3026,
+  [SMALL_STATE(110)] = 3055,
+  [SMALL_STATE(111)] = 3092,
+  [SMALL_STATE(112)] = 3119,
+  [SMALL_STATE(113)] = 3146,
+  [SMALL_STATE(114)] = 3162,
+  [SMALL_STATE(115)] = 3181,
+  [SMALL_STATE(116)] = 3200,
+  [SMALL_STATE(117)] = 3219,
+  [SMALL_STATE(118)] = 3234,
+  [SMALL_STATE(119)] = 3253,
+  [SMALL_STATE(120)] = 3275,
+  [SMALL_STATE(121)] = 3285,
+  [SMALL_STATE(122)] = 3295,
+  [SMALL_STATE(123)] = 3305,
+  [SMALL_STATE(124)] = 3315,
+  [SMALL_STATE(125)] = 3337,
+  [SMALL_STATE(126)] = 3359,
+  [SMALL_STATE(127)] = 3375,
+  [SMALL_STATE(128)] = 3390,
+  [SMALL_STATE(129)] = 3399,
+  [SMALL_STATE(130)] = 3412,
+  [SMALL_STATE(131)] = 3421,
+  [SMALL_STATE(132)] = 3430,
+  [SMALL_STATE(133)] = 3449,
+  [SMALL_STATE(134)] = 3462,
+  [SMALL_STATE(135)] = 3471,
+  [SMALL_STATE(136)] = 3487,
+  [SMALL_STATE(137)] = 3499,
+  [SMALL_STATE(138)] = 3511,
+  [SMALL_STATE(139)] = 3523,
+  [SMALL_STATE(140)] = 3539,
+  [SMALL_STATE(141)] = 3551,
+  [SMALL_STATE(142)] = 3563,
+  [SMALL_STATE(143)] = 3579,
+  [SMALL_STATE(144)] = 3593,
+  [SMALL_STATE(145)] = 3600,
+  [SMALL_STATE(146)] = 3607,
+  [SMALL_STATE(147)] = 3618,
+  [SMALL_STATE(148)] = 3631,
+  [SMALL_STATE(149)] = 3642,
+  [SMALL_STATE(150)] = 3655,
+  [SMALL_STATE(151)] = 3668,
+  [SMALL_STATE(152)] = 3675,
+  [SMALL_STATE(153)] = 3686,
+  [SMALL_STATE(154)] = 3692,
+  [SMALL_STATE(155)] = 3702,
+  [SMALL_STATE(156)] = 3712,
+  [SMALL_STATE(157)] = 3718,
+  [SMALL_STATE(158)] = 3728,
+  [SMALL_STATE(159)] = 3736,
+  [SMALL_STATE(160)] = 3744,
+  [SMALL_STATE(161)] = 3754,
+  [SMALL_STATE(162)] = 3764,
+  [SMALL_STATE(163)] = 3774,
+  [SMALL_STATE(164)] = 3780,
+  [SMALL_STATE(165)] = 3786,
+  [SMALL_STATE(166)] = 3792,
+  [SMALL_STATE(167)] = 3798,
+  [SMALL_STATE(168)] = 3805,
+  [SMALL_STATE(169)] = 3812,
+  [SMALL_STATE(170)] = 3817,
+  [SMALL_STATE(171)] = 3822,
+  [SMALL_STATE(172)] = 3829,
+  [SMALL_STATE(173)] = 3836,
+  [SMALL_STATE(174)] = 3843,
+  [SMALL_STATE(175)] = 3850,
+  [SMALL_STATE(176)] = 3855,
+  [SMALL_STATE(177)] = 3862,
+  [SMALL_STATE(178)] = 3869,
+  [SMALL_STATE(179)] = 3876,
+  [SMALL_STATE(180)] = 3883,
+  [SMALL_STATE(181)] = 3890,
+  [SMALL_STATE(182)] = 3897,
+  [SMALL_STATE(183)] = 3904,
+  [SMALL_STATE(184)] = 3909,
+  [SMALL_STATE(185)] = 3916,
+  [SMALL_STATE(186)] = 3920,
+  [SMALL_STATE(187)] = 3924,
+  [SMALL_STATE(188)] = 3928,
+  [SMALL_STATE(189)] = 3932,
+  [SMALL_STATE(190)] = 3936,
+  [SMALL_STATE(191)] = 3940,
+  [SMALL_STATE(192)] = 3944,
+  [SMALL_STATE(193)] = 3948,
+  [SMALL_STATE(194)] = 3952,
+  [SMALL_STATE(195)] = 3956,
+  [SMALL_STATE(196)] = 3960,
+  [SMALL_STATE(197)] = 3964,
+  [SMALL_STATE(198)] = 3968,
+  [SMALL_STATE(199)] = 3972,
+  [SMALL_STATE(200)] = 3976,
+  [SMALL_STATE(201)] = 3980,
+  [SMALL_STATE(202)] = 3984,
+  [SMALL_STATE(203)] = 3988,
+  [SMALL_STATE(204)] = 3992,
+  [SMALL_STATE(205)] = 3996,
+  [SMALL_STATE(206)] = 4000,
+  [SMALL_STATE(207)] = 4004,
+  [SMALL_STATE(208)] = 4008,
+  [SMALL_STATE(209)] = 4012,
+  [SMALL_STATE(210)] = 4016,
+  [SMALL_STATE(211)] = 4020,
+  [SMALL_STATE(212)] = 4024,
+  [SMALL_STATE(213)] = 4028,
+  [SMALL_STATE(214)] = 4032,
+  [SMALL_STATE(215)] = 4036,
+  [SMALL_STATE(216)] = 4040,
+  [SMALL_STATE(217)] = 4044,
+  [SMALL_STATE(218)] = 4048,
+  [SMALL_STATE(219)] = 4052,
+  [SMALL_STATE(220)] = 4056,
+  [SMALL_STATE(221)] = 4060,
+  [SMALL_STATE(222)] = 4064,
+  [SMALL_STATE(223)] = 4068,
+  [SMALL_STATE(224)] = 4072,
+  [SMALL_STATE(225)] = 4076,
+  [SMALL_STATE(226)] = 4080,
+  [SMALL_STATE(227)] = 4084,
+  [SMALL_STATE(228)] = 4088,
+  [SMALL_STATE(229)] = 4092,
+  [SMALL_STATE(230)] = 4096,
 };
 
 static TSParseActionEntry ts_parse_actions[] = {
   [0] = {.entry = {.count = 0, .reusable = false}},
   [1] = {.entry = {.count = 1, .reusable = false}}, RECOVER(),
   [3] = {.entry = {.count = 1, .reusable = true}}, SHIFT(2),
-  [5] = {.entry = {.count = 1, .reusable = true}}, SHIFT(111),
-  [7] = {.entry = {.count = 1, .reusable = true}}, SHIFT(82),
-  [9] = {.entry = {.count = 1, .reusable = true}}, SHIFT(27),
-  [11] = {.entry = {.count = 1, .reusable = true}}, SHIFT(120),
-  [13] = {.entry = {.count = 1, .reusable = true}}, SHIFT(58),
-  [15] = {.entry = {.count = 1, .reusable = true}}, SHIFT(179),
+  [5] = {.entry = {.count = 1, .reusable = true}}, SHIFT(115),
+  [7] = {.entry = {.count = 1, .reusable = true}}, SHIFT(74),
+  [9] = {.entry = {.count = 1, .reusable = true}}, SHIFT(18),
+  [11] = {.entry = {.count = 1, .reusable = true}}, SHIFT(143),
+  [13] = {.entry = {.count = 1, .reusable = true}}, SHIFT(30),
+  [15] = {.entry = {.count = 1, .reusable = true}}, SHIFT(204),
   [17] = {.entry = {.count = 1, .reusable = true}}, SHIFT(91),
-  [19] = {.entry = {.count = 1, .reusable = true}}, SHIFT(121),
-  [21] = {.entry = {.count = 1, .reusable = true}}, SHIFT(112),
+  [19] = {.entry = {.count = 1, .reusable = true}}, SHIFT(208),
+  [21] = {.entry = {.count = 1, .reusable = true}}, SHIFT(88),
   [23] = {.entry = {.count = 1, .reusable = true}}, SHIFT(87),
-  [25] = {.entry = {.count = 1, .reusable = true}}, SHIFT(86),
-  [27] = {.entry = {.count = 1, .reusable = false}}, SHIFT(93),
-  [29] = {.entry = {.count = 1, .reusable = true}}, SHIFT(93),
-  [31] = {.entry = {.count = 1, .reusable = true}}, SHIFT(92),
-  [33] = {.entry = {.count = 1, .reusable = true}}, SHIFT(170),
-  [35] = {.entry = {.count = 1, .reusable = true}}, SHIFT(90),
-  [37] = {.entry = {.count = 1, .reusable = true}}, SHIFT(89),
-  [39] = {.entry = {.count = 1, .reusable = true}}, SHIFT(19),
-  [41] = {.entry = {.count = 1, .reusable = false}}, SHIFT(23),
-  [43] = {.entry = {.count = 1, .reusable = true}}, SHIFT(23),
-  [45] = {.entry = {.count = 1, .reusable = false}}, SHIFT(50),
-  [47] = {.entry = {.count = 1, .reusable = true}}, SHIFT(167),
-  [49] = {.entry = {.count = 1, .reusable = true}}, SHIFT(196),
-  [51] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(82),
-  [54] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(27),
-  [57] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(120),
-  [60] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(58),
-  [63] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(179),
-  [66] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(91),
-  [69] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(121),
-  [72] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(112),
-  [75] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(87),
-  [78] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(86),
-  [81] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(93),
-  [84] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(93),
-  [87] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(92),
-  [90] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(170),
-  [93] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(90),
-  [96] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(89),
-  [99] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(19),
-  [102] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(23),
-  [105] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(23),
-  [108] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2),
-  [110] = {.entry = {.count = 1, .reusable = true}}, SHIFT(197),
-  [112] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_named_type, 1),
-  [114] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_named_type, 1),
-  [116] = {.entry = {.count = 2, .reusable = true}}, REDUCE(sym_namespace_name, 1), SHIFT(173),
-  [119] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__var_tag, 2),
-  [121] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__var_tag, 2),
-  [123] = {.entry = {.count = 1, .reusable = true}}, SHIFT(194),
-  [125] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__types, 1),
-  [127] = {.entry = {.count = 1, .reusable = true}}, SHIFT(104),
-  [129] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__types, 1),
-  [131] = {.entry = {.count = 1, .reusable = true}}, SHIFT(15),
-  [133] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_qualified_name, 2),
-  [135] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_qualified_name, 2),
-  [137] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__link_tag, 2),
-  [139] = {.entry = {.count = 1, .reusable = true}}, SHIFT(35),
-  [141] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__link_tag, 2),
-  [143] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__phpdoc_array_types_repeat1, 2),
-  [145] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym__phpdoc_array_types_repeat1, 2),
-  [147] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__phpdoc_array_types_repeat1, 2), SHIFT_REPEAT(13),
-  [150] = {.entry = {.count = 1, .reusable = true}}, SHIFT(101),
-  [152] = {.entry = {.count = 1, .reusable = true}}, SHIFT(32),
-  [154] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__phpdoc_array_types, 2),
-  [156] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__phpdoc_array_types, 2),
-  [158] = {.entry = {.count = 1, .reusable = true}}, SHIFT(13),
-  [160] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_optional_type, 2),
-  [162] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_optional_type, 2),
-  [164] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_primitive_type, 1),
-  [166] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_primitive_type, 1),
-  [168] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__version_tag, 1),
-  [170] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__version_tag, 1),
-  [172] = {.entry = {.count = 1, .reusable = true}}, SHIFT(24),
-  [174] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__method_tag, 4),
-  [176] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__method_tag, 4),
-  [178] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_union_type, 1),
-  [180] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_union_type, 1),
-  [182] = {.entry = {.count = 1, .reusable = true}}, SHIFT(95),
-  [184] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__phpunit_tag, 1),
-  [186] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__phpunit_tag, 1),
-  [188] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__version_tag, 2),
-  [190] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__version_tag, 2),
-  [192] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_tag, 1),
-  [194] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_tag, 1),
-  [196] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__param_tag, 3),
-  [198] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__param_tag, 3),
-  [200] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__simple_tag_with_optional_description, 1),
-  [202] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__simple_tag_with_optional_description, 1),
-  [204] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__phpdoc_array_types_repeat1, 2), SHIFT_REPEAT(28),
-  [207] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__property_tag, 3),
-  [209] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__property_tag, 3),
-  [211] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__throws_tag, 2),
-  [213] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__throws_tag, 2),
-  [215] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_union_type, 2),
-  [217] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_union_type, 2),
-  [219] = {.entry = {.count = 1, .reusable = true}}, SHIFT(28),
-  [221] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_union_type_repeat1, 2),
-  [223] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_union_type_repeat1, 2),
-  [225] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_union_type_repeat1, 2), SHIFT_REPEAT(95),
-  [228] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__link_tag, 3),
-  [230] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__link_tag, 3),
-  [232] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__var_tag, 3),
-  [234] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__var_tag, 3),
-  [236] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__method_tag, 5),
-  [238] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__method_tag, 5),
-  [240] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__return_tag, 2),
-  [242] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__return_tag, 2),
-  [244] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__param_tag, 2),
-  [246] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__param_tag, 2),
-  [248] = {.entry = {.count = 1, .reusable = true}}, SHIFT(94),
-  [250] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_description_repeat1, 2), SHIFT_REPEAT(111),
-  [253] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_description_repeat1, 2),
-  [255] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_description_repeat1, 2),
-  [257] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_description_repeat1, 2), SHIFT_REPEAT(44),
-  [260] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__psalm_generic_array_types, 6, .production_id = 5),
-  [262] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__psalm_generic_array_types, 6, .production_id = 5),
-  [264] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__psalm_list_array_types, 4, .production_id = 4),
-  [266] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__psalm_list_array_types, 4, .production_id = 4),
-  [268] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_union_type_repeat1, 2), SHIFT_REPEAT(94),
-  [271] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_description, 1),
-  [273] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_description, 1),
-  [275] = {.entry = {.count = 1, .reusable = false}}, SHIFT(44),
-  [277] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_inline_tag, 3),
-  [279] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_inline_tag, 3),
-  [281] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_variable_name, 2),
-  [283] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_variable_name, 2),
-  [285] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_parameters, 2),
-  [287] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_parameters, 2),
-  [289] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__currently_incomplete_tags, 1),
-  [291] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__currently_incomplete_tags, 1),
-  [293] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_parameters, 3),
-  [295] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_parameters, 3),
-  [297] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_parameters, 4),
-  [299] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_parameters, 4),
-  [301] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__author_tag, 2),
-  [303] = {.entry = {.count = 1, .reusable = true}}, SHIFT(174),
-  [305] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__author_tag, 2),
-  [307] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__property_tag, 4),
-  [309] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__property_tag, 4),
-  [311] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__param_tag, 4),
-  [313] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__param_tag, 4),
-  [315] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__author_tag, 5),
-  [317] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__author_tag, 5),
-  [319] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__internal_tag, 2),
-  [321] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__internal_tag, 2),
-  [323] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__phpunit_tag, 2),
-  [325] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__phpunit_tag, 2),
-  [327] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_tag, 2),
-  [329] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_tag, 2),
-  [331] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__version_tag, 3),
-  [333] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__version_tag, 3),
-  [335] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__link_tag, 4),
-  [337] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__link_tag, 4),
-  [339] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__throws_tag, 3),
-  [341] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__throws_tag, 3),
-  [343] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__see_tag, 3),
-  [345] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__see_tag, 3),
-  [347] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__return_tag, 3),
-  [349] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__return_tag, 3),
-  [351] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__var_tag, 4),
-  [353] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__var_tag, 4),
-  [355] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__method_tag, 6),
-  [357] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__method_tag, 6),
-  [359] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__simple_tag_with_required_description, 2),
-  [361] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__simple_tag_with_required_description, 2),
-  [363] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__simple_tag_with_optional_description, 2),
-  [365] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__simple_tag_with_optional_description, 2),
-  [367] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__global_tag, 3),
-  [369] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__global_tag, 3),
-  [371] = {.entry = {.count = 1, .reusable = false}}, SHIFT(110),
-  [373] = {.entry = {.count = 1, .reusable = false}}, SHIFT(169),
-  [375] = {.entry = {.count = 1, .reusable = true}}, SHIFT(154),
-  [377] = {.entry = {.count = 1, .reusable = false}}, SHIFT(130),
-  [379] = {.entry = {.count = 1, .reusable = true}}, SHIFT(109),
-  [381] = {.entry = {.count = 1, .reusable = false}}, SHIFT(117),
-  [383] = {.entry = {.count = 1, .reusable = true}}, SHIFT(184),
-  [385] = {.entry = {.count = 1, .reusable = true}}, SHIFT(57),
-  [387] = {.entry = {.count = 1, .reusable = false}}, SHIFT(107),
-  [389] = {.entry = {.count = 1, .reusable = false}}, SHIFT(7),
-  [391] = {.entry = {.count = 1, .reusable = false}}, SHIFT(201),
-  [393] = {.entry = {.count = 1, .reusable = true}}, SHIFT(106),
-  [395] = {.entry = {.count = 1, .reusable = false}}, SHIFT(18),
-  [397] = {.entry = {.count = 1, .reusable = false}}, SHIFT(9),
-  [399] = {.entry = {.count = 1, .reusable = false}}, SHIFT(200),
-  [401] = {.entry = {.count = 1, .reusable = true}}, SHIFT(108),
-  [403] = {.entry = {.count = 1, .reusable = false}}, SHIFT(39),
-  [405] = {.entry = {.count = 2, .reusable = false}}, REDUCE(sym_primitive_type, 1), REDUCE(sym_static, 1),
-  [408] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_static, 1),
-  [410] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_static, 1),
-  [412] = {.entry = {.count = 1, .reusable = true}}, SHIFT(164),
-  [414] = {.entry = {.count = 1, .reusable = true}}, SHIFT(159),
-  [416] = {.entry = {.count = 1, .reusable = true}}, SHIFT(114),
-  [418] = {.entry = {.count = 1, .reusable = true}}, SHIFT(162),
-  [420] = {.entry = {.count = 1, .reusable = false}}, SHIFT(156),
-  [422] = {.entry = {.count = 1, .reusable = true}}, SHIFT(34),
-  [424] = {.entry = {.count = 1, .reusable = true}}, SHIFT(142),
-  [426] = {.entry = {.count = 1, .reusable = true}}, SHIFT(99),
-  [428] = {.entry = {.count = 1, .reusable = true}}, SHIFT(122),
-  [430] = {.entry = {.count = 1, .reusable = true}}, SHIFT(123),
-  [432] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__phpdoc_array_types_repeat1, 2), SHIFT_REPEAT(123),
-  [435] = {.entry = {.count = 1, .reusable = true}}, SHIFT(96),
-  [437] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_union_type_repeat1, 2), SHIFT_REPEAT(96),
-  [440] = {.entry = {.count = 1, .reusable = true}}, SHIFT(85),
-  [442] = {.entry = {.count = 1, .reusable = true}}, SHIFT(59),
-  [444] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__link_inline_tag, 2),
-  [446] = {.entry = {.count = 1, .reusable = true}}, SHIFT(141),
-  [448] = {.entry = {.count = 1, .reusable = false}}, SHIFT(182),
-  [450] = {.entry = {.count = 1, .reusable = true}}, SHIFT(156),
-  [452] = {.entry = {.count = 1, .reusable = true}}, SHIFT(147),
-  [454] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_parameters_repeat1, 2), SHIFT_REPEAT(85),
-  [457] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_parameters_repeat1, 2),
-  [459] = {.entry = {.count = 1, .reusable = true}}, SHIFT(60),
-  [461] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_parameter, 1),
-  [463] = {.entry = {.count = 1, .reusable = true}}, SHIFT(181),
-  [465] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_parameter, 2),
-  [467] = {.entry = {.count = 1, .reusable = true}}, SHIFT(172),
-  [469] = {.entry = {.count = 1, .reusable = true}}, SHIFT(54),
-  [471] = {.entry = {.count = 1, .reusable = true}}, SHIFT(102),
-  [473] = {.entry = {.count = 1, .reusable = true}}, SHIFT(48),
-  [475] = {.entry = {.count = 1, .reusable = true}}, SHIFT(105),
-  [477] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__link_inline_tag, 3),
-  [479] = {.entry = {.count = 1, .reusable = false}}, SHIFT(165),
-  [481] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__see_inline_tag, 2),
-  [483] = {.entry = {.count = 1, .reusable = false}}, SHIFT(177),
-  [485] = {.entry = {.count = 2, .reusable = true}}, REDUCE(sym_namespace_name, 2), SHIFT(173),
-  [488] = {.entry = {.count = 2, .reusable = true}}, REDUCE(sym_namespace_name_as_prefix, 2), SHIFT(156),
-  [491] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_parameter, 3),
-  [493] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_parameter, 4),
-  [495] = {.entry = {.count = 1, .reusable = true}}, SHIFT(84),
-  [497] = {.entry = {.count = 2, .reusable = true}}, REDUCE(sym_namespace_name_as_prefix, 1), SHIFT(156),
-  [500] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_namespace_name_repeat1, 2), SHIFT_REPEAT(173),
-  [503] = {.entry = {.count = 1, .reusable = true}}, SHIFT(132),
-  [505] = {.entry = {.count = 1, .reusable = true}}, SHIFT(97),
-  [507] = {.entry = {.count = 1, .reusable = true}}, SHIFT(195),
-  [509] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
-  [511] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_namespace_name_as_prefix, 2),
-  [513] = {.entry = {.count = 1, .reusable = true}}, SHIFT(143),
-  [515] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_namespace_name_as_prefix, 3),
-  [517] = {.entry = {.count = 1, .reusable = true}}, SHIFT(55),
-  [519] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__link_inline_tag, 4, .production_id = 3),
-  [521] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_namespace_name_repeat1, 2),
-  [523] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 2),
-  [525] = {.entry = {.count = 1, .reusable = true}}, SHIFT(98),
-  [527] = {.entry = {.count = 1, .reusable = true}}, SHIFT(119),
-  [529] = {.entry = {.count = 1, .reusable = true}}, SHIFT(163),
-  [531] = {.entry = {.count = 1, .reusable = true}}, SHIFT(151),
-  [533] = {.entry = {.count = 1, .reusable = true}}, SHIFT(166),
-  [535] = {.entry = {.count = 1, .reusable = true}}, SHIFT(176),
-  [537] = {.entry = {.count = 1, .reusable = true}}, SHIFT(153),
-  [539] = {.entry = {.count = 1, .reusable = true}}, SHIFT(66),
-  [541] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__see_inline_tag, 3, .production_id = 2),
-  [543] = {.entry = {.count = 1, .reusable = true}}, SHIFT(161),
-  [545] = {.entry = {.count = 1, .reusable = true}}, SHIFT(61),
-  [547] = {.entry = {.count = 1, .reusable = true}}, SHIFT(199),
-  [549] = {.entry = {.count = 1, .reusable = true}}, SHIFT(148),
-  [551] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__link_inline_tag, 3, .production_id = 2),
-  [553] = {.entry = {.count = 1, .reusable = true}}, SHIFT(51),
-  [555] = {.entry = {.count = 1, .reusable = true}}, SHIFT(136),
-  [557] = {.entry = {.count = 1, .reusable = true}}, SHIFT(133),
-  [559] = {.entry = {.count = 1, .reusable = true}}, SHIFT(52),
-  [561] = {.entry = {.count = 1, .reusable = true}}, SHIFT(40),
-  [563] = {.entry = {.count = 1, .reusable = true}}, SHIFT(115),
-  [565] = {.entry = {.count = 1, .reusable = true}}, SHIFT(46),
-  [567] = {.entry = {.count = 1, .reusable = true}}, SHIFT(11),
-  [569] = {.entry = {.count = 1, .reusable = true}}, SHIFT(138),
-  [571] = {.entry = {.count = 1, .reusable = true}}, SHIFT(56),
-  [573] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__internal_inline_tag, 2, .production_id = 1),
-  [575] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 3),
-  [577] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 4),
-  [579] = {.entry = {.count = 1, .reusable = true}}, SHIFT(155),
-  [581] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_namespace_name_as_prefix, 4),
-  [583] = {.entry = {.count = 1, .reusable = true}}, SHIFT(100),
-  [585] = {.entry = {.count = 1, .reusable = true}}, SHIFT(103),
+  [25] = {.entry = {.count = 1, .reusable = false}}, SHIFT(90),
+  [27] = {.entry = {.count = 1, .reusable = true}}, SHIFT(90),
+  [29] = {.entry = {.count = 1, .reusable = true}}, SHIFT(94),
+  [31] = {.entry = {.count = 1, .reusable = true}}, SHIFT(119),
+  [33] = {.entry = {.count = 1, .reusable = true}}, SHIFT(93),
+  [35] = {.entry = {.count = 1, .reusable = true}}, SHIFT(89),
+  [37] = {.entry = {.count = 1, .reusable = true}}, SHIFT(7),
+  [39] = {.entry = {.count = 1, .reusable = true}}, SHIFT(112),
+  [41] = {.entry = {.count = 1, .reusable = true}}, SHIFT(111),
+  [43] = {.entry = {.count = 1, .reusable = false}}, SHIFT(26),
+  [45] = {.entry = {.count = 1, .reusable = true}}, SHIFT(26),
+  [47] = {.entry = {.count = 1, .reusable = true}}, SHIFT(191),
+  [49] = {.entry = {.count = 1, .reusable = true}}, SHIFT(38),
+  [51] = {.entry = {.count = 1, .reusable = true}}, SHIFT(190),
+  [53] = {.entry = {.count = 1, .reusable = true}}, SHIFT(203),
+  [55] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(74),
+  [58] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(18),
+  [61] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(143),
+  [64] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(30),
+  [67] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(204),
+  [70] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(91),
+  [73] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(208),
+  [76] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(88),
+  [79] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(87),
+  [82] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(90),
+  [85] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(90),
+  [88] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(94),
+  [91] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(119),
+  [94] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(93),
+  [97] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(89),
+  [100] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(7),
+  [103] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(112),
+  [106] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(111),
+  [109] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(26),
+  [112] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(26),
+  [115] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2),
+  [117] = {.entry = {.count = 1, .reusable = true}}, SHIFT(118),
+  [119] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__deprecated_tag, 1),
+  [121] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__deprecated_tag, 1),
+  [123] = {.entry = {.count = 1, .reusable = true}}, SHIFT(51),
+  [125] = {.entry = {.count = 1, .reusable = true}}, SHIFT(189),
+  [127] = {.entry = {.count = 1, .reusable = true}}, SHIFT(54),
+  [129] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_named_type, 1),
+  [131] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_named_type, 1),
+  [133] = {.entry = {.count = 2, .reusable = true}}, REDUCE(sym_namespace_name, 1), SHIFT(227),
+  [136] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_qualified_name, 2),
+  [138] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_qualified_name, 2),
+  [140] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__types, 1),
+  [142] = {.entry = {.count = 1, .reusable = true}}, SHIFT(105),
+  [144] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__types, 1),
+  [146] = {.entry = {.count = 1, .reusable = true}}, SHIFT(15),
+  [148] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__see_tag, 2, .production_id = 1),
+  [150] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__see_tag, 2, .production_id = 1),
+  [152] = {.entry = {.count = 1, .reusable = true}}, SHIFT(22),
+  [154] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_primitive_type, 1),
+  [156] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_primitive_type, 1),
+  [158] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__see_tag, 2),
+  [160] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__see_tag, 2),
+  [162] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__phpdoc_array_types_repeat1, 2),
+  [164] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym__phpdoc_array_types_repeat1, 2),
+  [166] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__phpdoc_array_types_repeat1, 2), SHIFT_REPEAT(14),
+  [169] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__phpdoc_array_types, 2),
+  [171] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__phpdoc_array_types, 2),
+  [173] = {.entry = {.count = 1, .reusable = true}}, SHIFT(14),
+  [175] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_optional_type, 2),
+  [177] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_optional_type, 2),
+  [179] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__tag_with_optional_description, 1),
+  [181] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__tag_with_optional_description, 1),
+  [183] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__method_tag, 5),
+  [185] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__method_tag, 5),
+  [187] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__method_tag, 4),
+  [189] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__method_tag, 4),
+  [191] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__var_tag, 3),
+  [193] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__var_tag, 3),
+  [195] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__see_tag, 3, .production_id = 1),
+  [197] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__see_tag, 3, .production_id = 1),
+  [199] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__property_tag, 3),
+  [201] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__property_tag, 3),
+  [203] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__param_tag, 3),
+  [205] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__param_tag, 3),
+  [207] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__throws_tag, 2),
+  [209] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__throws_tag, 2),
+  [211] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__phpunit_tag, 1),
+  [213] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__phpunit_tag, 1),
+  [215] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__since_tag, 2),
+  [217] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__since_tag, 2),
+  [219] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__deprecated_tag, 2),
+  [221] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__deprecated_tag, 2),
+  [223] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__param_tag, 2),
+  [225] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__param_tag, 2),
+  [227] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__tag_with_incomplete_implementation, 1),
+  [229] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__tag_with_incomplete_implementation, 1),
+  [231] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__return_tag, 2),
+  [233] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__return_tag, 2),
+  [235] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__link_tag, 2),
+  [237] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__link_tag, 2),
+  [239] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__version_tag, 2),
+  [241] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__version_tag, 2),
+  [243] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__description_not_version, 1, .production_id = 2),
+  [245] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__description_not_version, 1, .production_id = 2),
+  [247] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_union_type, 1),
+  [249] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_union_type, 1),
+  [251] = {.entry = {.count = 1, .reusable = true}}, SHIFT(96),
+  [253] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__description_after_type_repeat1, 2), SHIFT_REPEAT(116),
+  [256] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__description_after_type_repeat1, 2),
+  [258] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym__description_after_type_repeat1, 2),
+  [260] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__description_after_type_repeat1, 2), SHIFT_REPEAT(47),
+  [263] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_description_repeat1, 2), SHIFT_REPEAT(115),
+  [266] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_description_repeat1, 2),
+  [268] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_description_repeat1, 2),
+  [270] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_description_repeat1, 2), SHIFT_REPEAT(37),
+  [273] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_description, 1),
+  [275] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_description, 1),
+  [277] = {.entry = {.count = 1, .reusable = true}}, SHIFT(37),
+  [279] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_union_type, 2),
+  [281] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_union_type, 2),
+  [283] = {.entry = {.count = 1, .reusable = true}}, SHIFT(116),
+  [285] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__description_after_type, 1, .production_id = 2),
+  [287] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__description_after_type, 1, .production_id = 2),
+  [289] = {.entry = {.count = 1, .reusable = true}}, SHIFT(47),
+  [291] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_union_type_repeat1, 2),
+  [293] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_union_type_repeat1, 2),
+  [295] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_union_type_repeat1, 2), SHIFT_REPEAT(96),
+  [298] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__description_not_version_repeat1, 2), SHIFT_REPEAT(118),
+  [301] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__description_not_version_repeat1, 2),
+  [303] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym__description_not_version_repeat1, 2),
+  [305] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__description_not_version_repeat1, 2), SHIFT_REPEAT(54),
+  [308] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_variable_name, 2),
+  [310] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_variable_name, 2),
+  [312] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__psalm_list_array_types, 4, .production_id = 3),
+  [314] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__psalm_list_array_types, 4, .production_id = 3),
+  [316] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__psalm_generic_array_types, 6, .production_id = 4),
+  [318] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__psalm_generic_array_types, 6, .production_id = 4),
+  [320] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__description_after_type_repeat1, 1),
+  [322] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym__description_after_type_repeat1, 1),
+  [324] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_inline_tag, 3),
+  [326] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_inline_tag, 3),
+  [328] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_version, 1),
+  [330] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_version, 1),
+  [332] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_parameters, 2),
+  [334] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_parameters, 2),
+  [336] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_parameters, 4),
+  [338] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_parameters, 4),
+  [340] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__description_not_version_repeat1, 1),
+  [342] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym__description_not_version_repeat1, 1),
+  [344] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_parameters, 3),
+  [346] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_parameters, 3),
+  [348] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_version, 2),
+  [350] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_version, 2),
+  [352] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__author_tag, 2),
+  [354] = {.entry = {.count = 1, .reusable = true}}, SHIFT(228),
+  [356] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__author_tag, 2),
+  [358] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__property_tag, 4),
+  [360] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__property_tag, 4),
+  [362] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__tag_with_optional_description, 2),
+  [364] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__tag_with_optional_description, 2),
+  [366] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__author_tag, 5),
+  [368] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__author_tag, 5),
+  [370] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__var_tag, 4),
+  [372] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__var_tag, 4),
+  [374] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__see_tag, 4, .production_id = 1),
+  [376] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__see_tag, 4, .production_id = 1),
+  [378] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__param_tag, 4),
+  [380] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__param_tag, 4),
+  [382] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__tag_with_required_description, 2),
+  [384] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__tag_with_required_description, 2),
+  [386] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__method_tag, 6),
+  [388] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__method_tag, 6),
+  [390] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__global_tag, 3),
+  [392] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__global_tag, 3),
+  [394] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__phpunit_tag, 2),
+  [396] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__phpunit_tag, 2),
+  [398] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_tag, 1),
+  [400] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_tag, 1),
+  [402] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__throws_tag, 3),
+  [404] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__throws_tag, 3),
+  [406] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__deprecated_tag, 3),
+  [408] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__deprecated_tag, 3),
+  [410] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__link_tag, 3),
+  [412] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__link_tag, 3),
+  [414] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__see_tag, 3),
+  [416] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__see_tag, 3),
+  [418] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__since_tag, 3),
+  [420] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__since_tag, 3),
+  [422] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__tag_with_incomplete_implementation, 2),
+  [424] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__tag_with_incomplete_implementation, 2),
+  [426] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__version_tag, 3),
+  [428] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__version_tag, 3),
+  [430] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__return_tag, 3),
+  [432] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__return_tag, 3),
+  [434] = {.entry = {.count = 1, .reusable = false}}, SHIFT(113),
+  [436] = {.entry = {.count = 1, .reusable = false}}, SHIFT(185),
+  [438] = {.entry = {.count = 1, .reusable = true}}, SHIFT(179),
+  [440] = {.entry = {.count = 1, .reusable = false}}, SHIFT(162),
+  [442] = {.entry = {.count = 1, .reusable = true}}, SHIFT(108),
+  [444] = {.entry = {.count = 1, .reusable = false}}, SHIFT(122),
+  [446] = {.entry = {.count = 1, .reusable = true}}, SHIFT(209),
+  [448] = {.entry = {.count = 1, .reusable = true}}, SHIFT(52),
+  [450] = {.entry = {.count = 1, .reusable = true}}, SHIFT(196),
+  [452] = {.entry = {.count = 1, .reusable = false}}, SHIFT(109),
+  [454] = {.entry = {.count = 1, .reusable = false}}, SHIFT(117),
+  [456] = {.entry = {.count = 1, .reusable = false}}, SHIFT(230),
+  [458] = {.entry = {.count = 1, .reusable = true}}, SHIFT(110),
+  [460] = {.entry = {.count = 1, .reusable = false}}, SHIFT(134),
+  [462] = {.entry = {.count = 1, .reusable = false}}, SHIFT(8),
+  [464] = {.entry = {.count = 1, .reusable = false}}, SHIFT(229),
+  [466] = {.entry = {.count = 1, .reusable = true}}, SHIFT(107),
+  [468] = {.entry = {.count = 1, .reusable = false}}, SHIFT(12),
+  [470] = {.entry = {.count = 2, .reusable = false}}, REDUCE(sym_primitive_type, 1), REDUCE(sym_static, 1),
+  [473] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_static, 1),
+  [475] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_static, 1),
+  [477] = {.entry = {.count = 1, .reusable = true}}, SHIFT(213),
+  [479] = {.entry = {.count = 1, .reusable = true}}, SHIFT(132),
+  [481] = {.entry = {.count = 1, .reusable = true}}, SHIFT(187),
+  [483] = {.entry = {.count = 1, .reusable = true}}, SHIFT(124),
+  [485] = {.entry = {.count = 1, .reusable = true}}, SHIFT(188),
+  [487] = {.entry = {.count = 1, .reusable = true}}, SHIFT(218),
+  [489] = {.entry = {.count = 1, .reusable = true}}, SHIFT(207),
+  [491] = {.entry = {.count = 1, .reusable = false}}, SHIFT(180),
+  [493] = {.entry = {.count = 1, .reusable = true}}, SHIFT(13),
+  [495] = {.entry = {.count = 1, .reusable = true}}, SHIFT(149),
+  [497] = {.entry = {.count = 1, .reusable = true}}, SHIFT(102),
+  [499] = {.entry = {.count = 1, .reusable = true}}, SHIFT(129),
+  [501] = {.entry = {.count = 1, .reusable = true}}, SHIFT(98),
+  [503] = {.entry = {.count = 1, .reusable = true}}, SHIFT(140),
+  [505] = {.entry = {.count = 1, .reusable = true}}, SHIFT(133),
+  [507] = {.entry = {.count = 1, .reusable = true}}, SHIFT(114),
+  [509] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__inline_internal_tag, 1),
+  [511] = {.entry = {.count = 1, .reusable = true}}, SHIFT(163),
+  [513] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__phpdoc_array_types_repeat1, 2), SHIFT_REPEAT(133),
+  [516] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__description_in_inline_tag_with_nesting, 1, .production_id = 2),
+  [518] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_union_type_repeat1, 2), SHIFT_REPEAT(97),
+  [521] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__phpdoc_array_types_repeat1, 2), SHIFT_REPEAT(137),
+  [524] = {.entry = {.count = 1, .reusable = true}}, SHIFT(97),
+  [526] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__description_in_inline_tag_with_nesting_repeat1, 2), SHIFT_REPEAT(114),
+  [529] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__description_in_inline_tag_with_nesting_repeat1, 2),
+  [531] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__description_in_inline_tag_with_nesting_repeat1, 2), SHIFT_REPEAT(163),
+  [534] = {.entry = {.count = 1, .reusable = true}}, SHIFT(137),
+  [536] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__inline_see_tag, 2, .production_id = 1),
+  [538] = {.entry = {.count = 1, .reusable = true}}, SHIFT(147),
+  [540] = {.entry = {.count = 1, .reusable = true}}, SHIFT(183),
+  [542] = {.entry = {.count = 1, .reusable = true}}, SHIFT(95),
+  [544] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__inline_see_tag, 3, .production_id = 1),
+  [546] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__inline_see_tag, 2),
+  [548] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__inline_link_tag, 2),
+  [550] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_union_type_repeat1, 2), SHIFT_REPEAT(95),
+  [553] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_parameters_repeat1, 2), SHIFT_REPEAT(86),
+  [556] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_parameters_repeat1, 2),
+  [558] = {.entry = {.count = 1, .reusable = true}}, SHIFT(86),
+  [560] = {.entry = {.count = 1, .reusable = true}}, SHIFT(55),
+  [562] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__description_in_inline_tag_repeat1, 2),
+  [564] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__description_in_inline_tag_repeat1, 2), SHIFT_REPEAT(183),
+  [567] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_parameter, 2),
+  [569] = {.entry = {.count = 1, .reusable = true}}, SHIFT(221),
+  [571] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_parameter, 1),
+  [573] = {.entry = {.count = 1, .reusable = true}}, SHIFT(226),
+  [575] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__description_in_inline_tag, 1, .production_id = 2),
+  [577] = {.entry = {.count = 1, .reusable = true}}, SHIFT(53),
+  [579] = {.entry = {.count = 1, .reusable = true}}, SHIFT(180),
+  [581] = {.entry = {.count = 1, .reusable = true}}, SHIFT(178),
+  [583] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__description_in_inline_tag_with_nesting_repeat1, 1),
+  [585] = {.entry = {.count = 1, .reusable = true}}, SHIFT(45),
+  [587] = {.entry = {.count = 1, .reusable = true}}, SHIFT(104),
+  [589] = {.entry = {.count = 1, .reusable = true}}, SHIFT(85),
+  [591] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_parameter, 4),
+  [593] = {.entry = {.count = 1, .reusable = true}}, SHIFT(165),
+  [595] = {.entry = {.count = 1, .reusable = true}}, SHIFT(99),
+  [597] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_namespace_name_repeat1, 2), SHIFT_REPEAT(227),
+  [600] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_parameter, 3),
+  [602] = {.entry = {.count = 1, .reusable = true}}, SHIFT(144),
+  [604] = {.entry = {.count = 1, .reusable = true}}, SHIFT(100),
+  [606] = {.entry = {.count = 2, .reusable = true}}, REDUCE(sym_namespace_name_as_prefix, 2), SHIFT(180),
+  [609] = {.entry = {.count = 2, .reusable = true}}, REDUCE(sym_namespace_name_as_prefix, 1), SHIFT(180),
+  [612] = {.entry = {.count = 2, .reusable = true}}, REDUCE(sym_namespace_name, 2), SHIFT(227),
+  [615] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__description_in_inline_tag_repeat1, 1),
+  [617] = {.entry = {.count = 1, .reusable = true}}, SHIFT(101),
+  [619] = {.entry = {.count = 1, .reusable = true}}, SHIFT(9),
+  [621] = {.entry = {.count = 1, .reusable = true}}, SHIFT(150),
+  [623] = {.entry = {.count = 1, .reusable = true}}, SHIFT(49),
+  [625] = {.entry = {.count = 1, .reusable = true}}, SHIFT(57),
+  [627] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 3),
+  [629] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 2),
+  [631] = {.entry = {.count = 1, .reusable = true}}, SHIFT(153),
+  [633] = {.entry = {.count = 1, .reusable = true}}, SHIFT(205),
+  [635] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__inline_see_tag, 4, .production_id = 1),
+  [637] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_namespace_name_as_prefix, 3),
+  [639] = {.entry = {.count = 1, .reusable = true}}, SHIFT(48),
+  [641] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_namespace_name_repeat1, 2),
+  [643] = {.entry = {.count = 1, .reusable = true}}, SHIFT(62),
+  [645] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__inline_see_tag, 3),
+  [647] = {.entry = {.count = 1, .reusable = true}}, SHIFT(120),
+  [649] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 4),
+  [651] = {.entry = {.count = 1, .reusable = true}}, SHIFT(58),
+  [653] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_namespace_name_as_prefix, 4),
+  [655] = {.entry = {.count = 1, .reusable = true}}, SHIFT(177),
+  [657] = {.entry = {.count = 1, .reusable = true}}, SHIFT(50),
+  [659] = {.entry = {.count = 1, .reusable = true}}, SHIFT(32),
+  [661] = {.entry = {.count = 1, .reusable = true}}, SHIFT(44),
+  [663] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
+  [665] = {.entry = {.count = 1, .reusable = true}}, SHIFT(46),
+  [667] = {.entry = {.count = 1, .reusable = true}}, SHIFT(164),
+  [669] = {.entry = {.count = 1, .reusable = true}}, SHIFT(128),
+  [671] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__inline_internal_tag, 2),
+  [673] = {.entry = {.count = 1, .reusable = true}}, SHIFT(145),
+  [675] = {.entry = {.count = 1, .reusable = true}}, SHIFT(56),
+  [677] = {.entry = {.count = 1, .reusable = true}}, SHIFT(166),
+  [679] = {.entry = {.count = 1, .reusable = true}}, SHIFT(168),
+  [681] = {.entry = {.count = 1, .reusable = true}}, SHIFT(169),
+  [683] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_namespace_name_as_prefix, 2),
+  [685] = {.entry = {.count = 1, .reusable = true}}, SHIFT(222),
+  [687] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__inline_link_tag, 3),
+  [689] = {.entry = {.count = 1, .reusable = true}}, SHIFT(195),
+  [691] = {.entry = {.count = 1, .reusable = true}}, SHIFT(175),
+  [693] = {.entry = {.count = 1, .reusable = true}}, SHIFT(197),
+  [695] = {.entry = {.count = 1, .reusable = true}}, SHIFT(199),
+  [697] = {.entry = {.count = 1, .reusable = true}}, SHIFT(106),
+  [699] = {.entry = {.count = 1, .reusable = true}}, SHIFT(103),
 };
 
 #ifdef __cplusplus
 extern "C" {
 #endif
+void *tree_sitter_phpdoc_external_scanner_create(void);
+void tree_sitter_phpdoc_external_scanner_destroy(void *);
+bool tree_sitter_phpdoc_external_scanner_scan(void *, TSLexer *, const bool *);
+unsigned tree_sitter_phpdoc_external_scanner_serialize(void *, char *);
+void tree_sitter_phpdoc_external_scanner_deserialize(void *, const char *, unsigned);
+
 #ifdef _WIN32
 #define extern __declspec(dllexport)
 #endif
@@ -11696,6 +12235,15 @@ extern const TSLanguage *tree_sitter_phpdoc(void) {
     .lex_fn = ts_lex,
     .keyword_lex_fn = ts_lex_keywords,
     .keyword_capture_token = sym_name,
+    .external_scanner = {
+      (const bool *)ts_external_scanner_states,
+      ts_external_scanner_symbol_map,
+      tree_sitter_phpdoc_external_scanner_create,
+      tree_sitter_phpdoc_external_scanner_destroy,
+      tree_sitter_phpdoc_external_scanner_scan,
+      tree_sitter_phpdoc_external_scanner_serialize,
+      tree_sitter_phpdoc_external_scanner_deserialize,
+    },
     .field_count = FIELD_COUNT,
     .field_map_slices = (const TSFieldMapSlice *)ts_field_map_slices,
     .field_map_entries = (const TSFieldMapEntry *)ts_field_map_entries,

@@ -1,0 +1,322 @@
+=====================
+@deprecated
+=====================
+/**
+ * @deprecated
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+@deprecated w/ version
+=====================
+/**
+ * @deprecated 1.2.3
+ * @deprecated 1.2.3-beta
+ * @deprecated $Id$
+ * @deprecated git: $Id$
+ * @deprecated @package_version@
+ */
+---
+(document
+  (tag (tag_name) (version))
+  (tag (tag_name) (version))
+  (tag (tag_name) (version))
+  (tag (tag_name) (version))
+  (tag (tag_name) (version)))
+
+=====================
+@deprecated w/ description
+=====================
+/**
+ * @deprecated some description
+ * @deprecated
+ * description on next line
+ * @deprecated $description starts with var
+ * @deprecated @description starts with tag
+ * @deprecated some description
+ * continued on next line
+ */
+---
+(document
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text) (text))))
+
+=====================
+@deprecated w/ version & description
+=====================
+/**
+ * @deprecated 1.2.3 some description
+ * @deprecated 1.2.3-beta some description
+ * @deprecated $Id$ some description
+ * @deprecated git: $Id$ some description
+ * @deprecated @package_version@ some description
+ */
+---
+(document
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text))))
+
+=====================
+@deprecated w/ version & description on next line
+=====================
+/**
+ * @deprecated 1.2.3
+ * some description
+ * @deprecated 1.2.3-beta
+ * some description
+ * @deprecated $Id$
+ * some description
+ * @deprecated git: $Id$
+ * some description
+ * @deprecated @package_version@
+ * some description
+ */
+---
+(document
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text))))
+
+=====================
+@deprecated w/ version & description w/ linebreak
+=====================
+/**
+ * @deprecated 1.2.3 some description
+ * continued description
+ * @deprecated 1.2.3-beta some description
+ * continued description
+ * @deprecated $Id$ some description
+ * continued description
+ * @deprecated git: $Id$ some description
+ * continued description
+ * @deprecated @package_version@ some description
+ * continued description
+ */
+---
+(document
+  (tag (tag_name) (version) (description (text) (text)))
+  (tag (tag_name) (version) (description (text) (text)))
+  (tag (tag_name) (version) (description (text) (text)))
+  (tag (tag_name) (version) (description (text) (text)))
+  (tag (tag_name) (version) (description (text) (text))))
+
+
+
+
+=====================
+@version w/ version
+=====================
+/**
+ * @version 1.2.3
+ * @version 1.2.3-beta
+ * @version $Id$
+ * @version git: $Id$
+ * @version @package_version@
+ */
+---
+(document
+  (tag (tag_name) (version))
+  (tag (tag_name) (version))
+  (tag (tag_name) (version))
+  (tag (tag_name) (version))
+  (tag (tag_name) (version)))
+
+=====================
+@version w/ description
+=====================
+/**
+ * @version some description
+ * @version
+ * description on next line
+ * @version $description starts with var
+ * @version @description starts with tag
+ * @version some description
+ * continued on next line
+ */
+---
+(document
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text) (text))))
+
+=====================
+@version w/ version & description
+=====================
+/**
+ * @version 1.2.3 some description
+ * @version 1.2.3-beta some description
+ * @version $Id$ some description
+ * @version git: $Id$ some description
+ * @version @package_version@ some description
+ */
+---
+(document
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text))))
+
+=====================
+@version w/ version & description on next line
+=====================
+/**
+ * @version 1.2.3
+ * some description
+ * @version 1.2.3-beta
+ * some description
+ * @version $Id$
+ * some description
+ * @version git: $Id$
+ * some description
+ * @version @package_version@
+ * some description
+ */
+---
+(document
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text))))
+
+=====================
+@version w/ version & description w/ linebreak
+=====================
+/**
+ * @version 1.2.3 some description
+ * continued description
+ * @version 1.2.3-beta some description
+ * continued description
+ * @version $Id$ some description
+ * continued description
+ * @version git: $Id$ some description
+ * continued description
+ * @version @package_version@ some description
+ * continued description
+ */
+---
+(document
+  (tag (tag_name) (version) (description (text) (text)))
+  (tag (tag_name) (version) (description (text) (text)))
+  (tag (tag_name) (version) (description (text) (text)))
+  (tag (tag_name) (version) (description (text) (text)))
+  (tag (tag_name) (version) (description (text) (text))))
+
+
+
+
+
+=====================
+@version w/ version
+=====================
+/**
+ * @version 1.2.3
+ * @version 1.2.3-beta
+ * @version $Id$
+ * @version git: $Id$
+ * @version @package_version@
+ */
+---
+(document
+  (tag (tag_name) (version))
+  (tag (tag_name) (version))
+  (tag (tag_name) (version))
+  (tag (tag_name) (version))
+  (tag (tag_name) (version)))
+
+=====================
+@version w/ description
+=====================
+/**
+ * @version some description
+ * @version
+ * description on next line
+ * @version $description starts with var
+ * @version @description starts with tag
+ * @version some description
+ * continued on next line
+ */
+---
+(document
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text) (text))))
+
+=====================
+@version w/ version & description
+=====================
+/**
+ * @version 1.2.3 some description
+ * @version 1.2.3-beta some description
+ * @version $Id$ some description
+ * @version git: $Id$ some description
+ * @version @package_version@ some description
+ */
+---
+(document
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text))))
+
+=====================
+@version w/ version & description on next line
+=====================
+/**
+ * @version 1.2.3
+ * some description
+ * @version 1.2.3-beta
+ * some description
+ * @version $Id$
+ * some description
+ * @version git: $Id$
+ * some description
+ * @version @package_version@
+ * some description
+ */
+---
+(document
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text)))
+  (tag (tag_name) (version) (description (text))))
+
+=====================
+@version w/ version & description w/ linebreak
+=====================
+/**
+ * @version 1.2.3 some description
+ * continued description
+ * @version 1.2.3-beta some description
+ * continued description
+ * @version $Id$ some description
+ * continued description
+ * @version git: $Id$ some description
+ * continued description
+ * @version @package_version@ some description
+ * continued description
+ */
+---
+(document
+  (tag (tag_name) (version) (description (text) (text)))
+  (tag (tag_name) (version) (description (text) (text)))
+  (tag (tag_name) (version) (description (text) (text)))
+  (tag (tag_name) (version) (description (text) (text)))
+  (tag (tag_name) (version) (description (text) (text))))

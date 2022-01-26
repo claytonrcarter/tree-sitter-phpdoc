@@ -1,0 +1,15 @@
+=====================
+Basic phpunit tag support
+=====================
+/**
+ * @test
+ * @dataProvider
+ * @group api
+ */
+---
+(document
+  (tag (tag_name))
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))

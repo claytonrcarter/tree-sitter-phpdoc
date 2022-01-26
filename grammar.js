@@ -4,25 +4,52 @@ const PHP = require('tree-sitter-php/grammar');
 // TODO array return types https://docs.phpdoc.org/3.0/guide/references/phpdoc/types.html#arrays
 // PHPDoc tags: https://docs.phpdoc.org/3.0/guide/references/phpdoc/tags/index.html#tag-reference
 // PHPDoc docs appear to use these conventions
+// TODO inline tags in inline tags (allowed for @internal)
 //   @verbatimElement [required element] [<optional element>]
 
 module.exports = grammar({
   name: 'phpdoc',
 
   extras: $ => [
-    token(
-      seq(/(\r)|(\r\n)|(\n)/, /[ \t]*/, repeat('*'), /[ \t]*/)
-    ),
-    token(
-      seq(/[ \t]*/, repeat('*'), /[ \t]*/)
-    ),
-    token(repeat1(' ')),
+    token(choice(
+      // Skip over stars at the beginnings of lines
+      seq(/\n/, /[ \t]*/, repeat(seq('*', /[ \t]*/))),
+      /\s/
+    ))
   ],
 
   conflicts: $ => [
     [$.primitive_type, $.static],
     [$.namespace_name],
     [$.namespace_name_as_prefix],
+  ],
+
+  // Note:
+  // 1. External scanners receive text with `extras` not removed yet. So
+  //    whitespace must be detected and skipped appropriately with lexer->skip().
+  //
+  // 2. External scanners are triggered with highest precedence whenever possible.
+  //    For example a rule like:
+  //      seq(
+  //        optional($.variable_name),
+  //        optional($.text)
+  //      )
+  //    would not even start scanning for $.variable but immediately call the
+  //    external scanner for $.text, because both tokens are optional. This can't
+  //    be fixed with prec() either.
+  //
+  //    That's why you see weird looking external tokens like $._text_after_type
+  //    which allows us to restate the above rule like:
+  //
+  //      choice(
+  //        $._text_after_type,
+  //        seq($.variable, $text)
+  //      )
+  externals: $ => [
+    $.text,
+    $._text_after_type,
+    $._text_in_inline_tag,
+    $._text_not_version,
   ],
 
   word: $ => $.name,
@@ -37,59 +64,111 @@ module.exports = grammar({
 
     _begin: $ => token(seq('/**', repeat('*'))),
 
+    description: $ => repeat1(
+      choice(
+        $.text,
+        $.inline_tag
+      )
+    ),
+
+    _description_after_type: $ => alias(
+      repeat1(
+        choice(
+          alias($._text_after_type, $.text),
+          $.inline_tag
+        )
+      ),
+      $.description
+    ),
+
+    _description_not_version: $ => alias(
+      repeat1(
+        choice(
+          alias($._text_not_version, $.text),
+          $.inline_tag
+        )
+      ),
+      $.description
+    ),
+
+    _description_in_inline_tag: $ => alias(
+      repeat1(
+        alias($._text_in_inline_tag, $.text),
+      ),
+      $.description
+    ),
+
+    _description_in_inline_tag_with_nesting: $ => alias(
+      repeat1(
+        choice(
+          alias($._text_in_inline_tag, $.text),
+          $.inline_tag
+        )
+      ),
+      $.description
+    ),
+
     tag: $ => choice(
 
-      $._simple_tag_without_description,
-      $._simple_tag_with_optional_description,
-      $._simple_tag_with_required_description,
-
-      seq(
-          alias($._currently_incomplete_tags, $.tag_name),
-          optional($.description)
-      ),
+      $._tag_without_description,
+      $._tag_with_optional_description,
+      $._tag_with_required_description,
 
       $._author_tag,
+      $._deprecated_tag,
       $._global_tag,
-      $._internal_tag,
       $._link_tag,
       $._method_tag,
       $._param_tag,
       $._property_tag,
       $._return_tag,
       $._see_tag,
+      $._since_tag,
       $._throws_tag,
       $._var_tag,
       $._version_tag,
 
-      $._phpunit_tag
+      $._phpunit_tag,
+
+      // TODO eliminate this
+      $._tag_with_incomplete_implementation
+
     ),
 
-    // @inheritDoc is inline only, has no description
-    inline_tag: $ => prec(-1, seq(
+    inline_tag: $ => seq(
       '{',
       choice(
-        alias("@inheritDoc", $.tag_name),
-        $._internal_inline_tag,
-        $._link_inline_tag,
-        $._see_inline_tag,
+        alias('@inheritdoc', $.tag_name),
+        alias('@inheritDoc', $.tag_name),
+        $._inline_internal_tag,
+        $._inline_link_tag,
+        $._inline_see_tag,
       ),
       '}'
-    )),
+    ),
 
     // @api
     // @filesource
-    _simple_tag_without_description: $ => alias(
+    // @inheritdoc
+    // @inheritDoc
+    _tag_without_description: $ => alias(
       choice(
         '@api',
         '@filesource',
+        '@inheritdoc',
+        '@inheritDoc',
       ),
       $.tag_name
     ),
 
     // @ignore [<description>]
-    _simple_tag_with_optional_description: $ => seq(
+    // @internal [<description>]
+    _tag_with_optional_description: $ => seq(
       alias(
-        '@ignore',
+        choice(
+          '@ignore',
+          '@internal'
+        ),
         $.tag_name
       ),
       optional($.description)
@@ -98,7 +177,7 @@ module.exports = grammar({
     // @category [description]
     // @copyright [description]
     // @todo [description]
-    _simple_tag_with_required_description: $ => seq(
+    _tag_with_required_description: $ => seq(
       alias(
         choice(
           '@category',
@@ -110,6 +189,7 @@ module.exports = grammar({
       $.description
     ),
 
+    // TODO complete implementation for these tags
     // https://docs.phpdoc.org/3.0/guide/references/phpdoc/tags/subpackage.html
     // @subpackage [name]
 
@@ -125,13 +205,19 @@ module.exports = grammar({
     // @source [<start-line> [<number-of-lines>] ] [<description>]
     // https://docs.phpdoc.org/3.0/guide/references/phpdoc/tags/uses.html
     // @uses [FQSEN] [<description>]
-    _currently_incomplete_tags: $ => choice(
-        '@example',
-        '@license',
-        '@package',
-        '@source',
-        '@subpackage',
-        '@uses'
+    _tag_with_incomplete_implementation: $ => seq(
+      alias(
+        choice(
+          '@example',
+          '@license',
+          '@package',
+          '@source',
+          '@subpackage',
+          '@uses'
+        ),
+        $.tag_name
+      ),
+      optional($.description)
     ),
 
     // @author [name] [<email address>]
@@ -151,35 +237,21 @@ module.exports = grammar({
     ),
 
     // @internal [description]
-    _internal_tag: $ => seq(
+    _inline_internal_tag: $ => seq(
       alias('@internal', $.tag_name),
-      $.description
-    ),
-
-    _internal_inline_tag: $ => seq(
-      alias('@internal', $.tag_name),
-      alias($.text, $.description)
+      optional($._description_in_inline_tag_with_nesting)
     ),
 
     // @link [URI] [<description>]
     _link_tag: $ => seq(
       alias('@link', $.tag_name),
-      choice(
-        $.uri,
-        $.qualified_name,
-        seq($.qualified_name, '()'),
-      ),
+      $.uri,
       optional($.description)
     ),
-
-    _link_inline_tag: $ => seq(
+    _inline_link_tag: $ => seq(
       alias('@link', $.tag_name),
-      choice(
-        $.uri,
-        $.qualified_name,
-        seq($.qualified_name, '()'),
-      ),
-      optional(alias($.text, $.description))
+      $.uri,
+      optional($._description_in_inline_tag)
     ),
 
     // https://docs.phpdoc.org/3.0/guide/references/phpdoc/tags/method.html#method
@@ -226,16 +298,31 @@ module.exports = grammar({
 
     // https://docs.phpdoc.org/3.0/guide/references/phpdoc/tags/see.html
     // @see [URI | FQSEN] [<description>]
+    // TODO Implement FQSEN support
+    // Docs on FQSEN are unclear:
+    // https://docs.phpdoc.org/classes/phpDocumentor-Descriptor-DescriptorAbstract.html#property_fqsen
+    // "Fully Qualified Structural Element Name; the FQCN including method, property or constant name"
+    // So FQSEN must always use FQCN (fully qualified class name). But the examples don't:
+    //   @see number_of() 
+    //   @see MyClass::$items
+    //   @see MyClass::setItems()
     _see_tag: $ => seq(
       alias('@see', $.tag_name),
-      $.uri,
-      $.description,
+      choice(
+        $.uri,
+        alias($.qualified_name, $.fqsen),
+        alias(seq($.qualified_name, '()'), $.fqsen),
+      ),
+      optional($.description)
     ),
-
-    _see_inline_tag: $ => seq(
+    _inline_see_tag: $ => seq(
       alias('@see', $.tag_name),
-      $.uri,
-      optional(alias($.text, $.description))
+      choice(
+        $.uri,
+        alias($.qualified_name, $.fqsen),
+        alias(seq($.qualified_name, '()'), $.fqsen),
+      ),
+      optional($._description_in_inline_tag)
     ),
 
     // @throws [Type] [<description>]
@@ -247,29 +334,48 @@ module.exports = grammar({
 
     // https://docs.phpdoc.org/3.0/guide/references/phpdoc/tags/var.html
     // @var ["Type"] [element_name] [<description>]
-    // note that `element_name` can be either required or optional depending on
-    // context, so we just treat it as optional
     _var_tag: $ => seq(
       alias('@var', $.tag_name),
-      $._type,
-      optional($.variable_name),
-      optional($.description),
+      choice(
+        // @var int|string[]|array<string, int> description
+        seq($._type, $._description_after_type),
+        // @var int|string[]|array<string, int>
+        seq($._type, $.variable_name),
+        // @var int|string[]|array<string, int> $foo description
+        seq($._type, $.variable_name, $.description),
+      )
     ),
 
     // @deprecated [<Semantic Version>] [<description>]
+    _deprecated_tag: $ => seq(
+      alias('@deprecated', $.tag_name),
+      optional(
+        choice(
+          $.version,
+          $._description_not_version,
+          seq($.version, $.description)
+        )
+      )
+    ),
+
     // @since [<Semantic Version>] [<description>]
+    _since_tag: $ => seq(
+      alias('@since', $.tag_name),
+      choice(
+        $.version,
+        $._description_not_version,
+        seq($.version, $.description)
+      )
+    ),
+
     // @version [<Semantic Version>] [<description>]
     _version_tag: $ => seq(
-      alias(
-        choice(
-          '@deprecated',
-          '@since',
-          '@version'
-        ),
-        $.tag_name
-      ),
-      optional($.version),
-      optional($.description),
+      alias('@version', $.tag_name),
+      choice(
+        $.version,
+        $._description_not_version,
+        seq($.version, $.description)
+      )
     ),
 
     // partial support for phpunit tags
@@ -359,7 +465,7 @@ module.exports = grammar({
     union_type: $ => PHP.rules.union_type,
     variable_name: $ => PHP.rules.variable_name,
 
-    // Match as words as possible, where a word is just a sequence of
+    // Match as many words as possible, where a word is just a sequence of
     // non-whitespace and non-< characters, separated by a space. (The non-<
     // requirement makes sure this regex doesn't consume the <email> field.)
     author_name: $ => /\S+( [^\s<]+)*/,
@@ -368,13 +474,20 @@ module.exports = grammar({
     // anything also doesn't include a closing angle bracket
     email_address: $ => /\S+@\S+\.[^\s>]+/,
 
-    description: $ => seq(
-      repeat1(choice($.text, $.inline_tag)),
+    version: $ => choice(
+      // phpDoc does only recommend semantic versioning but it's not mandatory.
+      // So we gracefully accept every word (i.e. no space included) that
+      // starts with a number + dot as version.
+      /\d+\.[^\s]+/,
+      // Version vectors:
+      //   $Id$
+      //   name-of-vcs: $Id$
+      $._version_vector,
+      seq(/[a-zA-Z-_]+: */, $._version_vector),
+      // Used by PEAR
+      '@package_version@'
     ),
-
-    text: $ => token(prec(-1, /[^@*\s\n\\][^\n*]*/)),
-
-    version: $ => /\d+(\.(\d+|[x*])){0,2}(-\w+)?/,
+    _version_vector: $ => /\$[a-zA-Z_][a-zA-Z0-9-_]*\$/,
 
     uri: $ => /\w+:(\/?\/?)[^\s}]+/,
 

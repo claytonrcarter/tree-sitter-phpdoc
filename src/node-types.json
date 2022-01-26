@@ -83,7 +83,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "inline_tag",
@@ -116,6 +116,25 @@
     }
   },
   {
+    "type": "fqsen",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "namespace_name_as_prefix",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "inline_tag",
     "named": true,
     "fields": {},
@@ -128,7 +147,7 @@
           "named": true
         },
         {
-          "type": "qualified_name",
+          "type": "fqsen",
           "named": true
         },
         {
@@ -298,15 +317,15 @@
           "named": true
         },
         {
+          "type": "fqsen",
+          "named": true
+        },
+        {
           "type": "name",
           "named": true
         },
         {
           "type": "parameters",
-          "named": true
-        },
-        {
-          "type": "qualified_name",
           "named": true
         },
         {
@@ -335,11 +354,6 @@
         }
       ]
     }
-  },
-  {
-    "type": "tag_name",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "type_list",
@@ -384,15 +398,16 @@
     }
   },
   {
+    "type": "version",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "$",
     "named": false
   },
   {
     "type": "(",
-    "named": false
-  },
-  {
-    "type": "()",
     "named": false
   },
   {
@@ -420,27 +435,7 @@
     "named": false
   },
   {
-    "type": "@example",
-    "named": false
-  },
-  {
-    "type": "@license",
-    "named": false
-  },
-  {
-    "type": "@package",
-    "named": false
-  },
-  {
-    "type": "@source",
-    "named": false
-  },
-  {
-    "type": "@subpackage",
-    "named": false
-  },
-  {
-    "type": "@uses",
+    "type": "@package_version@",
     "named": false
   },
   {
@@ -516,15 +511,15 @@
     "named": false
   },
   {
+    "type": "tag_name",
+    "named": true
+  },
+  {
     "type": "text",
     "named": true
   },
   {
     "type": "uri",
-    "named": true
-  },
-  {
-    "type": "version",
     "named": true
   },
   {

@@ -1,86 +1,4 @@
 =====================
-Empty docblock
-=====================
-/**
- *
- */
----
-(document)
-
-=====================
-Docblock w/ no tags
-=====================
-/**
- * Just a comment
- *
- * more comment here
- */
----
-(document (description (text) (text)))
-
-=====================
-Simple tags w/o description
-=====================
-/**
- * @api
- * @filesource
- */
----
-(document
-  (tag (tag_name))
-  (tag (tag_name)))
-
-=====================
-Simple tags w/ optional description
-=====================
-/**
- * @ignore
- * @ignore description
- */
----
-(document
-  (tag (tag_name))
-  (tag (tag_name) (description (text))))
-
-=====================
-Simple tags w/ required descriptions
-=====================
-/**
- * @category description
- * @copyright description
- * @todo description
- */
----
-(document
-  (tag (tag_name) (description (text)))
-  (tag (tag_name) (description (text)))
-  (tag (tag_name) (description (text))))
-
-=====================
-Simple inline tags
-=====================
-/**
- * {@inheritDoc}
- */
----
-(document
-  (description
-    (inline_tag (tag_name))))
-
-=====================
-Curly braces in description don't conflict w/ inline tags
-=====================
-/**
- * Example: `if ($foo) { $bar; }`
- * {@inheritDoc}
- */
----
-(document
-  (description
-    (text)
-    (inline_tag (tag_name))))
-
-=====================
 @author
 =====================
 /**
@@ -130,6 +48,48 @@ Curly braces in description don't conflict w/ inline tags
       (variable_name (name))))
 
 =====================
+@param w/ primitive list type
+=====================
+/**
+ * @param int|string $foo
+ */
+---
+(document
+    (tag
+      (tag_name)
+      (type_list (primitive_type) (primitive_type))
+      (variable_name (name))))
+
+=====================
+@param w/ primitive array type
+=====================
+/**
+ * @param int[] $foo
+ */
+---
+(document
+    (tag
+      (tag_name)
+      (type_list (array_type (primitive_type)))
+      (variable_name (name))))
+
+=====================
+@param w/ primitive array & list type
+=====================
+/**
+ * @param int[]|string[]|float $foo
+ */
+---
+(document
+    (tag
+      (tag_name)
+      (type_list
+        (array_type (primitive_type))
+        (array_type (primitive_type))
+        (primitive_type))
+      (variable_name (name))))
+
+=====================
 @param w/ primitive type & description
 =====================
 /**
@@ -144,11 +104,25 @@ Curly braces in description don't conflict w/ inline tags
       (description (text))))
 
 =====================
+@param w/ primitive list type & description
+=====================
+/**
+ * @param int|string $foo description
+ */
+---
+(document
+    (tag
+      (tag_name)
+      (type_list (primitive_type) (primitive_type))
+      (variable_name (name))
+      (description (text))))
+
+=====================
 @param w/ named type
 =====================
 /**
-* @param MyClass $foo
-*/
+ * @param MyClass $foo
+ */
 ---
 (document
     (tag
@@ -160,8 +134,8 @@ Curly braces in description don't conflict w/ inline tags
 @param w/ qualified type
 =====================
 /**
-* @param MyPackage\MyClass $foo
-*/
+ * @param MyPackage\MyClass $foo
+ */
 ---
 (document
     (tag
@@ -177,8 +151,8 @@ Curly braces in description don't conflict w/ inline tags
 @param w/ qualified type & description
 =====================
 /**
-* @param MyPackage\MyClass $foo bar baz
-*/
+ * @param MyPackage\MyClass $foo bar baz
+ */
 ---
 (document
     (tag
@@ -195,8 +169,8 @@ Curly braces in description don't conflict w/ inline tags
 @param w/ global qualified type
 =====================
 /**
-* @param \MyPackage\MyClass $foo
-*/
+ * @param \MyPackage\MyClass $foo
+ */
 ---
 (document
     (tag
@@ -212,8 +186,8 @@ Curly braces in description don't conflict w/ inline tags
 @param w/ global qualified type & description
 =====================
 /**
-* @param \MyPackage\MyClass $foo bar baz
-*/
+ * @param \MyPackage\MyClass $foo bar baz
+ */
 ---
 (document
     (tag
@@ -255,8 +229,8 @@ Curly braces in description don't conflict w/ inline tags
 @return w/ named type
 =====================
 /**
-* @return MyClass
-*/
+ * @return MyClass
+ */
 ---
 (document
     (tag
@@ -267,8 +241,8 @@ Curly braces in description don't conflict w/ inline tags
 @return w/ qualified type
 =====================
 /**
-* @return MyPackage\MyClass
-*/
+ * @return MyPackage\MyClass
+ */
 ---
 (document
     (tag
@@ -283,8 +257,8 @@ Curly braces in description don't conflict w/ inline tags
 @return w/ qualified type & description
 =====================
 /**
-* @return MyPackage\MyClass foo bar
-*/
+ * @return MyPackage\MyClass foo bar
+ */
 ---
 (document
     (tag
@@ -300,8 +274,8 @@ Curly braces in description don't conflict w/ inline tags
 @return w/ global qualified type
 =====================
 /**
-* @return \MyPackage\MyClass
-*/
+ * @return \MyPackage\MyClass
+ */
 ---
 (document
     (tag
@@ -316,8 +290,8 @@ Curly braces in description don't conflict w/ inline tags
 @return w/ global qualified type & description
 =====================
 /**
-* @return \MyPackage\MyClass foo bar
-*/
+ * @return \MyPackage\MyClass foo bar
+ */
 ---
 (document
     (tag
@@ -333,8 +307,8 @@ Curly braces in description don't conflict w/ inline tags
 @return w/ global qualified type & description w/ backslash
 =====================
 /**
-* @return \MyPackage\MyClass foo\bar
-*/
+ * @return \MyPackage\MyClass foo\bar
+ */
 ---
 (document
     (tag
@@ -480,43 +454,6 @@ Curly braces in description don't conflict w/ inline tags
       (variable_name (name))))
 
 =====================
-Psalm style array types
-=====================
-/**
- * @var array<string, int> $foo
- * @var list<string> $foo
- * @var MyNameSpace\MyClass<string, MyClass> $foo
- */
----
-(document
-  (tag
-    (tag_name)
-    (type_list
-      (array_type
-        array: (primitive_type)
-        key: (primitive_type)
-        value: (primitive_type)))
-    (variable_name (name)))
-  (tag
-    (tag_name)
-    (type_list
-      (array_type
-        array: (primitive_type)
-        value: (primitive_type)))
-    (variable_name (name)))
-  (tag
-    (tag_name)
-    (type_list
-      (array_type
-        array: (named_type
-                 (qualified_name
-                   (namespace_name_as_prefix (namespace_name (name)))
-                   (name)))
-        key: (primitive_type)
-        value: (named_type (name))))
-    (variable_name (name))))
-
-=====================
 @method
 =====================
 /** @method MyNameSpace\MyClass methodName(int $param) */
@@ -535,42 +472,3 @@ Psalm style array types
           (type_list (primitive_type))
           (variable_name (name))))))
 
-=====================
-@deprecated, @since and @version
-=====================
-/**
- * @deprecated
- * @since 1.0
- * @version 1.2.3
- * @version 1.x
- * @version 1.*
- * @version 1.0-beta
- * @version blah blah
- * @since 1.2.3-beta blah blah
- */
----
-(document
-  (tag (tag_name))
-  (tag (tag_name) (version))
-  (tag (tag_name) (version))
-  (tag (tag_name) (version))
-  (tag (tag_name) (version))
-  (tag (tag_name) (version))
-  (tag (tag_name) (description (text)))
-  (tag (tag_name) (version) (description (text))))
-
-=====================
-Basic phpunit tag support
-=====================
-/**
- * @test
- * @dataProvider
- * @group api
- */
----
-(document
-  (tag (tag_name))
-  (tag (tag_name))
-  (tag
-    (tag_name)
-    (description (text))))

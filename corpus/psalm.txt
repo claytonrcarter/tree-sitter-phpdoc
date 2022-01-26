@@ -1,0 +1,52 @@
+=====================
+Psalm style array types w/o variable name
+=====================
+/** @var array<string, int> description */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list
+      (array_type
+        array: (primitive_type)
+        key: (primitive_type)
+        value: (primitive_type)))
+    (description (text))))
+
+=====================
+Psalm style array types
+=====================
+/**
+ * @var array<string, int> $foo
+ * @var list<string> $foo
+ * @var MyNameSpace\MyClass<string, MyClass> $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list
+      (array_type
+        array: (primitive_type)
+        key: (primitive_type)
+        value: (primitive_type)))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type
+        array: (primitive_type)
+        value: (primitive_type)))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type
+        array: (named_type
+                 (qualified_name
+                   (namespace_name_as_prefix (namespace_name (name)))
+                   (name)))
+        key: (primitive_type)
+        value: (named_type (name))))
+    (variable_name (name))))
+
