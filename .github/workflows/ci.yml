@@ -19,4 +19,5 @@ jobs:
         with:
           node-version: 14
       - run: npm install
-      - run: npm test
+      - run: ./node_modules/.bin/tree-sitter generate
+      - run: ./node_modules/.bin/tree-sitter test
