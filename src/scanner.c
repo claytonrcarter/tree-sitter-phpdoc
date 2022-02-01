@@ -93,10 +93,10 @@ static bool scan_variable_name(TSLexer *lexer, bool *has_content) {
   while (true) {
     if (
         lexer->lookahead == '_' ||
-        lexer->lookahead >= 'a' && lexer->lookahead <= 'z' ||
-        lexer->lookahead >= 'A' && lexer->lookahead <= 'Z' ||
-        lexer->lookahead >= 0x00A1 && lexer->lookahead <= 0x00FF ||
-        *has_content && (lexer->lookahead >= '0' && lexer->lookahead <= '9')
+        (lexer->lookahead >= 'a' && lexer->lookahead <= 'z') ||
+        (lexer->lookahead >= 'A' && lexer->lookahead <= 'Z') ||
+        (lexer->lookahead >= 0x00A1 && lexer->lookahead <= 0x00FF) ||
+        (*has_content && lexer->lookahead >= '0' && lexer->lookahead <= '9')
        ) {
       *has_content = true;
       advance(lexer);
