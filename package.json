@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "generate": "./node_modules/.bin/tree-sitter generate",
-    "test": "if [ $(stat -f %m ./grammar.js) -gt $(stat -f %m src/grammar.json) -o $(stat -f %m ./src/scanner.c) -gt $(stat -f %m src/parser.c) ]; then echo Regenerating...; ./node_modules/.bin/tree-sitter generate; fi && ./node_modules/.bin/tree-sitter test"
+    "test": "if [ $(stat -f %m ./grammar.js) -gt $(stat -f %m ./src/grammar.json) -o $(stat -f %m ./src/scanner.c) -gt $(stat -f %m ./src/parser.c) ]; then echo Regenerating...; ./node_modules/.bin/tree-sitter generate; fi && ./node_modules/.bin/tree-sitter test"
   },
   "repository": {
     "type": "git",
