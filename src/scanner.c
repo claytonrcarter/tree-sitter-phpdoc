@@ -70,20 +70,13 @@ static bool skip_whitespace(TSLexer *lexer) {
   return skipped;
 }
 
-static bool skip_single_space(TSLexer *lexer) {
-  if (lexer->lookahead == ' ') {
-    skip(lexer);
-    return true;
-  }
-  return false;
-}
-
 // Returns whether a valid variable name like $ab_cde was detected.
 // Preceding whitespace will be skipped.
 static bool scan_variable_name(TSLexer *lexer, bool *has_content) {
-  skip_whitespace(lexer);
-  if (lexer->lookahead != '$') {
+  if (skip_whitespace(lexer)) {
     *has_content = true;
+  }
+  if (lexer->lookahead != '$') {
     return false;
   }
   advance(lexer);
@@ -187,7 +180,7 @@ static bool scan_version(TSLexer *lexer, bool *has_content) {
   }
 }
 
-static bool scan_text(TSLexer *lexer, bool is_inline, bool *has_content) {
+static bool scan_text(TSLexer *lexer, bool is_inline, bool has_content) {
   while (true) {
     lexer->mark_end(lexer);
 
@@ -196,12 +189,12 @@ static bool scan_text(TSLexer *lexer, bool is_inline, bool *has_content) {
         return false;
 
       case '\n':
-        return *has_content;
+        return has_content;
 
       case '@':
       case '\\':
         // don't allow @ or \\ at text start to not mess with tags and namespaces
-        if (!*has_content) {
+        if (!has_content) {
           return false;
         }
         break;
@@ -210,14 +203,14 @@ static bool scan_text(TSLexer *lexer, bool is_inline, bool *has_content) {
         advance(lexer);
         if (lexer->lookahead == '@') {
           // new inline tag starts, so text node is complete
-          return *has_content;
+          return has_content;
         }
         break;
 
       case '}':
         if (is_inline) {
           // inline tag ends, so text node is complete
-          return *has_content;
+          return has_content;
         }
         break;
 
@@ -230,7 +223,7 @@ static bool scan_text(TSLexer *lexer, bool is_inline, bool *has_content) {
               advance(lexer);
             }
             if (lexer->lookahead == '/') {
-              return *has_content;
+              return has_content;
             }
             break;
           // check for start of inline tag
@@ -238,13 +231,13 @@ static bool scan_text(TSLexer *lexer, bool is_inline, bool *has_content) {
             advance(lexer);
             if (lexer->lookahead == '@') {
               // new inline tag starts, so text node is complete
-              return *has_content;
+              return has_content;
             }
             break;
         }
         break;
     }
-    *has_content = true;
+    has_content = true;
     advance(lexer);
   }
 }
@@ -279,7 +272,7 @@ bool tree_sitter_phpdoc_external_scanner_scan(void *payload, TSLexer *lexer,
     }
     skip(lexer);
 
-    if (valid_symbols[TEXT] && scan_text(lexer, false, &has_content)) {
+    if (valid_symbols[TEXT] && scan_text(lexer, false, has_content)) {
       lexer->result_symbol = TEXT;
       LOG("  scanner detected:text return:1\n");
       return true;
@@ -293,13 +286,13 @@ bool tree_sitter_phpdoc_external_scanner_scan(void *payload, TSLexer *lexer,
         return false;
       }
       skip_whitespace(lexer);
-      if (scan_text(lexer, false, &has_content)) {
+      if (scan_text(lexer, false, has_content)) {
         LOG("  scanner detected:text_after_type return:1\n");
         return true;
       }
     }
 
-    if (valid_symbols[TEXT_IN_INLINE_TAG] && scan_text(lexer, true, &has_content)) {
+    if (valid_symbols[TEXT_IN_INLINE_TAG] && scan_text(lexer, true, has_content)) {
       lexer->result_symbol = TEXT_IN_INLINE_TAG;
       LOG("  scanner detected:text_in_inline_tag return:1\n");
       return true;
@@ -316,12 +309,11 @@ bool tree_sitter_phpdoc_external_scanner_scan(void *payload, TSLexer *lexer,
         LOG("  scanner detected:version return:0\n");
         return false;
       }
-      if (scan_text(lexer, false, &has_content)) {
+      if (scan_text(lexer, false, has_content)) {
         LOG("  scanner detected:text_not_version return:1\n");
         return true;
       }
     }
-
   }
   LOG("scanner detected:nothing return:0\n");
   return false;
