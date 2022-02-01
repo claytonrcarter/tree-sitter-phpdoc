@@ -35,6 +35,7 @@ static bool skip_to_text_start(TSLexer *lexer) {
   bool asterisk_found = false;
   while (true) {
     switch (lexer->lookahead) {
+      case '\r':
       case '\n':
         skip(lexer);
         asterisk_found = false;
@@ -115,6 +116,7 @@ static bool scan_version(TSLexer *lexer, bool *has_content) {
   bool vector_started = false;
   while (true) {
     switch (lexer->lookahead) {
+      case '\r':
       case '\n':
       case '\0':
         return false;
@@ -188,6 +190,7 @@ static bool scan_text(TSLexer *lexer, bool is_inline, bool has_content) {
       case '\0':
         return false;
 
+      case '\r':
       case '\n':
         return has_content;
 
@@ -259,7 +262,7 @@ bool tree_sitter_phpdoc_external_scanner_scan(void *payload, TSLexer *lexer,
       valid_symbols[TEXT_NOT_VERSION]
   ) {
 
-    if (lexer->lookahead == '\n') {
+    if (lexer->lookahead == '\n' || lexer->lookahead == '\r') {
       if (!skip_to_text_start(lexer)) {
         return false;
       }

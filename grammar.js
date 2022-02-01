@@ -13,7 +13,7 @@ module.exports = grammar({
   extras: $ => [
     token(choice(
       // Skip over stars at the beginnings of lines
-      seq(/\n/, /[ \t]*/, repeat(seq('*', /[ \t]*/))),
+      seq(/\r?\n/, /[ \t]*/, repeat(seq('*', /[ \t]*/))),
       /\s/
     ))
   ],

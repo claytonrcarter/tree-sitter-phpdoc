@@ -1829,7 +1829,7 @@
             "members": [
               {
                 "type": "PATTERN",
-                "value": "\\n"
+                "value": "\\r?\\n"
               },
               {
                 "type": "PATTERN",
