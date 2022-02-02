@@ -1,0 +1,32 @@
+=====================
+Tags w/ incomplete implementation
+=====================
+/**
+ * @example
+ * @license
+ * @package
+ * @source
+ * @subpackage
+ * @uses
+ * @example description
+ * @license description
+ * @package description
+ * @source description
+ * @subpackage description
+ * @subpackage description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag (tag_name))
+  (tag (tag_name))
+  (tag (tag_name))
+  (tag (tag_name))
+  (tag (tag_name))
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text)))
+  (tag (tag_name) (description (text))))
+

@@ -1,0 +1,395 @@
+=====================
+@global
+=====================
+/**
+ * @global int $foo
+ * @global MyClass[]|MyNameSpace\MyClass[] $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type (named_type (name)))
+      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (variable_name (name))))
+
+
+
+=====================
+@method w/o description
+=====================
+/**
+ * @method int methodName(int $param)
+ * @method MyClass[]|MyNameSpace\MyClass[] methodName(int $param)
+ */
+---
+(document
+    (tag
+      (tag_name)
+      (type_list (primitive_type))
+      (name)
+      (parameters
+        (parameter
+          (type_list (primitive_type))
+          (variable_name (name)))))
+    (tag
+      (tag_name)
+      (type_list
+        (array_type (named_type (name)))
+        (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+      (name)
+      (parameters
+        (parameter
+          (type_list (primitive_type))
+          (variable_name (name))))))
+
+=====================
+@method w/ description
+=====================
+/**
+ * @method int methodName(int $param) some description
+ * @method MyClass[]|MyNameSpace\MyClass[] methodName(int $param) some description
+ */
+---
+(document
+    (tag
+      (tag_name)
+      (type_list (primitive_type))
+      (name)
+      (parameters
+        (parameter
+          (type_list (primitive_type))
+          (variable_name (name))))
+      (description (text)))
+    (tag
+      (tag_name)
+      (type_list
+        (array_type (named_type (name)))
+        (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+      (name)
+      (parameters
+        (parameter
+          (type_list (primitive_type))
+          (variable_name (name))))
+      (description (text))))
+
+
+
+=====================
+@param w/ varname & w/o description
+=====================
+/**
+ * @param int $foo
+ * @param MyClass[]|MyNameSpace\MyClass[] $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type (named_type (name)))
+      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (variable_name (name))))
+
+=====================
+@param w/ varname & w/ description
+=====================
+/**
+ * @param int $foo some description
+ * @param MyClass[]|MyNameSpace\MyClass[] $foo some description
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name))
+    (description (text)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type (named_type (name)))
+      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (variable_name (name))
+    (description (text))))
+
+
+
+=====================
+@property w/ varname & w/o description
+=====================
+/**
+ * @property int $foo
+ * @property MyClass[]|MyNameSpace\MyClass[] $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type (named_type (name)))
+      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (variable_name (name))))
+
+=====================
+@property w/ varname & w/ description
+=====================
+/**
+ * @property int $foo some description
+ * @property MyClass[]|MyNameSpace\MyClass[] $foo some description
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name))
+    (description (text)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type (named_type (name)))
+      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (variable_name (name))
+    (description (text))))
+
+
+
+=====================
+@property-read w/ varname & w/o description
+=====================
+/**
+ * @property-read int $foo
+ * @property-read MyClass[]|MyNameSpace\MyClass[] $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type (named_type (name)))
+      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (variable_name (name))))
+
+=====================
+@property-read w/ varname & w/ description
+=====================
+/**
+ * @property-read int $foo some description
+ * @property-read MyClass[]|MyNameSpace\MyClass[] $foo some description
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name))
+    (description (text)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type (named_type (name)))
+      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (variable_name (name))
+    (description (text))))
+
+
+
+=====================
+@property-write w/ varname & w/o description
+=====================
+/**
+ * @property-write int $foo
+ * @property-write MyClass[]|MyNameSpace\MyClass[] $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type (named_type (name)))
+      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (variable_name (name))))
+
+=====================
+@property-write w/ varname & w/ description
+=====================
+/**
+ * @property-write int $foo some description
+ * @property-write MyClass[]|MyNameSpace\MyClass[] $foo some description
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name))
+    (description (text)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type (named_type (name)))
+      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (variable_name (name))
+    (description (text))))
+
+
+
+=====================
+@return w/o varname & description
+=====================
+/**
+ * @return int
+ * @return MyClass[]|MyNameSpace\MyClass[]
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (primitive_type)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type (named_type (name)))
+      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))))
+
+=====================
+@return w/o varname & w/ description
+=====================
+/**
+ * @return int some description
+ * @return MyClass[]|MyNameSpace\MyClass[] some description
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (description (text)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type (named_type (name)))
+      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (description (text))))
+
+
+
+=====================
+@throws w/o description
+=====================
+/**
+ * @throws MyClass
+ * @throws MyNameSpace\MyClass
+ */
+---
+(document
+    (tag
+      (tag_name)
+      (type_list (named_type (name))))
+    (tag
+      (tag_name)
+      (type_list (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name))))))
+
+=====================
+@throws w/ description
+=====================
+/**
+ * @throws MyClass some description
+ * @throws MyNameSpace\MyClass some description
+ */
+---
+(document
+    (tag
+      (tag_name)
+      (type_list (named_type (name)))
+      (description (text)))
+    (tag
+      (tag_name)
+      (type_list (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name))))
+      (description (text))))
+
+
+
+=====================
+@var w/o varname & w/ description
+=====================
+/**
+ * @var int some description
+ * @var MyClass[]|MyNameSpace\MyClass[] some description
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (description (text)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type (named_type (name)))
+      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (description (text))))
+
+=====================
+@var w/ varname & w/o description
+=====================
+/**
+ * @var int $foo
+ * @var MyClass[]|MyNameSpace\MyClass[] $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type (named_type (name)))
+      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (variable_name (name))))
+
+=====================
+@var w/ varname & w/ description
+=====================
+/**
+ * @var int $foo some description
+ * @var MyClass[]|MyNameSpace\MyClass[] $foo some description
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name))
+    (description (text)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type (named_type (name)))
+      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (variable_name (name))
+    (description (text))))

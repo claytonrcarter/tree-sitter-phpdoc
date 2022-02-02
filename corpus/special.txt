@@ -1,0 +1,14 @@
+=====================
+@author
+=====================
+/**
+ * @author Foo Bar
+ * @author F. Bar
+ * @author F. Bar <f@bar.com>
+ */
+---
+(document
+  (tag (tag_name) (author_name))
+  (tag (tag_name) (author_name))
+  (tag (tag_name) (author_name) (email_address)))
+

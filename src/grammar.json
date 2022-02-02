@@ -743,7 +743,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "description"
+              "name": "_description_after_type"
             },
             {
               "type": "BLANK"
@@ -897,7 +897,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "description"
+              "name": "_description_after_type"
             },
             {
               "type": "BLANK"

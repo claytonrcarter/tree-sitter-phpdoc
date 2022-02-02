@@ -8,16 +8,99 @@ Empty docblock
 (document)
 
 =====================
-Docblock w/ no tags
+Docblock w/o tags
 =====================
 /**
- * Just a comment
+ * Summary text
  *
- * more comment here with
+ * Description text with
  * $variable and special chars: } { @
+ *     and indented text
+ *
+ * New paragraph
  */
 ---
-(document (description (text) (text) (text)))
+(document
+  (description
+    (text)
+    (text)
+    (text)
+    (text)
+    (text)))
+
+=====================
+Docblock w/ description & tags
+=====================
+/**
+ * Summary text
+ *
+ * Description text with
+ * $variable and special chars: } { @
+ *     and indented text
+ *
+ * @api
+ * @property int $var description
+ *    continued description
+ * @property int $var
+ * description on next line
+ */
+---
+(document
+  (description
+    (text)
+    (text)
+    (text)
+    (text))
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name))
+    (description (text) (text)))
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name))
+    (description (text))))
+
+=====================
+Docblock w/ description & tags w/o separation
+=====================
+/**
+ * Summary text
+ * more text
+ * @api
+ */
+---
+(document
+  (description
+    (text)
+    (text))
+  (tag (tag_name)))
+
+
+
+=====================
+Single line docblock w/o tag
+=====================
+/** Just a comment */
+---
+(document
+  (description (text)))
+
+=====================
+Single line docblock w/ tag
+=====================
+/** @var int $foo just a comment */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name))
+    (description (text))))
+
+
 
 =====================
 Tags w/o description
@@ -25,10 +108,12 @@ Tags w/o description
 /**
  * @api
  * @filesource
+ * @inheritdoc
  * @inheritDoc
  */
 ---
 (document
+  (tag (tag_name))
   (tag (tag_name))
   (tag (tag_name))
   (tag (tag_name)))
@@ -38,11 +123,15 @@ Tags w/ optional description
 =====================
 /**
  * @ignore
+ * @internal
  * @ignore description
+ * @internal description
  */
 ---
 (document
   (tag (tag_name))
+  (tag (tag_name))
+  (tag (tag_name) (description (text)))
   (tag (tag_name) (description (text))))
 
 =====================

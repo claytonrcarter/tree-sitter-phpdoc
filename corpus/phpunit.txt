@@ -1,15 +1,448 @@
 =====================
-Basic phpunit tag support
+@after
 =====================
 /**
- * @test
- * @dataProvider
- * @group api
+ * @after
+ * @after description
  */
 ---
 (document
   (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@afterClass
+=====================
+/**
+ * @afterClass
+ * @afterClass description
+ */
+---
+(document
   (tag (tag_name))
   (tag
     (tag_name)
     (description (text))))
+
+=====================
+@annotation
+=====================
+/**
+ * @annotation
+ * @annotation description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@backupGlobals
+=====================
+/**
+ * @backupGlobals
+ * @backupGlobals description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@backupStaticAttributes
+=====================
+/**
+ * @backupStaticAttributes
+ * @backupStaticAttributes description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@before
+=====================
+/**
+ * @before
+ * @before description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@beforeClass
+=====================
+/**
+ * @beforeClass
+ * @beforeClass description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@codeCoverageIgnore
+=====================
+/**
+ * @codeCoverageIgnore
+ * @codeCoverageIgnore description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@codeCoverageIgnore*
+=====================
+/**
+ * @codeCoverageIgnore*
+ * @codeCoverageIgnore* description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@codeCoverageIgnoreEnd
+=====================
+/**
+ * @codeCoverageIgnoreEnd
+ * @codeCoverageIgnoreEnd description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@codeCoverageIgnoreStart
+=====================
+/**
+ * @codeCoverageIgnoreStart
+ * @codeCoverageIgnoreStart description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@covers
+=====================
+/**
+ * @covers
+ * @covers description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@coversDefaultClass
+=====================
+/**
+ * @coversDefaultClass
+ * @coversDefaultClass description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@coversDefaultClass to shorten annotations
+=====================
+/**
+ * @coversDefaultClass to shorten annotations
+ * @coversDefaultClass to shorten annotations description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@coversNothing
+=====================
+/**
+ * @coversNothing
+ * @coversNothing description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@dataProvider
+=====================
+/**
+ * @dataProvider
+ * @dataProvider description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@depends
+=====================
+/**
+ * @depends
+ * @depends description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@depends annotation to express dependencies
+=====================
+/**
+ * @depends annotation to express dependencies
+ * @depends annotation to express dependencies description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@doesNotPerformAssertions
+=====================
+/**
+ * @doesNotPerformAssertions
+ * @doesNotPerformAssertions description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@group
+=====================
+/**
+ * @group
+ * @group description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@large
+=====================
+/**
+ * @large
+ * @large description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@medium
+=====================
+/**
+ * @medium
+ * @medium description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@preserveGlobalState
+=====================
+/**
+ * @preserveGlobalState
+ * @preserveGlobalState description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@requires
+=====================
+/**
+ * @requires
+ * @requires description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@requires usages
+=====================
+/**
+ * @requires usages
+ * @requires usages description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@runInSeparateProcess
+=====================
+/**
+ * @runInSeparateProcess
+ * @runInSeparateProcess description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@runTestsInSeparateProcesses
+=====================
+/**
+ * @runTestsInSeparateProcesses
+ * @runTestsInSeparateProcesses description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@small
+=====================
+/**
+ * @small
+ * @small description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@test
+=====================
+/**
+ * @test
+ * @test description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@testWith
+=====================
+/**
+ * @testWith
+ * @testWith description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@testdox
+=====================
+/**
+ * @testdox
+ * @testdox description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+
+=====================
+@ticket
+=====================
+/**
+ * @ticket
+ * @ticket description
+ */
+---
+(document
+  (tag (tag_name))
+  (tag
+    (tag_name)
+    (description (text))))
+

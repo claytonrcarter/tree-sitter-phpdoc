@@ -1,10 +1,10 @@
 const PHP = require('tree-sitter-php/grammar');
 
 // PHPDoc reference: https://docs.phpdoc.org/3.0/guide/references/phpdoc/index.html
-// TODO array return types https://docs.phpdoc.org/3.0/guide/references/phpdoc/types.html#arrays
 // PHPDoc tags: https://docs.phpdoc.org/3.0/guide/references/phpdoc/tags/index.html#tag-reference
 // PHPDoc docs appear to use these conventions
-// TODO inline tags in inline tags (allowed for @internal)
+//
+// TODO array return types https://docs.phpdoc.org/3.0/guide/references/phpdoc/types.html#arrays
 //   @verbatimElement [required element] [<optional element>]
 
 module.exports = grammar({
@@ -47,8 +47,17 @@ module.exports = grammar({
   //      )
   externals: $ => [
     $.text,
+
+    // Must not start with $variable
     $._text_after_type,
+
+    // Text ends at }
     $._text_in_inline_tag,
+
+    // Must not start with
+    //   \d+\.
+    //   '@package_version@'
+    //   'git: $Id$'   (or any other form of 'name-of-vcs: $vector$')
     $._text_not_version,
   ],
 
@@ -293,7 +302,7 @@ module.exports = grammar({
     _return_tag: $ => seq(
       alias('@return', $.tag_name),
       $._type,
-      optional($.description),
+      optional($._description_after_type),
     ),
 
     // https://docs.phpdoc.org/3.0/guide/references/phpdoc/tags/see.html
@@ -329,7 +338,7 @@ module.exports = grammar({
     _throws_tag: $ => seq(
       alias('@throws', $.tag_name),
       $._type,
-      optional($.description),
+      optional($._description_after_type),
     ),
 
     // https://docs.phpdoc.org/3.0/guide/references/phpdoc/tags/var.html

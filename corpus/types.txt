@@ -1,0 +1,221 @@
+=====================
+Primitive types
+=====================
+/**
+ * @var array $foo
+ * @var callable $foo
+ * @var iterable $foo
+ * @var bool $foo
+ * @var float $foo
+ * @var int $foo
+ * @var string $foo
+ * @var void $foo
+ * @var mixed $foo
+ * @var static $foo
+ * @var false $foo
+ * @var null $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list (primitive_type))
+    (variable_name (name))))
+
+=====================
+Namespaced types
+=====================
+/**
+ * @var MyClass $foo
+ * @var \MyClass $foo
+ * @var My\Namespace\MyClass $foo
+ * @var \My\Namespace\MyClass $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (named_type (name)))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix) (name))))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix (namespace_name (name) (name)))
+          (name))))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix (namespace_name (name) (name)))
+          (name))))
+    (variable_name (name))))
+
+=====================
+Array types
+=====================
+/**
+ * @var int[] $foo
+ * @var MyClass[] $foo
+ * @var \MyClass[] $foo
+ * @var My\Namespace\MyClass[] $foo
+ * @var \My\Namespace\MyClass[] $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list (array_type (primitive_type)))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list (array_type (named_type (name))))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type
+        (named_type (qualified_name (namespace_name_as_prefix) (name)))))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+    (array_type
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name)))))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name_as_prefix
+              (namespace_name (name) (name)))
+            (name)))))
+    (variable_name (name))))
+
+=====================
+List types
+=====================
+/**
+ * @var int|float|null $foo
+ * @var MyClass|MyNameSpace\MyClass $foo
+ * @var \MyNameSpace\MyClass|MyClass $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list
+      (primitive_type)
+      (primitive_type)
+      (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (named_type (name))
+      (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name))))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))
+      (named_type (name)))
+    (variable_name (name))))
+
+=====================
+Combined list & array types
+=====================
+/**
+ * @var int[]|float[]|null $foo
+ * @var MyClass[]|MyNameSpace\MyClass[] $foo
+ * @var \MyNameSpace\MyClass[]|MyClass[] $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list
+      (array_type (primitive_type))
+      (array_type (primitive_type))
+      (primitive_type))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type (named_type (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name_as_prefix (namespace_name (name)))
+            (name)))))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (type_list
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name_as_prefix (namespace_name (name)))
+            (name))))
+      (array_type (named_type (name))))
+    (variable_name (name))))
