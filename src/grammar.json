@@ -772,31 +772,8 @@
               "name": "uri"
             },
             {
-              "type": "ALIAS",
-              "content": {
-                "type": "SYMBOL",
-                "name": "qualified_name"
-              },
-              "named": true,
-              "value": "fqsen"
-            },
-            {
-              "type": "ALIAS",
-              "content": {
-                "type": "SEQ",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "qualified_name"
-                  },
-                  {
-                    "type": "STRING",
-                    "value": "()"
-                  }
-                ]
-              },
-              "named": true,
-              "value": "fqsen"
+              "type": "SYMBOL",
+              "name": "fqsen"
             }
           ]
         },
@@ -834,31 +811,8 @@
               "name": "uri"
             },
             {
-              "type": "ALIAS",
-              "content": {
-                "type": "SYMBOL",
-                "name": "qualified_name"
-              },
-              "named": true,
-              "value": "fqsen"
-            },
-            {
-              "type": "ALIAS",
-              "content": {
-                "type": "SEQ",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "qualified_name"
-                  },
-                  {
-                    "type": "STRING",
-                    "value": "()"
-                  }
-                ]
-              },
-              "named": true,
-              "value": "fqsen"
+              "type": "SYMBOL",
+              "name": "fqsen"
             }
           ]
         },
@@ -1715,7 +1669,88 @@
     },
     "uri": {
       "type": "PATTERN",
-      "value": "\\w+:(\\/?\\/?)[^\\s}]+"
+      "value": "https?:\\/\\/[^\\s}]+"
+    },
+    "fqsen": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "named_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "variable_name"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "name"
+            },
+            {
+              "type": "STRING",
+              "value": "()"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "named_type"
+            },
+            {
+              "type": "STRING",
+              "value": "::"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "name"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "named_type"
+            },
+            {
+              "type": "STRING",
+              "value": "::"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "name"
+            },
+            {
+              "type": "STRING",
+              "value": "()"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "named_type"
+            },
+            {
+              "type": "STRING",
+              "value": "::"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "variable_name"
+            }
+          ]
+        }
+      ]
     },
     "parameters": {
       "type": "SEQ",

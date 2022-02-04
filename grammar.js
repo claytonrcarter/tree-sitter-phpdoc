@@ -319,8 +319,7 @@ module.exports = grammar({
       alias('@see', $.tag_name),
       choice(
         $.uri,
-        alias($.qualified_name, $.fqsen),
-        alias(seq($.qualified_name, '()'), $.fqsen),
+        $.fqsen
       ),
       optional($.description)
     ),
@@ -328,8 +327,7 @@ module.exports = grammar({
       alias('@see', $.tag_name),
       choice(
         $.uri,
-        alias($.qualified_name, $.fqsen),
-        alias(seq($.qualified_name, '()'), $.fqsen),
+        $.fqsen
       ),
       optional($._description_in_inline_tag)
     ),
@@ -498,7 +496,16 @@ module.exports = grammar({
     ),
     _version_vector: $ => /\$[a-zA-Z_][a-zA-Z0-9-_]*\$/,
 
-    uri: $ => /\w+:(\/?\/?)[^\s}]+/,
+    uri: $ => /https?:\/\/[^\s}]+/,
+
+    fqsen: $ => choice(
+      $.named_type,
+      $.variable_name,
+      seq($.name, '()'),
+      seq($.named_type, '::', $.name),
+      seq($.named_type, '::', $.name, '()'),
+      seq($.named_type, '::', $.variable_name)
+    ),
 
     parameters: $ => seq(
       '(',

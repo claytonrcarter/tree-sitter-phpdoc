@@ -72,7 +72,6 @@
 
 
 
-
 =====================
 @see w/ URI
 =====================
@@ -146,24 +145,376 @@
   (tag (tag_name) (uri) (description (text) (text))))
 
 
+
 =====================
-@see sw/ FQSEN
+@see w/ FQSEN for classnames
 =====================
 /**
  * @see \MyClass
- * @see \Other\Class
+ * @see \Vendor\Package\ClassName
+ * @see MyClass
+ * @see Vendor\Package\ClassName
  */
 ---
 (document
   (tag
     (tag_name)
     (fqsen
-      (namespace_name_as_prefix)
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix)
+          (name)))))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name)))))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type (name))))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name))))))
+
+=====================
+@see w/ FQSEN for methods
+=====================
+/**
+ * @see some_function()
+ * @see \MyClass::some_function()
+ * @see \Vendor\Package\ClassName::some_function()
+ * @see MyClass::some_function()
+ * @see Vendor\Package\ClassName::some_function()
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (fqsen (name)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix)
+          (name)))
       (name)))
   (tag
     (tag_name)
     (fqsen
-      (namespace_name_as_prefix
-        (namespace_name (name)))
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name)))
+      (name)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type (name))
+      (name)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name)))
       (name))))
+
+=====================
+@see w/ FQSEN for properties
+=====================
+/**
+ * @see $some_variable
+ * @see \MyClass::$someProp
+ * @see \Vendor\Package\ClassName::$someProp
+ * @see MyClass::$someProp
+ * @see Vendor\Package\ClassName::$someProp
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (fqsen
+      (variable_name (name))))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix)
+          (name)))
+      (variable_name (name))))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name)))
+      (variable_name (name))))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type (name))
+      (variable_name (name))))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name)))
+      (variable_name (name)))))
+
+=====================
+@see w/ FQSEN for class constants
+=====================
+/**
+ * @see \MyClass::SOME_CONSTANT
+ * @see \Vendor\Package\ClassName::SOME_CONSTANT
+ * @see MyClass::SOME_CONSTANT
+ * @see Vendor\Package\ClassName::SOME_CONSTANT
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix)
+          (name)))
+      (name)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name)))
+      (name)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type (name))
+      (name)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name)))
+      (name))))
+
+=====================
+@see w/ FQSEN for classnames w/ description
+=====================
+/**
+ * @see \MyClass some description
+ * @see \Vendor\Package\ClassName some description
+ * @see MyClass some description
+ * @see Vendor\Package\ClassName some description
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix)
+          (name))))
+    (description (text)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name))))
+    (description (text)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type (name)))
+    (description (text)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name))))
+    (description (text))))
+
+=====================
+@see w/ FQSEN for methods w/ description
+=====================
+/**
+ * @see some_function() some description
+ * @see \MyClass::some_function() some description
+ * @see \Vendor\Package\ClassName::some_function() some description
+ * @see MyClass::some_function() some description
+ * @see Vendor\Package\ClassName::some_function() some description
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (fqsen (name))
+    (description (text)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix)
+          (name)))
+      (name))
+    (description (text)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name)))
+      (name))
+    (description (text)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type (name))
+      (name))
+    (description (text)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name)))
+      (name))
+    (description (text))))
+
+=====================
+@see w/ FQSEN for properties w/ description
+=====================
+/**
+ * @see $some_variable some description
+ * @see \MyClass::$someProp some description
+ * @see \Vendor\Package\ClassName::$someProp some description
+ * @see MyClass::$someProp some description
+ * @see Vendor\Package\ClassName::$someProp some description
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (fqsen
+      (variable_name (name)))
+    (description (text)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix)
+          (name)))
+      (variable_name (name)))
+    (description (text)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name)))
+      (variable_name (name)))
+    (description (text)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type (name))
+      (variable_name (name)))
+    (description (text)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name)))
+      (variable_name (name)))
+    (description (text))))
+
+=====================
+@see w/ FQSEN for class constants w/ description
+=====================
+/**
+ * @see \MyClass::SOME_CONSTANT some description
+ * @see \Vendor\Package\ClassName::SOME_CONSTANT some description
+ * @see MyClass::SOME_CONSTANT some description
+ * @see Vendor\Package\ClassName::SOME_CONSTANT some description
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix)
+          (name)))
+      (name))
+    (description (text)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name)))
+      (name))
+    (description (text)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type (name))
+      (name))
+    (description (text)))
+  (tag
+    (tag_name)
+    (fqsen
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name)))
+      (name))
+    (description (text))))
 
