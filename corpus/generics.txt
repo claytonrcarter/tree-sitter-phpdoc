@@ -1,0 +1,87 @@
+=====================
+Generic template
+=====================
+/**
+ * @template T
+ * @template T of MyNameSpace\MyClass
+ * @psalm-template T
+ * @phpstan-template T
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (named_type (name))))
+  (tag
+    (tag_name)
+      (type_list (named_type (name)))
+      (type_list (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+  (tag
+    (tag_name)
+      (type_list (named_type (name))))
+  (tag
+    (tag_name)
+      (type_list (named_type (name)))))
+=====================
+Generic template implements interface
+=====================
+/**
+ * @implements MyInterface<int>
+ * @template-implements MyInterface<MyClass>
+ * @template-implements MyInterface<MyClass, MyOtherClass>
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list
+        (array_type (named_type (name)) (primitive_type))))
+  (tag
+    (tag_name)
+      (type_list
+        (array_type (named_type (name)) (named_type (name)))))
+  (tag
+    (tag_name)
+      (type_list
+        (array_type (named_type (name)) (named_type (name)) (named_type (name))))))
+=====================
+Generic template extends class
+=====================
+/**
+ * @extends MyInterface<int>
+ * @template-extends MyInterface<MyClass>
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (array_type (named_type (name)) (primitive_type))))
+  (tag
+    (tag_name)
+      (type_list (array_type (named_type (name)) (named_type (name))))))
+=====================
+Generic template use traits
+=====================
+/**
+ * @use MyTrait<int>
+ * @template-use MyTrait<MyClass>
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (array_type (named_type (name)) (primitive_type))))
+  (tag
+    (tag_name)
+      (type_list (array_type (named_type (name)) (named_type (name))))))
+=====================
+Generic template class-string
+=====================
+/**
+ * @var class-string<MyClass> $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (pseudo_type (named_type (name)))) (variable_name (name))))

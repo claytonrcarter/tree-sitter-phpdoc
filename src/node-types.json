@@ -139,6 +139,29 @@
     }
   },
   {
+    "type": "generic_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "type_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "inline_tag",
     "named": true,
     "fields": {},
@@ -173,6 +196,10 @@
       "multiple": false,
       "required": true,
       "types": [
+        {
+          "type": "generic_type",
+          "named": true
+        },
         {
           "type": "name",
           "named": true
@@ -275,6 +302,22 @@
     "type": "primitive_type",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "pseudo_type",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "named_type",
+            "named": true
+          }
+        ]
+      }
+    }
   },
   {
     "type": "qualified_name",
@@ -382,6 +425,10 @@
         {
           "type": "primitive_type",
           "named": true
+        },
+        {
+          "type": "pseudo_type",
+          "named": true
         }
       ]
     }
@@ -475,6 +522,10 @@
     "named": false
   },
   {
+    "type": "class-string",
+    "named": false
+  },
+  {
     "type": "default_value",
     "named": true
   },
@@ -512,6 +563,10 @@
   },
   {
     "type": "null",
+    "named": false
+  },
+  {
+    "type": "of",
     "named": false
   },
   {

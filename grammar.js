@@ -22,6 +22,8 @@ module.exports = grammar({
     [$.primitive_type, $.static],
     [$.namespace_name],
     [$.namespace_name_as_prefix],
+    [$.named_type, $.generic_type],
+    [$._type_argument_list]
   ],
 
   // Note:
@@ -140,8 +142,12 @@ module.exports = grammar({
       $._phpunit_tag,
 
       // TODO eliminate this
-      $._tag_with_incomplete_implementation
+      $._tag_with_incomplete_implementation,
 
+      $._generic_template_tag,
+      $._generic_implements_tag,
+      $._generic_extends_tag,
+      $._generic_use_tag
     ),
 
     inline_tag: $ => seq(
@@ -312,7 +318,7 @@ module.exports = grammar({
     // https://docs.phpdoc.org/classes/phpDocumentor-Descriptor-DescriptorAbstract.html#property_fqsen
     // "Fully Qualified Structural Element Name; the FQCN including method, property or constant name"
     // So FQSEN must always use FQCN (fully qualified class name). But the examples don't:
-    //   @see number_of() 
+    //   @see number_of()
     //   @see MyClass::$items
     //   @see MyClass::setItems()
     _see_tag: $ => seq(
@@ -385,6 +391,51 @@ module.exports = grammar({
       )
     ),
 
+    // @template [Type] <of [Type]>
+    // @psalm-template [Type] <of [Type]>
+    // @phpstan-template [Type] <of [Type]>
+    _generic_template_tag: $ => seq(
+      alias(choice(
+        '@template',
+        '@psalm-template',
+        '@phpstan-template'
+      ), $.tag_name),
+      choice(
+        $._type,
+        seq($._type, 'of', $._type),
+      )
+    ),
+
+    // @implements [Type]
+    // @template-implements [Type]
+    _generic_implements_tag: $ => seq(
+      alias(choice(
+        '@implements',
+        '@template-implements'
+      ), $.tag_name),
+      $._type,
+    ),
+
+    // @extends [Type]
+    // @template-extends [Type]
+    _generic_extends_tag: $ => seq(
+      alias(choice(
+        '@extends',
+        '@template-extends'
+      ), $.tag_name),
+      $._type,
+    ),
+
+    // @use [Type]
+    // @template-use [Type]
+    _generic_use_tag: $ => seq(
+      alias(choice(
+        '@use',
+        '@template-use'
+      ), $.tag_name),
+      $._type,
+    ),
+
     // partial support for phpunit tags
     // TODO id the "core" tags and flesh out their support (ie some tags take
     // no text, some take types, etc)
@@ -438,6 +489,7 @@ module.exports = grammar({
     // aren't grouped under a parent node) or array types (which are)
     _types: $ => choice(
       $._regular_types,
+      $.pseudo_type,
       alias($._phpdoc_array_types, $.array_type),
       alias($._psalm_generic_array_types, $.array_type),
       alias($._psalm_list_array_types, $.array_type)
@@ -462,8 +514,28 @@ module.exports = grammar({
       ">"
     ),
 
+    pseudo_type: $ => choice(
+      seq(
+        'class-string',
+        "<",
+        field('value', $.named_type),
+        ">"
+      )
+    ),
+
+    generic_type: $ => seq(PHP.rules.named_type, $._type_argument_list),
+
+    _type_argument_list: $ => seq(
+      '<',
+      choice(
+        repeat(','),
+        sep(',', $._type),
+      ),
+      '>'
+    ),
+
     name: $ => PHP.rules.name,
-    named_type: $ => PHP.rules.named_type,
+    named_type: $ => choice(PHP.rules.named_type, $.generic_type),
     namespace_name: $ => PHP.rules.namespace_name,
     namespace_name_as_prefix: $ => PHP.rules.namespace_name_as_prefix,
     optional_type: $ => PHP.rules.optional_type,
