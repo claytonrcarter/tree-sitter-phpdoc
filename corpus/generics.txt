@@ -74,14 +74,3 @@ Generic template use traits
   (tag
     (tag_name)
       (type_list (array_type (named_type (name)) (named_type (name))))))
-=====================
-Generic template class-string
-=====================
-/**
- * @var class-string<MyClass> $foo
- */
----
-(document
-  (tag
-    (tag_name)
-      (type_list (pseudo_type (named_type (name)))) (variable_name (name))))

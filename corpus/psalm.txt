@@ -50,3 +50,543 @@ Psalm style array types
         value: (named_type (name))))
     (variable_name (name))))
 
+=====================
+Psalm scalar class-string type
+=====================
+/**
+ * @var class-string $foo
+ * @var class-string<MyClass> $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (primitive_type)) (variable_name (name)))
+  (tag
+    (tag_name)
+      (type_list (primitive_type (named_type (name)))) (variable_name (name))))
+
+=====================
+Psalm scalar interface-string type
+=====================
+/**
+ * @var interface-string $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (primitive_type)) (variable_name (name))))
+
+=====================
+Psalm scalar positive-int type
+=====================
+/**
+ * @var positive-int $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (primitive_type)) (variable_name (name))))
+
+=====================
+Psalm scalar trait-string type
+=====================
+/**
+ * @var trait-string $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (primitive_type)) (variable_name (name))))
+
+=====================
+Psalm scalar enum-string type
+=====================
+/**
+ * @var enum-string $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (primitive_type)) (variable_name (name))))
+
+=====================
+Psalm scalar callable-string type
+=====================
+/**
+ * @var callable-string $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (primitive_type)) (variable_name (name))))
+
+=====================
+Psalm scalar numeric-string type
+=====================
+/**
+ * @var numeric-string $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (primitive_type)) (variable_name (name))))
+
+=====================
+Psalm scalar literal-string type
+=====================
+/**
+ * @var literal-string $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (primitive_type)) (variable_name (name))))
+
+=====================
+Psalm scalar lowercase-string type
+=====================
+/**
+ * @var lowercase-string $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (primitive_type)) (variable_name (name))))
+
+=====================
+Psalm scalar non-empty-string type
+=====================
+/**
+ * @var non-empty-string $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (primitive_type)) (variable_name (name))))
+
+=====================
+Psalm scalar non-empty-lowercase-string type
+=====================
+/**
+ * @var non-empty-lowercase-string $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (primitive_type)) (variable_name (name))))
+
+=====================
+Psalm @psalm-consistent-constructor tag
+=====================
+/**
+ * @psalm-consistent-constructor
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-consistent-templates tag
+=====================
+/**
+ * @psalm-consistent-templates
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @param-out tag
+=====================
+/**
+ * @param-out MyClass $foo
+ * @param-out int $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (named_type (name))) (variable_name (name)))
+  (tag
+    (tag_name)
+      (type_list (primitive_type)) (variable_name (name))))
+
+=====================
+Psalm @psalm-param-out tag
+=====================
+/**
+ * @psalm-param-out MyClass $foo
+ * @psalm-param-out int $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (named_type (name))) (variable_name (name)))
+  (tag
+    (tag_name)
+      (type_list (primitive_type)) (variable_name (name))))
+
+=====================
+Psalm @psalm-var tag
+=====================
+/**
+ * @psalm-var
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-param tag
+=====================
+/**
+ * @psalm-param
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-param tag
+=====================
+/**
+ * @psalm-return
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-property tag
+=====================
+/**
+ * @psalm-property
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-property-read tag
+=====================
+/**
+ * @psalm-property-read
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-property-write tag
+=====================
+/**
+ * @psalm-property-write
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-method tag
+=====================
+/**
+ * @psalm-method
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-ignore-var tag
+=====================
+/**
+ * @psalm-ignore-var
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-assert tag
+=====================
+/**
+ * @psalm-assert MyClass $foo
+ * @psalm-assert null $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (named_type (name))) (variable_name (name)))
+  (tag
+    (tag_name)
+      (type_list (primitive_type)) (variable_name (name))))
+
+=====================
+Psalm @psalm-assert-if-true tag
+=====================
+/**
+ * @psalm-assert-if-true MyClass $foo
+ * @psalm-assert-if-true int $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (named_type (name))) (variable_name (name)))
+  (tag
+    (tag_name)
+      (type_list (primitive_type)) (variable_name (name))))
+
+=====================
+Psalm @psalm-assert-if-false tag
+=====================
+/**
+ * @psalm-assert-if-false MyClass $foo
+ * @psalm-assert-if-false int $foo
+ */
+---
+(document
+  (tag
+    (tag_name)
+      (type_list (named_type (name))) (variable_name (name)))
+  (tag
+    (tag_name)
+      (type_list (primitive_type)) (variable_name (name))))
+
+=====================
+Psalm @psalm-if-this-is tag
+=====================
+/**
+ * @psalm-if-this-is
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-this-out tag
+=====================
+/**
+ * @psalm-this-out
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-ignore-nullable-return tag
+=====================
+/**
+ * @psalm-ignore-nullable-return
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-ignore-falsable-return tag
+=====================
+/**
+ * @psalm-ignore-falsable-return
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-seal-properties tag
+=====================
+/**
+ * @psalm-seal-properties
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-readonly tag
+=====================
+/**
+ * @psalm-readonly
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-mutation-free tag
+=====================
+/**
+ * @psalm-mutation-free
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-external-mutation-free tag
+=====================
+/**
+ * @psalm-external-mutation-free
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-immutable tag
+=====================
+/**
+ * @psalm-immutable
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-pure tag
+=====================
+/**
+ * @psalm-pure
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-allow-private-mutation tag
+=====================
+/**
+ * @psalm-allow-private-mutation
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-readonly-allow-private-mutation tag
+=====================
+/**
+ * @psalm-readonly-allow-private-mutation
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-trace tag
+=====================
+/**
+ * @psalm-trace $variable
+ */
+---
+(document
+  (tag (tag_name) (variable_name (name))))
+
+=====================
+Psalm @no-named-arguments tag
+=====================
+/**
+ * @no-named-arguments
+ */
+---
+(document
+  (tag (tag_name)))
+
+=====================
+Psalm @psalm-suppress tag
+=====================
+/**
+ * @psalm-suppress SomeIssueName
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (named_type (name))))
+
+=====================
+Psalm @psalm-internal tag
+=====================
+/**
+ * @psalm-internal Foo
+ * @psalm-internal MyNameSpace\MyClass
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (named_type (name)))
+  (tag
+    (tag_name)
+    (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+
+=====================
+Psalm @psalm-import-type tag
+=====================
+/**
+ * @psalm-import-type MyClass from MyClassBase
+ * @psalm-import-type MyClass from MyClassBase as MyClassAlias
+ * @psalm-import-type MyNameSpace\MyClass from MyNameSpace\MyClassBase as MyClassAlias
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (named_type (name))
+    (named_type (name)))
+  (tag
+    (tag_name)
+    (named_type (name))
+    (named_type (name))
+    (name))
+  (tag
+    (tag_name)
+    (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))
+    (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))
+    (name)))
+
+=====================
+Psalm @psalm-require-implements tag
+=====================
+/**
+ * @psalm-require-implements Foo
+ * @psalm-require-implements MyNameSpace\MyClass
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (named_type (name)))
+  (tag
+    (tag_name)
+    (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+
+=====================
+Psalm @psalm-require-extends tag
+=====================
+/**
+ * @psalm-require-extends Foo
+ * @psalm-require-extends MyNameSpace\MyClass
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (named_type (name)))
+  (tag
+    (tag_name)
+    (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))

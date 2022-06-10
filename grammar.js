@@ -147,7 +147,9 @@ module.exports = grammar({
       $._generic_template_tag,
       $._generic_implements_tag,
       $._generic_extends_tag,
-      $._generic_use_tag
+      $._generic_use_tag,
+
+      $._psalm_tag
     ),
 
     inline_tag: $ => seq(
@@ -483,13 +485,94 @@ module.exports = grammar({
       optional($.description),
     ),
 
+    _psalm_tag: $ => choice(
+      alias(
+        choice(
+          '@psalm-consistent-constructor',
+          '@psalm-consistent-templates',
+          '@psalm-var',
+          '@psalm-param',
+          '@psalm-return',
+          '@psalm-property',
+          '@psalm-property-read',
+          '@psalm-property-write',
+          '@psalm-method',
+          '@psalm-ignore-var',
+          '@psalm-if-this-is',
+          '@psalm-this-out',
+          '@psalm-ignore-nullable-return',
+          '@psalm-ignore-falsable-return',
+          '@psalm-seal-properties',
+          '@psalm-readonly',
+          '@readonly',
+          '@psalm-mutation-free',
+          '@psalm-external-mutation-free',
+          '@psalm-immutable',
+          '@psalm-pure',
+          '@psalm-allow-private-mutation',
+          '@psalm-readonly-allow-private-mutation',
+          '@psalm-trace',
+          '@no-named-arguments'
+        ),
+        $.tag_name
+      ),
+      // @psalm-trace [name]
+      seq(
+        alias(choice(
+          '@psalm-trace'
+        ), $.tag_name),
+        $.variable_name
+      ),
+      seq(
+        alias(choice(
+          '@param-out',
+          '@psalm-param-out'
+        ), $.tag_name),
+        $._type,
+        $.variable_name
+      ),
+      // @psalm-asset[<-if-true|-if-false] [Type] [name|expression]
+      seq(
+        alias(choice(
+          '@psalm-assert',
+          '@psalm-assert-if-true',
+          '@psalm-assert-if-false',
+        ), $.tag_name),
+        $._type,
+        choice(
+          $.variable_name,
+          // TODO allow PHP expression
+        )
+      ),
+      //TODO implement @psalm-taint-* see https://psalm.dev/docs/security_analysis/annotations/
+      seq(
+        alias('@psalm-import-type', $.tag_name),
+        $.named_type,
+        'from',
+        $.named_type,
+        optional(PHP.rules.namespace_aliasing_clause)
+      ),
+      // @psalm-suppress [Type]
+      // @psalm-internal [Type]
+      // @psalm-require-[extends|implements] [Type]
+      seq(
+        alias(choice(
+          '@psalm-suppress',
+          '@psalm-internal',
+          '@psalm-require-extends',
+          '@psalm-require-implements'
+        ), $.tag_name),
+        $.named_type
+      ),
+    ),
+
     // PHP.rules._type creates an alias for $.type_list
     _type: $ => PHP.rules._type,
     // union_type uses _types, so we override it to be "regular" types (which
     // aren't grouped under a parent node) or array types (which are)
     _types: $ => choice(
       $._regular_types,
-      $.pseudo_type,
+      alias($._psalm_scalar_type, $.primitive_type),
       alias($._phpdoc_array_types, $.array_type),
       alias($._psalm_generic_array_types, $.array_type),
       alias($._psalm_list_array_types, $.array_type)
@@ -514,13 +597,21 @@ module.exports = grammar({
       ">"
     ),
 
-    pseudo_type: $ => choice(
+    _psalm_scalar_type: $ => choice(
       seq(
         'class-string',
-        "<",
-        field('value', $.named_type),
-        ">"
-      )
+        optional($._type_argument_named_type)
+      ),
+      'interface-string',
+      'positive-int',
+      'trait-string',
+      'enum-string',
+      'callable-string',
+      'numeric-string',
+      'literal-string',
+      'lowercase-string',
+      'non-empty-string',
+      'non-empty-lowercase-string'
     ),
 
     generic_type: $ => seq(PHP.rules.named_type, $._type_argument_list),
@@ -531,6 +622,12 @@ module.exports = grammar({
         repeat(','),
         sep(',', $._type),
       ),
+      '>'
+    ),
+
+    _type_argument_named_type: $ => seq(
+      '<',
+      $.named_type,
       '>'
     ),
 
