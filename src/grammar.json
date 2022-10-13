@@ -2546,6 +2546,7 @@
       "_type_argument_list"
     ]
   ],
+  "precedences": [],
   "externals": [
     {
       "type": "SYMBOL",

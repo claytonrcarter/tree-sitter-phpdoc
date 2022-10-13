@@ -2,7 +2,7 @@
   "name": "tree-sitter-phpdoc",
   "version": "0.1.0",
   "description": "PHPDoc grammar for tree-sitter",
-  "main": "index.js",
+  "main": "bindings/node",
   "scripts": {
     "generate": "./node_modules/.bin/tree-sitter generate",
     "test": "if [ $(stat -f %m ./grammar.js) -gt $(stat -f %m ./src/grammar.json) -o $(stat -f %m ./src/scanner.c) -gt $(stat -f %m ./src/parser.c) ]; then echo Regenerating...; ./node_modules/.bin/tree-sitter generate; fi && ./node_modules/.bin/tree-sitter test"
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/claytonrcarter/tree-sitter-phpdoc#readme",
   "devDependencies": {
-    "tree-sitter-cli": "^0.17.3",
+    "tree-sitter-cli": "^0.20.7",
     "tree-sitter-php": "github:tree-sitter/tree-sitter-php#50c6951"
   },
   "dependencies": {
