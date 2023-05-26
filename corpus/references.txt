@@ -518,3 +518,42 @@
       (name))
     (description (text))))
 
+=====================
+@mixin
+=====================
+/**
+ * @mixin \MyClass
+ * @mixin \Vendor\Package\ClassName
+ * @mixin MyClass
+ * @mixin Vendor\Package\ClassName
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix)
+          (name)))))
+  (tag
+    (tag_name)
+    (type_list
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name)))))
+  (tag
+    (tag_name)
+    (type_list
+      (named_type (name))))
+  (tag
+    (tag_name)
+    (type_list
+      (named_type
+        (qualified_name
+          (namespace_name_as_prefix
+            (namespace_name (name) (name)))
+          (name))))))
+

@@ -258,6 +258,10 @@
         {
           "type": "SYMBOL",
           "name": "_psalm_tag"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_mixin_tag"
         }
       ]
     },
@@ -1652,6 +1656,24 @@
               "name": "named_type"
             }
           ]
+        }
+      ]
+    },
+    "_mixin_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "@mixin"
+          },
+          "named": true,
+          "value": "tag_name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_type"
         }
       ]
     },

@@ -149,7 +149,8 @@ module.exports = grammar({
       $._generic_extends_tag,
       $._generic_use_tag,
 
-      $._psalm_tag
+      $._psalm_tag,
+      $._mixin_tag,
     ),
 
     inline_tag: $ => seq(
@@ -564,6 +565,14 @@ module.exports = grammar({
         ), $.tag_name),
         $.named_type
       ),
+    ),
+
+    // https://phpstan.org/writing-php-code/phpdocs-basics#mixins
+    // https://psalm.dev/docs/annotating_code/supported_annotations/#mixins
+    // @mixin [Type]
+    _mixin_tag: $ => seq(
+      alias('@mixin', $.tag_name),
+      $._type,
     ),
 
     // PHP.rules._type creates an alias for $.type_list
