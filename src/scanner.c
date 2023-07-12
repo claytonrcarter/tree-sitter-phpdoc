@@ -1,8 +1,13 @@
 #include <tree_sitter/parser.h>
-#include <wctype.h>
-#include <stdio.h>
 
-#define LOG(...) if (getenv("TREE_SITTER_DEBUG")) { printf(__VA_ARGS__); }
+#define TSDEBUG 0
+
+#if TSDEBUG
+#include <stdio.h>
+#define LOG(...)  fprintf(stderr, __VA_ARGS__)
+#else
+#define LOG(...)
+#endif
 
 enum TokenType {
   TEXT,
@@ -12,7 +17,7 @@ enum TokenType {
 };
 
 // Used as version string for some PEAR packages
-static const char* package_version = "@package_version@";
+static const char* const package_version = "@package_version@";
 
 void *tree_sitter_phpdoc_external_scanner_create() { return NULL; }
 void tree_sitter_phpdoc_external_scanner_destroy(void *p) {}
