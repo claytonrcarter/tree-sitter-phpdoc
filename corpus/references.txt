@@ -531,14 +531,14 @@
 (document
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (named_type
         (qualified_name
           (namespace_name_as_prefix)
           (name)))))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (named_type
         (qualified_name
           (namespace_name_as_prefix
@@ -546,11 +546,11 @@
           (name)))))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (named_type (name))))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (named_type
         (qualified_name
           (namespace_name_as_prefix

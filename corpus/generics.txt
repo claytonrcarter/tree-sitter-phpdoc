@@ -11,17 +11,17 @@ Generic template
 (document
   (tag
     (tag_name)
-      (type_list (named_type (name))))
+      (union_type (named_type (name))))
   (tag
     (tag_name)
-      (type_list (named_type (name)))
-      (type_list (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+      (union_type (named_type (name)))
+      (union_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
   (tag
     (tag_name)
-      (type_list (named_type (name))))
+      (union_type (named_type (name))))
   (tag
     (tag_name)
-      (type_list (named_type (name)))))
+      (union_type (named_type (name)))))
 =====================
 Generic template implements interface
 =====================
@@ -34,15 +34,15 @@ Generic template implements interface
 (document
   (tag
     (tag_name)
-      (type_list
+      (union_type
         (array_type (named_type (name)) (primitive_type))))
   (tag
     (tag_name)
-      (type_list
+      (union_type
         (array_type (named_type (name)) (named_type (name)))))
   (tag
     (tag_name)
-      (type_list
+      (union_type
         (array_type (named_type (name)) (named_type (name)) (named_type (name))))))
 =====================
 Generic template extends class
@@ -55,10 +55,10 @@ Generic template extends class
 (document
   (tag
     (tag_name)
-      (type_list (array_type (named_type (name)) (primitive_type))))
+      (union_type (array_type (named_type (name)) (primitive_type))))
   (tag
     (tag_name)
-      (type_list (array_type (named_type (name)) (named_type (name))))))
+      (union_type (array_type (named_type (name)) (named_type (name))))))
 =====================
 Generic template use traits
 =====================
@@ -70,7 +70,7 @@ Generic template use traits
 (document
   (tag
     (tag_name)
-      (type_list (array_type (named_type (name)) (primitive_type))))
+      (union_type (array_type (named_type (name)) (primitive_type))))
   (tag
     (tag_name)
-      (type_list (array_type (named_type (name)) (named_type (name))))))
+      (union_type (array_type (named_type (name)) (named_type (name))))))

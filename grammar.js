@@ -1,4 +1,4 @@
-const PHP = require('tree-sitter-php/grammar');
+const PHP = require('tree-sitter-php/php/grammar');
 
 // PHPDoc reference: https://docs.phpdoc.org/3.0/guide/references/phpdoc/index.html
 // PHPDoc tags: https://docs.phpdoc.org/3.0/guide/references/phpdoc/tags/index.html#tag-reference
@@ -23,7 +23,8 @@ module.exports = grammar({
     [$.namespace_name],
     [$.namespace_name_as_prefix],
     [$.named_type, $.generic_type],
-    [$._type_argument_list]
+    [$._type_argument_list],
+    [$.union_type, $.intersection_type],
   ],
 
   // Note:
@@ -648,6 +649,7 @@ module.exports = grammar({
     primitive_type: $ => PHP.rules.primitive_type,
     qualified_name: $ => PHP.rules.qualified_name,
     union_type: $ => PHP.rules.union_type,
+    intersection_type: $ => PHP.rules.intersection_type,
     variable_name: $ => PHP.rules.variable_name,
 
     // Match as many words as possible, where a word is just a sequence of

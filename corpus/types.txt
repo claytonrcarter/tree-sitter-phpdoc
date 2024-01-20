@@ -19,51 +19,51 @@ Primitive types
 (document
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (named_type (name)))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name))))
 
 =====================
@@ -79,18 +79,18 @@ Namespaced types
 (document
   (tag
     (tag_name)
-    (type_list (named_type (name)))
+    (union_type (named_type (name)))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (named_type
         (qualified_name
           (namespace_name_as_prefix) (name))))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (named_type
         (qualified_name
           (namespace_name_as_prefix (namespace_name (name) (name)))
@@ -98,7 +98,7 @@ Namespaced types
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (named_type
         (qualified_name
           (namespace_name_as_prefix (namespace_name (name) (name)))
@@ -119,21 +119,21 @@ Array types
 (document
   (tag
     (tag_name)
-    (type_list (array_type (primitive_type)))
+    (union_type (array_type (primitive_type)))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list (array_type (named_type (name))))
+    (union_type (array_type (named_type (name))))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type
         (named_type (qualified_name (namespace_name_as_prefix) (name)))))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
     (array_type
       (named_type
         (qualified_name
@@ -143,7 +143,7 @@ Array types
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type
         (named_type
           (qualified_name
@@ -164,20 +164,20 @@ List types
 (document
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (primitive_type)
       (primitive_type)
       (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (named_type (name))
       (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name))))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))
       (named_type (name)))
     (variable_name (name))))
@@ -194,14 +194,14 @@ Combined list & array types
 (document
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type (primitive_type))
       (array_type (primitive_type))
       (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type (named_type (name)))
       (array_type
         (named_type
@@ -211,7 +211,7 @@ Combined list & array types
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type
         (named_type
           (qualified_name

@@ -9,11 +9,11 @@
 (document
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type (named_type (name)))
       (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
     (variable_name (name))))
@@ -31,21 +31,21 @@
 (document
     (tag
       (tag_name)
-      (type_list (primitive_type))
+      (union_type (primitive_type))
       (name)
       (parameters
         (parameter
-          (type_list (primitive_type))
+          (union_type (primitive_type))
           (variable_name (name)))))
     (tag
       (tag_name)
-      (type_list
+      (union_type
         (array_type (named_type (name)))
         (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
       (name)
       (parameters
         (parameter
-          (type_list (primitive_type))
+          (union_type (primitive_type))
           (variable_name (name))))))
 
 =====================
@@ -59,22 +59,22 @@
 (document
     (tag
       (tag_name)
-      (type_list (primitive_type))
+      (union_type (primitive_type))
       (name)
       (parameters
         (parameter
-          (type_list (primitive_type))
+          (union_type (primitive_type))
           (variable_name (name))))
       (description (text)))
     (tag
       (tag_name)
-      (type_list
+      (union_type
         (array_type (named_type (name)))
         (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
       (name)
       (parameters
         (parameter
-          (type_list (primitive_type))
+          (union_type (primitive_type))
           (variable_name (name))))
       (description (text))))
 
@@ -91,11 +91,11 @@
 (document
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type (named_type (name)))
       (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
     (variable_name (name))))
@@ -111,12 +111,12 @@
 (document
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name))
     (description (text)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type (named_type (name)))
       (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
     (variable_name (name))
@@ -135,11 +135,11 @@
 (document
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type (named_type (name)))
       (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
     (variable_name (name))))
@@ -155,12 +155,12 @@
 (document
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name))
     (description (text)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type (named_type (name)))
       (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
     (variable_name (name))
@@ -179,11 +179,11 @@
 (document
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type (named_type (name)))
       (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
     (variable_name (name))))
@@ -199,12 +199,12 @@
 (document
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name))
     (description (text)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type (named_type (name)))
       (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
     (variable_name (name))
@@ -223,11 +223,11 @@
 (document
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type (named_type (name)))
       (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
     (variable_name (name))))
@@ -243,12 +243,12 @@
 (document
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name))
     (description (text)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type (named_type (name)))
       (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
     (variable_name (name))
@@ -267,10 +267,10 @@
 (document
   (tag
     (tag_name)
-    (type_list (primitive_type)))
+    (union_type (primitive_type)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type (named_type (name)))
       (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))))
 
@@ -285,11 +285,11 @@
 (document
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (description (text)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type (named_type (name)))
       (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
     (description (text))))
@@ -307,10 +307,10 @@
 (document
     (tag
       (tag_name)
-      (type_list (named_type (name))))
+      (union_type (named_type (name))))
     (tag
       (tag_name)
-      (type_list (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name))))))
+      (union_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name))))))
 
 =====================
 @throws w/ description
@@ -323,11 +323,11 @@
 (document
     (tag
       (tag_name)
-      (type_list (named_type (name)))
+      (union_type (named_type (name)))
       (description (text)))
     (tag
       (tag_name)
-      (type_list (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name))))
+      (union_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name))))
       (description (text))))
 
 
@@ -343,11 +343,11 @@
 (document
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (description (text)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type (named_type (name)))
       (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
     (description (text))))
@@ -363,11 +363,11 @@
 (document
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type (named_type (name)))
       (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
     (variable_name (name))))
@@ -383,12 +383,12 @@
 (document
   (tag
     (tag_name)
-    (type_list (primitive_type))
+    (union_type (primitive_type))
     (variable_name (name))
     (description (text)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type (named_type (name)))
       (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
     (variable_name (name))

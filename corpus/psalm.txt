@@ -6,7 +6,7 @@ Psalm style array types w/o variable name
 (document
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type
         array: (primitive_type)
         key: (primitive_type)
@@ -25,7 +25,7 @@ Psalm style array types
 (document
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type
         array: (primitive_type)
         key: (primitive_type)
@@ -33,14 +33,14 @@ Psalm style array types
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type
         array: (primitive_type)
         value: (primitive_type)))
     (variable_name (name)))
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type
         array: (named_type
                  (qualified_name
@@ -58,7 +58,7 @@ PHPStan style nested array types
 (document
   (tag
     (tag_name)
-    (type_list
+    (union_type
       (array_type
         array: (primitive_type)
         value: (array_type
@@ -79,10 +79,10 @@ Psalm scalar class-string type
 (document
   (tag
     (tag_name)
-      (type_list (primitive_type)) (variable_name (name)))
+      (union_type (primitive_type)) (variable_name (name)))
   (tag
     (tag_name)
-      (type_list (primitive_type (named_type (name)))) (variable_name (name))))
+      (union_type (primitive_type (named_type (name)))) (variable_name (name))))
 
 =====================
 Psalm scalar interface-string type
@@ -94,7 +94,7 @@ Psalm scalar interface-string type
 (document
   (tag
     (tag_name)
-      (type_list (primitive_type)) (variable_name (name))))
+      (union_type (primitive_type)) (variable_name (name))))
 
 =====================
 Psalm scalar positive-int type
@@ -106,7 +106,7 @@ Psalm scalar positive-int type
 (document
   (tag
     (tag_name)
-      (type_list (primitive_type)) (variable_name (name))))
+      (union_type (primitive_type)) (variable_name (name))))
 
 =====================
 Psalm scalar trait-string type
@@ -118,7 +118,7 @@ Psalm scalar trait-string type
 (document
   (tag
     (tag_name)
-      (type_list (primitive_type)) (variable_name (name))))
+      (union_type (primitive_type)) (variable_name (name))))
 
 =====================
 Psalm scalar enum-string type
@@ -130,7 +130,7 @@ Psalm scalar enum-string type
 (document
   (tag
     (tag_name)
-      (type_list (primitive_type)) (variable_name (name))))
+      (union_type (primitive_type)) (variable_name (name))))
 
 =====================
 Psalm scalar callable-string type
@@ -142,7 +142,7 @@ Psalm scalar callable-string type
 (document
   (tag
     (tag_name)
-      (type_list (primitive_type)) (variable_name (name))))
+      (union_type (primitive_type)) (variable_name (name))))
 
 =====================
 Psalm scalar numeric-string type
@@ -154,7 +154,7 @@ Psalm scalar numeric-string type
 (document
   (tag
     (tag_name)
-      (type_list (primitive_type)) (variable_name (name))))
+      (union_type (primitive_type)) (variable_name (name))))
 
 =====================
 Psalm scalar literal-string type
@@ -166,7 +166,7 @@ Psalm scalar literal-string type
 (document
   (tag
     (tag_name)
-      (type_list (primitive_type)) (variable_name (name))))
+      (union_type (primitive_type)) (variable_name (name))))
 
 =====================
 Psalm scalar lowercase-string type
@@ -178,7 +178,7 @@ Psalm scalar lowercase-string type
 (document
   (tag
     (tag_name)
-      (type_list (primitive_type)) (variable_name (name))))
+      (union_type (primitive_type)) (variable_name (name))))
 
 =====================
 Psalm scalar non-empty-string type
@@ -190,7 +190,7 @@ Psalm scalar non-empty-string type
 (document
   (tag
     (tag_name)
-      (type_list (primitive_type)) (variable_name (name))))
+      (union_type (primitive_type)) (variable_name (name))))
 
 =====================
 Psalm scalar non-empty-lowercase-string type
@@ -202,7 +202,7 @@ Psalm scalar non-empty-lowercase-string type
 (document
   (tag
     (tag_name)
-      (type_list (primitive_type)) (variable_name (name))))
+      (union_type (primitive_type)) (variable_name (name))))
 
 =====================
 Psalm @psalm-consistent-constructor tag
@@ -235,10 +235,10 @@ Psalm @param-out tag
 (document
   (tag
     (tag_name)
-      (type_list (named_type (name))) (variable_name (name)))
+      (union_type (named_type (name))) (variable_name (name)))
   (tag
     (tag_name)
-      (type_list (primitive_type)) (variable_name (name))))
+      (union_type (primitive_type)) (variable_name (name))))
 
 =====================
 Psalm @psalm-param-out tag
@@ -251,10 +251,10 @@ Psalm @psalm-param-out tag
 (document
   (tag
     (tag_name)
-      (type_list (named_type (name))) (variable_name (name)))
+      (union_type (named_type (name))) (variable_name (name)))
   (tag
     (tag_name)
-      (type_list (primitive_type)) (variable_name (name))))
+      (union_type (primitive_type)) (variable_name (name))))
 
 =====================
 Psalm @psalm-var tag
@@ -347,10 +347,10 @@ Psalm @psalm-assert tag
 (document
   (tag
     (tag_name)
-      (type_list (named_type (name))) (variable_name (name)))
+      (union_type (named_type (name))) (variable_name (name)))
   (tag
     (tag_name)
-      (type_list (primitive_type)) (variable_name (name))))
+      (union_type (primitive_type)) (variable_name (name))))
 
 =====================
 Psalm @psalm-assert-if-true tag
@@ -363,10 +363,10 @@ Psalm @psalm-assert-if-true tag
 (document
   (tag
     (tag_name)
-      (type_list (named_type (name))) (variable_name (name)))
+      (union_type (named_type (name))) (variable_name (name)))
   (tag
     (tag_name)
-      (type_list (primitive_type)) (variable_name (name))))
+      (union_type (primitive_type)) (variable_name (name))))
 
 =====================
 Psalm @psalm-assert-if-false tag
@@ -379,10 +379,10 @@ Psalm @psalm-assert-if-false tag
 (document
   (tag
     (tag_name)
-      (type_list (named_type (name))) (variable_name (name)))
+      (union_type (named_type (name))) (variable_name (name)))
   (tag
     (tag_name)
-      (type_list (primitive_type)) (variable_name (name))))
+      (union_type (primitive_type)) (variable_name (name))))
 
 =====================
 Psalm @psalm-if-this-is tag

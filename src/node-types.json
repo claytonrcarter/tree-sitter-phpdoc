@@ -151,6 +151,10 @@
       "required": true,
       "types": [
         {
+          "type": "intersection_type",
+          "named": true
+        },
+        {
           "type": "name",
           "named": true
         },
@@ -159,7 +163,7 @@
           "named": true
         },
         {
-          "type": "type_list",
+          "type": "union_type",
           "named": true
         }
       ]
@@ -187,6 +191,33 @@
         },
         {
           "type": "uri",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "intersection_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array_type",
+          "named": true
+        },
+        {
+          "type": "named_type",
+          "named": true
+        },
+        {
+          "type": "optional_type",
+          "named": true
+        },
+        {
+          "type": "primitive_type",
           "named": true
         }
       ]
@@ -277,7 +308,11 @@
           "named": true
         },
         {
-          "type": "type_list",
+          "type": "intersection_type",
+          "named": true
+        },
+        {
+          "type": "union_type",
           "named": true
         },
         {
@@ -366,6 +401,10 @@
           "named": true
         },
         {
+          "type": "intersection_type",
+          "named": true
+        },
+        {
           "type": "name",
           "named": true
         },
@@ -386,7 +425,7 @@
           "named": true
         },
         {
-          "type": "type_list",
+          "type": "union_type",
           "named": true
         },
         {
@@ -405,7 +444,7 @@
     }
   },
   {
-    "type": "type_list",
+    "type": "union_type",
     "named": true,
     "fields": {},
     "children": {
@@ -453,6 +492,10 @@
   },
   {
     "type": "$",
+    "named": false
+  },
+  {
+    "type": "&",
     "named": false
   },
   {
@@ -629,6 +672,10 @@
   },
   {
     "type": "trait-string",
+    "named": false
+  },
+  {
+    "type": "true",
     "named": false
   },
   {

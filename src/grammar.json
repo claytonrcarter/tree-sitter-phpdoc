@@ -1604,7 +1604,7 @@
                       "type": "ALIAS",
                       "content": {
                         "type": "PATTERN",
-                        "value": "[aA][sS]"
+                        "value": "as"
                       },
                       "named": false,
                       "value": "as"
@@ -1678,13 +1678,17 @@
       ]
     },
     "_type": {
-      "type": "ALIAS",
-      "content": {
-        "type": "SYMBOL",
-        "name": "union_type"
-      },
-      "named": true,
-      "value": "type_list"
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "union_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "intersection_type"
+        }
+      ]
     },
     "_types": {
       "type": "CHOICE",
@@ -2101,7 +2105,7 @@
               "type": "ALIAS",
               "content": {
                 "type": "PATTERN",
-                "value": "[nN][aA][mM][eE][sS][pP][aA][cC][eE]"
+                "value": "namespace"
               },
               "named": false,
               "value": "namespace"
@@ -2119,7 +2123,7 @@
               "type": "ALIAS",
               "content": {
                 "type": "PATTERN",
-                "value": "[nN][aA][mM][eE][sS][pP][aA][cC][eE]"
+                "value": "namespace"
               },
               "named": false,
               "value": "namespace"
@@ -2178,7 +2182,12 @@
           "value": "array"
         },
         {
-          "type": "STRING",
+          "type": "ALIAS",
+          "content": {
+            "type": "PATTERN",
+            "value": "callable"
+          },
+          "named": false,
           "value": "callable"
         },
         {
@@ -2220,6 +2229,10 @@
         {
           "type": "STRING",
           "value": "null"
+        },
+        {
+          "type": "STRING",
+          "value": "true"
         }
       ]
     },
@@ -2264,6 +2277,34 @@
           }
         ]
       }
+    },
+    "intersection_type": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_types"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "TOKEN",
+                "content": {
+                  "type": "STRING",
+                  "value": "&"
+                }
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_types"
+              }
+            ]
+          }
+        }
+      ]
     },
     "variable_name": {
       "type": "SEQ",
@@ -2566,6 +2607,10 @@
     ],
     [
       "_type_argument_list"
+    ],
+    [
+      "union_type",
+      "intersection_type"
     ]
   ],
   "precedences": [],
