@@ -44,6 +44,10 @@
         "required": false,
         "types": [
           {
+            "type": "array_type",
+            "named": true
+          },
+          {
             "type": "named_type",
             "named": true
           },

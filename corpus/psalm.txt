@@ -51,6 +51,24 @@ Psalm style array types
     (variable_name (name))))
 
 =====================
+PHPStan style nested array types
+=====================
+/** @var array<array<array<int>>> $foo */
+---
+(document
+  (tag
+    (tag_name)
+    (type_list
+      (array_type
+        array: (primitive_type)
+        value: (array_type
+          array: (primitive_type)
+          value: (array_type
+            array: (primitive_type)
+            value: (primitive_type)))))
+    (variable_name (name))))
+
+=====================
 Psalm scalar class-string type
 =====================
 /**

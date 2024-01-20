@@ -602,7 +602,7 @@ module.exports = grammar({
     _psalm_list_array_types: $ => seq(
       field('array', choice(alias("list", $.primitive_type), $._regular_types)),
       "<",
-      field('value', $._regular_types),
+      field('value', $._types),
       ">"
     ),
 
