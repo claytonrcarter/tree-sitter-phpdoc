@@ -16,3 +16,7 @@ PHPDoc grammar for [tree-sitter][].
 If this test script doesn't work for you, you can just run 
 `./node_modules/.bin/tree-sitter generate` and 
 `./node_modules/.bin/tree-sitter test` manually.
+
+#### Thanks
+
+Originally forked from https://github.com/john-nguyen09/tree-sitter-phpdoc
