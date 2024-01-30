@@ -101,6 +101,37 @@
     }
   },
   {
+    "type": "disjunctive_normal_form_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array_type",
+          "named": true
+        },
+        {
+          "type": "intersection_type",
+          "named": true
+        },
+        {
+          "type": "named_type",
+          "named": true
+        },
+        {
+          "type": "optional_type",
+          "named": true
+        },
+        {
+          "type": "primitive_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "document",
     "named": true,
     "fields": {},
@@ -151,11 +182,31 @@
       "required": true,
       "types": [
         {
+          "type": "array_type",
+          "named": true
+        },
+        {
+          "type": "disjunctive_normal_form_type",
+          "named": true
+        },
+        {
           "type": "intersection_type",
           "named": true
         },
         {
           "type": "name",
+          "named": true
+        },
+        {
+          "type": "named_type",
+          "named": true
+        },
+        {
+          "type": "optional_type",
+          "named": true
+        },
+        {
+          "type": "primitive_type",
           "named": true
         },
         {
@@ -304,11 +355,31 @@
       "required": true,
       "types": [
         {
+          "type": "array_type",
+          "named": true
+        },
+        {
           "type": "default_value",
           "named": true
         },
         {
+          "type": "disjunctive_normal_form_type",
+          "named": true
+        },
+        {
           "type": "intersection_type",
+          "named": true
+        },
+        {
+          "type": "named_type",
+          "named": true
+        },
+        {
+          "type": "optional_type",
+          "named": true
+        },
+        {
+          "type": "primitive_type",
           "named": true
         },
         {
@@ -385,11 +456,19 @@
       "required": true,
       "types": [
         {
+          "type": "array_type",
+          "named": true
+        },
+        {
           "type": "author_name",
           "named": true
         },
         {
           "type": "description",
+          "named": true
+        },
+        {
+          "type": "disjunctive_normal_form_type",
           "named": true
         },
         {
@@ -413,7 +492,15 @@
           "named": true
         },
         {
+          "type": "optional_type",
+          "named": true
+        },
+        {
           "type": "parameters",
+          "named": true
+        },
+        {
+          "type": "primitive_type",
           "named": true
         },
         {
