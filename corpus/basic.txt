@@ -54,12 +54,12 @@ Docblock w/ description & tags
   (tag (tag_name))
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name))
     (description (text) (text)))
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name))
     (description (text))))
 
@@ -96,7 +96,7 @@ Single line docblock w/ tag
 (document
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name))
     (description (text))))
 

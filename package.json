@@ -26,7 +26,7 @@
   "homepage": "https://github.com/claytonrcarter/tree-sitter-phpdoc#readme",
   "devDependencies": {
     "tree-sitter-cli": "^0.20.7",
-    "tree-sitter-php": "github:tree-sitter/tree-sitter-php#b569a5f2c0d592e67430520d1a0e1f765d83ceb0"
+    "tree-sitter-php": "^0.21.1"
   },
   "dependencies": {
     "nan": "^2.15.0"

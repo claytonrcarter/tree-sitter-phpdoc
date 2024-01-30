@@ -24,7 +24,8 @@ module.exports = grammar({
     [$.namespace_name_as_prefix],
     [$.named_type, $.generic_type],
     [$._type_argument_list],
-    [$.union_type, $.intersection_type],
+    [$._type, $.union_type, $.intersection_type, $.disjunctive_normal_form_type],
+    [$.union_type, $.disjunctive_normal_form_type],
   ],
 
   // Note:
@@ -650,6 +651,7 @@ module.exports = grammar({
     qualified_name: $ => PHP.rules.qualified_name,
     union_type: $ => PHP.rules.union_type,
     intersection_type: $ => PHP.rules.intersection_type,
+    disjunctive_normal_form_type: $ => PHP.rules.disjunctive_normal_form_type,
     variable_name: $ => PHP.rules.variable_name,
 
     // Match as many words as possible, where a word is just a sequence of

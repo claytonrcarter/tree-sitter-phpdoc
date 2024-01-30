@@ -9,7 +9,7 @@
 (document
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
@@ -31,11 +31,11 @@
 (document
     (tag
       (tag_name)
-      (union_type (primitive_type))
+      (primitive_type)
       (name)
       (parameters
         (parameter
-          (union_type (primitive_type))
+          (primitive_type)
           (variable_name (name)))))
     (tag
       (tag_name)
@@ -45,7 +45,7 @@
       (name)
       (parameters
         (parameter
-          (union_type (primitive_type))
+          (primitive_type)
           (variable_name (name))))))
 
 =====================
@@ -59,11 +59,11 @@
 (document
     (tag
       (tag_name)
-      (union_type (primitive_type))
+      (primitive_type)
       (name)
       (parameters
         (parameter
-          (union_type (primitive_type))
+          (primitive_type)
           (variable_name (name))))
       (description (text)))
     (tag
@@ -74,7 +74,7 @@
       (name)
       (parameters
         (parameter
-          (union_type (primitive_type))
+          (primitive_type)
           (variable_name (name))))
       (description (text))))
 
@@ -91,7 +91,7 @@
 (document
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
@@ -111,7 +111,7 @@
 (document
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name))
     (description (text)))
   (tag
@@ -135,7 +135,7 @@
 (document
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
@@ -155,7 +155,7 @@
 (document
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name))
     (description (text)))
   (tag
@@ -179,7 +179,7 @@
 (document
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
@@ -199,7 +199,7 @@
 (document
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name))
     (description (text)))
   (tag
@@ -223,7 +223,7 @@
 (document
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
@@ -243,7 +243,7 @@
 (document
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name))
     (description (text)))
   (tag
@@ -267,7 +267,7 @@
 (document
   (tag
     (tag_name)
-    (union_type (primitive_type)))
+    (primitive_type))
   (tag
     (tag_name)
     (union_type
@@ -285,7 +285,7 @@
 (document
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (description (text)))
   (tag
     (tag_name)
@@ -307,10 +307,10 @@
 (document
     (tag
       (tag_name)
-      (union_type (named_type (name))))
+      (named_type (name)))
     (tag
       (tag_name)
-      (union_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name))))))
+      (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
 
 =====================
 @throws w/ description
@@ -323,11 +323,11 @@
 (document
     (tag
       (tag_name)
-      (union_type (named_type (name)))
+      (named_type (name))
       (description (text)))
     (tag
       (tag_name)
-      (union_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name))))
+      (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))
       (description (text))))
 
 
@@ -343,7 +343,7 @@
 (document
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (description (text)))
   (tag
     (tag_name)
@@ -363,7 +363,7 @@
 (document
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
@@ -378,12 +378,13 @@
 /**
  * @var int $foo some description
  * @var MyClass[]|MyNameSpace\MyClass[] $foo some description
+ * @var (MyClass&MyNameSpace\MyClass)|null $foo some description
  */
 ---
 (document
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name))
     (description (text)))
   (tag
@@ -391,5 +392,14 @@
     (union_type
       (array_type (named_type (name)))
       (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (variable_name (name))
+    (description (text)))
+  (tag
+    (tag_name)
+    (disjunctive_normal_form_type
+      (intersection_type
+        (named_type (name))
+        (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name))))
+      (primitive_type))
     (variable_name (name))
     (description (text))))

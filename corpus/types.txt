@@ -19,51 +19,51 @@ Primitive types
 (document
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type (named_type (name)))
+    (named_type (name))
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type (primitive_type))
+    (primitive_type)
     (variable_name (name))))
 
 =====================
@@ -79,30 +79,27 @@ Namespaced types
 (document
   (tag
     (tag_name)
-    (union_type (named_type (name)))
+    (named_type (name))
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type
-      (named_type
-        (qualified_name
-          (namespace_name_as_prefix) (name))))
+    (named_type
+     (qualified_name
+      (namespace_name_as_prefix) (name)))
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type
-      (named_type
-        (qualified_name
-          (namespace_name_as_prefix (namespace_name (name) (name)))
-          (name))))
+    (named_type
+     (qualified_name
+      (namespace_name_as_prefix (namespace_name (name) (name)))
+      (name)))
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type
-      (named_type
-        (qualified_name
-          (namespace_name_as_prefix (namespace_name (name) (name)))
-          (name))))
+    (named_type
+     (qualified_name
+      (namespace_name_as_prefix (namespace_name (name) (name)))
+      (name)))
     (variable_name (name))))
 
 =====================
@@ -119,37 +116,34 @@ Array types
 (document
   (tag
     (tag_name)
-    (union_type (array_type (primitive_type)))
+    (array_type (primitive_type))
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type (array_type (named_type (name))))
+    (array_type (named_type (name)))
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type
-      (array_type
-        (named_type (qualified_name (namespace_name_as_prefix) (name)))))
-    (variable_name (name)))
-  (tag
-    (tag_name)
-    (union_type
     (array_type
-      (named_type
-        (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
-          (name)))))
+     (named_type (qualified_name (namespace_name_as_prefix) (name))))
     (variable_name (name)))
   (tag
     (tag_name)
-    (union_type
-      (array_type
-        (named_type
-          (qualified_name
-            (namespace_name_as_prefix
-              (namespace_name (name) (name)))
-            (name)))))
+    (array_type
+     (named_type
+      (qualified_name
+       (namespace_name_as_prefix
+        (namespace_name (name) (name)))
+       (name))))
+    (variable_name (name)))
+  (tag
+    (tag_name)
+    (array_type
+     (named_type
+      (qualified_name
+       (namespace_name_as_prefix
+        (namespace_name (name) (name)))
+       (name))))
     (variable_name (name))))
 
 =====================

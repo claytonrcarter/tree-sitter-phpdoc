@@ -531,29 +531,25 @@
 (document
   (tag
     (tag_name)
-    (union_type
-      (named_type
-        (qualified_name
-          (namespace_name_as_prefix)
-          (name)))))
+    (named_type
+      (qualified_name
+        (namespace_name_as_prefix)
+        (name))))
   (tag
     (tag_name)
-    (union_type
-      (named_type
-        (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
-          (name)))))
+    (named_type
+      (qualified_name
+        (namespace_name_as_prefix
+        (namespace_name (name) (name)))
+      (name))))
   (tag
     (tag_name)
-    (union_type
-      (named_type (name))))
+    (named_type (name)))
   (tag
     (tag_name)
-    (union_type
-      (named_type
-        (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
-          (name))))))
+    (named_type
+      (qualified_name
+        (namespace_name_as_prefix
+          (namespace_name (name) (name)))
+        (name)))))
 
