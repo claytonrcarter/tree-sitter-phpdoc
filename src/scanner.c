@@ -1,4 +1,4 @@
-#include <tree_sitter/parser.h>
+#include "tree_sitter/parser.h"
 
 #define TSDEBUG 0
 
@@ -20,12 +20,15 @@ enum TokenType {
 static const char* const package_version = "@package_version@";
 
 void *tree_sitter_phpdoc_external_scanner_create() { return NULL; }
-void tree_sitter_phpdoc_external_scanner_destroy(void *p) {}
-void tree_sitter_phpdoc_external_scanner_reset(void *p) {}
-unsigned tree_sitter_phpdoc_external_scanner_serialize(void *p, char *buffer) { return 0; }
-void tree_sitter_phpdoc_external_scanner_deserialize(void *p, const char *b, unsigned n) {}
+
+void tree_sitter_phpdoc_external_scanner_destroy(void *payload) {}
+
+unsigned tree_sitter_phpdoc_external_scanner_serialize(void *payload, char *buffer) { return 0; }
+
+void tree_sitter_phpdoc_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {}
 
 static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+
 static void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
 
 // Skip line prefix:

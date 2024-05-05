@@ -1,4 +1,4 @@
-const PHP = require('tree-sitter-php/php/grammar');
+const PHP = require('tree-sitter-php/php/grammar').grammar;
 
 // PHPDoc reference: https://docs.phpdoc.org/3.0/guide/references/phpdoc/index.html
 // PHPDoc tags: https://docs.phpdoc.org/3.0/guide/references/phpdoc/tags/index.html#tag-reference
