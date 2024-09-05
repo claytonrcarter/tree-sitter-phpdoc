@@ -1,5 +1,4 @@
-tree-sitter-phpdoc
-==================
+# tree-sitter-phpdoc
 
 PHPDoc grammar for [tree-sitter][].
 
@@ -13,8 +12,8 @@ PHPDoc grammar for [tree-sitter][].
 
 `npm test`
 
-If this test script doesn't work for you, you can just run 
-`./node_modules/.bin/tree-sitter generate` and 
+If this test script doesn't work for you, you can just run
+`./node_modules/.bin/tree-sitter generate` and
 `./node_modules/.bin/tree-sitter test` manually.
 
 #### Thanks
