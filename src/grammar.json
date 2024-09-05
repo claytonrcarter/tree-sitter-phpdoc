@@ -905,50 +905,40 @@
           "value": "tag_name"
         },
         {
+          "type": "SYMBOL",
+          "name": "_type"
+        },
+        {
           "type": "CHOICE",
           "members": [
             {
-              "type": "SEQ",
+              "type": "CHOICE",
               "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "_type"
-                },
                 {
                   "type": "SYMBOL",
                   "name": "_description_after_type"
-                }
-              ]
-            },
-            {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "_type"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "variable_name"
-                }
-              ]
-            },
-            {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "_type"
                 },
                 {
                   "type": "SYMBOL",
                   "name": "variable_name"
                 },
                 {
-                  "type": "SYMBOL",
-                  "name": "description"
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "variable_name"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "description"
+                    }
+                  ]
                 }
               ]
+            },
+            {
+              "type": "BLANK"
             }
           ]
         }

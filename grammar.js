@@ -321,13 +321,19 @@ module.exports = grammar({
     _var_tag: ($) =>
       seq(
         alias('@var', $.tag_name),
-        choice(
-          // @var int|string[]|array<string, int> description
-          seq($._type, $._description_after_type),
-          // @var int|string[]|array<string, int>
-          seq($._type, $.variable_name),
-          // @var int|string[]|array<string, int> $foo description
-          seq($._type, $.variable_name, $.description),
+        $._type,
+        // for psalm and phpstan, the var name is optional
+        optional(
+          choice(
+            // @var int description
+            $._description_after_type,
+
+            // @var int $foo
+            $.variable_name,
+
+            // @var int $foo description
+            seq($.variable_name, $.description),
+          ),
         ),
       ),
 
