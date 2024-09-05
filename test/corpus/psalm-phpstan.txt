@@ -1,4 +1,14 @@
 =====================
+Psalm and phpStan allow var tags w/o a variable name
+=====================
+/** @var array */
+---
+(document
+  (tag
+    (tag_name)
+    (primitive_type)))
+
+=====================
 Psalm style array types w/o variable name
 =====================
 /** @var array<string, int> description */
@@ -11,6 +21,7 @@ Psalm style array types w/o variable name
       key: (primitive_type)
       value: (primitive_type))
     (description (text))))
+
 
 =====================
 Psalm style array types
@@ -46,6 +57,7 @@ Psalm style array types
      value: (named_type (name)))
     (variable_name (name))))
 
+
 =====================
 PHPStan style nested array types
 =====================
@@ -62,6 +74,7 @@ PHPStan style nested array types
           array: (primitive_type)
           value: (primitive_type))))
     (variable_name (name))))
+
 
 =====================
 Psalm scalar class-string type
