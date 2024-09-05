@@ -8,7 +8,9 @@
     "generate": "./node_modules/.bin/tree-sitter generate",
     "test": "if [ $(stat -f %m ./grammar.js) -gt $(stat -f %m ./src/grammar.json) -o $(stat -f %m ./src/scanner.c) -gt $(stat -f %m ./src/parser.c) ]; then echo Regenerating...; ./node_modules/.bin/tree-sitter generate; fi && ./node_modules/.bin/tree-sitter test",
     "install": "node-gyp-build",
-    "prebuildify": "prebuildify --napi --strip"
+    "prebuildify": "prebuildify --napi --strip",
+    "format": "./node_modules/.bin/prettier --write grammar.js .github/workflows/ci.yml",
+    "format-check": "npm run format -- --check"
   },
   "repository": {
     "type": "git",
@@ -36,9 +38,10 @@
   },
   "homepage": "https://github.com/claytonrcarter/tree-sitter-phpdoc#readme",
   "devDependencies": {
+    "prebuildify": "^6.0.0",
+    "prettier": "^3.3.3",
     "tree-sitter-cli": "^0.22.6",
-    "tree-sitter-php": "^0.22.2",
-    "prebuildify": "^6.0.0"
+    "tree-sitter-php": "^0.22.2"
   },
   "dependencies": {
     "node-addon-api": "^7.1.0",
