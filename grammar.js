@@ -546,6 +546,7 @@ module.exports = grammar({
         alias($._phpdoc_array_types, $.array_type),
         alias($._psalm_generic_array_types, $.array_type),
         alias($._psalm_list_array_types, $.array_type),
+        alias($._psalm_shaped_array_types, $.array_type),
       ),
     _regular_types: ($) => PHP.rules._types,
     _phpdoc_array_types: ($) => seq($._regular_types, repeat1('[]')),
@@ -567,6 +568,37 @@ module.exports = grammar({
         '<',
         field('value', $._types),
         '>',
+      ),
+
+    _psalm_shaped_array_types: ($) =>
+      prec(
+        2,
+        seq(
+          'array',
+          '{',
+          sep1(alias($._shaped_array_element, $.array_element), ','),
+          '}',
+        ),
+      ),
+
+    _shaped_array_element: ($) =>
+      seq(
+        field(
+          'key',
+          optional(
+            seq(
+              choice(
+                $.name,
+                seq("'", $.name, "'"),
+                seq('"', $.name, '"'),
+                alias(/\d+/, $.name),
+              ),
+              optional('?'),
+              ':',
+            ),
+          ),
+        ),
+        field('value', $._regular_types),
       ),
 
     _psalm_scalar_type: ($) =>

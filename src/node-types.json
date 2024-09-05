@@ -1,5 +1,55 @@
 [
   {
+    "type": "array_element",
+    "named": true,
+    "fields": {
+      "key": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "\"",
+            "named": false
+          },
+          {
+            "type": "'",
+            "named": false
+          },
+          {
+            "type": ":",
+            "named": false
+          },
+          {
+            "type": "?",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "named_type",
+            "named": true
+          },
+          {
+            "type": "optional_type",
+            "named": true
+          },
+          {
+            "type": "primitive_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "array_type",
     "named": true,
     "fields": {
@@ -63,9 +113,13 @@
       }
     },
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "array_element",
+          "named": true
+        },
         {
           "type": "named_type",
           "named": true
@@ -578,11 +632,19 @@
     "fields": {}
   },
   {
+    "type": "\"",
+    "named": false
+  },
+  {
     "type": "$",
     "named": false
   },
   {
     "type": "&",
+    "named": false
+  },
+  {
+    "type": "'",
     "named": false
   },
   {
@@ -599,6 +661,10 @@
   },
   {
     "type": ",",
+    "named": false
+  },
+  {
+    "type": ":",
     "named": false
   },
   {

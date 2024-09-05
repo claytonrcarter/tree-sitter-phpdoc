@@ -77,6 +77,82 @@ PHPStan style nested array types
 
 
 =====================
+Psalm-style array shapes
+=====================
+/**
+ * @var array{foo: string, bar: int}
+ * @return array{optional?: string, bar: int}
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (array_type
+        (array_element
+          key: (name)
+          value: (primitive_type))
+        (array_element
+          key: (name)
+          value: (primitive_type))))
+  (tag
+    (tag_name)
+    (array_type
+      (array_element
+        key: (name)
+        value: (primitive_type))
+      (array_element
+        key: (name)
+        value: (primitive_type)))))
+
+
+=====================
+phpStan-style array shapes
+=====================
+/**
+ * @var array{'foo': int, "bar": string}
+ * @var array{0: int, 1?: int}
+ * @var array{int, int}
+ * @var array{foo: int, bar: string}
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (array_type
+      (array_element
+        key: (name)
+        value: (primitive_type))
+      (array_element
+        key: (name)
+        value: (primitive_type))))
+  (tag
+    (tag_name)
+    (array_type
+      (array_element
+        key: (name)
+        value: (primitive_type))
+      (array_element
+        key: (name)
+        value: (primitive_type))))
+  (tag
+    (tag_name)
+    (array_type
+      (array_element
+        value: (primitive_type))
+      (array_element
+        value: (primitive_type))))
+  (tag
+    (tag_name)
+    (array_type
+      (array_element
+        key: (name)
+        value: (primitive_type))
+      (array_element
+        key: (name)
+        value: (primitive_type)))))
+
+
+=====================
 Psalm scalar class-string type
 =====================
 /**
