@@ -19,7 +19,6 @@
     (variable_name (name))))
 
 
-
 =====================
 @method w/o description
 =====================
@@ -47,6 +46,7 @@
         (parameter
           (primitive_type)
           (variable_name (name))))))
+
 
 =====================
 @method w/ description
@@ -78,6 +78,31 @@
           (variable_name (name))))
       (description (text))))
 
+
+=====================
+@method w/ and w/o return type (#36)
+=====================
+/**
+ * @method DOMNodeList getSelectorContents(string $selector)
+ * @method getSelectorContents(string $selector)
+ */
+---
+(document
+    (tag
+      (tag_name)
+      (named_type (name))
+      (name)
+      (parameters
+        (parameter
+          (primitive_type)
+          (variable_name (name)))))
+    (tag
+      (tag_name)
+      (name)
+      (parameters
+        (parameter
+          (primitive_type)
+          (variable_name (name))))))
 
 
 =====================

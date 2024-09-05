@@ -280,7 +280,7 @@ module.exports = grammar({
       alias('@method', $.tag_name),
       // `[static]` is interpreted as optional despite not being in [<...>]
       optional($.static),
-      $._type,
+      optional($._type),
       $.name,
       $.parameters,
       optional($.description),
