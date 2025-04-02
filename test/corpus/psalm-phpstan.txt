@@ -134,6 +134,45 @@ Psalm-style array shapes
 
 
 =====================
+Psalm-style list shapes
+=====================
+/**
+ * @var list{string, int}
+ * @return list{0: string, 1: int}
+ * @return list{string, string, stdClass, false}
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (array_type
+        (array_element
+          value: (primitive_type))
+        (array_element
+          value: (primitive_type))))
+  (tag
+    (tag_name)
+    (array_type
+      (array_element
+        key: (name)
+        value: (primitive_type))
+      (array_element
+        key: (name)
+        value: (primitive_type))))
+  (tag
+    (tag_name)
+    (array_type
+      (array_element
+        value: (primitive_type))
+      (array_element
+        value: (primitive_type))
+      (array_element
+        value: (named_type
+          (name)))
+      (array_element
+        value: (primitive_type)))))
+
+=====================
 phpStan-style array shapes
 =====================
 /**

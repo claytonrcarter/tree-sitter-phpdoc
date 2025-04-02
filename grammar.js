@@ -574,7 +574,7 @@ module.exports = grammar({
       prec(
         2,
         seq(
-          'array',
+          choice('array', 'list'),
           '{',
           sep1(alias($._shaped_array_element, $.array_element), ','),
           '}',

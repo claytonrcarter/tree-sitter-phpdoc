@@ -768,6 +768,10 @@
     "named": false
   },
   {
+    "type": "list",
+    "named": false
+  },
+  {
     "type": "literal-string",
     "named": false
   },
