@@ -554,9 +554,9 @@ module.exports = grammar({
       seq(
         field('array', $._regular_types),
         '<',
-        field('key', $._regular_types),
+        field('key', $._types),
         ',',
-        field('value', $._regular_types),
+        field('value', $._types),
         '>',
       ),
     _psalm_list_array_types: ($) =>

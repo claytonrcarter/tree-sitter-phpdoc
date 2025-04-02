@@ -59,6 +59,34 @@ Psalm style array types
 
 
 =====================
+Psalm style array types with nested array values
+=====================
+/**
+ * @var array<class-string, array<int, bool>>
+ * @var array<string, array<int, bool>>
+ */
+---
+(document
+  (tag
+    (tag_name)
+    (array_type
+      array: (primitive_type)
+      key: (primitive_type)
+      value: (array_type
+        array: (primitive_type)
+        key: (primitive_type)
+        value: (primitive_type))))
+  (tag
+    (tag_name)
+    (array_type
+      array: (primitive_type)
+      key: (primitive_type)
+      value: (array_type
+        array: (primitive_type)
+        key: (primitive_type)
+        value: (primitive_type)))))
+
+=====================
 PHPStan style nested array types
 =====================
 /** @var array<array<array<int>>> $foo */
