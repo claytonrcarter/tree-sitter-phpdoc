@@ -721,12 +721,12 @@ Psalm @psalm-import-type tag
     (tag_name)
     (named_type (name))
     (named_type (name))
-    (name))
+    (named_type (name)))
   (tag
     (tag_name)
     (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))
     (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))
-    (name)))
+    (named_type (name))))
 
 =====================
 Psalm @psalm-require-implements tag
