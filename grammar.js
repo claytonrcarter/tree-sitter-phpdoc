@@ -511,7 +511,7 @@ module.exports = grammar({
           $.named_type,
           'from',
           $.named_type,
-          optional(PHP.rules.namespace_aliasing_clause),
+          optional(seq('as', $.named_type)),
         ),
         // @psalm-suppress [Type]
         // @psalm-internal [Type]
