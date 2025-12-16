@@ -1599,18 +1599,12 @@
                   "type": "SEQ",
                   "members": [
                     {
-                      "type": "ALIAS",
-                      "content": {
-                        "type": "PATTERN",
-                        "value": "as",
-                        "flags": "i"
-                      },
-                      "named": false,
+                      "type": "STRING",
                       "value": "as"
                     },
                     {
                       "type": "SYMBOL",
-                      "name": "name"
+                      "name": "named_type"
                     }
                   ]
                 },
