@@ -7,6 +7,9 @@ const PHP = require('tree-sitter-php/php/grammar').grammar;
 // TODO array return types https://docs.phpdoc.org/3.0/guide/references/phpdoc/types.html#arrays
 //   @verbatimElement [required element] [<optional element>]
 
+// console.error(JSON.stringify(PHP.reserved.classes[0]));
+// console.error(PHP.reserved.classes[0].value);
+
 module.exports = grammar({
   name: 'phpdoc',
 
@@ -32,6 +35,13 @@ module.exports = grammar({
     ],
     [$.union_type, $.disjunctive_normal_form_type],
   ],
+
+  // copied to mimic the PHP grammar
+  reserved: {
+    global: (_) => PHP.reserved.global.map((k) => new RegExp(k.value, 'i')),
+    classes: (_) => PHP.reserved.classes.map((k) => new RegExp(k.value, 'i')),
+    nothing: (_) => [],
+  },
 
   // Note:
   // 1. External scanners receive text with `extras` not removed yet. So
@@ -481,7 +491,7 @@ module.exports = grammar({
           $.tag_name,
         ),
         // @psalm-trace [name]
-        seq(alias(choice('@psalm-trace'), $.tag_name), $.variable_name),
+        seq(alias('@psalm-trace', $.tag_name), $.variable_name),
         seq(
           alias(choice('@param-out', '@psalm-param-out'), $.tag_name),
           $._type,
@@ -498,10 +508,8 @@ module.exports = grammar({
             $.tag_name,
           ),
           $._type,
-          choice(
-            $.variable_name,
-            // TODO allow PHP expression
-          ),
+          $.variable_name,
+          // TODO allow PHP expression
         ),
         //TODO implement @psalm-taint-* see https://psalm.dev/docs/security_analysis/annotations/
         seq(
