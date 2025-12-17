@@ -2104,6 +2104,10 @@
             {
               "type": "SYMBOL",
               "name": "qualified_name"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "relative_name"
             }
           ]
         },
@@ -2205,6 +2209,10 @@
             {
               "type": "SYMBOL",
               "name": "qualified_name"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "relative_name"
             }
           ]
         },
@@ -2239,91 +2247,56 @@
         }
       ]
     },
-    "namespace_name_as_prefix": {
-      "type": "CHOICE",
+    "relative_name": {
+      "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "\\"
-        },
-        {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "\\"
+          "type": "FIELD",
+          "name": "prefix",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "ALIAS",
+                "content": {
+                  "type": "PATTERN",
+                  "value": "namespace",
+                  "flags": "i"
                 },
-                {
-                  "type": "BLANK"
-                }
-              ]
-            },
-            {
-              "type": "SYMBOL",
-              "name": "namespace_name"
-            },
-            {
-              "type": "STRING",
-              "value": "\\"
-            }
-          ]
+                "named": false,
+                "value": "namespace"
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": "\\"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "namespace_name"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "STRING",
+                "value": "\\"
+              }
+            ]
+          }
         },
         {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "ALIAS",
-              "content": {
-                "type": "PATTERN",
-                "value": "namespace",
-                "flags": "i"
-              },
-              "named": false,
-              "value": "namespace"
-            },
-            {
-              "type": "STRING",
-              "value": "\\"
-            }
-          ]
-        },
-        {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "ALIAS",
-              "content": {
-                "type": "PATTERN",
-                "value": "namespace",
-                "flags": "i"
-              },
-              "named": false,
-              "value": "namespace"
-            },
-            {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "\\"
-                },
-                {
-                  "type": "BLANK"
-                }
-              ]
-            },
-            {
-              "type": "SYMBOL",
-              "name": "namespace_name"
-            },
-            {
-              "type": "STRING",
-              "value": "\\"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "name"
         }
       ]
     },
@@ -2396,10 +2369,6 @@
         },
         {
           "type": "STRING",
-          "value": "static"
-        },
-        {
-          "type": "STRING",
           "value": "false"
         },
         {
@@ -2416,8 +2385,41 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "namespace_name_as_prefix"
+          "type": "FIELD",
+          "name": "prefix",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "\\"
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "namespace_name"
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "STRING",
+                "value": "\\"
+              }
+            ]
+          }
         },
         {
           "type": "SYMBOL",
@@ -2837,14 +2839,7 @@
   ],
   "conflicts": [
     [
-      "primitive_type",
-      "static"
-    ],
-    [
       "namespace_name"
-    ],
-    [
-      "namespace_name_as_prefix"
     ],
     [
       "named_type",
