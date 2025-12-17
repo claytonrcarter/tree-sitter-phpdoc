@@ -14,10 +14,17 @@
   (tag
     (tag_name)
     (union_type
-      (array_type (named_type (name)))
-      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
-    (variable_name (name))))
-
+      (array_type
+        (named_type
+          (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name)))))
+    (variable_name
+      (name))))
 
 =====================
 @method w/o description
@@ -27,26 +34,35 @@
  * @method MyClass[]|MyNameSpace\MyClass[] methodName(int $param)
  */
 ---
-(document
-    (tag
-      (tag_name)
-      (primitive_type)
-      (name)
-      (parameters
-        (parameter
-          (primitive_type)
-          (variable_name (name)))))
-    (tag
-      (tag_name)
-      (union_type
-        (array_type (named_type (name)))
-        (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
-      (name)
-      (parameters
-        (parameter
-          (primitive_type)
-          (variable_name (name))))))
 
+(document
+  (tag
+    (tag_name)
+    (primitive_type)
+    (name)
+    (parameters
+      (parameter
+        (primitive_type)
+        (variable_name
+          (name)))))
+  (tag
+    (tag_name)
+    (union_type
+      (array_type
+        (named_type
+          (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name)))))
+    (name)
+    (parameters
+      (parameter
+        (primitive_type)
+        (variable_name
+          (name))))))
 
 =====================
 @method w/ description
@@ -56,28 +72,39 @@
  * @method MyClass[]|MyNameSpace\MyClass[] methodName(int $param) some description
  */
 ---
-(document
-    (tag
-      (tag_name)
-      (primitive_type)
-      (name)
-      (parameters
-        (parameter
-          (primitive_type)
-          (variable_name (name))))
-      (description (text)))
-    (tag
-      (tag_name)
-      (union_type
-        (array_type (named_type (name)))
-        (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
-      (name)
-      (parameters
-        (parameter
-          (primitive_type)
-          (variable_name (name))))
-      (description (text))))
 
+(document
+  (tag
+    (tag_name)
+    (primitive_type)
+    (name)
+    (parameters
+      (parameter
+        (primitive_type)
+        (variable_name
+          (name))))
+    (description
+      (text)))
+  (tag
+    (tag_name)
+    (union_type
+      (array_type
+        (named_type
+          (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name)))))
+    (name)
+    (parameters
+      (parameter
+        (primitive_type)
+        (variable_name
+          (name))))
+    (description
+      (text))))
 
 =====================
 @method w/ and w/o return type (#36)
@@ -121,9 +148,17 @@
   (tag
     (tag_name)
     (union_type
-      (array_type (named_type (name)))
-      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
-    (variable_name (name))))
+      (array_type
+        (named_type
+          (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name)))))
+    (variable_name
+      (name))))
 
 =====================
 @param w/ varname & w/ description
@@ -142,12 +177,19 @@
   (tag
     (tag_name)
     (union_type
-      (array_type (named_type (name)))
-      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
-    (variable_name (name))
-    (description (text))))
-
-
+      (array_type
+        (named_type
+          (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name)))))
+    (variable_name
+      (name))
+    (description
+      (text))))
 
 =====================
 @property w/ varname & w/o description
@@ -165,9 +207,17 @@
   (tag
     (tag_name)
     (union_type
-      (array_type (named_type (name)))
-      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
-    (variable_name (name))))
+      (array_type
+        (named_type
+          (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name)))))
+    (variable_name
+      (name))))
 
 =====================
 @property w/ varname & w/ description
@@ -186,12 +236,19 @@
   (tag
     (tag_name)
     (union_type
-      (array_type (named_type (name)))
-      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
-    (variable_name (name))
-    (description (text))))
-
-
+      (array_type
+        (named_type
+          (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name)))))
+    (variable_name
+      (name))
+    (description
+      (text))))
 
 =====================
 @property-read w/ varname & w/o description
@@ -209,9 +266,17 @@
   (tag
     (tag_name)
     (union_type
-      (array_type (named_type (name)))
-      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
-    (variable_name (name))))
+      (array_type
+        (named_type
+          (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name)))))
+    (variable_name
+      (name))))
 
 =====================
 @property-read w/ varname & w/ description
@@ -230,12 +295,19 @@
   (tag
     (tag_name)
     (union_type
-      (array_type (named_type (name)))
-      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
-    (variable_name (name))
-    (description (text))))
-
-
+      (array_type
+        (named_type
+          (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name)))))
+    (variable_name
+      (name))
+    (description
+      (text))))
 
 =====================
 @property-write w/ varname & w/o description
@@ -253,9 +325,17 @@
   (tag
     (tag_name)
     (union_type
-      (array_type (named_type (name)))
-      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
-    (variable_name (name))))
+      (array_type
+        (named_type
+          (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name)))))
+    (variable_name
+      (name))))
 
 =====================
 @property-write w/ varname & w/ description
@@ -274,12 +354,19 @@
   (tag
     (tag_name)
     (union_type
-      (array_type (named_type (name)))
-      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
-    (variable_name (name))
-    (description (text))))
-
-
+      (array_type
+        (named_type
+          (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name)))))
+    (variable_name
+      (name))
+    (description
+      (text))))
 
 =====================
 @return w/o varname & description
@@ -296,8 +383,15 @@
   (tag
     (tag_name)
     (union_type
-      (array_type (named_type (name)))
-      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))))
+      (array_type
+        (named_type
+          (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name)))))))
 
 =====================
 @return w/o varname & w/ description
@@ -315,11 +409,17 @@
   (tag
     (tag_name)
     (union_type
-      (array_type (named_type (name)))
-      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
-    (description (text))))
-
-
+      (array_type
+        (named_type
+          (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name)))))
+    (description
+      (text))))
 
 =====================
 @throws w/o description
@@ -330,12 +430,17 @@
  */
 ---
 (document
-    (tag
-      (tag_name)
-      (named_type (name)))
-    (tag
-      (tag_name)
-      (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+  (tag
+    (tag_name)
+    (named_type
+      (name)))
+  (tag
+    (tag_name)
+    (named_type
+      (qualified_name
+        (namespace_name
+          (name))
+        (name)))))
 
 =====================
 @throws w/ description
@@ -345,17 +450,23 @@
  * @throws MyNameSpace\MyClass some description
  */
 ---
+
 (document
-    (tag
-      (tag_name)
-      (named_type (name))
-      (description (text)))
-    (tag
-      (tag_name)
-      (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))
-      (description (text))))
-
-
+  (tag
+    (tag_name)
+    (named_type
+      (name))
+    (description
+      (text)))
+  (tag
+    (tag_name)
+    (named_type
+      (qualified_name
+        (namespace_name
+          (name))
+        (name)))
+    (description
+      (text))))
 
 =====================
 @var w/o varname & w/ description
@@ -373,9 +484,17 @@
   (tag
     (tag_name)
     (union_type
-      (array_type (named_type (name)))
-      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
-    (description (text))))
+      (array_type
+        (named_type
+          (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name)))))
+    (description
+      (text))))
 
 =====================
 @var w/ varname & w/o description
@@ -393,9 +512,17 @@
   (tag
     (tag_name)
     (union_type
-      (array_type (named_type (name)))
-      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
-    (variable_name (name))))
+      (array_type
+        (named_type
+          (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name)))))
+    (variable_name
+      (name))))
 
 =====================
 @var w/ varname & w/ description
@@ -415,16 +542,30 @@
   (tag
     (tag_name)
     (union_type
-      (array_type (named_type (name)))
-      (array_type (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
-    (variable_name (name))
-    (description (text)))
+      (array_type
+        (named_type
+          (name)))
+      (array_type
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name)))))
+    (variable_name
+      (name))
+    (description
+      (text)))
   (tag
     (tag_name)
     (disjunctive_normal_form_type
       (intersection_type
-        (named_type (name))
-        (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name))))
+        (named_type
+          (name))
+        (named_type
+          (qualified_name
+            (namespace_name
+              (name))
+            (name))))
       (primitive_type))
     (variable_name (name))
     (description (text))))

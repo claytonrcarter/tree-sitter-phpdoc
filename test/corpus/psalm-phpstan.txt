@@ -51,7 +51,8 @@ Psalm style array types
     (array_type
       array: (named_type
         (qualified_name
-          (namespace_name_as_prefix (namespace_name (name)))
+          prefix: (namespace_name
+            (name))
           (name)))
      key: (primitive_type)
      value: (named_type (name)))
@@ -701,7 +702,11 @@ Psalm @psalm-internal tag
     (named_type (name)))
   (tag
     (tag_name)
-    (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (named_type
+      (qualified_name
+        (namespace_name
+          (name))
+        (name)))))
 
 =====================
 Psalm @psalm-import-type tag
@@ -724,9 +729,18 @@ Psalm @psalm-import-type tag
     (named_type (name)))
   (tag
     (tag_name)
-    (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))
-    (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))
-    (named_type (name))))
+    (named_type
+      (qualified_name
+        (namespace_name
+          (name))
+        (name)))
+    (named_type
+      (qualified_name
+        (namespace_name
+          (name))
+        (name)))
+    (named_type
+      (name))))
 
 =====================
 Psalm @psalm-require-implements tag
@@ -742,7 +756,11 @@ Psalm @psalm-require-implements tag
     (named_type (name)))
   (tag
     (tag_name)
-    (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (named_type
+      (qualified_name
+        (namespace_name
+          (name))
+        (name)))))
 
 =====================
 Psalm @psalm-require-extends tag
@@ -758,4 +776,8 @@ Psalm @psalm-require-extends tag
     (named_type (name)))
   (tag
     (tag_name)
-    (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))))
+    (named_type
+      (qualified_name
+        (namespace_name
+          (name))
+        (name)))))

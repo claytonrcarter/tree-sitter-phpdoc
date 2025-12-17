@@ -15,7 +15,7 @@ Generic template
   (tag
     (tag_name)
       (named_type (name))
-      (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name))))
+      (named_type (qualified_name (namespace_name (name)) (name))))
   (tag
     (tag_name)
       (named_type (name)))

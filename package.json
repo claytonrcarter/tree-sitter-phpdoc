@@ -41,7 +41,7 @@
     "prebuildify": "^6.0.0",
     "prettier": "^3.3.3",
     "tree-sitter-cli": "^0.22.6",
-    "tree-sitter-php": "^0.22.2"
+    "tree-sitter-php": "^0.23.12"
   },
   "dependencies": {
     "node-addon-api": "^7.1.0",

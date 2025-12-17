@@ -11,7 +11,6 @@ Primitive types
  * @var string $foo
  * @var void $foo
  * @var mixed $foo
- * @var static $foo
  * @var false $foo
  * @var null $foo
  */
@@ -24,10 +23,6 @@ Primitive types
   (tag
     (tag_name)
     (named_type (name))
-    (variable_name (name)))
-  (tag
-    (tag_name)
-    (primitive_type)
     (variable_name (name)))
   (tag
     (tag_name)
@@ -84,23 +79,30 @@ Namespaced types
   (tag
     (tag_name)
     (named_type
-     (qualified_name
-      (namespace_name_as_prefix) (name)))
-    (variable_name (name)))
+      (qualified_name
+        (name)))
+    (variable_name
+      (name)))
   (tag
     (tag_name)
     (named_type
-     (qualified_name
-      (namespace_name_as_prefix (namespace_name (name) (name)))
+      (qualified_name
+        (namespace_name
+          (name)
+          (name))
+        (name)))
+    (variable_name
       (name)))
-    (variable_name (name)))
   (tag
     (tag_name)
     (named_type
-     (qualified_name
-      (namespace_name_as_prefix (namespace_name (name) (name)))
-      (name)))
-    (variable_name (name))))
+      (qualified_name
+        (namespace_name
+          (name)
+          (name))
+        (name)))
+    (variable_name
+      (name))))
 
 =====================
 Array types
@@ -125,26 +127,33 @@ Array types
   (tag
     (tag_name)
     (array_type
-     (named_type (qualified_name (namespace_name_as_prefix) (name))))
-    (variable_name (name)))
+      (named_type
+        (qualified_name
+          (name))))
+    (variable_name
+      (name)))
   (tag
     (tag_name)
     (array_type
-     (named_type
-      (qualified_name
-       (namespace_name_as_prefix
-        (namespace_name (name) (name)))
-       (name))))
-    (variable_name (name)))
+      (named_type
+        (qualified_name
+          (namespace_name
+            (name)
+            (name))
+          (name))))
+    (variable_name
+      (name)))
   (tag
     (tag_name)
     (array_type
-     (named_type
-      (qualified_name
-       (namespace_name_as_prefix
-        (namespace_name (name) (name)))
-       (name))))
-    (variable_name (name))))
+      (named_type
+        (qualified_name
+          (namespace_name
+            (name)
+            (name))
+          (name))))
+    (variable_name
+      (name))))
 
 =====================
 List types
@@ -166,15 +175,27 @@ List types
   (tag
     (tag_name)
     (union_type
-      (named_type (name))
-      (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name))))
-    (variable_name (name)))
+      (named_type
+        (name))
+      (named_type
+        (qualified_name
+          (namespace_name
+            (name))
+          (name))))
+    (variable_name
+      (name)))
   (tag
     (tag_name)
     (union_type
-      (named_type (qualified_name (namespace_name_as_prefix (namespace_name (name))) (name)))
-      (named_type (name)))
-    (variable_name (name))))
+      (named_type
+        (qualified_name
+          (namespace_name
+            (name))
+          (name)))
+      (named_type
+        (name)))
+    (variable_name
+      (name))))
 
 =====================
 Combined list & array types
@@ -200,7 +221,8 @@ Combined list & array types
       (array_type
         (named_type
           (qualified_name
-            (namespace_name_as_prefix (namespace_name (name)))
+            (namespace_name
+              (name))
             (name)))))
     (variable_name (name)))
   (tag
@@ -209,7 +231,8 @@ Combined list & array types
       (array_type
         (named_type
           (qualified_name
-            (namespace_name_as_prefix (namespace_name (name)))
+            (namespace_name
+              (name))
             (name))))
       (array_type (named_type (name))))
     (variable_name (name))))
