@@ -21,9 +21,7 @@ module.exports = grammar({
   ],
 
   conflicts: ($) => [
-    [$.primitive_type, $.static],
     [$.namespace_name],
-    [$.namespace_name_as_prefix],
     [$.named_type, $.generic_type],
     [$._type_argument_list],
     [
@@ -535,8 +533,8 @@ module.exports = grammar({
     // @mixin [Type]
     _mixin_tag: ($) => seq(alias('@mixin', $.tag_name), $._type),
 
-    // PHP.rules._type creates an alias for $.type_list
-    _type: ($) => PHP.rules._type,
+    // PHP.rules.type creates an alias for $.type_list
+    _type: ($) => PHP.rules.type,
     // union_type uses _types, so we override it to be "regular" types (which
     // aren't grouped under a parent node) or array types (which are)
     _types: ($) =>
@@ -626,7 +624,7 @@ module.exports = grammar({
     name: ($) => PHP.rules.name,
     named_type: ($) => choice(PHP.rules.named_type, $.generic_type),
     namespace_name: ($) => PHP.rules.namespace_name,
-    namespace_name_as_prefix: ($) => PHP.rules.namespace_name_as_prefix,
+    relative_name: ($) => PHP.rules.relative_name,
     optional_type: ($) => PHP.rules.optional_type,
     primitive_type: ($) => PHP.rules.primitive_type,
     qualified_name: ($) => PHP.rules.qualified_name,

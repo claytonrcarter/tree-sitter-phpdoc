@@ -162,15 +162,15 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix)
           (name)))))
   (tag
     (tag_name)
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
+          (namespace_name
+            (name)
+            (name))
           (name)))))
   (tag
     (tag_name)
@@ -181,8 +181,9 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
+          (namespace_name
+            (name)
+            (name))
           (name))))))
 
 =====================
@@ -205,7 +206,6 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix)
           (name)))
       (name)))
   (tag
@@ -213,8 +213,9 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
+          (namespace_name
+            (name)
+            (name))
           (name)))
       (name)))
   (tag
@@ -227,8 +228,9 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
+          (namespace_name
+            (name)
+            (name))
           (name)))
       (name))))
 
@@ -253,7 +255,6 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix)
           (name)))
       (variable_name (name))))
   (tag
@@ -261,8 +262,9 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
+          (namespace_name
+            (name)
+            (name))
           (name)))
       (variable_name (name))))
   (tag
@@ -275,8 +277,9 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
+          (namespace_name
+            (name)
+            (name))
           (name)))
       (variable_name (name)))))
 
@@ -296,7 +299,6 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix)
           (name)))
       (name)))
   (tag
@@ -304,8 +306,9 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
+          (namespace_name
+            (name)
+            (name))
           (name)))
       (name)))
   (tag
@@ -318,8 +321,9 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
+          (namespace_name
+            (name)
+            (name))
           (name)))
       (name))))
 
@@ -339,7 +343,6 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix)
           (name))))
     (description (text)))
   (tag
@@ -347,8 +350,9 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
+          (namespace_name
+            (name)
+            (name))
           (name))))
     (description (text)))
   (tag
@@ -361,8 +365,9 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
+          (namespace_name
+            (name)
+            (name))
           (name))))
     (description (text))))
 
@@ -387,7 +392,6 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix)
           (name)))
       (name))
     (description (text)))
@@ -396,8 +400,9 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
+          (namespace_name
+            (name)
+            (name))
           (name)))
       (name))
     (description (text)))
@@ -412,8 +417,9 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
+          (namespace_name
+            (name)
+            (name))
           (name)))
       (name))
     (description (text))))
@@ -440,7 +446,6 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix)
           (name)))
       (variable_name (name)))
     (description (text)))
@@ -449,8 +454,9 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
+          (namespace_name
+            (name)
+            (name))
           (name)))
       (variable_name (name)))
     (description (text)))
@@ -465,8 +471,9 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
+          (namespace_name
+            (name)
+            (name))
           (name)))
       (variable_name (name)))
     (description (text))))
@@ -487,7 +494,6 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix)
           (name)))
       (name))
     (description (text)))
@@ -496,8 +502,9 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
+          (namespace_name
+            (name)
+            (name))
           (name)))
       (name))
     (description (text)))
@@ -512,8 +519,9 @@
     (fqsen
       (named_type
         (qualified_name
-          (namespace_name_as_prefix
-            (namespace_name (name) (name)))
+          (namespace_name
+            (name)
+            (name))
           (name)))
       (name))
     (description (text))))
@@ -533,15 +541,15 @@
     (tag_name)
     (named_type
       (qualified_name
-        (namespace_name_as_prefix)
         (name))))
   (tag
     (tag_name)
     (named_type
       (qualified_name
-        (namespace_name_as_prefix
-        (namespace_name (name) (name)))
-      (name))))
+        (namespace_name
+          (name)
+          (name))
+        (name))))
   (tag
     (tag_name)
     (named_type (name)))
@@ -549,7 +557,8 @@
     (tag_name)
     (named_type
       (qualified_name
-        (namespace_name_as_prefix
-          (namespace_name (name) (name)))
+        (namespace_name
+          (name)
+          (name))
         (name)))))
 
