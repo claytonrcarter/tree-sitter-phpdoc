@@ -272,6 +272,10 @@
           "named": true
         },
         {
+          "type": "relative_name",
+          "named": true
+        },
+        {
           "type": "union_type",
           "named": true
         }
@@ -351,6 +355,10 @@
         {
           "type": "qualified_name",
           "named": true
+        },
+        {
+          "type": "relative_name",
+          "named": true
         }
       ]
     }
@@ -365,21 +373,6 @@
       "types": [
         {
           "type": "name",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "namespace_name_as_prefix",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "namespace_name",
           "named": true
         }
       ]
@@ -484,26 +477,66 @@
   {
     "type": "qualified_name",
     "named": true,
-    "fields": {},
+    "fields": {
+      "prefix": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "\\",
+            "named": false
+          },
+          {
+            "type": "namespace_name",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
           "type": "name",
-          "named": true
-        },
-        {
-          "type": "namespace_name_as_prefix",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "static",
+    "type": "relative_name",
     "named": true,
-    "fields": {}
+    "fields": {
+      "prefix": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "\\",
+            "named": false
+          },
+          {
+            "type": "namespace",
+            "named": false
+          },
+          {
+            "type": "namespace_name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "tag",
@@ -817,7 +850,7 @@
   },
   {
     "type": "static",
-    "named": false
+    "named": true
   },
   {
     "type": "string",
